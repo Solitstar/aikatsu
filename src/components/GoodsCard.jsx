@@ -5,7 +5,7 @@ const GoodsCard = ({ item, onClick }) => {
       return (
         <div className="absolute top-3 left-3 z-10">
           <span className="bg-yellow-400 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
-            猸愶笍 {qty > 1 ? `脳${qty}` : '宸叉嫢鏈?}
+            ⭐️ {qty > 1 ? `×${qty}` : '已拥有'}
           </span>
         </div>
       );
@@ -14,7 +14,7 @@ const GoodsCard = ({ item, onClick }) => {
       return (
         <div className="absolute top-3 left-3 z-10">
           <span className="bg-rose-400 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
-            鉂わ笍 鎯宠
+            ❤️ 想要
           </span>
         </div>
       );
@@ -50,14 +50,9 @@ const GoodsCard = ({ item, onClick }) => {
       </div>
 
       <div className="p-3 sm:p-4">
-        <h3 className="font-medium text-text-primary text-sm sm:text-base mb-1 line-clamp-2 leading-tight">
+        <h3 className="font-medium text-text-primary text-sm sm:text-base mb-2 line-clamp-2 leading-tight">
           {item.name}
         </h3>
-        {item.name_jp && (
-          <p className="text-xs text-text-secondary/70 font-quick mb-1.5 leading-tight">
-            {item.name_jp}
-          </p>
-        )}
         <div className="flex flex-wrap gap-1.5">
           <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-accent/15 text-accent font-medium">
             {item.character}
