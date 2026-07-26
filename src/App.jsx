@@ -26,6 +26,7 @@ function App() {
   const [filterChar, setFilterChar] = useState(() => getInitialFilter('character', '全部'));
   const [filterType, setFilterType] = useState(() => getInitialFilter('type', '全部'));
   const [filterStatus, setFilterStatus] = useState(() => getInitialFilter('status', '全部'));
+  const [searchKeyword, setSearchKeyword] = useState(() => getInitialFilter('search', ''));
 
   useEffect(() => {
     const availableChars = getCharactersBySeriesAndGender(filterSeries, filterGender);
@@ -51,9 +52,13 @@ function App() {
       const matchChar = filterChar === '全部' || item.character === filterChar;
       const matchType = filterType === '全部' || item.type === filterType;
       const matchStatus = filterStatus === '全部' || item.status === filterStatus;
-      return matchSeries && matchGender && matchChar && matchType && matchStatus;
+      const matchSearch = !searchKeyword ||
+        item.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+        item.character.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+        item.type.toLowerCase().includes(searchKeyword.toLowerCase());
+      return matchSeries && matchGender && matchChar && matchType && matchStatus && matchSearch;
     });
-  }, [items, filterSeries, filterGender, filterChar, filterType, filterStatus]);
+  }, [items, filterSeries, filterGender, filterChar, filterType, filterStatus, searchKeyword]);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -62,10 +67,11 @@ function App() {
     if (filterChar !== '全部') params.set('character', filterChar);
     if (filterType !== '全部') params.set('type', filterType);
     if (filterStatus !== '全部') params.set('status', filterStatus);
+    if (searchKeyword) params.set('search', searchKeyword);
     const query = params.toString();
     const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
     window.history.replaceState({}, '', newUrl);
-  }, [filterSeries, filterGender, filterChar, filterType, filterStatus]);
+  }, [filterSeries, filterGender, filterChar, filterType, filterStatus, searchKeyword]);
 
   const handleReset = () => {
     setFilterSeries('全部');
@@ -73,6 +79,7 @@ function App() {
     setFilterChar('全部');
     setFilterType('全部');
     setFilterStatus('全部');
+    setSearchKeyword('');
   };
 
   const handleTabChange = (tab) => {
@@ -186,6 +193,36 @@ function App() {
           wishTotalQuantity={wishTotalQuantity}
           totalCount={totalCount}
         />
+
+        <div className="mb-6">
+          <div className="relative max-w-md mx-auto">
+            <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-accent/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+              type="text"
+              value={searchKeyword}
+              onChange={(e) => setSearchKeyword(e.target.value)}
+              placeholder="搜索商品名称、角色、种类..."
+              className="w-full pl-12 pr-10 py-3 rounded-2xl bg-card-bg shadow-card border border-accent/20
+                         text-text-primary placeholder:text-text-secondary/50 text-sm
+                         focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20
+                         transition-all duration-300"
+            />
+            {searchKeyword && (
+              <button
+                onClick={() => setSearchKeyword('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center
+                           rounded-full text-text-secondary/50 hover:text-text-secondary hover:bg-accent/10
+                           transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+          </div>
+        </div>
 
         <FilterBar
           filterSeries={filterSeries}
