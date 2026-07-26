@@ -173,12 +173,12 @@ export const BASE_ITEMS = [
   },
   {
     id: 20,
-    name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ ",
+    name: "2018Live徽章",
+    subtitle: "AIKATSU☆STARS Special Live Tour MUSIC of DREAM!!缶バッジ ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/V35msdn.png"
+    image: "https://i.imgur.com/2xkRpPZ.png"
   },
   {
     id: 21,
@@ -227,12 +227,12 @@ export const BASE_ITEMS = [
   },
   {
     id: 26,
-    name: "夏树未来舞台徽章",
-    subtitle: "夏樹みらい ステージ缶バッジ",
+     name: "海景布徽章(再贩)",
+    subtitle: "アイカツ メモリアルハンカチセット 缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=stage%20badge%20yellow%20haired%20anime%20idol%20aikatsu%20merch&image_size=square_hd"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/YXl6KQ6.png"
   },
   {
     id: 27,
