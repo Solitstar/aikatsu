@@ -18,7 +18,7 @@ git commit -m "deploy: 更新部署 $(date '+%Y-%m-%d %H:%M')"
 
 # 推送到 gh-pages 分支
 echo "🌐 推送到 gh-pages 分支..."
-git subtree push --prefix dist origin gh-pages
+git push origin `git subtree split --prefix dist main`:gh-pages --force
 
 if [ $? -eq 0 ]; then
   echo ""
