@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty, onSetPrice, onIncreaseWishQty, onDecreaseWishQty, onSetWishPrice }) => {
+const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPrice }) => {
   useEffect(() => {
     if (!item) return;
     const handleEsc = (e) => {
@@ -14,7 +14,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
 
   if (!item) return null;
 
-  const totalPrice = (item.price || 0) * (item.quantity || 0);
+  const totalPrice = item.totalPrice || 0;
   const wishTotalPrice = (item.wishPrice || 0) * (item.wishQuantity || 0);
 
   return (
@@ -75,25 +75,6 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                   <span>⭐️</span>
                   已拥有
                 </button>
-                {item.status === 'owned' && (
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-50 border border-yellow-200">
-                    <button
-                      onClick={() => onDecreaseQty(item.id)}
-                      className="w-6 h-6 flex items-center justify-center rounded-full bg-white text-yellow-700 font-bold hover:bg-yellow-100 transition-colors"
-                    >
-                      −
-                    </button>
-                    <span className="font-quick font-bold text-yellow-700 min-w-[24px] text-center">
-                      {item.quantity || 0}
-                    </span>
-                    <button
-                      onClick={() => onIncreaseQty(item.id)}
-                      className="w-6 h-6 flex items-center justify-center rounded-full bg-white text-yellow-700 font-bold hover:bg-yellow-100 transition-colors"
-                    >
-                      +
-                    </button>
-                  </div>
-                )}
                 <button
                   onClick={() => onToggleStatus(item.id, 'wish')}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all ${
@@ -109,49 +90,76 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
 
               {item.status === 'owned' && (
                 <div className="bg-yellow-50/50 rounded-2xl p-4 mb-6 border border-yellow-100">
-                  <p className="text-sm font-semibold text-yellow-700 mb-3">购入记录</p>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">单价</label>
-                      <div className="flex-1 flex items-center gap-2">
-                        <span className="text-text-secondary">¥</span>
-                        <input
-                          type="number"
-                          min="0"
-                          step="0.01"
-                          value={item.price || ''}
-                          onChange={(e) => onSetPrice(item.id, e.target.value)}
-                          placeholder="0.00"
-                          className="flex-1 px-3 py-1.5 rounded-lg border border-yellow-200 bg-white text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent font-quick"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">数量</label>
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() => onDecreaseQty(item.id)}
-                          className="w-7 h-7 flex items-center justify-center rounded-full bg-white text-yellow-700 font-bold border border-yellow-200 hover:bg-yellow-100 transition-colors"
-                        >
-                          −
-                        </button>
-                        <span className="font-quick font-bold text-yellow-700 min-w-[32px] text-center">
-                          {item.quantity || 0}
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="text-sm font-semibold text-yellow-700">购入记录</p>
+                    <button
+                      onClick={() => onAddPriceRecord(item.id)}
+                      className="flex items-center gap-1 px-3 py-1 rounded-full bg-yellow-200 text-yellow-700 text-xs font-medium hover:bg-yellow-300 transition-colors"
+                    >
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                      </svg>
+                      添加记录
+                    </button>
+                  </div>
+                  <div className="space-y-2">
+                    {(item.priceRecords || []).map((record, idx) => (
+                      <div key={record.id} className="flex items-center gap-2 p-2 rounded-xl bg-white/80">
+                        <span className="text-xs text-text-secondary font-quick w-5 text-center flex-shrink-0">
+                          {idx + 1}
+                        </span>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs text-text-secondary">¥</span>
+                          <input
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            value={record.price || ''}
+                            onChange={(e) => onUpdatePriceRecord(item.id, record.id, 'price', e.target.value)}
+                            placeholder="0.00"
+                            className="w-20 px-2 py-1 rounded-lg border border-yellow-200 bg-white text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent font-quick"
+                          />
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <button
+                            onClick={() => onUpdatePriceRecord(item.id, record.id, 'quantity', Math.max(0, (record.quantity || 1) - 1))}
+                            className="w-6 h-6 flex items-center justify-center rounded-full bg-white text-yellow-600 text-sm border border-yellow-200 hover:bg-yellow-100 transition-colors"
+                          >
+                            −
+                          </button>
+                          <span className="font-quick font-bold text-yellow-700 min-w-[20px] text-center text-sm">
+                            {record.quantity || 1}
+                          </span>
+                          <button
+                            onClick={() => onUpdatePriceRecord(item.id, record.id, 'quantity', (record.quantity || 1) + 1)}
+                            className="w-6 h-6 flex items-center justify-center rounded-full bg-white text-yellow-600 text-sm border border-yellow-200 hover:bg-yellow-100 transition-colors"
+                          >
+                            +
+                          </button>
+                        </div>
+                        <span className="text-xs font-quick text-yellow-600 font-medium ml-auto">
+                          ¥{((record.price || 0) * (record.quantity || 0)).toFixed(2)}
                         </span>
                         <button
-                          onClick={() => onIncreaseQty(item.id)}
-                          className="w-7 h-7 flex items-center justify-center rounded-full bg-white text-yellow-700 font-bold border border-yellow-200 hover:bg-yellow-100 transition-colors"
+                          onClick={() => onRemovePriceRecord(item.id, record.id)}
+                          className="w-6 h-6 flex items-center justify-center rounded-full text-red-400 hover:bg-red-50 hover:text-red-500 transition-colors flex-shrink-0"
+                          title="删除此记录"
                         >
-                          +
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
                         </button>
                       </div>
-                    </div>
-                    <div className="flex items-center gap-3 pt-2 border-t border-yellow-200/60">
-                      <span className="text-sm text-text-secondary w-16 flex-shrink-0">总价</span>
-                      <span className="font-quick font-bold text-lg text-yellow-700">
-                        ¥ {totalPrice.toFixed(2)}
-                      </span>
-                    </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-3 pt-3 mt-3 border-t border-yellow-200/60">
+                    <span className="text-sm text-text-secondary">总价</span>
+                    <span className="font-quick font-bold text-lg text-yellow-700">
+                      ¥ {totalPrice.toFixed(2)}
+                    </span>
+                    <span className="text-xs text-yellow-400 ml-auto">
+                      共 {(item.quantity || 0)} 件
+                    </span>
                   </div>
                 </div>
               )}

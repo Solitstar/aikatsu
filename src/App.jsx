@@ -11,7 +11,7 @@ import WishlistShareImage from './components/WishlistShareImage';
 import OwnedShareImage from './components/OwnedShareImage';
 
 function App() {
-  const { items, toggleStatus, setStatus, increaseQuantity, decreaseQuantity, setPrice, increaseWishQuantity, decreaseWishQuantity, setWishPrice, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPrice, totalCount } = useCollection();
+  const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPrice, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPrice, totalCount } = useCollection();
   const [activeTab, setActiveTab] = useState('collection');
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
@@ -176,9 +176,9 @@ function App() {
       item.character,
       item.series,
       item.type,
-      (item.price || 0).toFixed(2),
+      item.quantity > 0 ? ((item.totalPrice || 0) / item.quantity).toFixed(2) : '0.00',
       item.quantity || 0,
-      ((item.price || 0) * (item.quantity || 0)).toFixed(2),
+      (item.totalPrice || 0).toFixed(2),
     ]);
     const totalRow = ['合计', '', '', '', '', ownedTotalQuantity, ownedTotalPrice.toFixed(2)];
     const csvContent = '\uFEFF' + [headers, ...rows, totalRow]
@@ -366,9 +366,9 @@ function App() {
         item={modalItem}
         onClose={() => setSelectedItem(null)}
         onToggleStatus={handleModalToggle}
-        onIncreaseQty={increaseQuantity}
-        onDecreaseQty={decreaseQuantity}
-        onSetPrice={setPrice}
+        onAddPriceRecord={addPriceRecord}
+        onRemovePriceRecord={removePriceRecord}
+        onUpdatePriceRecord={updatePriceRecord}
         onIncreaseWishQty={increaseWishQuantity}
         onDecreaseWishQty={decreaseWishQuantity}
         onSetWishPrice={setWishPrice}
