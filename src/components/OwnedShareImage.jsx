@@ -43,7 +43,7 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
                 crossOrigin="anonymous"
               />
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0 flex flex-col justify-center">
               {item.subtitle && (
                 <p className="text-[9px] text-black/40 leading-tight">{item.subtitle}</p>
               )}
