@@ -35,7 +35,7 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref
             key={item.id}
             className="flex items-center gap-4 bg-white rounded-xl p-4"
           >
-            <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-rose-50">
+            <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 bg-rose-50">
               <img
                 src={item.image}
                 alt={item.name}
