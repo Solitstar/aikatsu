@@ -48,7 +48,7 @@ function App() {
 
   const filteredItems = useMemo(() => {
     return items.filter(item => {
-      const matchSeries = filterSeries === '全部' || item.series === filterSeries;
+      const matchSeries = filterSeries === '全部' || item.series.includes(filterSeries);
       const matchChar = filterChar === '全部' || item.character.includes(filterChar);
       const matchType = filterType === '全部' || item.type === filterType;
       const matchStatus = filterStatus === '全部' || item.status === filterStatus;
