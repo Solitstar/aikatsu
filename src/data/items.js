@@ -48,30 +48,30 @@ export const BASE_ITEMS = [
   },
   {
     id: 6,
-    name: "星宫莓舞台徽章",
-    subtitle: "星宮いちご ステージ缶バッジ",
-    character: "星宫莓",
+    name: "全息Live会场限定徽章",
+    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    character: "其他",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=sparkling%20star%20badge%20pink%20idol%20stage%20theme%20aikatsu%20merchandise&image_size=square_hd"
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/OxbDZKz.png"
   },
   {
     id: 7,
-    name: "雾矢葵亚克力立牌",
-    subtitle: "霧矢あおい アクリルスタンド",
-    character: "雾矢葵",
-    type: "亚克力立牌",
-    size: "约 15cm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=blue%20anime%20girl%20acrylic%20stand%20cool%20idol%20outfit%20aikatsu%20style&image_size=portrait_4_3"
+    name: "2015Live徽章",
+    subtitle: "アイカツ スターアニス 2015年 ジャケバッチ ",
+    character: "其他",
+    type: "徽章",
+    size: "约 40mm",
+    image: "https://i.imgur.com/LSzOFDa.png"
   },
   {
     id: 8,
-    name: "大空明闪耀卡片",
-    subtitle: "大空あかり キラキラカード",
-    character: "大空明",
-    type: "卡片",
-    size: "直径约 63×89mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20sparkling%20trading%20card%20sunshine%20idol%20girl%20aikatsu%20collectible&image_size=portrait_4_3"
+    name: "2016Live徽章",
+    subtitle: "アイカツ スターアニス 2016年 ジャケバッチ ",
+    character: "其他",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/2uRF6rl.png"
   },
   {
     id: 9,
