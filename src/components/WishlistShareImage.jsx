@@ -4,7 +4,7 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref
   return (
     <div
       ref={ref}
-      className="w-[600px] bg-gradient-to-b from-rose-50 to-white p-8"
+      className="w-[700px] bg-gradient-to-b from-rose-50 to-white p-8"
       style={{ fontFamily: "'Quicksand', 'Noto Sans SC', sans-serif" }}
     >
       <div className="text-center mb-8">
@@ -49,7 +49,7 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref
                 <p className="text-xs text-gray-300 truncate">{item.subtitle}</p>
               )}
               <p className="font-bold text-gray-700 text-sm truncate">{item.name}</p>
-              <p className="text-xs text-gray-400">{item.character} · {item.type}</p>
+              <p className="text-xs text-gray-400 truncate">{item.character} · {item.type}</p>
             </div>
             <div className="text-right flex-shrink-0">
               <p className="text-rose-500 font-bold text-sm">
