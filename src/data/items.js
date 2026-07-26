@@ -4,6 +4,7 @@ export const BASE_ITEMS = [
   {
     id: 1,
     name: "DMM抽赏徽章",
+    subtitle: "アイカツ！ DMMスクラッチくじ 缶バッジ",
     character: "星宫莓",
     type: "徽章",
     size: "直径 57mm",
@@ -12,6 +13,7 @@ export const BASE_ITEMS = [
   {
     id: 2,
     name: "全息Live会场限定徽章",
+    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
     character: "夏树未来,有栖川乙女,一之濑枫,冴草纪伊",
     type: "徽章",
     size: "直径 40mm",
@@ -20,6 +22,7 @@ export const BASE_ITEMS = [
   {
     id: 3,
     name: "雾矢葵闪耀卡片",
+    subtitle: "霧矢あおい キラキラカード",
     character: "雾矢葵",
     type: "卡片",
     size: "63×89mm",
@@ -28,6 +31,7 @@ export const BASE_ITEMS = [
   {
     id: 4,
     name: "大空明文件夹",
+    subtitle: "大空あかり クリアファイル",
     character: "大空明",
     type: "文件夹",
     size: "A4",
@@ -36,6 +40,7 @@ export const BASE_ITEMS = [
   {
     id: 5,
     name: "音城塞拉毛绒玩偶",
+    subtitle: "音城セイラ ぬいぐるみ",
     character: "音城塞拉",
     type: "毛绒玩偶",
     size: "约 20cm",
@@ -44,6 +49,7 @@ export const BASE_ITEMS = [
   {
     id: 6,
     name: "星宫莓舞台徽章",
+    subtitle: "星宮いちご ステージ缶バッジ",
     character: "星宫莓",
     type: "徽章",
     size: "直径 57mm",
@@ -52,6 +58,7 @@ export const BASE_ITEMS = [
   {
     id: 7,
     name: "雾矢葵亚克力立牌",
+    subtitle: "霧矢あおい アクリルスタンド",
     character: "雾矢葵",
     type: "亚克力立牌",
     size: "约 15cm",
@@ -60,6 +67,7 @@ export const BASE_ITEMS = [
   {
     id: 8,
     name: "大空明闪耀卡片",
+    subtitle: "大空あかり キラキラカード",
     character: "大空明",
     type: "卡片",
     size: "63×89mm",
@@ -68,6 +76,7 @@ export const BASE_ITEMS = [
   {
     id: 9,
     name: "星宫莓毛绒玩偶",
+    subtitle: "星宮いちご ぬいぐるみ",
     character: "星宫莓",
     type: "毛绒玩偶",
     size: "约 20cm",
@@ -76,6 +85,7 @@ export const BASE_ITEMS = [
   {
     id: 10,
     name: "雾矢葵文件夹",
+    subtitle: "霧矢あおい クリアファイル",
     character: "雾矢葵",
     type: "文件夹",
     size: "A4",
@@ -84,6 +94,7 @@ export const BASE_ITEMS = [
   {
     id: 11,
     name: "音城塞拉徽章",
+    subtitle: "音城セイラ 缶バッジ",
     character: "音城塞拉",
     type: "徽章",
     size: "直径 57mm",
@@ -92,6 +103,7 @@ export const BASE_ITEMS = [
   {
     id: 12,
     name: "大空明亚克力立牌",
+    subtitle: "大空あかり アクリルスタンド",
     character: "大空明",
     type: "亚克力立牌",
     size: "约 15cm",
@@ -100,6 +112,7 @@ export const BASE_ITEMS = [
   {
     id: 13,
     name: "星宫莓文件夹",
+    subtitle: "星宮いちご クリアファイル",
     character: "星宫莓",
     type: "文件夹",
     size: "A4",
@@ -108,6 +121,7 @@ export const BASE_ITEMS = [
   {
     id: 14,
     name: "雾矢葵毛绒玩偶",
+    subtitle: "霧矢あおい ぬいぐるみ",
     character: "雾矢葵",
     type: "毛绒玩偶",
     size: "约 20cm",
@@ -116,6 +130,7 @@ export const BASE_ITEMS = [
   {
     id: 15,
     name: "音城塞拉卡片",
+    subtitle: "音城セイラ コレクションカード",
     character: "音城塞拉",
     type: "卡片",
     size: "63×89mm",
@@ -124,6 +139,7 @@ export const BASE_ITEMS = [
   {
     id: 16,
     name: "大空明毛绒玩偶",
+    subtitle: "大空あかり ぬいぐるみ",
     character: "大空明",
     type: "毛绒玩偶",
     size: "约 20cm",
@@ -132,6 +148,7 @@ export const BASE_ITEMS = [
   {
     id: 17,
     name: "星宫莓收藏卡片套装",
+    subtitle: "星宮いちご コレクションカードセット",
     character: "星宫莓",
     type: "卡片",
     size: "63×89mm",
@@ -140,6 +157,7 @@ export const BASE_ITEMS = [
   {
     id: 18,
     name: "音城塞拉亚克力立牌",
+    subtitle: "音城セイラ アクリルスタンド",
     character: "音城塞拉",
     type: "亚克力立牌",
     size: "约 15cm",
@@ -148,6 +166,7 @@ export const BASE_ITEMS = [
   {
     id: 19,
     name: "大空明徽章",
+    subtitle: "大空あかり 缶バッジ",
     character: "大空明",
     type: "徽章",
     size: "直径 57mm",
@@ -156,6 +175,7 @@ export const BASE_ITEMS = [
   {
     id: 20,
     name: "音城塞拉文件夹",
+    subtitle: "音城セイラ クリアファイル",
     character: "音城塞拉",
     type: "文件夹",
     size: "A4",

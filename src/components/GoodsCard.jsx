@@ -50,6 +50,11 @@ const GoodsCard = ({ item, onClick }) => {
       </div>
 
       <div className="p-3 sm:p-4">
+        {item.subtitle && (
+          <p className="text-xs text-text-secondary font-quick mb-0.5 truncate">
+            {item.subtitle}
+          </p>
+        )}
         <h3 className="font-medium text-text-primary text-sm sm:text-base mb-2 line-clamp-2 leading-tight">
           {item.name}
         </h3>

@@ -12,32 +12,6 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
     };
   }, [item, onClose]);
 
-  const getNameJp = (name) => {
-    const nameMap = {
-      'DMM抽赏徽章': 'アイカツ！ DMMスクラッチくじ 缶バッジ ',
-      '全息Live会场限定徽章': 'アイカツ Liveイリュージョン 缶バッジセット 会場限定 ',
-      '雾矢葵闪耀卡片': '霧矢あおい キラキラカード',
-      '大空明文件夹': '大空あかり クリアファイル',
-      '音城塞拉毛绒玩偶': '音城セイラ ぬいぐるみ',
-      '星宫莓舞台徽章': '星宮いちご ステージ缶バッジ',
-      '雾矢葵亚克力立牌': '霧矢あおい アクリルスタンド',
-      '大空明闪耀卡片': '大空あかり キラキラカード',
-      '星宫莓毛绒玩偶': '星宮いちご ぬいぐるみ',
-      '雾矢葵文件夹': '霧矢あおい クリアファイル',
-      '音城塞拉徽章': '音城セイラ 缶バッジ',
-      '大空明亚克力立牌': '大空あかり アクリルスタンド',
-      '星宫莓文件夹': '星宮いちご クリアファイル',
-      '雾矢葵毛绒玩偶': '霧矢あおい ぬいぐるみ',
-      '音城塞拉卡片': '音城セイラ コレクションカード',
-      '大空明毛绒玩偶': '大空あかり ぬいぐるみ',
-      '星宫莓收藏卡片套装': '星宮いちご コレクションカードセット',
-      '音城塞拉亚克力立牌': '音城セイラ アクリルスタンド',
-      '大空明徽章': '大空あかり 缶バッジ',
-      '音城塞拉文件夹': '音城セイラ クリアファイル',
-    };
-    return nameMap[name] || name;
-  };
-
   if (!item) return null;
 
   const totalPrice = (item.price || 0) * (item.quantity || 0);
@@ -80,9 +54,11 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
             </div>
 
             <div className="flex-1 flex flex-col justify-center">
-              <p className="text-sm text-text-secondary font-quick mb-1">
-                {getNameJp(item.name)}
-              </p>
+              {item.subtitle && (
+                <p className="text-sm text-text-secondary font-quick mb-1">
+                  {item.subtitle}
+                </p>
+              )}
               <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4">
                 {item.name}
               </h3>

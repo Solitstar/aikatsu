@@ -45,6 +45,9 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
               />
             </div>
             <div className="flex-1 min-w-0">
+              {item.subtitle && (
+                <p className="text-xs text-gray-300 truncate">{item.subtitle}</p>
+              )}
               <p className="font-bold text-gray-700 text-sm truncate">{item.name}</p>
               <p className="text-xs text-gray-400">{item.character} · {item.type}</p>
             </div>
