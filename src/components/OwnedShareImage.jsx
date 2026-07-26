@@ -8,24 +8,23 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
       style={{ fontFamily: "'Quicksand', 'Noto Sans SC', sans-serif" }}
     >
       <div className="text-center mb-8">
-        <div className="text-5xl mb-2">⭐</div>
-        <h1 className="text-3xl font-bold text-yellow-600 mb-1">MY COLLECTION</h1>
-        <p className="text-yellow-400 text-sm">我的收藏 · 偶像活动周边收藏</p>
+        <h1 className="text-3xl font-bold text-black mb-1">MY COLLECTION</h1>
+        <p className="text-black/60 text-sm">我的收藏 · 偶像活动周边收藏</p>
       </div>
 
       <div className="bg-white rounded-2xl shadow-md p-5 mb-6">
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
-            <p className="text-xs text-gray-400 mb-1">🏷 种类</p>
-            <p className="text-2xl font-bold text-yellow-600">{items.length}</p>
+            <p className="text-xs text-black/50 mb-1">🏷 种类</p>
+            <p className="text-2xl font-bold text-black">{items.length}</p>
           </div>
           <div>
-            <p className="text-xs text-gray-400 mb-1">📦 总件数</p>
-            <p className="text-2xl font-bold text-yellow-600">{totalQuantity}</p>
+            <p className="text-xs text-black/50 mb-1">📦 总件数</p>
+            <p className="text-2xl font-bold text-black">{totalQuantity}</p>
           </div>
           <div>
-            <p className="text-xs text-gray-400 mb-1">💰 购入总价</p>
-            <p className="text-2xl font-bold text-yellow-600">¥{totalPrice.toFixed(2)}</p>
+            <p className="text-xs text-black/50 mb-1">💰 购入总价</p>
+            <p className="text-2xl font-bold text-black">¥{totalPrice.toFixed(2)}</p>
           </div>
         </div>
       </div>
@@ -46,16 +45,16 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
             </div>
             <div className="flex-1 min-w-0">
               {item.subtitle && (
-                <p className="text-xs text-gray-300 leading-tight">{item.subtitle}</p>
+                <p className="text-xs text-black/40 leading-tight">{item.subtitle}</p>
               )}
-              <p className="font-bold text-gray-700 text-sm leading-tight">{item.name}</p>
-              <p className="text-xs text-gray-400 leading-tight">{item.character} · {item.type}</p>
+              <p className="font-bold text-black text-sm leading-tight">{item.name}</p>
+              <p className="text-xs text-black/50 leading-tight">{item.character} · {item.type}</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <p className="text-yellow-600 font-bold text-sm whitespace-nowrap">
+              <p className="text-black font-bold text-sm whitespace-nowrap">
                 ¥{(item.totalPrice || 0).toFixed(2)}
               </p>
-              <p className="text-xs text-gray-400 whitespace-nowrap">
+              <p className="text-xs text-black/50 whitespace-nowrap">
                 {item.quantity || 0} 件
               </p>
             </div>
@@ -63,9 +62,9 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
         ))}
       </div>
 
-      <div className="text-center text-yellow-400 text-xs">
-        <p>💖 Made with love for Aikatsu fans</p>
-        <p className="mt-1 text-yellow-300">AIKATSU GOODS COLLECTION</p>
+      <div className="text-center text-black/40 text-xs">
+        <p>Made by Solitstar</p>
+        <p className="mt-1 text-black/30">AIKATSU GOODS COLLECTION</p>
       </div>
     </div>
   );
