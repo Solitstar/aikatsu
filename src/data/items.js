@@ -3,10 +3,10 @@ import { getCharacterInfo } from './characters';
 export const BASE_ITEMS = [
   {
     id: 1,
-    name: "草莓爱心徽章",
+    name: "DMM抽赏徽章",
     character: "星宫莓",
     type: "徽章",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20pink%20heart%20shaped%20badge%20with%20strawberry%20theme%20aikatsu%20style%20anime%20merchandise&image_size=square_hd"
+    image: "https://i.imgur.com/fwvbu2W.jpeg"
   },
   {
     id: 2,
