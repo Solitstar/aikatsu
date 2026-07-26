@@ -144,7 +144,7 @@ function App() {
     if (!wishShareRef.current) return;
     setExportingImage(true);
     try {
-      const scale = Math.min(window.devicePixelRatio || 2, 2);
+      const scale = 2;
       const canvas = await html2canvas(wishShareRef.current, {
         scale,
         useCORS: true,
@@ -207,7 +207,7 @@ function App() {
     if (!ownedShareRef.current) return;
     setExportingImage(true);
     try {
-      const scale = Math.min(window.devicePixelRatio || 2, 2);
+      const scale = 2;
       const canvas = await html2canvas(ownedShareRef.current, {
         scale,
         useCORS: true,
