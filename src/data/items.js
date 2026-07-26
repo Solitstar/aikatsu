@@ -23,7 +23,7 @@ export const BASE_ITEMS = [
     id: 3,
     name: "全息Live会场限定徽章",
     subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
-    character: "雾矢葵，藤堂尤里卡，音城塞拉",
+    character: "雾矢葵,藤堂尤里卡,音城塞拉",
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/CFTghib.png"
@@ -32,7 +32,7 @@ export const BASE_ITEMS = [
     id: 4,
     name: "全息Live会场限定徽章",
     subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
-    character: "紫吹兰，神崎美月，风沢空",
+    character: "紫吹兰,神崎美月,风沢空",
     type: "徽章",
     size: "直径约 40 mm",
     image: "https://i.imgur.com/JAaWO7J.png"
@@ -41,7 +41,7 @@ export const BASE_ITEMS = [
     id: 5,
    name: "全息Live会场限定徽章",
     subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
-    character: "星宫莓，大空明，姬里玛利亚，北大路樱",
+    character: "星宫莓,大空明,姬里玛利亚,北大路樱",
     type: "徽章",
     size: "直径约 40 mm",
     image: "https://i.imgur.com/QwB8QZu.png"
@@ -67,7 +67,7 @@ export const BASE_ITEMS = [
   {
     id: 8,
     name: "2016Live徽章",
-    subtitle: "アイカツ スターアニス 2016年 ジャケバッチ ",
+    subtitle: "アイカツ ミュージックフェスタ2016 缶バッジ ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
@@ -75,7 +75,7 @@ export const BASE_ITEMS = [
   },
   {
     ame: "2017Live徽章",
-    subtitle: "アイカツ スターアニス 2016年 ジャケバッチ ",
+    subtitle: "アイカツ ミュージックフェスタ2017 缶バッジ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
@@ -83,66 +83,66 @@ export const BASE_ITEMS = [
   },
   {
     id: 10,
-    name: "雾矢葵文件夹",
-    subtitle: "霧矢あおい クリアファイル",
-    character: "雾矢葵",
-    type: "文件夹",
-    size: " A4",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=blue%20anime%20clear%20file%20folder%20cool%20idol%20girl%20aikatsu%20merchandise&image_size=portrait_4_3"
+    name: "武道馆Live徽章",
+    subtitle: "アイカツ！ミュージックフェスタ in アイカツ武道館 缶バッジ",
+    character: "其他",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/3XvYa2s.png"
   },
   {
     id: 11,
-    name: "音城塞拉徽章",
-    subtitle: "音城セイラ 缶バッジ",
-    character: "音城塞拉",
+    name: "大游行Live徽章",
+    subtitle: "アイカツオンパレード！ユニットライブツアー ユニパレ！ 缶バッジ",
+    character: "其他",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20moon%20badge%20rock%20idol%20theme%20aikatsu%20merchandise%20cool%20style&image_size=square_hd"
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/GfHOYay.png"
   },
   {
     id: 12,
-    name: "大空明亚克力立牌",
-    subtitle: "大空あかり アクリルスタンド",
-    character: "大空明",
-    type: "亚克力立牌",
-    size: "约 15cm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20haired%20anime%20girl%20acrylic%20stand%20sunshine%20idol%20outfit%20aikatsu&image_size=portrait_4_3"
+    name: "友代Live徽章",
+    subtitle: "BEST FRIENDS！ スペシャルLIVE ～Thanks⇄OK～ 缶バッジ",
+    character: "其他",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/4ti8nYN.png"
   },
   {
     id: 13,
-    name: "星宫莓文件夹",
-    subtitle: "星宮いちご クリアファイル",
-    character: "星宫莓",
-    type: "文件夹",
-    size: "A4",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=pink%20anime%20clear%20file%20folder%20strawberry%20idol%20girl%20aikatsu%20merchandise&image_size=portrait_4_3"
+    name: "Vivid Kiss品牌徽章",
+    subtitle: "アイカツ デザインマート Vivid Kiss 缶バッジ",
+    character: "其他,夏树未来,新条雏姬",
+    type: "徽章",
+    size: "直径约 50mm",
+    image: "https://i.imgur.com/RoNG8Ne.png"
   },
   {
     id: 14,
-    name: "雾矢葵毛绒玩偶",
-    subtitle: "霧矢あおい ぬいぐるみ",
-    character: "雾矢葵",
-    type: "毛绒玩偶",
-    size: "约 20cm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=blue%20chibi%20plush%20doll%20cool%20anime%20idol%20girl%20aikatsu%20cute&image_size=square_hd"
+    name: "Vivid Kiss品牌徽章",
+    subtitle: "アイカツ デザインマート Vivid Kiss 缶バッジ",
+    character: "其他,夏树未来,新条雏姬",
+    type: "徽章",
+    size: "直径约 30mm",
+    image: "https://i.imgur.com/uJYq7oL.png"
   },
   {
     id: 15,
-    name: "音城塞拉卡片",
-    subtitle: "音城セイラ コレクションカード",
-    character: "音城塞拉",
-    type: "卡片",
-    size: "63×89mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20rock%20style%20trading%20card%20cool%20idol%20girl%20aikatsu%20collectible&image_size=portrait_4_3"
+    name: "WM组合徽章",
+    subtitle: "WM ユニットおうえんグッズセット 「アイカツ! AIKATSU! STYLE」 缶バッジ",
+    character: "其他,夏树未来,神崎美月",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/Fx8ZOQu.png"
   },
   {
     id: 16,
-    name: "大空明毛绒玩偶",
-    subtitle: "大空あかり ぬいぐるみ",
-    character: "大空明",
-    type: "毛绒玩偶",
-    size: "约 20cm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20chibi%20plush%20doll%20sunshine%20anime%20idol%20girl%20aikatsu%20cute&image_size=square_hd"
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶 グッズセットB",
+    character: "其他",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/vCT5dYr.png"
   },
   {
     id: 17,
