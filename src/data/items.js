@@ -74,7 +74,7 @@ export const BASE_ITEMS = [
     image: "https://i.imgur.com/2uRF6rl.png"
   },
   {
-    ame: "2017Live徽章",
+    name: "2017Live徽章",
     subtitle: "アイカツ ミュージックフェスタ2017 缶バッジ",
     character: "其他",
     type: "徽章",
@@ -138,47 +138,263 @@ export const BASE_ITEMS = [
   {
     id: 16,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶 グッズセットB",
+    subtitle: "アイカツ ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/vCT5dYr.png"
+    image: "https://i.imgur.com/AG4y677.png"
   },
   {
     id: 17,
-    name: "星宫莓收藏卡片套装",
-    subtitle: "星宮いちご コレクションカードセット",
-    character: "星宫莓",
-    type: "卡片",
-    size: "63×89mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=pink%20premium%20trading%20card%20set%20strawberry%20idol%20aikatsu%20collector%20edition&image_size=portrait_4_3"
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶バッジ",
+    character: "星宫莓,雾矢葵,紫吹兰,有栖川乙女,藤堂尤里卡,北大路樱,一之濑枫,神崎美月",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/3wih2wM.png"
   },
   {
     id: 18,
-    name: "音城塞拉亚克力立牌",
-    subtitle: "音城セイラ アクリルスタンド",
-    character: "音城塞拉",
-    type: "亚克力立牌",
-    size: "约 15cm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20haired%20anime%20girl%20acrylic%20stand%20rock%20idol%20outfit%20aikatsu%20cool&image_size=portrait_4_3"
-  },
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶バッジ",
+    character: "星宫莓",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/v0P9Wot.png"
+    },
   {
     id: 19,
-    name: "大空明徽章",
-    subtitle: "大空あかり 缶バッジ",
-    character: "大空明",
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶バッジ ",
+    character: "其他",
     type: "徽章",
-    size: "直径 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20sun%20badge%20cheerful%20idol%20theme%20aikatsu%20merchandise%20cute&image_size=square_hd"
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/V35msdn.png"
   },
   {
     id: 20,
-    name: "音城塞拉文件夹",
-    subtitle: "音城セイラ クリアファイル",
-    character: "音城塞拉",
-    type: "文件夹",
-    size: "A4",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20anime%20clear%20file%20folder%20rock%20idol%20girl%20aikatsu%20merchandise%20cool&image_size=portrait_4_3"
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶バッジ ",
+    character: "其他",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/V35msdn.png"
+  },
+  {
+    id: 21,
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶バッジ ",
+    character: "其他",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/qoOBrVG.png"
+  },
+  {
+    id: 22,
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶バッジ ",
+    character: "星宫莓,紫吹兰",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/S4yh8dL.png"
+  },
+  {
+    id: 23,
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶バッジ ",
+    character: "其他",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/v2y3c7X.pngg"
+  },
+  {
+    id: 24,
+    name: "布艺(食玩)徽章",
+    subtitle: "アイカツ ワッペン缶バッジ ",
+    character: "星宫莓,雾矢葵,紫吹兰",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/0z9i6XP.png"
+  },
+  {
+    id: 25,
+    name: "海景布徽章(初版)",
+    subtitle: "アイカツ メモリアルハンカチセット 缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/85MiwUC.png"
+  },
+  {
+    id: 26,
+    name: "夏树未来舞台徽章",
+    subtitle: "夏樹みらい ステージ缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=stage%20badge%20yellow%20haired%20anime%20idol%20aikatsu%20merch&image_size=square_hd"
+  },
+  {
+    id: 27,
+    name: "夏树未来限定徽章",
+    subtitle: "夏樹みらい 限定缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=limited%20edition%20badge%20yellow%20anime%20idol%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 28,
+    name: "夏树未来收藏徽章",
+    subtitle: "夏樹みらい コレクション缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=collectible%20badge%20cute%20anime%20idol%20yellow%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 29,
+    name: "夏树未来特典徽章",
+    subtitle: "夏樹みらい 特典缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=special%20badge%20yellow%20idol%20anime%20girl%20aikatsu%20merch&image_size=square_hd"
+  },
+  {
+    id: 30,
+    name: "夏树未来扭蛋徽章",
+    subtitle: "夏樹みらい ガシャポン缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=gacha%20badge%20yellow%20anime%20idol%20aikatsu%20cute&image_size=square_hd"
+  },
+  {
+    id: 31,
+    name: "夏树未来Q版徽章",
+    subtitle: "夏樹みらい デフォルメ缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chibi%20badge%20yellow%20haired%20anime%20girl%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 32,
+    name: "夏树未来剧场版徽章",
+    subtitle: "夏樹みらい 劇場版缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=movie%20badge%20yellow%20anime%20idol%20aikatsu%20pin&image_size=square_hd"
+  },
+  {
+    id: 33,
+    name: "夏树未来纪念徽章",
+    subtitle: "夏樹みらい 記念缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=memorial%20badge%20cute%20yellow%20anime%20girl%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 34,
+    name: "夏树未来活动徽章",
+    subtitle: "夏樹みらい イベント缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=event%20badge%20yellow%20anime%20idol%20aikatsu%20merchandise&image_size=square_hd"
+  },
+  {
+    id: 35,
+    name: "夏树未来闪亮徽章",
+    subtitle: "夏樹みらい キラキラ缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=sparkling%20badge%20yellow%20anime%20idol%20girl%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 36,
+    name: "夏树未来合作徽章",
+    subtitle: "夏樹みらい コラボ缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 50mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=collaboration%20badge%20yellow%20anime%20idol%20aikatsu%20cute&image_size=square_hd"
+  },
+  {
+    id: 37,
+    name: "夏树未来抽赏徽章",
+    subtitle: "夏樹みらい くじ缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=lottery%20badge%20yellow%20anime%20girl%20idol%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 38,
+    name: "夏树未来冬季徽章",
+    subtitle: "夏樹みらい 冬限定缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=winter%20badge%20yellow%20anime%20idol%20cute%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 39,
+    name: "夏树未来夏日徽章",
+    subtitle: "夏樹みらい 夏限定缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=summer%20badge%20yellow%20anime%20idol%20aikatsu%20merch&image_size=square_hd"
+  },
+  {
+    id: 40,
+    name: "夏树未来星光徽章",
+    subtitle: "夏樹みらい スターライト缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=starlight%20badge%20yellow%20anime%20girl%20idol%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 41,
+    name: "夏树未来梦幻徽章",
+    subtitle: "夏樹みらい ドリーム缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dream%20badge%20cute%20yellow%20anime%20idol%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 42,
+    name: "夏树未来微笑徽章",
+    subtitle: "夏樹みらい スマイル缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smile%20badge%20yellow%20anime%20idol%20girl%20aikatsu&image_size=square_hd"
+  },
+  {
+    id: 43,
+    name: "夏树未来彩虹徽章",
+    subtitle: "夏樹みらい レインボー缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=rainbow%20badge%20yellow%20anime%20idol%20aikatsu%20cute&image_size=square_hd"
+  },
+  {
+    id: 44,
+    name: "夏树未来闪耀徽章",
+    subtitle: "夏樹みらい シャイニング缶バッジ",
+    character: "夏树未来",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=shining%20badge%20yellow%20anime%20idol%20girl%20aikatsu&image_size=square_hd"
   },
 ];
 
