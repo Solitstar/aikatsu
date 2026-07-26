@@ -14,7 +14,7 @@ export const BASE_ITEMS = [
     name: "全息Live会场限定徽章",
     character: "夏树未来,有栖川乙女,一之濑枫,冴草纪伊",
     type: "徽章",
-    size: "直径 57mm",
+    size: "直径 40mm",
     image: "https://i.imgur.com/65mqqHu.png"
   },
   {
