@@ -144,13 +144,14 @@ function App() {
     if (!wishShareRef.current) return;
     setExportingImage(true);
     try {
+      const scale = Math.min(window.devicePixelRatio || 2, 2);
       const canvas = await html2canvas(wishShareRef.current, {
-        scale: 2,
+        scale,
         useCORS: true,
         allowTaint: true,
         backgroundColor: null,
-        windowWidth: wishShareRef.current.scrollWidth,
-        windowHeight: wishShareRef.current.scrollHeight,
+        width: wishShareRef.current.scrollWidth,
+        height: wishShareRef.current.scrollHeight,
       });
       const link = document.createElement('a');
       const date = new Date().toISOString().slice(0, 10);
@@ -206,13 +207,14 @@ function App() {
     if (!ownedShareRef.current) return;
     setExportingImage(true);
     try {
+      const scale = Math.min(window.devicePixelRatio || 2, 2);
       const canvas = await html2canvas(ownedShareRef.current, {
-        scale: 2,
+        scale,
         useCORS: true,
         allowTaint: true,
         backgroundColor: null,
-        windowWidth: ownedShareRef.current.scrollWidth,
-        windowHeight: ownedShareRef.current.scrollHeight,
+        width: ownedShareRef.current.scrollWidth,
+        height: ownedShareRef.current.scrollHeight,
       });
       const link = document.createElement('a');
       const date = new Date().toISOString().slice(0, 10);
