@@ -1,4 +1,4 @@
-export const SERIES_LIST = ['全部', '初代', '明代', '星代', '友代', '大游行', '行星', 'Academy'];
+export const SERIES_LIST = ['全部', '初代', '明代', '星代', '友代', '大游行', '行星', 'Academy', '其他'];
 export const GENDER_OPTIONS = ['全部', '女', '男'];
 
 const CHARACTER_DATABASE = [

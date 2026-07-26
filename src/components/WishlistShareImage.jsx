@@ -45,10 +45,10 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref
             </div>
             <div className="flex-1 min-w-0">
               {item.subtitle && (
-                <p className="text-[11px] text-black/40 leading-tight">{item.subtitle}</p>
+                <p className="text-[10px] text-black/40 leading-tight">{item.subtitle}</p>
               )}
               <p className="font-bold text-black text-sm leading-tight">{item.name}</p>
-              <p className="text-[11px] text-black/50 leading-tight">{item.character} · {item.type}</p>
+              <p className="text-[10px] text-black/50 leading-tight">{item.character} · {item.type}</p>
             </div>
             <div className="text-right flex-shrink-0">
               <p className="text-black font-bold text-sm whitespace-nowrap">
