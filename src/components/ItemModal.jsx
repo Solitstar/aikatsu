@@ -34,10 +34,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
             onClick={onClose}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 text-text-secondary text-sm font-medium hover:bg-white hover:text-text-primary transition-all"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            返回
+            ◀ 返回
           </button>
         </div>
 
@@ -96,10 +93,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                       onClick={() => onAddPriceRecord(item.id)}
                       className="flex items-center gap-1 px-3 py-1 rounded-full bg-yellow-200 text-yellow-700 text-xs font-medium hover:bg-yellow-300 transition-colors"
                     >
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                      添加记录
+                      ➕ 添加记录
                     </button>
                   </div>
                   <div className="space-y-2">
@@ -145,9 +139,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                           className="w-6 h-6 flex items-center justify-center rounded-full text-red-400 hover:bg-red-50 hover:text-red-500 transition-colors flex-shrink-0"
                           title="删除此记录"
                         >
-                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
+                          ✕
                         </button>
                       </div>
                     ))}
