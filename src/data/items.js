@@ -7,7 +7,7 @@ export const BASE_ITEMS = [
     subtitle: "アイカツ！ DMMスクラッチくじ 缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径 57mm",
+    size: "直径约 57mm",
     image: "https://i.imgur.com/kTWKYmg.png"
   },
   {
@@ -16,35 +16,35 @@ export const BASE_ITEMS = [
     subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
     character: "夏树未来,有栖川乙女,一之濑枫,冴草纪伊",
     type: "徽章",
-    size: "直径 40mm",
+    size: "直径约 40mm",
     image: "https://i.imgur.com/65mqqHu.png"
   },
   {
     id: 3,
-    name: "雾矢葵闪耀卡片",
-    subtitle: "霧矢あおい キラキラカード",
-    character: "雾矢葵",
-    type: "卡片",
-    size: "63×89mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=sparkling%20blue%20trading%20card%20anime%20idol%20girl%20aikatsu%20style%20collectible&image_size=portrait_4_3"
+    name: "全息Live会场限定徽章",
+    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    character: "雾矢葵，藤堂尤里卡，音城塞拉",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/CFTghib.png"
   },
   {
     id: 4,
-    name: "大空明文件夹",
-    subtitle: "大空あかり クリアファイル",
-    character: "大空明",
-    type: "文件夹",
-    size: "A4",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20clear%20file%20folder%20orange%20haired%20idol%20girl%20aikatsu%20merchandise&image_size=portrait_4_3"
+    name: "全息Live会场限定徽章",
+    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    character: "紫吹兰，神崎美月，风沢空",
+    type: "徽章",
+    size: "直径约 40 mm",
+    image: "https://i.imgur.com/JAaWO7J.png"
   },
   {
     id: 5,
-    name: "音城塞拉毛绒玩偶",
-    subtitle: "音城セイラ ぬいぐるみ",
-    character: "音城塞拉",
-    type: "毛绒玩偶",
-    size: "约 20cm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20plush%20doll%20purple%20haired%20anime%20idol%20girl%20chibi%20style%20aikatsu&image_size=square_hd"
+   name: "全息Live会场限定徽章",
+    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    character: "星宫莓，大空明，姬里玛利亚，北大路樱",
+    type: "徽章",
+    size: "直径约 40 mm",
+    image: "https://i.imgur.com/QwB8QZu.png"
   },
   {
     id: 6,
@@ -52,7 +52,7 @@ export const BASE_ITEMS = [
     subtitle: "星宮いちご ステージ缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径 57mm",
+    size: "直径约 57mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=sparkling%20star%20badge%20pink%20idol%20stage%20theme%20aikatsu%20merchandise&image_size=square_hd"
   },
   {
@@ -70,7 +70,7 @@ export const BASE_ITEMS = [
     subtitle: "大空あかり キラキラカード",
     character: "大空明",
     type: "卡片",
-    size: "63×89mm",
+    size: "直径约 63×89mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20sparkling%20trading%20card%20sunshine%20idol%20girl%20aikatsu%20collectible&image_size=portrait_4_3"
   },
   {
@@ -88,7 +88,7 @@ export const BASE_ITEMS = [
     subtitle: "霧矢あおい クリアファイル",
     character: "雾矢葵",
     type: "文件夹",
-    size: "A4",
+    size: " A4",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=blue%20anime%20clear%20file%20folder%20cool%20idol%20girl%20aikatsu%20merchandise&image_size=portrait_4_3"
   },
   {
@@ -97,7 +97,7 @@ export const BASE_ITEMS = [
     subtitle: "音城セイラ 缶バッジ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径 57mm",
+    size: "直径约 57mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20moon%20badge%20rock%20idol%20theme%20aikatsu%20merchandise%20cool%20style&image_size=square_hd"
   },
   {
