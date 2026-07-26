@@ -74,13 +74,12 @@ export const BASE_ITEMS = [
     image: "https://i.imgur.com/2uRF6rl.png"
   },
   {
-    id: 9,
-    name: "星宫莓毛绒玩偶",
-    subtitle: "星宮いちご ぬいぐるみ",
-    character: "星宫莓",
-    type: "毛绒玩偶",
-    size: "约 20cm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=pink%20chibi%20plush%20doll%20cute%20anime%20idol%20girl%20strawberry%20theme%20aikatsu&image_size=square_hd"
+    ame: "2017Live徽章",
+    subtitle: "アイカツ スターアニス 2016年 ジャケバッチ ",
+    character: "其他",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/2yleCgX.png"
   },
   {
     id: 10,

@@ -4,7 +4,7 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
   return (
     <div
       ref={ref}
-      className="w-[800px] bg-gradient-to-b from-yellow-50 to-white p-10"
+      className="w-[850px] bg-gradient-to-b from-yellow-50 to-white p-10"
       style={{ fontFamily: "'Quicksand', 'Noto Sans SC', sans-serif" }}
     >
       <div className="text-center mb-8">
@@ -35,7 +35,7 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
             key={item.id}
             className="flex items-center gap-4 bg-white rounded-xl p-4"
           >
-            <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-yellow-50">
+            <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-yellow-50">
               <img
                 src={item.image}
                 alt={item.name}
@@ -45,7 +45,7 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
             </div>
             <div className="flex-1 min-w-0">
               {item.subtitle && (
-                <p className="text-[10px] text-black/40 leading-tight">{item.subtitle}</p>
+                <p className="text-[9px] text-black/40 leading-tight">{item.subtitle}</p>
               )}
               <p className="font-bold text-black text-sm leading-tight">{item.name}</p>
               <p className="text-[10px] text-black/50 leading-tight">{item.character} · {item.type}</p>
