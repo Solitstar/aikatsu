@@ -14,37 +14,37 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
 
   const getSizeLabel = (type) => {
     const sizes = {
-      '寰界珷': '鐩村緞 58mm',
-      '浜氬厠鍔涚珛鐗?: '绾?15cm',
-      '鍗＄墖': '63脳89mm',
-      '鏂囦欢澶?: 'A4',
-      '姣涚粧鐜╁伓': '绾?20cm',
+      '徽章': '直径 58mm',
+      '亚克力立牌': '约 15cm',
+      '卡片': '63×89mm',
+      '文件夹': 'A4',
+      '毛绒玩偶': '约 20cm',
     };
     return sizes[type] || '-';
   };
 
   const getNameJp = (name) => {
     const nameMap = {
-      '鑽夎帗鐖卞績寰界珷': '銇勩仭銇斻儚銉笺儓缂躲儛銉冦偢',
-      '鏄熷鑾撲簹鍏嬪姏绔嬬墝': '鏄熷銇勩仭銇?銈偗銉儷銈广偪銉炽儔',
-      '闆剧煝钁甸棯鑰€鍗＄墖': '闇х煝銇傘亰銇?銈儵銈儵銈兗銉?,
-      '澶х┖鏄庢枃浠跺す': '澶х┖銇傘亱銈?銈儶銈儠銈°偆銉?,
-      '闊冲煄濉炴媺姣涚粧鐜╁伓': '闊冲煄銈汇偆銉?銇亜銇愩倠銇?,
-      '鏄熷鑾撹垶鍙板窘绔?: '鏄熷銇勩仭銇?銈广儐銉笺偢缂躲儛銉冦偢',
-      '闆剧煝钁典簹鍏嬪姏绔嬬墝': '闇х煝銇傘亰銇?銈偗銉儷銈广偪銉炽儔',
-      '澶х┖鏄庨棯鑰€鍗＄墖': '澶х┖銇傘亱銈?銈儵銈儵銈兗銉?,
-      '鏄熷鑾撴瘺缁掔帺鍋?: '鏄熷銇勩仭銇?銇亜銇愩倠銇?,
-      '闆剧煝钁垫枃浠跺す': '闇х煝銇傘亰銇?銈儶銈儠銈°偆銉?,
-      '闊冲煄濉炴媺寰界珷': '闊冲煄銈汇偆銉?缂躲儛銉冦偢',
-      '澶х┖鏄庝簹鍏嬪姏绔嬬墝': '澶х┖銇傘亱銈?銈偗銉儷銈广偪銉炽儔',
-      '鏄熷鑾撴枃浠跺す': '鏄熷銇勩仭銇?銈儶銈儠銈°偆銉?,
-      '闆剧煝钁垫瘺缁掔帺鍋?: '闇х煝銇傘亰銇?銇亜銇愩倠銇?,
-      '闊冲煄濉炴媺鍗＄墖': '闊冲煄銈汇偆銉?銈炽儸銈偡銉с兂銈兗銉?,
-      '澶х┖鏄庢瘺缁掔帺鍋?: '澶х┖銇傘亱銈?銇亜銇愩倠銇?,
-      '鏄熷鑾撴敹钘忓崱鐗囧瑁?: '鏄熷銇勩仭銇?銈炽儸銈偡銉с兂銈兗銉夈偦銉冦儓',
-      '闊冲煄濉炴媺浜氬厠鍔涚珛鐗?: '闊冲煄銈汇偆銉?銈偗銉儷銈广偪銉炽儔',
-      '澶х┖鏄庡窘绔?: '澶х┖銇傘亱銈?缂躲儛銉冦偢',
-      '闊冲煄濉炴媺鏂囦欢澶?: '闊冲煄銈汇偆銉?銈儶銈儠銈°偆銉?,
+      '草莓爱心徽章': 'いちごハート缶バッジ',
+      '星宫莓亚克力立牌': '星宮いちご アクリルスタンド',
+      '雾矢葵闪耀卡片': '霧矢あおい キラキラカード',
+      '大空明文件夹': '大空あかり クリアファイル',
+      '音城塞拉毛绒玩偶': '音城セイラ ぬいぐるみ',
+      '星宫莓舞台徽章': '星宮いちご ステージ缶バッジ',
+      '雾矢葵亚克力立牌': '霧矢あおい アクリルスタンド',
+      '大空明闪耀卡片': '大空あかり キラキラカード',
+      '星宫莓毛绒玩偶': '星宮いちご ぬいぐるみ',
+      '雾矢葵文件夹': '霧矢あおい クリアファイル',
+      '音城塞拉徽章': '音城セイラ 缶バッジ',
+      '大空明亚克力立牌': '大空あかり アクリルスタンド',
+      '星宫莓文件夹': '星宮いちご クリアファイル',
+      '雾矢葵毛绒玩偶': '霧矢あおい ぬいぐるみ',
+      '音城塞拉卡片': '音城セイラ コレクションカード',
+      '大空明毛绒玩偶': '大空あかり ぬいぐるみ',
+      '星宫莓收藏卡片套装': '星宮いちご コレクションカードセット',
+      '音城塞拉亚克力立牌': '音城セイラ アクリルスタンド',
+      '大空明徽章': '大空あかり 缶バッジ',
+      '音城塞拉文件夹': '音城セイラ クリアファイル',
     };
     return nameMap[name] || name;
   };
@@ -74,7 +74,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            杩斿洖
+            返回
           </button>
         </div>
 
@@ -92,7 +92,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
 
             <div className="flex-1 flex flex-col justify-center">
               <p className="text-sm text-text-secondary font-quick mb-1">
-                {item.name_jp || getNameJp(item.name)}
+                {getNameJp(item.name)}
               </p>
               <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4">
                 {item.name}
@@ -107,8 +107,8 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                       : 'bg-white text-text-secondary border border-text-secondary/20 hover:border-yellow-400 hover:text-yellow-600'
                   }`}
                 >
-                  <span>猸愶笍</span>
-                  宸叉嫢鏈?
+                  <span>⭐️</span>
+                  已拥有
                 </button>
                 {item.status === 'owned' && (
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-50 border border-yellow-200">
@@ -116,7 +116,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                       onClick={() => onDecreaseQty(item.id)}
                       className="w-6 h-6 flex items-center justify-center rounded-full bg-white text-yellow-700 font-bold hover:bg-yellow-100 transition-colors"
                     >
-                      鈭?
+                      −
                     </button>
                     <span className="font-quick font-bold text-yellow-700 min-w-[24px] text-center">
                       {item.quantity || 0}
@@ -137,19 +137,19 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                       : 'bg-white text-text-secondary border border-text-secondary/20 hover:border-rose-400 hover:text-rose-500'
                   }`}
                 >
-                  <span>鉂わ笍</span>
-                  蹇冩効鍗?
+                  <span>❤️</span>
+                  心愿单
                 </button>
               </div>
 
               {item.status === 'owned' && (
                 <div className="bg-yellow-50/50 rounded-2xl p-4 mb-6 border border-yellow-100">
-                  <p className="text-sm font-semibold text-yellow-700 mb-3">璐叆璁板綍</p>
+                  <p className="text-sm font-semibold text-yellow-700 mb-3">购入记录</p>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">鍗曚环</label>
+                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">单价</label>
                       <div className="flex-1 flex items-center gap-2">
-                        <span className="text-text-secondary">楼</span>
+                        <span className="text-text-secondary">¥</span>
                         <input
                           type="number"
                           min="0"
@@ -162,13 +162,13 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">鏁伴噺</label>
+                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">数量</label>
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => onDecreaseQty(item.id)}
                           className="w-7 h-7 flex items-center justify-center rounded-full bg-white text-yellow-700 font-bold border border-yellow-200 hover:bg-yellow-100 transition-colors"
                         >
-                          鈭?
+                          −
                         </button>
                         <span className="font-quick font-bold text-yellow-700 min-w-[32px] text-center">
                           {item.quantity || 0}
@@ -182,9 +182,9 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                       </div>
                     </div>
                     <div className="flex items-center gap-3 pt-2 border-t border-yellow-200/60">
-                      <span className="text-sm text-text-secondary w-16 flex-shrink-0">鎬讳环</span>
+                      <span className="text-sm text-text-secondary w-16 flex-shrink-0">总价</span>
                       <span className="font-quick font-bold text-lg text-yellow-700">
-                        楼 {totalPrice.toFixed(2)}
+                        ¥ {totalPrice.toFixed(2)}
                       </span>
                     </div>
                   </div>
@@ -193,12 +193,12 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
 
               {item.status === 'wish' && (
                 <div className="bg-rose-50/50 rounded-2xl p-4 mb-6 border border-rose-100">
-                  <p className="text-sm font-semibold text-rose-600 mb-3">蹇冪悊浠锋牸</p>
+                  <p className="text-sm font-semibold text-rose-600 mb-3">心理价格</p>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">鍗曚环</label>
+                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">单价</label>
                       <div className="flex-1 flex items-center gap-2">
-                        <span className="text-text-secondary">楼</span>
+                        <span className="text-text-secondary">¥</span>
                         <input
                           type="number"
                           min="0"
@@ -211,13 +211,13 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">鏁伴噺</label>
+                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">数量</label>
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => onDecreaseWishQty(item.id)}
                           className="w-7 h-7 flex items-center justify-center rounded-full bg-white text-rose-600 font-bold border border-rose-200 hover:bg-rose-100 transition-colors"
                         >
-                          鈭?
+                          −
                         </button>
                         <span className="font-quick font-bold text-rose-600 min-w-[32px] text-center">
                           {item.wishQuantity || 1}
@@ -231,9 +231,9 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                       </div>
                     </div>
                     <div className="flex items-center gap-3 pt-2 border-t border-rose-200/60">
-                      <span className="text-sm text-text-secondary w-16 flex-shrink-0">鎬讳环</span>
+                      <span className="text-sm text-text-secondary w-16 flex-shrink-0">总价</span>
                       <span className="font-quick font-bold text-lg text-rose-600">
-                        楼 {wishTotalPrice.toFixed(2)}
+                        ¥ {wishTotalPrice.toFixed(2)}
                       </span>
                     </div>
                   </div>
@@ -243,19 +243,19 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
               <div className="border-t border-accent/20 pt-5">
                 <div className="space-y-3 text-sm">
                   <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">绯诲垪</span>
+                    <span className="w-16 text-text-secondary flex-shrink-0">系列</span>
                     <span className="text-text-primary">{item.series}</span>
                   </div>
                   <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">瑙掕壊</span>
+                    <span className="w-16 text-text-secondary flex-shrink-0">角色</span>
                     <span className="text-text-primary">{item.character}</span>
                   </div>
                   <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">绉嶇被</span>
+                    <span className="w-16 text-text-secondary flex-shrink-0">种类</span>
                     <span className="text-text-primary">{item.type}</span>
                   </div>
                   <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">灏哄</span>
+                    <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>
                     <span className="text-text-primary">{getSizeLabel(item.type)}</span>
                   </div>
                 </div>
