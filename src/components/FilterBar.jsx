@@ -1,18 +1,15 @@
 import { TYPES } from '../data/items';
 import {
   SERIES_LIST,
-  GENDER_OPTIONS,
   getCharactersBySeriesAndGender,
 } from '../data/characters';
 
 const FilterBar = ({
   filterSeries,
-  filterGender,
   filterChar,
   filterType,
   filterStatus,
   onSeriesChange,
-  onGenderChange,
   onCharChange,
   onTypeChange,
   onStatusChange,
@@ -24,7 +21,7 @@ const FilterBar = ({
     { value: 'wish', label: '想要 ❤️' },
   ];
 
-  const availableCharacters = ['全部', ...getCharactersBySeriesAndGender(filterSeries, filterGender)];
+  const availableCharacters = ['全部', ...getCharactersBySeriesAndGender(filterSeries, '全部')];
   if (!availableCharacters.includes('其他')) {
     availableCharacters.push('其他');
   }
@@ -63,7 +60,6 @@ const FilterBar = ({
       <div className="flex flex-col lg:flex-row flex-wrap gap-4 items-stretch lg:items-center">
         <div className="flex flex-col sm:flex-row flex-wrap gap-4 flex-1">
           {renderSelect('系列', filterSeries, onSeriesChange, SERIES_LIST, 'w-full sm:w-32')}
-          {renderSelect('性别', filterGender, onGenderChange, GENDER_OPTIONS, 'w-full sm:w-24')}
           {renderSelect('角色', filterChar, onCharChange, availableCharacters, 'w-full sm:w-40')}
           {renderSelect('种类', filterType, onTypeChange, TYPES, 'w-full sm:w-36')}
 

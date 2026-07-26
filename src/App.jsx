@@ -22,18 +22,17 @@ function App() {
   };
 
   const [filterSeries, setFilterSeries] = useState(() => getInitialFilter('series', '全部'));
-  const [filterGender, setFilterGender] = useState(() => getInitialFilter('gender', '全部'));
   const [filterChar, setFilterChar] = useState(() => getInitialFilter('character', '全部'));
   const [filterType, setFilterType] = useState(() => getInitialFilter('type', '全部'));
   const [filterStatus, setFilterStatus] = useState(() => getInitialFilter('status', '全部'));
   const [searchKeyword, setSearchKeyword] = useState(() => getInitialFilter('search', ''));
 
   useEffect(() => {
-    const availableChars = getCharactersBySeriesAndGender(filterSeries, filterGender);
+    const availableChars = getCharactersBySeriesAndGender(filterSeries, '全部');
     if (filterChar !== '全部' && !availableChars.includes(filterChar)) {
       setFilterChar('全部');
     }
-  }, [filterSeries, filterGender, filterChar]);
+  }, [filterSeries, filterChar]);
 
   useEffect(() => {
     if (filterStatus === 'wish') {
@@ -48,7 +47,6 @@ function App() {
   const filteredItems = useMemo(() => {
     return items.filter(item => {
       const matchSeries = filterSeries === '全部' || item.series === filterSeries;
-      const matchGender = filterGender === '全部' || item.gender === filterGender;
       const matchChar = filterChar === '全部' || item.character === filterChar;
       const matchType = filterType === '全部' || item.type === filterType;
       const matchStatus = filterStatus === '全部' || item.status === filterStatus;
@@ -56,14 +54,13 @@ function App() {
         item.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
         item.character.toLowerCase().includes(searchKeyword.toLowerCase()) ||
         item.type.toLowerCase().includes(searchKeyword.toLowerCase());
-      return matchSeries && matchGender && matchChar && matchType && matchStatus && matchSearch;
+      return matchSeries && matchChar && matchType && matchStatus && matchSearch;
     });
-  }, [items, filterSeries, filterGender, filterChar, filterType, filterStatus, searchKeyword]);
+  }, [items, filterSeries, filterChar, filterType, filterStatus, searchKeyword]);
 
   useEffect(() => {
     const params = new URLSearchParams();
     if (filterSeries !== '全部') params.set('series', filterSeries);
-    if (filterGender !== '全部') params.set('gender', filterGender);
     if (filterChar !== '全部') params.set('character', filterChar);
     if (filterType !== '全部') params.set('type', filterType);
     if (filterStatus !== '全部') params.set('status', filterStatus);
@@ -71,11 +68,10 @@ function App() {
     const query = params.toString();
     const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
     window.history.replaceState({}, '', newUrl);
-  }, [filterSeries, filterGender, filterChar, filterType, filterStatus, searchKeyword]);
+  }, [filterSeries, filterChar, filterType, filterStatus, searchKeyword]);
 
   const handleReset = () => {
     setFilterSeries('全部');
-    setFilterGender('全部');
     setFilterChar('全部');
     setFilterType('全部');
     setFilterStatus('全部');
@@ -226,12 +222,10 @@ function App() {
 
         <FilterBar
           filterSeries={filterSeries}
-          filterGender={filterGender}
           filterChar={filterChar}
           filterType={filterType}
           filterStatus={filterStatus}
           onSeriesChange={setFilterSeries}
-          onGenderChange={setFilterGender}
           onCharChange={setFilterChar}
           onTypeChange={setFilterType}
           onStatusChange={setFilterStatus}
