@@ -145,7 +145,7 @@ function App() {
     setExportingImage(true);
     try {
       const canvas = await html2canvas(wishShareRef.current, {
-        scale: 1,
+        scale: 2,
         useCORS: true,
         allowTaint: true,
         backgroundColor: null,
@@ -207,7 +207,7 @@ function App() {
     setExportingImage(true);
     try {
       const canvas = await html2canvas(ownedShareRef.current, {
-        scale: 1,
+        scale: 2,
         useCORS: true,
         allowTaint: true,
         backgroundColor: null,
