@@ -12,7 +12,7 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref
         <p className="text-black/60 text-sm">我的心愿单 · 偶像活动周边收藏</p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-md p-5 mb-6">
+      <div className="bg-white rounded-2xl p-5 mb-6">
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
             <p className="text-xs text-black/50 mb-1">🏷 种类</p>
@@ -33,7 +33,7 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref
         {items.map((item) => (
           <div
             key={item.id}
-            className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm"
+            className="flex items-center gap-4 bg-white rounded-xl p-4"
           >
             <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-rose-50">
               <img
