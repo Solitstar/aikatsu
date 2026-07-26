@@ -145,10 +145,12 @@ function App() {
     setExportingImage(true);
     try {
       const canvas = await html2canvas(wishShareRef.current, {
-        scale: 2,
+        scale: 1,
         useCORS: true,
         allowTaint: true,
         backgroundColor: null,
+        windowWidth: wishShareRef.current.scrollWidth,
+        windowHeight: wishShareRef.current.scrollHeight,
       });
       const link = document.createElement('a');
       const date = new Date().toISOString().slice(0, 10);
@@ -205,10 +207,12 @@ function App() {
     setExportingImage(true);
     try {
       const canvas = await html2canvas(ownedShareRef.current, {
-        scale: 2,
+        scale: 1,
         useCORS: true,
         allowTaint: true,
         backgroundColor: null,
+        windowWidth: ownedShareRef.current.scrollWidth,
+        windowHeight: ownedShareRef.current.scrollHeight,
       });
       const link = document.createElement('a');
       const date = new Date().toISOString().slice(0, 10);
