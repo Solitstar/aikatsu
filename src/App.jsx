@@ -8,13 +8,15 @@ import FilterBar from './components/FilterBar';
 import CardGrid from './components/CardGrid';
 import ItemModal from './components/ItemModal';
 import WishlistShareImage from './components/WishlistShareImage';
+import OwnedShareImage from './components/OwnedShareImage';
 
 function App() {
-  const { items, toggleStatus, setStatus, increaseQuantity, decreaseQuantity, setPrice, increaseWishQuantity, decreaseWishQuantity, setWishPrice, ownedCount, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPrice, totalCount } = useCollection();
+  const { items, toggleStatus, setStatus, increaseQuantity, decreaseQuantity, setPrice, increaseWishQuantity, decreaseWishQuantity, setWishPrice, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPrice, totalCount } = useCollection();
   const [activeTab, setActiveTab] = useState('collection');
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
-  const shareImageRef = useRef(null);
+  const wishShareRef = useRef(null);
+  const ownedShareRef = useRef(null);
 
   const getInitialFilter = (param, defaultValue) => {
     const params = new URLSearchParams(window.location.search);
@@ -139,10 +141,10 @@ function App() {
       alert('心愿单是空的，没有可导出的内容~');
       return;
     }
-    if (!shareImageRef.current) return;
+    if (!wishShareRef.current) return;
     setExportingImage(true);
     try {
-      const canvas = await html2canvas(shareImageRef.current, {
+      const canvas = await html2canvas(wishShareRef.current, {
         scale: 2,
         useCORS: true,
         allowTaint: true,
@@ -151,6 +153,66 @@ function App() {
       const link = document.createElement('a');
       const date = new Date().toISOString().slice(0, 10);
       link.download = `心愿单_${date}.png`;
+      link.href = canvas.toDataURL('image/png');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      console.error('导出图片失败:', err);
+      alert('导出图片失败，请稍后再试~');
+    } finally {
+      setExportingImage(false);
+    }
+  };
+
+  const exportOwnedCSV = () => {
+    if (ownedItems.length === 0) {
+      alert('收藏是空的，没有可导出的内容~');
+      return;
+    }
+    const headers = ['商品名称', '角色', '系列', '种类', '购入单价(元)', '数量', '购入总价(元)'];
+    const rows = ownedItems.map(item => [
+      item.name,
+      item.character,
+      item.series,
+      item.type,
+      (item.price || 0).toFixed(2),
+      item.quantity || 0,
+      ((item.price || 0) * (item.quantity || 0)).toFixed(2),
+    ]);
+    const totalRow = ['合计', '', '', '', '', ownedTotalQuantity, ownedTotalPrice.toFixed(2)];
+    const csvContent = '\uFEFF' + [headers, ...rows, totalRow]
+      .map(row => row.map(cell => `"${cell}"`).join(','))
+      .join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    const date = new Date().toISOString().slice(0, 10);
+    link.download = `我的收藏_${date}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  const exportOwnedImage = async () => {
+    if (ownedItems.length === 0) {
+      alert('收藏是空的，没有可导出的内容~');
+      return;
+    }
+    if (!ownedShareRef.current) return;
+    setExportingImage(true);
+    try {
+      const canvas = await html2canvas(ownedShareRef.current, {
+        scale: 2,
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: null,
+      });
+      const link = document.createElement('a');
+      const date = new Date().toISOString().slice(0, 10);
+      link.download = `我的收藏_${date}.png`;
       link.href = canvas.toDataURL('image/png');
       document.body.appendChild(link);
       link.click();
@@ -262,6 +324,32 @@ function App() {
           </div>
         )}
 
+        {activeTab === 'owned' && (
+          <div className="flex justify-end gap-3 mb-6">
+            <button
+              onClick={exportOwnedCSV}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-yellow-100 text-yellow-700 font-medium text-sm
+                         hover:bg-yellow-200 transition-all duration-300 shadow-sm"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              导出表格
+            </button>
+            <button
+              onClick={exportOwnedImage}
+              disabled={exportingImage}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-yellow-400 to-amber-400 text-white font-medium text-sm
+                         hover:from-yellow-500 hover:to-amber-500 transition-all duration-300 shadow-md disabled:opacity-50"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              {exportingImage ? '生成中...' : '导出图片'}
+            </button>
+          </div>
+        )}
+
         <CardGrid items={filteredItems} onCardClick={handleCardClick} />
 
         <footer className="mt-16 pb-8 text-center">
@@ -288,10 +376,16 @@ function App() {
 
       <div className="fixed left-full top-0 pointer-events-none" aria-hidden="true">
         <WishlistShareImage
-          ref={shareImageRef}
+          ref={wishShareRef}
           items={wishItems}
           totalQuantity={wishTotalQuantity}
           totalPrice={wishTotalPrice}
+        />
+        <OwnedShareImage
+          ref={ownedShareRef}
+          items={ownedItems}
+          totalQuantity={ownedTotalQuantity}
+          totalPrice={ownedTotalPrice}
         />
       </div>
     </div>

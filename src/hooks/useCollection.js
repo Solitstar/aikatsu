@@ -190,6 +190,7 @@ export const useCollection = () => {
   };
 
   const ownedCount = items.filter(item => item.status === 'owned').length;
+  const ownedItems = items.filter(item => item.status === 'owned');
   const ownedTotalQuantity = items.reduce((sum, item) => sum + (item.status === 'owned' ? (item.quantity || 0) : 0), 0);
   const ownedTotalPrice = items.reduce((sum, item) => sum + (item.status === 'owned' ? (item.price || 0) * (item.quantity || 0) : 0), 0);
   const wishCount = items.filter(item => item.status === 'wish').length;
@@ -210,6 +211,7 @@ export const useCollection = () => {
     decreaseWishQuantity,
     setWishPrice,
     ownedCount,
+    ownedItems,
     ownedTotalQuantity,
     ownedTotalPrice,
     wishCount,
