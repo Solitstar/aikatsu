@@ -188,7 +188,7 @@ export const STATUS_OPTIONS = ["全部", "已拥有", "想要"];
 
 export const getItemsWithMeta = () => {
   return BASE_ITEMS.map(item => {
-    const chars = item.character.split(',');
+    const chars = item.character.split(/[,，]/);
     const infos = chars.map(name => getCharacterInfo(name.trim()));
     const series = [...new Set(infos.map(i => i.series))].join(', ');
     return {
