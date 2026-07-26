@@ -190,47 +190,51 @@ function App() {
           totalCount={totalCount}
         />
 
-        <div className="mb-6">
-          <div className="relative max-w-md mx-auto">
-            <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-accent/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input
-              type="text"
-              value={searchKeyword}
-              onChange={(e) => setSearchKeyword(e.target.value)}
-              placeholder="搜索商品名称、角色、种类..."
-              className="w-full pl-12 pr-10 py-3 rounded-2xl bg-card-bg shadow-card border border-accent/20
-                         text-text-primary placeholder:text-text-secondary/50 text-sm
-                         focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20
-                         transition-all duration-300"
-            />
-            {searchKeyword && (
-              <button
-                onClick={() => setSearchKeyword('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center
-                           rounded-full text-text-secondary/50 hover:text-text-secondary hover:bg-accent/10
-                           transition-colors"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        {activeTab === 'collection' && (
+          <>
+            <div className="mb-6">
+              <div className="relative max-w-md mx-auto">
+                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-accent/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-              </button>
-            )}
-          </div>
-        </div>
+                <input
+                  type="text"
+                  value={searchKeyword}
+                  onChange={(e) => setSearchKeyword(e.target.value)}
+                  placeholder="搜索商品名称、角色、种类..."
+                  className="w-full pl-12 pr-10 py-3 rounded-2xl bg-card-bg shadow-card border border-accent/20
+                             text-text-primary placeholder:text-text-secondary/50 text-sm
+                             focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20
+                             transition-all duration-300"
+                />
+                {searchKeyword && (
+                  <button
+                    onClick={() => setSearchKeyword('')}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center
+                               rounded-full text-text-secondary/50 hover:text-text-secondary hover:bg-accent/10
+                               transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+            </div>
 
-        <FilterBar
-          filterSeries={filterSeries}
-          filterChar={filterChar}
-          filterType={filterType}
-          filterStatus={filterStatus}
-          onSeriesChange={setFilterSeries}
-          onCharChange={setFilterChar}
-          onTypeChange={setFilterType}
-          onStatusChange={setFilterStatus}
-          onReset={handleReset}
-        />
+            <FilterBar
+              filterSeries={filterSeries}
+              filterChar={filterChar}
+              filterType={filterType}
+              filterStatus={filterStatus}
+              onSeriesChange={setFilterSeries}
+              onCharChange={setFilterChar}
+              onTypeChange={setFilterType}
+              onStatusChange={setFilterStatus}
+              onReset={handleReset}
+            />
+          </>
+        )}
 
         {activeTab === 'wishlist' && (
           <div className="flex justify-end gap-3 mb-6">
