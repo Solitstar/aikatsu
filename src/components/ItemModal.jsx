@@ -12,17 +12,6 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
     };
   }, [item, onClose]);
 
-  const getSizeLabel = (type) => {
-    const sizes = {
-      '徽章': '直径 57mm',
-      '亚克力立牌': '约 15cm',
-      '卡片': '63×89mm',
-      '文件夹': 'A4',
-      '毛绒玩偶': '约 20cm',
-    };
-    return sizes[type] || '-';
-  };
-
   const getNameJp = (name) => {
     const nameMap = {
       'DMM抽赏徽章': 'アイカツ！ DMMスクラッチくじ 缶バッジ ',
@@ -256,7 +245,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
                   </div>
                   <div className="flex">
                     <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>
-                    <span className="text-text-primary">{getSizeLabel(item.type)}</span>
+                    <span className="text-text-primary">{item.size || '-'}</span>
                   </div>
                 </div>
               </div>

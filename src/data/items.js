@@ -6,13 +6,15 @@ export const BASE_ITEMS = [
     name: "DMM抽赏徽章",
     character: "星宫莓",
     type: "徽章",
+    size: "直径 57mm",
     image: "https://i.imgur.com/kTWKYmg.png"
   },
   {
     id: 2,
     name: "全息Live会场限定徽章",
-    character: "夏树未来",
+    character: "夏树未来,有栖川乙女,一之濑枫,冴草纪伊",
     type: "徽章",
+    size: "直径 57mm",
     image: "https://i.imgur.com/65mqqHu.png"
   },
   {
@@ -20,6 +22,7 @@ export const BASE_ITEMS = [
     name: "雾矢葵闪耀卡片",
     character: "雾矢葵",
     type: "卡片",
+    size: "63×89mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=sparkling%20blue%20trading%20card%20anime%20idol%20girl%20aikatsu%20style%20collectible&image_size=portrait_4_3"
   },
   {
@@ -27,6 +30,7 @@ export const BASE_ITEMS = [
     name: "大空明文件夹",
     character: "大空明",
     type: "文件夹",
+    size: "A4",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20clear%20file%20folder%20orange%20haired%20idol%20girl%20aikatsu%20merchandise&image_size=portrait_4_3"
   },
   {
@@ -34,6 +38,7 @@ export const BASE_ITEMS = [
     name: "音城塞拉毛绒玩偶",
     character: "音城塞拉",
     type: "毛绒玩偶",
+    size: "约 20cm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20plush%20doll%20purple%20haired%20anime%20idol%20girl%20chibi%20style%20aikatsu&image_size=square_hd"
   },
   {
@@ -41,6 +46,7 @@ export const BASE_ITEMS = [
     name: "星宫莓舞台徽章",
     character: "星宫莓",
     type: "徽章",
+    size: "直径 57mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=sparkling%20star%20badge%20pink%20idol%20stage%20theme%20aikatsu%20merchandise&image_size=square_hd"
   },
   {
@@ -48,6 +54,7 @@ export const BASE_ITEMS = [
     name: "雾矢葵亚克力立牌",
     character: "雾矢葵",
     type: "亚克力立牌",
+    size: "约 15cm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=blue%20anime%20girl%20acrylic%20stand%20cool%20idol%20outfit%20aikatsu%20style&image_size=portrait_4_3"
   },
   {
@@ -55,6 +62,7 @@ export const BASE_ITEMS = [
     name: "大空明闪耀卡片",
     character: "大空明",
     type: "卡片",
+    size: "63×89mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20sparkling%20trading%20card%20sunshine%20idol%20girl%20aikatsu%20collectible&image_size=portrait_4_3"
   },
   {
@@ -62,6 +70,7 @@ export const BASE_ITEMS = [
     name: "星宫莓毛绒玩偶",
     character: "星宫莓",
     type: "毛绒玩偶",
+    size: "约 20cm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=pink%20chibi%20plush%20doll%20cute%20anime%20idol%20girl%20strawberry%20theme%20aikatsu&image_size=square_hd"
   },
   {
@@ -69,6 +78,7 @@ export const BASE_ITEMS = [
     name: "雾矢葵文件夹",
     character: "雾矢葵",
     type: "文件夹",
+    size: "A4",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=blue%20anime%20clear%20file%20folder%20cool%20idol%20girl%20aikatsu%20merchandise&image_size=portrait_4_3"
   },
   {
@@ -76,6 +86,7 @@ export const BASE_ITEMS = [
     name: "音城塞拉徽章",
     character: "音城塞拉",
     type: "徽章",
+    size: "直径 57mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20moon%20badge%20rock%20idol%20theme%20aikatsu%20merchandise%20cool%20style&image_size=square_hd"
   },
   {
@@ -83,6 +94,7 @@ export const BASE_ITEMS = [
     name: "大空明亚克力立牌",
     character: "大空明",
     type: "亚克力立牌",
+    size: "约 15cm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20haired%20anime%20girl%20acrylic%20stand%20sunshine%20idol%20outfit%20aikatsu&image_size=portrait_4_3"
   },
   {
@@ -90,6 +102,7 @@ export const BASE_ITEMS = [
     name: "星宫莓文件夹",
     character: "星宫莓",
     type: "文件夹",
+    size: "A4",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=pink%20anime%20clear%20file%20folder%20strawberry%20idol%20girl%20aikatsu%20merchandise&image_size=portrait_4_3"
   },
   {
@@ -97,6 +110,7 @@ export const BASE_ITEMS = [
     name: "雾矢葵毛绒玩偶",
     character: "雾矢葵",
     type: "毛绒玩偶",
+    size: "约 20cm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=blue%20chibi%20plush%20doll%20cool%20anime%20idol%20girl%20aikatsu%20cute&image_size=square_hd"
   },
   {
@@ -104,6 +118,7 @@ export const BASE_ITEMS = [
     name: "音城塞拉卡片",
     character: "音城塞拉",
     type: "卡片",
+    size: "63×89mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20rock%20style%20trading%20card%20cool%20idol%20girl%20aikatsu%20collectible&image_size=portrait_4_3"
   },
   {
@@ -111,6 +126,7 @@ export const BASE_ITEMS = [
     name: "大空明毛绒玩偶",
     character: "大空明",
     type: "毛绒玩偶",
+    size: "约 20cm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20chibi%20plush%20doll%20sunshine%20anime%20idol%20girl%20aikatsu%20cute&image_size=square_hd"
   },
   {
@@ -118,6 +134,7 @@ export const BASE_ITEMS = [
     name: "星宫莓收藏卡片套装",
     character: "星宫莓",
     type: "卡片",
+    size: "63×89mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=pink%20premium%20trading%20card%20set%20strawberry%20idol%20aikatsu%20collector%20edition&image_size=portrait_4_3"
   },
   {
@@ -125,6 +142,7 @@ export const BASE_ITEMS = [
     name: "音城塞拉亚克力立牌",
     character: "音城塞拉",
     type: "亚克力立牌",
+    size: "约 15cm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20haired%20anime%20girl%20acrylic%20stand%20rock%20idol%20outfit%20aikatsu%20cool&image_size=portrait_4_3"
   },
   {
@@ -132,6 +150,7 @@ export const BASE_ITEMS = [
     name: "大空明徽章",
     character: "大空明",
     type: "徽章",
+    size: "直径 57mm",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orange%20sun%20badge%20cheerful%20idol%20theme%20aikatsu%20merchandise%20cute&image_size=square_hd"
   },
   {
@@ -139,6 +158,7 @@ export const BASE_ITEMS = [
     name: "音城塞拉文件夹",
     character: "音城塞拉",
     type: "文件夹",
+    size: "A4",
     image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=purple%20anime%20clear%20file%20folder%20rock%20idol%20girl%20aikatsu%20merchandise%20cool&image_size=portrait_4_3"
   },
 ];
