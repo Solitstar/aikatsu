@@ -1,1 +1,76 @@
-Y29uc3QgR29vZHNDYXJkID0gKHsgaXRlbSwgb25DbGljayB9KSA9PiB7DQogIGNvbnN0IGdldFN0YXR1c0JhZGdlID0gKCkgPT4gew0KICAgIGlmIChpdGVtLnN0YXR1cyA9PT0gJ293bmVkJykgew0KICAgICAgY29uc3QgcXR5ID0gaXRlbS5xdWFudGl0eSB8fCAxOw0KICAgICAgcmV0dXJuICgNCiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIHRvcC0zIGxlZnQtMyB6LTEwIj4NCiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImJnLXllbGxvdy00MDAgdGV4dC13aGl0ZSB0ZXh0LXhzIGZvbnQtYm9sZCBweC0yLjUgcHktMSByb3VuZGVkLWZ1bGwgc2hhZG93LW1kIGZsZXggaXRlbXMtY2VudGVyIGdhcC0xIj4NCiAgICAgICAgICAgIOeMuOaEtuesjSB7cXR5ID4gMSA/IGDohLMke3F0eX1gIDogJ+WuuOWPieWroumPiD99DQogICAgICAgICAgPC9zcGFuPg0KICAgICAgICA8L2Rpdj4NCiAgICAgICk7DQogICAgfQ0KICAgIGlmIChpdGVtLnN0YXR1cyA9PT0gJ3dpc2gnKSB7DQogICAgICByZXR1cm4gKA0KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgdG9wLTMgbGVmdC0zIHotMTAiPg0KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iYmctcm9zZS00MDAgdGV4dC13aGl0ZSB0ZXh0LXhzIGZvbnQtYm9sZCBweC0yLjUgcHktMSByb3VuZGVkLWZ1bGwgc2hhZG93LW1kIGZsZXggaXRlbXMtY2VudGVyIGdhcC0xIj4NCiAgICAgICAgICAgIOmJguOCj+esjSDpjq/lrqDum6YNCiAgICAgICAgICA8L3NwYW4+DQogICAgICAgIDwvZGl2Pg0KICAgICAgKTsNCiAgICB9DQogICAgcmV0dXJuIG51bGw7DQogIH07DQoNCiAgY29uc3QgZ2V0Q2FyZEJvcmRlciA9ICgpID0+IHsNCiAgICBpZiAoaXRlbS5zdGF0dXMgPT09ICdvd25lZCcpIHJldHVybiAncmluZy0yIHJpbmcteWVsbG93LTQwMC82MCc7DQogICAgaWYgKGl0ZW0uc3RhdHVzID09PSAnd2lzaCcpIHJldHVybiAncmluZy0yIHJpbmctcm9zZS00MDAvNjAnOw0KICAgIHJldHVybiAnJzsNCiAgfTsNCg0KICByZXR1cm4gKA0KICAgIDxkaXYNCiAgICAgIG9uQ2xpY2s9eygpID0+IG9uQ2xpY2soaXRlbSl9DQogICAgICBjbGFzc05hbWU9e2ANCiAgICAgICAgZ3JvdXAgcmVsYXRpdmUgYmctY2FyZC1iZyByb3VuZGVkLTJ4bCBvdmVyZmxvdy1oaWRkZW4gc2hhZG93LWNhcmQNCiAgICAgICAgY3Vyc29yLXBvaW50ZXIgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwIGVhc2Utb3V0DQogICAgICAgIGhvdmVyOnNoYWRvdy1zb2Z0IGhvdmVyOi10cmFuc2xhdGUteS0xDQogICAgICAgICR7Z2V0Q2FyZEJvcmRlcigpfQ0KICAgICAgYH0NCiAgICA+DQogICAgICB7Z2V0U3RhdHVzQmFkZ2UoKX0NCg0KICAgICAgPGRpdiBjbGFzc05hbWU9ImFzcGVjdC1zcXVhcmUgb3ZlcmZsb3ctaGlkZGVuIGJnLWJnLXByaW1hcnkvMzAiPg0KICAgICAgICA8aW1nDQogICAgICAgICAgc3JjPXtpdGVtLmltYWdlfQ0KICAgICAgICAgIGFsdD17aXRlbS5uYW1lfQ0KICAgICAgICAgIGxvYWRpbmc9ImxhenkiDQogICAgICAgICAgY2xhc3NOYW1lPSJ3LWZ1bGwgaC1mdWxsIG9iamVjdC1jb3ZlciB0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi01MDAgZ3JvdXAtaG92ZXI6c2NhbGUtMTA1Ig0KICAgICAgICAvPg0KICAgICAgPC9kaXY+DQoNCiAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTMgc206cC00Ij4NCiAgICAgICAgPGgzIGNsYXNzTmFtZT0iZm9udC1tZWRpdW0gdGV4dC10ZXh0LXByaW1hcnkgdGV4dC1zbSBzbTp0ZXh0LWJhc2UgbWItMSBsaW5lLWNsYW1wLTIgbGVhZGluZy10aWdodCI+DQogICAgICAgICAge2l0ZW0ubmFtZX0NCiAgICAgICAgPC9oMz4NCiAgICAgICAge2l0ZW0ubmFtZV9qcCAmJiAoDQogICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtdGV4dC1zZWNvbmRhcnkvNzAgZm9udC1xdWljayBtYi0xLjUgbGVhZGluZy10aWdodCI+DQogICAgICAgICAgICB7aXRlbS5uYW1lX2pwfQ0KICAgICAgICAgIDwvcD4NCiAgICAgICAgKX0NCiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZmxleC13cmFwIGdhcC0xLjUiPg0KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaW5saW5lLWJsb2NrIHRleHQteHMgcHgtMi41IHB5LTEgcm91bmRlZC1mdWxsIGJnLWFjY2VudC8xNSB0ZXh0LWFjY2VudCBmb250LW1lZGl1bSI+DQogICAgICAgICAgICB7aXRlbS5jaGFyYWN0ZXJ9DQogICAgICAgICAgPC9zcGFuPg0KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaW5saW5lLWJsb2NrIHRleHQteHMgcHgtMi41IHB5LTEgcm91bmRlZC1mdWxsIGJnLWJnLXByaW1hcnkgdGV4dC10ZXh0LXNlY29uZGFyeSBmb250LW1lZGl1bSI+DQogICAgICAgICAgICB7aXRlbS50eXBlfQ0KICAgICAgICAgIDwvc3Bhbj4NCiAgICAgICAgPC9kaXY+DQogICAgICA8L2Rpdj4NCg0KICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTAgYmctYWNjZW50LzAgZ3JvdXAtaG92ZXI6YmctYWNjZW50LzUgdHJhbnNpdGlvbi1jb2xvcnMgZHVyYXRpb24tMzAwIHBvaW50ZXItZXZlbnRzLW5vbmUgcm91bmRlZC0yeGwiIC8+DQogICAgPC9kaXY+DQogICk7DQp9Ow0KDQpleHBvcnQgZGVmYXVsdCBHb29kc0NhcmQ7DQo=
+const GoodsCard = ({ item, onClick }) => {
+  const getStatusBadge = () => {
+    if (item.status === 'owned') {
+      const qty = item.quantity || 1;
+      return (
+        <div className="absolute top-3 left-3 z-10">
+          <span className="bg-yellow-400 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+            猸愶笍 {qty > 1 ? `脳${qty}` : '宸叉嫢鏈?}
+          </span>
+        </div>
+      );
+    }
+    if (item.status === 'wish') {
+      return (
+        <div className="absolute top-3 left-3 z-10">
+          <span className="bg-rose-400 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+            鉂わ笍 鎯宠
+          </span>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  const getCardBorder = () => {
+    if (item.status === 'owned') return 'ring-2 ring-yellow-400/60';
+    if (item.status === 'wish') return 'ring-2 ring-rose-400/60';
+    return '';
+  };
+
+  return (
+    <div
+      onClick={() => onClick(item)}
+      className={`
+        group relative bg-card-bg rounded-2xl overflow-hidden shadow-card
+        cursor-pointer transition-all duration-300 ease-out
+        hover:shadow-soft hover:-translate-y-1
+        ${getCardBorder()}
+      `}
+    >
+      {getStatusBadge()}
+
+      <div className="aspect-square overflow-hidden bg-bg-primary/30">
+        <img
+          src={item.image}
+          alt={item.name}
+          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="p-3 sm:p-4">
+        <h3 className="font-medium text-text-primary text-sm sm:text-base mb-1 line-clamp-2 leading-tight">
+          {item.name}
+        </h3>
+        {item.name_jp && (
+          <p className="text-xs text-text-secondary/70 font-quick mb-1.5 leading-tight">
+            {item.name_jp}
+          </p>
+        )}
+        <div className="flex flex-wrap gap-1.5">
+          <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-accent/15 text-accent font-medium">
+            {item.character}
+          </span>
+          <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-bg-primary text-text-secondary font-medium">
+            {item.type}
+          </span>
+        </div>
+      </div>
+
+      <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/5 transition-colors duration-300 pointer-events-none rounded-2xl" />
+    </div>
+  );
+};
+
+export default GoodsCard;
