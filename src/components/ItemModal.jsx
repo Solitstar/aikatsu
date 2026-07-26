@@ -14,7 +14,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
 
   const getSizeLabel = (type) => {
     const sizes = {
-      '徽章': '直径 58mm',
+      '徽章': '直径 57mm',
       '亚克力立牌': '约 15cm',
       '卡片': '63×89mm',
       '文件夹': 'A4',
@@ -25,8 +25,8 @@ const ItemModal = ({ item, onClose, onToggleStatus, onIncreaseQty, onDecreaseQty
 
   const getNameJp = (name) => {
     const nameMap = {
-      '草莓爱心徽章': 'いちごハート缶バッジ',
-      '星宫莓亚克力立牌': '星宮いちご アクリルスタンド',
+      'DMM抽赏徽章': 'アイカツ！ DMMスクラッチくじ 缶バッジ ',
+      '全息Live会场限定徽章': 'アイカツ Liveイリュージョン 缶バッジセット 会場限定 ',
       '雾矢葵闪耀卡片': '霧矢あおい キラキラカード',
       '大空明文件夹': '大空あかり クリアファイル',
       '音城塞拉毛绒玩偶': '音城セイラ ぬいぐるみ',
