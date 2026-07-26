@@ -11,12 +11,20 @@ const loadFromStorage = () => {
     const normalized = {};
     Object.entries(data).forEach(([id, val]) => {
       if (typeof val === 'string') {
-        normalized[id] = { status: val, quantity: 1, price: 0, wishQuantity: 1, wishPrice: 0 };
+        normalized[id] = {
+          status: val,
+          priceRecords: [],
+          wishQuantity: 1,
+          wishPrice: 0,
+        };
       } else {
         normalized[id] = {
           status: val.status,
-          quantity: val.quantity || 1,
-          price: val.price || 0,
+          priceRecords: val.priceRecords && val.priceRecords.length > 0
+            ? val.priceRecords
+            : (val.price > 0
+                ? [{ price: val.price || 0, quantity: val.quantity || 1 }]
+                : [{ price: 0, quantity: val.quantity || 1 }]),
           wishQuantity: val.wishQuantity || 1,
           wishPrice: val.wishPrice || 0,
         };
@@ -42,17 +50,33 @@ const getNextStatus = (current) => {
   return null;
 };
 
+let _recordIdCounter = Date.now();
+
+const generateRecordId = () => ++_recordIdCounter;
+
+const computeFromRecords = (records) => {
+  const quantity = records.reduce((sum, r) => sum + (r.quantity || 0), 0);
+  const totalPrice = records.reduce((sum, r) => sum + (r.price || 0) * (r.quantity || 0), 0);
+  return { quantity, totalPrice };
+};
+
 export const useCollection = () => {
   const [items, setItems] = useState(() => {
     const dataMap = loadFromStorage();
-    return getItemsWithMeta().map(item => ({
-      ...item,
-      status: dataMap[item.id]?.status || null,
-      quantity: dataMap[item.id]?.status === 'owned' ? (dataMap[item.id]?.quantity || 1) : 0,
-      price: dataMap[item.id]?.price || 0,
-      wishQuantity: dataMap[item.id]?.wishQuantity || 1,
-      wishPrice: dataMap[item.id]?.wishPrice || 0,
-    }));
+    return getItemsWithMeta().map(item => {
+      const saved = dataMap[item.id];
+      const records = saved?.priceRecords || [];
+      const { quantity, totalPrice } = computeFromRecords(records);
+      return {
+        ...item,
+        status: saved?.status || null,
+        priceRecords: records,
+        quantity,
+        totalPrice,
+        wishQuantity: saved?.wishQuantity || 1,
+        wishPrice: saved?.wishPrice || 0,
+      };
+    });
   });
 
   useEffect(() => {
@@ -61,8 +85,7 @@ export const useCollection = () => {
       if (item.status) {
         statusMap[item.id] = {
           status: item.status,
-          quantity: item.status === 'owned' ? (item.quantity || 1) : 0,
-          price: item.price || 0,
+          priceRecords: item.priceRecords || [],
           wishQuantity: item.wishQuantity || 1,
           wishPrice: item.wishPrice || 0,
         };
@@ -79,7 +102,9 @@ export const useCollection = () => {
         return {
           ...item,
           status: nextStatus,
+          priceRecords: nextStatus === 'owned' ? [{ id: generateRecordId(), price: 0, quantity: 1 }] : [],
           quantity: nextStatus === 'owned' ? 1 : 0,
+          totalPrice: 0,
         };
       })
     );
@@ -89,11 +114,56 @@ export const useCollection = () => {
     setItems(prevItems =>
       prevItems.map(item => {
         if (item.id !== id) return item;
+        const records = status === 'owned'
+          ? (item.priceRecords.length > 0 ? item.priceRecords : [{ id: generateRecordId(), price: 0, quantity: 1 }])
+          : [];
+        const { quantity, totalPrice } = computeFromRecords(records);
         return {
           ...item,
           status,
-          quantity: status === 'owned' ? (item.quantity > 0 ? item.quantity : 1) : 0,
+          priceRecords: records,
+          quantity,
+          totalPrice,
         };
+      })
+    );
+  };
+
+  const addPriceRecord = (id) => {
+    setItems(prevItems =>
+      prevItems.map(item => {
+        if (item.id !== id) return item;
+        const records = [...item.priceRecords, { id: generateRecordId(), price: 0, quantity: 1 }];
+        const { quantity, totalPrice } = computeFromRecords(records);
+        return { ...item, priceRecords: records, quantity, totalPrice };
+      })
+    );
+  };
+
+  const removePriceRecord = (id, recordId) => {
+    setItems(prevItems =>
+      prevItems.map(item => {
+        if (item.id !== id) return item;
+        const records = item.priceRecords.filter(r => r.id !== recordId);
+        const { quantity, totalPrice } = computeFromRecords(records);
+        const newStatus = quantity > 0 ? 'owned' : (item.status === 'wish' ? 'wish' : null);
+        return { ...item, priceRecords: records, quantity, totalPrice, status: newStatus };
+      })
+    );
+  };
+
+  const updatePriceRecord = (id, recordId, field, value) => {
+    setItems(prevItems =>
+      prevItems.map(item => {
+        if (item.id !== id) return item;
+        const records = item.priceRecords.map(r => {
+          if (r.id !== recordId) return r;
+          if (field === 'price') return { ...r, price: Math.max(0, parseFloat(value) || 0) };
+          if (field === 'quantity') return { ...r, quantity: Math.max(0, Math.floor(value || 0)) };
+          return r;
+        });
+        const { quantity, totalPrice } = computeFromRecords(records);
+        return { ...item, priceRecords: records, quantity, totalPrice };
       })
     );
   };
@@ -140,16 +210,6 @@ export const useCollection = () => {
     );
   };
 
-  const setPrice = (id, price) => {
-    setItems(prevItems =>
-      prevItems.map(item => {
-        if (item.id !== id) return item;
-        const p = Math.max(0, parseFloat(price) || 0);
-        return { ...item, price: p };
-      })
-    );
-  };
-
   const setWishQuantity = (id, quantity) => {
     setItems(prevItems =>
       prevItems.map(item => {
@@ -192,7 +252,7 @@ export const useCollection = () => {
   const ownedCount = items.filter(item => item.status === 'owned').length;
   const ownedItems = items.filter(item => item.status === 'owned');
   const ownedTotalQuantity = items.reduce((sum, item) => sum + (item.status === 'owned' ? (item.quantity || 0) : 0), 0);
-  const ownedTotalPrice = items.reduce((sum, item) => sum + (item.status === 'owned' ? (item.price || 0) * (item.quantity || 0) : 0), 0);
+  const ownedTotalPrice = items.reduce((sum, item) => sum + (item.status === 'owned' ? (item.totalPrice || 0) : 0), 0);
   const wishCount = items.filter(item => item.status === 'wish').length;
   const wishItems = items.filter(item => item.status === 'wish');
   const wishTotalQuantity = items.reduce((sum, item) => sum + (item.status === 'wish' ? (item.wishQuantity || 0) : 0), 0);
@@ -205,7 +265,9 @@ export const useCollection = () => {
     setQuantity,
     increaseQuantity,
     decreaseQuantity,
-    setPrice,
+    addPriceRecord,
+    removePriceRecord,
+    updatePriceRecord,
     setWishQuantity,
     increaseWishQuantity,
     decreaseWishQuantity,

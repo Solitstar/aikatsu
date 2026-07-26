@@ -53,10 +53,10 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
             </div>
             <div className="text-right flex-shrink-0">
               <p className="text-yellow-600 font-bold text-sm">
-                ¥{((item.price || 0) * (item.quantity || 0)).toFixed(2)}
+                ¥{(item.totalPrice || 0).toFixed(2)}
               </p>
               <p className="text-xs text-gray-400">
-                ¥{(item.price || 0).toFixed(2)} × {item.quantity || 0}
+                {item.quantity || 0} 件
               </p>
             </div>
           </div>
