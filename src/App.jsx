@@ -138,44 +138,6 @@ function App() {
     URL.revokeObjectURL(url);
   };
 
-  const PROXIES = [
-    (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
-    (url) => 'https://corsproxy.io/?' + encodeURIComponent(url),
-  ];
-
-  const fetchImageAsBase64 = async (src) => {
-    if (!src || src.startsWith('data:')) return null;
-    for (const proxyFn of PROXIES) {
-      try {
-        const proxyUrl = proxyFn(src);
-        const res = await fetch(proxyUrl);
-        if (!res.ok) continue;
-        const blob = await res.blob();
-        return new Promise((resolve) => {
-          const reader = new FileReader();
-          reader.onloadend = () => resolve(reader.result);
-          reader.readAsDataURL(blob);
-        });
-      } catch { /* 尝试下一个代理 */ }
-    }
-    return null;
-  };
-
-  const preloadShareImages = async (container) => {
-    const imgs = container.querySelectorAll('img');
-    const originals = [];
-    await Promise.all(
-      Array.from(imgs).map(async (img) => {
-        const src = img.getAttribute('src') || img.src;
-        if (!src || src.startsWith('data:')) return;
-        originals.push({ img, src });
-        const dataUrl = await fetchImageAsBase64(src);
-        if (dataUrl) img.setAttribute('src', dataUrl);
-      })
-    );
-    return originals;
-  };
-
   const exportWishlistImage = async () => {
     if (wishItems.length === 0) {
       alert('心愿单是空的，没有可导出的内容~');
@@ -183,13 +145,12 @@ function App() {
     }
     if (!wishShareRef.current) return;
     setExportingImage(true);
-    let originals = [];
     try {
-      originals = await preloadShareImages(wishShareRef.current);
       const scale = 2;
       const canvas = await html2canvas(wishShareRef.current, {
         scale,
         useCORS: true,
+        proxy: 'https://images.weserv.nl/?url=',
         backgroundColor: null,
         width: wishShareRef.current.scrollWidth,
         height: wishShareRef.current.scrollHeight,
@@ -205,7 +166,6 @@ function App() {
       console.error('导出图片失败:', err);
       alert('导出图片失败，请稍后再试~');
     } finally {
-      originals.forEach(({ img, src }) => img.setAttribute('src', src));
       setExportingImage(false);
     }
   };
@@ -248,13 +208,12 @@ function App() {
     }
     if (!ownedShareRef.current) return;
     setExportingImage(true);
-    let originals = [];
     try {
-      originals = await preloadShareImages(ownedShareRef.current);
       const scale = 2;
       const canvas = await html2canvas(ownedShareRef.current, {
         scale,
         useCORS: true,
+        proxy: 'https://images.weserv.nl/?url=',
         backgroundColor: null,
         width: ownedShareRef.current.scrollWidth,
         height: ownedShareRef.current.scrollHeight,
@@ -270,7 +229,6 @@ function App() {
       console.error('导出图片失败:', err);
       alert('导出图片失败，请稍后再试~');
     } finally {
-      originals.forEach(({ img, src }) => img.setAttribute('src', src));
       setExportingImage(false);
     }
   };
