@@ -685,7 +685,33 @@ export const BASE_ITEMS = [
     size: "直径约 56mm",
     image: "https://imgbed.heliar.top/i/8mi7_yj86Cvmqr4w.png"
   },
-  
+  {
+    id: 77,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "音城塞拉",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/18GV_thQOX-dx8qK.png"
+  },
+  {
+    id: 78,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "凉川直人",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/In8QmfHhrW0EXrGk.png"
+  },
+  {
+    id: 79,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "一之濑枫",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/OdXbUGL8U6dS-7uk.png"
+  },
 ];
 
 export const TYPES = ["全部", "徽章", "亚克力立牌", "卡片", "文件夹", "毛绒玩偶"];
