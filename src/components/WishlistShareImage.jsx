@@ -33,13 +33,13 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPriceMin, to
         </div>
       </div>
 
-      <div className="space-y-3 mb-8">
+      <div className="space-y-4 mb-8">
         {items.map((item) => (
           <div
             key={item.id}
-            className="flex items-center gap-4 bg-white rounded-xl p-4"
+            className="flex items-center gap-5 bg-white rounded-xl p-4"
           >
-            <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 bg-rose-50">
+            <div className="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0 bg-rose-50">
               <img
                 src={item.image}
                 alt={item.name}
@@ -47,14 +47,14 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPriceMin, to
                 crossOrigin="anonymous"
               />
             </div>
-            <div className="flex-1 min-w-0 flex flex-col justify-center">
+            <div className="flex-1 min-w-0 flex flex-col justify-center gap-0.5">
               {item.subtitle && (
-                <p className="text-[9px] text-black/40 leading-tight">{item.subtitle}</p>
+                <p className="text-[8px] text-black/40 leading-tight">{item.subtitle}</p>
               )}
-              <p className="font-bold text-black text-sm leading-tight">{item.name}</p>
-              <p className="text-[10px] text-black/50 leading-tight">{item.character} · {item.type}</p>
+              <p className="font-bold text-black text-xs leading-tight">{item.name}</p>
+              <p className="text-[9px] text-black/50 leading-tight">{item.character} · {item.type}</p>
             </div>
-            <div className="text-right flex-shrink-0">
+            <div className="text-right flex-shrink-0 flex flex-col justify-center">
               <p className="text-black font-bold text-sm whitespace-nowrap">
                 ¥{((item.wishPriceMin || 0) * (item.wishQuantity || 1)).toFixed(2)}
                 {(item.wishPriceMax || 0) > 0 && <span className="text-xs font-normal"> ~ ¥{((item.wishPriceMax || 0) * (item.wishQuantity || 1)).toFixed(2)}</span>}
