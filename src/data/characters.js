@@ -7,7 +7,7 @@ const CHARACTER_DATABASE = [
   { name: '雾矢葵', series: '初代', gender: '女', romaji: 'Kiriya Aoi' },
   { name: '紫吹兰', series: '初代', gender: '女', romaji: 'Shibuki Ran' },
   { name: '有栖川乙女', series: '初代', gender: '女', romaji: 'Arisugawa Otome' },
-  { name: '藤堂尤里卡', series: '初代', gender: '女', romaji: 'Todo Yurika' },
+  { name: '藤堂尤里卡', series: '初代', gender: '女', romaji: 'Todo Yurika', alias: '藤堂百合香' },
   { name: '北大路樱', series: '初代', gender: '女', romaji: 'Kitaoji Sakura' },
   { name: '一之濑枫', series: '初代', gender: '女', romaji: 'Ichinose Kaede' },
   { name: '神崎美月', series: '初代', gender: '女', romaji: 'Kanzaki Mizuki' },
@@ -21,6 +21,7 @@ const CHARACTER_DATABASE = [
   { name: '姬里玛利亚', series: '初代', gender: '女', romaji: 'Himesato Maria' },
   { name: '光石织姬', series: '初代', gender: '女', romaji: 'Mitsuishi Orihime' },
   { name: '星宫苹果', series: '初代', gender: '女', romaji: 'Hoshimiya Ringo' },
+  { name: '星宫赖智', series: '初代', gender: '男', romaji: 'Hoshimiya Raichi' },
   { name: '凉川直人', series: '初代', gender: '男', romaji: 'Suzukawa Naoto' },
   { name: '乔尼·别府', series: '初代', gender: '男', romaji: 'Johnny Beppu' },
 
@@ -54,7 +55,7 @@ const CHARACTER_DATABASE = [
   { name: '艾尔莎·福特', series: '星代', gender: '女', romaji: 'Elsa Forte' },
   { name: '香橙夜空', series: '星代', gender: '女', romaji: 'Kozue Yozora' },
   { name: '如月翼', series: '星代', gender: '女', romaji: 'Kisaragi Tsubasa' },
-  { name: '晴香露卡', series: '星代', gender: '女', romaji: 'Haruka Luca‌（' },
+  { name: '晴香露卡', series: '星代', gender: '女', romaji: 'Haruka Luca' },
   { name: '五十岚望', series: '星代', gender: '男', romaji: 'Igarashi Nozomi' },
   { name: '吉良彼方', series: '星代', gender: '男', romaji: 'Kira Kanata' },
   { name: '结城昂', series: '星代', gender: '男', romaji: 'Yuki Subaru' },
@@ -78,14 +79,14 @@ const CHARACTER_DATABASE = [
   { name: '姬石来希', series: '大游行', gender: '女', romaji: 'Kiseki Raki' },
 
   // 行星(Planet)
-  { name: '音羽舞樱', series: '行星', gender: '女', romaji: 'Otowa Mao' },
-  { name: '珠树琉璃', series: '行星', gender: '女', romaji: 'Tamaki Ruri' },
-  { name: '梅小路响子', series: '行星', gender: '女', romaji: 'Umekoji Kyoko' },
-  { name: '本谷栞', series: '行星', gender: '女', romaji: 'Motoya Shiori' },
-  { name: '月城爱弓', series: '行星', gender: '女', romaji: 'Tsukishiro Ayumi' },
-  { name: '栗六杏', series: '行星', gender: '女', romaji: 'Kurimu An' },
-  { name: '阳明咲', series: '行星', gender: '女', romaji: 'Yomei Saki' },
-  { name: '糸井纱良', series: '行星', gender: '女', romaji: 'Itoi Sara' },
+  { name: '音羽舞樱', series: '行星', gender: '女', romaji: 'Otowa Mao', alias: 'Hana' },
+  { name: '珠树琉璃', series: '行星', gender: '女', romaji: 'Tamaki Ruri', alias: 'Ruli' },
+  { name: '梅小路响子', series: '行星', gender: '女', romaji: 'Umekoji Kyoko', alias: 'Beat' },
+  { name: '本谷栞', series: '行星', gender: '女', romaji: 'Motoya Shiori', alias: 'Shiori' },
+  { name: '月城爱弓', series: '行星', gender: '女', romaji: 'Tsukishiro Ayumi', alias: 'Q-Pit' },
+  { name: '栗六杏', series: '行星', gender: '女', romaji: 'Kurimu An', alias: 'Ann' },
+  { name: '阳明咲', series: '行星', gender: '女', romaji: 'Yomei Saki', alias: 'Rose' },
+  { name: '糸井纱良', series: '行星', gender: '女', romaji: 'Itoi Sara', alias: 'Sala' },
 
   // Academy
   { name: '姫乃Mieru', series: 'Academy', gender: '女', romaji: 'Himeno Mieru' },
@@ -98,7 +99,7 @@ const CHARACTER_DATABASE = [
 ];
 
 export const getCharacterInfo = (name) => {
-  return CHARACTER_DATABASE.find(c => c.name === name) || { series: '未知', gender: '女', romaji: '' };
+  return CHARACTER_DATABASE.find(c => c.name === name) || { series: '未知', gender: '男，女', romaji: '', alias: '' };
 };
 
 export const getCharactersBySeriesAndGender = (series, gender) => {

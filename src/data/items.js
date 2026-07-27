@@ -401,7 +401,7 @@ export const BASE_ITEMS = [
     id: 45,
     name: "沙滩徽章",
     subtitle: "アイカツ！ Canバッジ54",
-    character: "星宫苹果,星宫荔枝,光石织姬",
+    character: "星宫苹果,星宫赖智,光石织姬",
     type: "徽章",
     size: "直径约 54mm",
     image: "https://imgbed.heliar.top/i/iXu5kMASGglcICkt.png"
@@ -572,10 +572,10 @@ export const BASE_ITEMS = [
     id: 64,
     name: "生日1弹徽章<5月~6月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
-    character: "",
+    character: "天翔响",
     type: "徽章",
     size: "直径约 56mm",
-    image: ""
+    image: "https://imgbed.heliar.top/i/CNRXIQww-5nPBAJg.png"
   },
   {
     id: 65,
@@ -616,10 +616,14 @@ export const getItemsWithMeta = () => {
       const chars = item.character.split(/[,，]/);
       const infos = chars.map(name => getCharacterInfo(name.trim()));
       const series = [...new Set(infos.map(i => i.series))].join(', ');
+      const characterRomaji = infos.map(i => i.romaji || '').filter(Boolean).join(' ');
+      const characterAlias = infos.map(i => i.alias || '').filter(Boolean).join(' ');
       return {
         ...item,
         series: series || '未知',
         gender: infos[0].gender,
+        characterRomaji,
+        characterAlias,
       };
     })
     .sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));

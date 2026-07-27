@@ -56,7 +56,8 @@ function App() {
         item.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
         item.character.toLowerCase().includes(searchKeyword.toLowerCase()) ||
         item.type.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        (item.characterRomaji || '').toLowerCase().includes(searchKeyword.toLowerCase());
+        (item.characterRomaji || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
+        (item.characterAlias || '').toLowerCase().includes(searchKeyword.toLowerCase());
       return matchSeries && matchChar && matchType && matchStatus && matchSearch;
     });
   }, [items, filterSeries, filterChar, filterType, filterStatus, searchKeyword]);
