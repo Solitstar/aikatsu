@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "download-images": "node scripts/download-images.cjs",
+    "build": "npm run download-images && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bash deploy.sh"
