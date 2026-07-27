@@ -45,7 +45,7 @@ const CHARACTER_DATABASE = [
   { name: '虹野梦', series: '星代', gender: '女', romaji: 'Nijino Yume', pinyin: 'hongyemeng' },
   { name: '七仓小春', series: '星代', gender: '女', romaji: 'Nanakura Koharu', pinyin: 'qicangxiaochun' },
   { name: '樱庭劳拉', series: '星代', gender: '女', romaji: 'Sakuraba Laura', pinyin: 'yingtinglaola' },
-  { name: '早乙女亚子', series: '星代', gender: '女', romaji: 'Saotome Ako', pinyin: 'zaoyinv'azi' },
+  { name: '早乙女亚子', series: '星代', gender: '女', romaji: 'Saotome Ako', pinyin: 'zaoyinv\'azi' },
   { name: '香澄真昼', series: '星代', gender: '女', romaji: 'Kasumi Mahiru', pinyin: 'xiangchengzhenzhou' },
   { name: '花园绮罗', series: '星代', gender: '女', romaji: 'Hanazono Kira', pinyin: 'huayuanyiluo' },
   { name: '双叶亚里亚', series: '星代', gender: '女', romaji: 'Futaba Aria', pinyin: 'shuangyeyaliya' },
@@ -86,7 +86,7 @@ const CHARACTER_DATABASE = [
   { name: '月城爱弓', series: '行星', gender: '女', romaji: 'Tsukishiro Ayumi', alias: 'Q-Pit', pinyin: 'yuechengaigong' },
   { name: '栗六杏', series: '行星', gender: '女', romaji: 'Kurimu An', alias: 'Ann', pinyin: 'liliuxing' },
   { name: '阳明咲', series: '行星', gender: '女', romaji: 'Yomei Saki', alias: 'Rose', pinyin: 'yangmingxiao' },
-  { name: '糸井纱良', series: '行星', gender: '女', romaji: 'Itoi Sara', alias: 'Sala', pinyin: 'mijing(shiliang)' },
+  { name: '糸井纱良', series: '行星', gender: '女', romaji: 'Itoi Sara', alias: 'Sala', pinyin: 'mijingshaliang' },
 
   // Academy
   { name: '姫乃Mieru', series: 'Academy', gender: '女', romaji: 'Himeno Mieru', pinyin: 'jinaimieru' },
