@@ -70,7 +70,7 @@ const SearchBar = ({ value, onChange, onClear }) => {
         onFocus={() => value && suggestions.length > 0 && setShowDropdown(true)}
         placeholder="搜索角色名、拼音、英文名..."
         className="w-full pl-12 pr-10 py-3 rounded-2xl bg-card-bg shadow-card border border-accent/20
-                   text-text-primary placeholder:text-text-secondary/50 text-sm
+                   text-text-primary placeholder:text-text-secondary/50 text-base
                    focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20
                    transition-all duration-300"
         autoComplete="off"
