@@ -147,8 +147,8 @@ function App() {
       const scale = 2;
       const canvas = await html2canvas(wishShareRef.current, {
         scale,
-        useCORS: false,
-        allowTaint: true,
+        useCORS: true,
+        proxy: 'https://corsproxy.io/?',
         backgroundColor: null,
         width: wishShareRef.current.scrollWidth,
         height: wishShareRef.current.scrollHeight,
@@ -210,8 +210,8 @@ function App() {
       const scale = 2;
       const canvas = await html2canvas(ownedShareRef.current, {
         scale,
-        useCORS: false,
-        allowTaint: true,
+        useCORS: true,
+        proxy: 'https://corsproxy.io/?',
         backgroundColor: null,
         width: ownedShareRef.current.scrollWidth,
         height: ownedShareRef.current.scrollHeight,
