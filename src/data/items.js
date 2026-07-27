@@ -8,7 +8,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 57mm",
-    image: "https://i.imgur.com/kTWKYmg.png"
+    image: "https://imgbed.heliar.top/i/5_zGTYEL-iAR4PHh?thumb=1"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const BASE_ITEMS = [
     character: "夏树未来,有栖川乙女,一之濑枫,冴草纪伊",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/65mqqHu.png"
+    image: "https://imgbed.heliar.top/i/PHiW8aNtYSuvuiNu?thumb=1"
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const BASE_ITEMS = [
     character: "雾矢葵,藤堂尤里卡,音城塞拉",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/CFTghib.png"
+    image: "https://imgbed.heliar.top/i/eqofr6OrOwFnm_RL?thumb=1"
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const BASE_ITEMS = [
     character: "紫吹兰,神崎美月,风沢空",
     type: "徽章",
     size: "直径约 40 mm",
-    image: "https://i.imgur.com/JAaWO7J.png"
+    image: "https://imgbed.heliar.top/i/p-ZtVlx2wgy3iNj8?thumb=1"
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ export const BASE_ITEMS = [
     character: "星宫莓,大空明,姬里玛利亚,北大路樱",
     type: "徽章",
     size: "直径约 40 mm",
-    image: "https://i.imgur.com/QwB8QZu.png"
+    image: "https://imgbed.heliar.top/i/9uy0ubhDCYivMowj?thumb=1"
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 75mm",
-    image: "https://i.imgur.com/OxbDZKz.png"
+    image: "https://imgbed.heliar.top/i/yeeoBhf9qSmloq8J?thumb=1"
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "约 40mm",
-    image: "https://i.imgur.com/LSzOFDa.png"
+    image: "https://imgbed.heliar.top/i/6hzo8WOeTxB4DQbh?thumb=1"
   },
   {
     id: 8,
@@ -71,15 +71,16 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/2uRF6rl.png"
+    image: "https://imgbed.heliar.top/i/GKJ6M-5Wz0Qla5LU?thumb=1"
   },
   {
+    id:9,
     name: "2017Live徽章",
     subtitle: "アイカツ！ ミュージックフェスタ2017 缶バッジ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/2yleCgX.png"
+    image: "https://imgbed.heliar.top/i/ler-V07WQNGTSrCf?thumb=1"
   },
   {
     id: 10,
@@ -88,7 +89,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/3XvYa2s.png"
+    image: "https://imgbed.heliar.top/i/E2dVUb09HVYQpYMh?thumb=1"
   },
   {
     id: 11,
@@ -97,7 +98,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/GfHOYay.png"
+    image: "https://imgbed.heliar.top/i/Z9o1nhAf_2M-UDS4?thumb=1"
   },
   {
     id: 12,
@@ -106,7 +107,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/4ti8nYN.png"
+    image: "https://imgbed.heliar.top/i/aeQoZdnzGId4FpcW?thumb=1"
   },
   {
     id: 13,
@@ -115,7 +116,7 @@ export const BASE_ITEMS = [
     character: "其他,夏树未来,新条雏姬",
     type: "徽章",
     size: "直径约 50mm",
-    image: "https://i.imgur.com/RoNG8Ne.png"
+    image: "https://imgbed.heliar.top/i/rY4UOZbD2NALKZVQ?thumb=1"
   },
   {
     id: 14,
@@ -124,7 +125,7 @@ export const BASE_ITEMS = [
     character: "其他,夏树未来,新条雏姬",
     type: "徽章",
     size: "直径约 30mm",
-    image: "https://i.imgur.com/uJYq7oL.png"
+    image: "https://imgbed.heliar.top/i/-Tb-Gqx64XJFJokF?thumb=1"
   },
   {
     id: 15,
@@ -133,7 +134,7 @@ export const BASE_ITEMS = [
     character: "其他,夏树未来,神崎美月",
     type: "徽章",
     size: "直径约 75mm",
-    image: "https://i.imgur.com/Fx8ZOQu.png"
+    image: "https://imgbed.heliar.top/i/Y_rIYYrLNjtYL18p?thumb=1"
   },
   {
     id: 16,
@@ -142,7 +143,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/AG4y677.png"
+    image: "https://imgbed.heliar.top/i/jDeG5dOtDPDBU1bn?thumb=1"
   },
   {
     id: 17,
@@ -151,7 +152,7 @@ export const BASE_ITEMS = [
     character: "星宫莓,雾矢葵,紫吹兰,有栖川乙女,藤堂尤里卡,北大路樱,一之濑枫,神崎美月",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://imgbed.heliar.top/i/2w_ibZudaKaJDpnH?thumb=1"
+    image: "https://imgbed.heliar.top/i/m9-WYFdp2a4oQHeI?thumb=1"
   },
   {
     id: 19,
@@ -160,7 +161,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://imgbed.heliar.top/i/FIMenSVOfQxPQrr1?thumb=1"
+    image: "https://imgbed.heliar.top/i/BPv54i1CV2ShBFJH?thumb=1"
     },
   {
     id: 18,
@@ -169,7 +170,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://imgbed.heliar.top/i/wj2RBao1ID0afAfr?thumb=1"
+    image: "https://imgbed.heliar.top/i/ojNxOlu7wXnX09U2?thumb=1"
   },
   {
     id: 20,
@@ -178,7 +179,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://imgbed.heliar.top/i/o3NnQwnVZbEhzlXV?thumb=1"
+    image: "https://imgbed.heliar.top/i/AFToGJs_2ECk6_Y4?thumb=1"
   },
   {
     id: 21,
@@ -187,7 +188,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://imgbed.heliar.top/i/IM7gpItzT4Gh3dP0?thumb=1"
+    image: "https://imgbed.heliar.top/i/ycE8VkL84mtbLICR?thumb=1"
   },
   {
     id: 22,
@@ -196,7 +197,7 @@ export const BASE_ITEMS = [
     character: "星宫莓,紫吹兰",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://imgbed.heliar.top/i/1lmSnmHOeP72nJZ2?thumb=1"
+    image: "https://imgbed.heliar.top/i/bFh5q3lIfnfyl6p4?thumb=1"
   },
   {
     id: 23,
@@ -205,7 +206,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://imgbed.heliar.top/i/Jk1uEPluJp1NJxKE?thumb=1"
+    image: "https://imgbed.heliar.top/i/fPPaAJVmHUcea6OB?thumb=1"
   },
   {
     id: 24,
@@ -214,7 +215,7 @@ export const BASE_ITEMS = [
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://imgbed.heliar.top/i/MPVbhq4URMI2_jSJ?thumb=1"
+    image: "https://imgbed.heliar.top/i/ceyhDXPvmmiLPCPr?thumb=1"
   },
   {
     id: 25,
@@ -223,7 +224,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 44mm",
-    image: "https://imgbed.heliar.top/i/aBUuvq3BIizbjKot?thumb=1"
+    image: "https://imgbed.heliar.top/i/nxD8t9RzgkdU60Wt?thumb=1"
   },
   {
     id: 26,
@@ -232,7 +233,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 44mm",
-    image: "https://imgbed.heliar.top/i/qjmkzP_Y9QUAbUDR?thumb=1"
+    image: "https://imgbed.heliar.top/i/4Yn0UVSOXwRH99Ew?thumb=1"
   },
   {
     id: 27,
@@ -241,7 +242,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 44mm",
-    image: "https://imgbed.heliar.top/i/BIoNbs96s4PrLZjL?thumb=1"
+    image: "https://imgbed.heliar.top/i/mf9ak-KridTUl_Hc?thumb=1"
   },
   {
     id: 28,
@@ -250,7 +251,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://imgbed.heliar.top/i/lmCOA1UAScy4Lgph?thumb=1"
+    image: "https://imgbed.heliar.top/i/pO698USquT6DL_lP?thumb=1"
   },
   {
     id: 29,
@@ -263,13 +264,12 @@ export const BASE_ITEMS = [
   },
   {
     id: 30,
-     id: 29,
     name: "生日3弹徽章",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://imgbed.heliar.top/i/wroclmlPArQvw0ru?thumb=1"
+    image: "https://imgbed.heliar.top/i/kTdCeOBirJZ15jnC?thumb=1"
   },
   {
     id: 31,
@@ -277,126 +277,145 @@ export const BASE_ITEMS = [
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约 56mm",
     image: "https://imgbed.heliar.top/i/uRLJG98NM0UKS8un?thumb=1"
   },
   {
     id: 32,
-    name: "夏树未来剧场版徽章",
-    subtitle: "夏樹みらい 劇場版缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "夏树未来，神崎美月",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=movie%20badge%20yellow%20anime%20idol%20aikatsu%20pin&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/bi6zSoK81SjzP8jy?thumb=1"
   },
   {
     id: 33,
-    name: "夏树未来纪念徽章",
-    subtitle: "夏樹みらい 記念缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "星宫莓",
     type: "徽章",
-    size: "直径约 75mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=memorial%20badge%20cute%20yellow%20anime%20girl%20aikatsu&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/p_D2pgtOEAkzoXP2?thumb=1"
   },
   {
     id: 34,
-    name: "夏树未来活动徽章",
-    subtitle: "夏樹みらい イベント缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "雾矢葵",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=event%20badge%20yellow%20anime%20idol%20aikatsu%20merchandise&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/-LCFMux8QhuDPUCd.png"
   },
   {
     id: 35,
-    name: "夏树未来闪亮徽章",
-    subtitle: "夏樹みらい キラキラ缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "紫吹兰",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=sparkling%20badge%20yellow%20anime%20idol%20girl%20aikatsu&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/2swVobhcJ4WkAb6V.png"
   },
   {
     id: 36,
-    name: "夏树未来合作徽章",
-    subtitle: "夏樹みらい コラボ缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "藤堂尤里卡,一之濑枫",
     type: "徽章",
-    size: "直径约 50mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=collaboration%20badge%20yellow%20anime%20idol%20aikatsu%20cute&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/rXH7YByqIhPah34j.png"
   },
   {
     id: 37,
-    name: "夏树未来抽赏徽章",
-    subtitle: "夏樹みらい くじ缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "冰上堇",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=lottery%20badge%20yellow%20anime%20girl%20idol%20aikatsu&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/Dy0kRXiXFnVmb9Ps.png"
   },
   {
     id: 38,
-    name: "夏树未来冬季徽章",
-    subtitle: "夏樹みらい 冬限定缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=winter%20badge%20yellow%20anime%20idol%20cute%20aikatsu&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/s9H7jsorxTrJRjRh.png"
   },
   {
     id: 39,
-    name: "夏树未来夏日徽章",
-    subtitle: "夏樹みらい 夏限定缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "有栖川乙女,北大路樱,神谷紫苑,大地乃野,白桦丽莎",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=summer%20badge%20yellow%20anime%20idol%20aikatsu%20merch&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/lcHaW6ENSTEtTlpm.png"
   },
   {
     id: 40,
-    name: "夏树未来星光徽章",
-    subtitle: "夏樹みらい スターライト缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "新条雏姬",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=starlight%20badge%20yellow%20anime%20girl%20idol%20aikatsu&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/g_QxaRXJmmoHGPMa.png"
   },
   {
     id: 41,
-    name: "夏树未来梦幻徽章",
-    subtitle: "夏樹みらい ドリーム缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "红林珠璃",
     type: "徽章",
-    size: "直径约 75mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dream%20badge%20cute%20yellow%20anime%20idol%20aikatsu&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/012q4D47ffbQbsAg.png"
   },
   {
     id: 42,
-    name: "夏树未来微笑徽章",
-    subtitle: "夏樹みらい スマイル缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "黑泽凛,天羽圆香",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smile%20badge%20yellow%20anime%20idol%20girl%20aikatsu&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/-uKlMrOoaOoCKr6-.png"
   },
   {
     id: 43,
-    name: "夏树未来彩虹徽章",
-    subtitle: "夏樹みらい レインボー缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "服部优,堂岛妮娜,栗栖心音,藤原雅",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=rainbow%20badge%20yellow%20anime%20idol%20aikatsu%20cute&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/aJwFHHGr9JRII-mS.png"
   },
   {
     id: 44,
-    name: "夏树未来闪耀徽章",
-    subtitle: "夏樹みらい シャイニング缶バッジ",
-    character: "夏树未来",
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "音城塞拉,冴草纪伊,风沢空,姬里玛利亚,音城诺艾尔",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=shining%20badge%20yellow%20anime%20idol%20girl%20aikatsu&image_size=square_hd"
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/7LYffjCRu0VX0ffO.png"
   },
+  {
+    id: 45,
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "星宫苹果,星宫荔枝,光石织姬",
+    type: "徽章",
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/iXu5kMASGglcICkt.png"
+  },
+  {
+    id: 46,
+    name: "沙滩徽章",
+    subtitle: "アイカツ！ Canバッジ54",
+    character: "凉川直人,乔尼·别府,濑名翼,四叶春",
+    type: "徽章",
+    size: "直径约 54mm",
+    image: "https://imgbed.heliar.top/i/nxpAS2EvFbIzF9rs.png"
+  },
+  
 ];
 
 export const TYPES = ["全部", "徽章", "亚克力立牌", "卡片", "文件夹", "毛绒玩偶"];
