@@ -12,18 +12,18 @@ const Header = ({ activeTab, onTabChange }) => {
     <>
       <header className="bg-card-bg/80 backdrop-blur-sm sticky top-0 z-50 border-b border-accent/20 shadow-soft">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <h1 className="font-quick text-xl sm:text-2xl font-bold text-text-primary tracking-wide">
-                AIKATSU GOODS
+          <div className="flex items-center justify-between h-14 sm:h-16">
+            <div className="flex items-center flex-shrink-0">
+              <h1 className="font-quick text-base sm:text-2xl font-bold text-text-primary tracking-wide whitespace-nowrap">
+                AIKATSU<span className="hidden sm:inline"> GOODS</span>
               </h1>
             </div>
-            <nav className="flex gap-1 sm:gap-2">
+            <nav className="flex gap-0.5 sm:gap-2 ml-1">
               {tabs.map(tab => (
                 <button
                   key={tab.key}
                   onClick={() => onTabChange(tab.key)}
-                  className={`px-3 sm:px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                     activeTab === tab.key
                       ? 'bg-accent text-white shadow-md'
                       : 'text-text-secondary hover:bg-accent/10 hover:text-text-primary'
@@ -34,7 +34,7 @@ const Header = ({ activeTab, onTabChange }) => {
               ))}
               <button
                 onClick={() => setShowAbout(true)}
-                className="px-3 sm:px-4 py-2 rounded-full text-sm font-medium text-text-secondary hover:bg-accent/10 hover:text-text-primary transition-all duration-300"
+                className="px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-text-secondary hover:bg-accent/10 hover:text-text-primary transition-all duration-300 whitespace-nowrap"
               >
                 关于
               </button>

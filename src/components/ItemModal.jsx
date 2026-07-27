@@ -160,7 +160,10 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
 
               {item.status === 'wish' && (
                 <div className="bg-rose-50/50 rounded-2xl p-4 mb-6 border border-rose-100">
-                  <p className="text-sm font-semibold text-rose-600 mb-3">心理价格范围</p>
+                  <p className="text-sm font-semibold text-rose-600 mb-1">心理价格范围</p>
+                  <p className="text-xs text-rose-400/70 mb-3 leading-relaxed">
+                    设置你愿意接受的买入价格区间。只填最低价 = 心理单价；填区间 = 最低到最高均可接受。
+                  </p>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <label className="text-sm text-text-secondary w-16 flex-shrink-0">最低价</label>
