@@ -1,5 +1,5 @@
-import { useState, useMemo, useEffect, useRef } from 'react';
-import html2canvas from 'html2canvas';
+import { useState, useMemo, useEffect } from 'react';
+import { renderShareImageToCanvas } from './utils/exportImage';
 import { useCollection } from './hooks/useCollection';
 import { getCharactersBySeriesAndGender } from './data/characters';
 import Header from './components/Header';
@@ -7,16 +7,12 @@ import StatsBar from './components/StatsBar';
 import FilterBar from './components/FilterBar';
 import CardGrid from './components/CardGrid';
 import ItemModal from './components/ItemModal';
-import WishlistShareImage from './components/WishlistShareImage';
-import OwnedShareImage from './components/OwnedShareImage';
 
 function App() {
   const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
   const [activeTab, setActiveTab] = useState('collection');
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
-  const wishShareRef = useRef(null);
-  const ownedShareRef = useRef(null);
 
   const getInitialFilter = (param, defaultValue) => {
     const params = new URLSearchParams(window.location.search);
@@ -146,225 +142,25 @@ function App() {
     URL.revokeObjectURL(url);
   };
 
-  const preloadImages = async (container) => {
-    console.group('🖼 导出图片预加载');
-    const startTime = performance.now();
-
-    const imgs = container.querySelectorAll('img');
-    console.log(`  发现 ${imgs.length} 张图片待加载`);
-
-    if (imgs.length === 0) {
-      console.groupEnd();
-      return { originals: [], failCount: 0 };
-    }
-
-    const originals = [];
-
-    // 将容器移入视口确保浏览器正常渲染（html2canvas 需要）
-    const containerParent = container.parentElement;
-    const originalStyle = containerParent ? containerParent.style.cssText : null;
-    if (containerParent) {
-      containerParent.style.cssText = 'position:fixed;left:0;top:0;width:850px;z-index:-1;opacity:0;pointer-events:none';
-    }
-
-    /**
-     * Blob → dataURL 转换
-     */
-    const blobToDataUrl = (blob) =>
-      new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result);
-        reader.onerror = reject;
-        reader.readAsDataURL(blob);
-      });
-
-    /**
-     * 发起单个 fetch 代理请求
-     */
-    const tryProxyFetch = async (proxyUrl, timeout = 10000) => {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), timeout);
-      try {
-        const res = await fetch(proxyUrl, { signal: controller.signal });
-        clearTimeout(timer);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const blob = await res.blob();
-        if (blob.size < 100) throw new Error('响应过小');
-        const dataUrl = await blobToDataUrl(blob);
-        if (dataUrl && dataUrl.startsWith('data:image/')) return dataUrl;
-        throw new Error('非图片响应');
-      } finally {
-        clearTimeout(timer);
-      }
-    };
-
-    /**
-     * 策略A: 直接 fetch CORS（server 有 Access-Control-Allow-Origin 时最快）
-     */
-    const strategyDirectFetch = async (src, timeout = 8000) => {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), timeout);
-      try {
-        const res = await fetch(src, { signal: controller.signal, mode: 'cors', referrerPolicy: 'no-referrer' });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const blob = await res.blob();
-        const dataUrl = await blobToDataUrl(blob);
-        if (dataUrl && dataUrl.startsWith('data:image/')) return dataUrl;
-        throw new Error('非图片');
-      } finally {
-        clearTimeout(timer);
-      }
-    };
-
-    /**
-     * 策略B: Canvas CORS 加载
-     */
-    const strategyCanvas = (src, timeout = 8000) =>
-      new Promise((resolve) => {
-        const img = new Image();
-        img.crossOrigin = 'anonymous';
-        img.referrerPolicy = 'no-referrer';
-        const timer = setTimeout(() => resolve(null), timeout);
-        img.onload = () => {
-          clearTimeout(timer);
-          try {
-            const c = document.createElement('canvas');
-            c.width = img.naturalWidth || 300;
-            c.height = img.naturalHeight || 300;
-            const ctx = c.getContext('2d');
-            ctx.drawImage(img, 0, 0);
-            resolve(c.toDataURL('image/png'));
-          } catch { resolve(null); }
-        };
-        img.onerror = () => { clearTimeout(timer); resolve(null); };
-        img.src = src;
-      });
-
-    /**
-     * 所有代理 URL 构建函数（按可靠性排序）
-     */
-    const proxyBuilders = [
-      { name: 'corsproxy.io', fn: (u) => 'https://corsproxy.io/?' + encodeURIComponent(u) },
-      { name: 'wsrv.nl', fn: (u) => 'https://wsrv.nl/?url=' + encodeURIComponent(u) + '&output=png' },
-      { name: 'weserv.nl', fn: (u) => 'https://images.weserv.nl/?url=' + encodeURIComponent(u) + '&output=png' },
-      { name: 'allorigins', fn: (u) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
-      { name: 'corsflare', fn: (u) => 'https://cors-flare.deno.dev/' + encodeURIComponent(u) },
-    ];
-
-    /**
-     * 单张图片加载：并行竞速所有策略，取最先成功的结果
-     */
-    const loadImage = async (src) => {
-      // 构建所有竞速任务（每个策略包装为 {name, promise}）
-      const racers = [
-        { name: 'direct-fetch', promise: strategyDirectFetch(src) },
-        { name: 'canvas-cors', promise: strategyCanvas(src) },
-        ...proxyBuilders.map(({ name, fn }) => ({
-          name: `proxy:${name}`,
-          promise: tryProxyFetch(fn(src)),
-        })),
-      ];
-
-      // 并行竞速：任一成功即返回
-      // 手动实现 Promise.any 兼容性更好
-      return new Promise((resolve) => {
-        let settled = 0;
-        const errors = [];
-
-        racers.forEach(({ name, promise }) => {
-          promise
-            .then((result) => {
-              if (result) {
-                console.log(`    ✓ [${name}]`);
-                resolve(result);
-              } else {
-                onFail(name, '返回空');
-              }
-            })
-            .catch((err) => {
-              onFail(name, err.message || String(err));
-            });
-        });
-
-        function onFail(name, reason) {
-          errors.push({ name, reason });
-          settled++;
-          if (settled >= racers.length) {
-            console.log(`    ✗ 全部失败: ${errors.map(e => e.name).join(', ')}`);
-            resolve(null);
-          }
-        }
-      });
-    };
-
-    // 等待 React 渲染完成
-    await new Promise(r => requestAnimationFrame(r));
-    await new Promise(r => setTimeout(r, 100));
-
-    const tasks = Array.from(imgs).map(async (img, idx) => {
-      const src = img.getAttribute('src') || img.src;
-      if (!src || src.startsWith('data:')) return;
-      originals.push({ img, src });
-      console.log(`  [${idx + 1}/${imgs.length}] 加载: ${src.substring(0, 60)}...`);
-      const dataUrl = await loadImage(src);
-      if (dataUrl) {
-        img.setAttribute('src', dataUrl);
-      }
-    });
-
-    await Promise.allSettled(tasks);
-
-    const failCount = originals.filter(o => {
-      const currentSrc = o.img.getAttribute('src');
-      return !currentSrc || !currentSrc.startsWith('data:');
-    }).length;
-
-    const elapsed = ((performance.now() - startTime) / 1000).toFixed(1);
-    console.log(`  完成: ${originals.length - failCount}/${originals.length} 成功, ${failCount} 失败 (耗时 ${elapsed}s)`);
-    console.groupEnd();
-
-    // 恢复容器样式
-    if (containerParent && originalStyle !== null) {
-      containerParent.style.cssText = originalStyle;
-    }
-
-    return { originals, failCount };
-  };
-
   const exportWishlistImage = async () => {
-    if (wishItems.length === 0) {
-      alert('心愿单是空的，没有可导出的内容~');
-      return;
-    }
-    if (!wishShareRef.current) return;
+    if (wishItems.length === 0) { alert('心愿单是空的，没有可导出的内容~'); return; }
     setExportingImage(true);
-    let originals = [];
     try {
-      const result = await preloadImages(wishShareRef.current);
-      originals = result.originals;
-      if (result.failCount > 0) {
-        alert(`⚠️ ${result.failCount} 张图片未能加载，导出的图片中可能缺少部分商品图。\n请检查网络连接后重试。`);
-      }
-      const scale = 2;
-      const canvas = await html2canvas(wishShareRef.current, {
-        scale,
-        useCORS: true,
-        backgroundColor: null,
-        width: wishShareRef.current.scrollWidth,
-        height: wishShareRef.current.scrollHeight,
+      const canvas = await renderShareImageToCanvas({
+        items: wishItems,
+        type: 'wish',
+        totalQuantity: wishTotalQuantity,
+        totalPriceMin: wishTotalPriceMin,
+        totalPriceMax: wishTotalPriceMax,
       });
       const link = document.createElement('a');
-      const date = new Date().toISOString().slice(0, 10);
-      link.download = `心愿单_${date}.png`;
+      link.download = `心愿单_${new Date().toISOString().slice(0, 10)}.png`;
       link.href = canvas.toDataURL('image/png');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      document.body.appendChild(link); link.click(); document.body.removeChild(link);
     } catch (err) {
       console.error('导出图片失败:', err);
       alert('导出图片失败，请稍后再试~');
     } finally {
-      originals.forEach(({ img, src }) => img.setAttribute('src', src));
       setExportingImage(false);
     }
   };
@@ -401,39 +197,23 @@ function App() {
   };
 
   const exportOwnedImage = async () => {
-    if (ownedItems.length === 0) {
-      alert('收藏是空的，没有可导出的内容~');
-      return;
-    }
-    if (!ownedShareRef.current) return;
+    if (ownedItems.length === 0) { alert('收藏是空的，没有可导出的内容~'); return; }
     setExportingImage(true);
-    let originals = [];
     try {
-      const result = await preloadImages(ownedShareRef.current);
-      originals = result.originals;
-      if (result.failCount > 0) {
-        alert(`⚠️ ${result.failCount} 张图片未能加载，导出的图片中可能缺少部分商品图。\n请检查网络连接后重试。`);
-      }
-      const scale = 2;
-      const canvas = await html2canvas(ownedShareRef.current, {
-        scale,
-        useCORS: true,
-        backgroundColor: null,
-        width: ownedShareRef.current.scrollWidth,
-        height: ownedShareRef.current.scrollHeight,
+      const canvas = await renderShareImageToCanvas({
+        items: ownedItems,
+        type: 'owned',
+        totalQuantity: ownedTotalQuantity,
+        totalPrice: ownedTotalPrice,
       });
       const link = document.createElement('a');
-      const date = new Date().toISOString().slice(0, 10);
-      link.download = `我的收藏_${date}.png`;
+      link.download = `我的收藏_${new Date().toISOString().slice(0, 10)}.png`;
       link.href = canvas.toDataURL('image/png');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      document.body.appendChild(link); link.click(); document.body.removeChild(link);
     } catch (err) {
       console.error('导出图片失败:', err);
       alert('导出图片失败，请稍后再试~');
     } finally {
-      originals.forEach(({ img, src }) => img.setAttribute('src', src));
       setExportingImage(false);
     }
   };
@@ -587,22 +367,6 @@ function App() {
         onSetWishPriceMin={setWishPriceMin}
         onSetWishPriceMax={setWishPriceMax}
       />
-
-      <div className="fixed left-full top-0 pointer-events-none" aria-hidden="true">
-        <WishlistShareImage
-          ref={wishShareRef}
-          items={wishItems}
-          totalQuantity={wishTotalQuantity}
-          totalPriceMin={wishTotalPriceMin}
-          totalPriceMax={wishTotalPriceMax}
-        />
-        <OwnedShareImage
-          ref={ownedShareRef}
-          items={ownedItems}
-          totalQuantity={ownedTotalQuantity}
-          totalPrice={ownedTotalPrice}
-        />
-      </div>
     </div>
   );
 }
