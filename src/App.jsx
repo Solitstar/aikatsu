@@ -149,26 +149,42 @@ function App() {
   const preloadImages = async (container) => {
     const imgs = container.querySelectorAll('img');
     const originals = [];
-    await Promise.all(
-      Array.from(imgs).map(async (img) => {
-        const src = img.getAttribute('src') || img.src;
-        if (!src || src.startsWith('data:')) return;
-        originals.push({ img, src });
+
+    const loadViaProxy = async (src) => {
+      const proxies = [
+        (url) => 'https://wsrv.nl/?url=' + encodeURIComponent(url) + '&output=webp',
+        (url) => 'https://images.weserv.nl/?url=' + encodeURIComponent(url),
+      ];
+      for (const proxyFn of proxies) {
         try {
           const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 15000);
-          const proxyUrl = 'https://images.weserv.nl/?url=' + encodeURIComponent(src);
-          const res = await fetch(proxyUrl, { signal: controller.signal });
+          const timeoutId = setTimeout(() => controller.abort(), 10000);
+          const res = await fetch(proxyFn(src), { signal: controller.signal });
           clearTimeout(timeoutId);
-          if (!res.ok) return;
+          if (!res.ok) continue;
           const blob = await res.blob();
           const dataUrl = await new Promise((resolve) => {
             const reader = new FileReader();
             reader.onloadend = () => resolve(reader.result);
             reader.readAsDataURL(blob);
           });
+          return dataUrl;
+        } catch {
+          continue;
+        }
+      }
+      return null;
+    };
+
+    await Promise.all(
+      Array.from(imgs).map(async (img) => {
+        const src = img.getAttribute('src') || img.src;
+        if (!src || src.startsWith('data:')) return;
+        originals.push({ img, src });
+        const dataUrl = await loadViaProxy(src);
+        if (dataUrl) {
           img.setAttribute('src', dataUrl);
-        } catch { /* skip failed images */ }
+        }
       })
     );
     return originals;
