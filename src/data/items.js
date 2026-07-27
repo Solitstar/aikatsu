@@ -545,28 +545,28 @@ export const BASE_ITEMS = [
     id: 61,
     name: "生日1弹徽章<5月~6月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
-    character: "",
+    character: "二阶堂柚子",
     type: "徽章",
     size: "直径约 56mm",
-    image: ""
+    image: "https://imgbed.heliar.top/i/exxAoIYgNntFk-sd.png"
   },
   {
     id: 62,
     name: "生日1弹徽章<5月~6月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
-    character: "",
+    character: "新条雏姬",
     type: "徽章",
     size: "直径约 56mm",
-    image: ""
+    image: "https://imgbed.heliar.top/i/_tsjuqOeoiWSh_Ej.png"
   },
   {
     id: 63,
     name: "生日1弹徽章<5月~6月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
-    character: "",
+    character: "珠树琉璃",
     type: "徽章",
     size: "直径约 56mm",
-    image: ""
+    image: "https://imgbed.heliar.top/i/E-E5MFGIWqVpG8FL.png"
   },
   {
     id: 64,
