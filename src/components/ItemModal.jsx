@@ -7,8 +7,10 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
       if (e.key === 'Escape') onClose();
     };
     document.addEventListener('keydown', handleEsc);
+    document.body.classList.add('modal-open');
     return () => {
       document.removeEventListener('keydown', handleEsc);
+      document.body.classList.remove('modal-open');
     };
   }, [item, onClose]);
 
@@ -21,12 +23,12 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
 
   return (
     <div
-      className="fixed inset-0 z-50 overflow-y-auto"
+      className="fixed inset-0 z-50 overflow-hidden"
       onClick={onClose}
     >
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
-      <div className="min-h-full flex items-center justify-center p-4">
+      <div className="absolute inset-0 overflow-y-auto flex items-start justify-center p-4 sm:items-center">
         <div
           className="relative w-full max-w-3xl bg-card-bg rounded-3xl shadow-soft overflow-hidden my-8"
           onClick={(e) => e.stopPropagation()}
