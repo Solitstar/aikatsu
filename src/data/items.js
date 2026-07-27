@@ -581,24 +581,96 @@ export const BASE_ITEMS = [
     id: 65,
     name: "生日1弹徽章<5月~6月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
-    character: "",
+    character: "白百合辉夜,白百合咲夜",
     type: "徽章",
     size: "直径约 56mm",
-    image: ""
+    image: "https://imgbed.heliar.top/i/ihZA9ubGCAH-9uHj.png"
   },
   {
     id: 66,
     name: "生日1弹徽章<5月~6月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
+    character: "白百合辉夜,白百合咲夜",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/hZ_t44Y_lt-jyar_.png"
+  },
+  {
+    id: 67,
+    name: "生日1弹徽章<5月~6月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
+    character: "糸井纱良",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/UBRe4syW4ab-T309.png"
+  },
+  {
+    id: 68,
+    name: "生日1弹徽章<9月~10月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
+    character: "春风若叶",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/ljA2NrlyvECZzz4H.png"
+  },
+  {
+    id: 69,
+    name: "生日1弹徽章<9月~10月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
+    character: "藤原雅",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/3kZh2CUwWs7nK5Tu.png"
+  },
+  {
+    id: 70,
+    name: "生日1弹徽章<9月~10月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
+    character: "神崎美月",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/A-Ac_UfUubqzeScR.png"
+  },
+  {
+    id: 71,
+    name: "生日1弹徽章<9月~10月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
+    character: "早乙女亚子",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/0CGpbOMfZ_zq_N21.png"
+  },
+  {
+    id: 72,
+    name: "生日1弹徽章<9月~10月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
+    character: "香澄真昼",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/gzhL2q95KACnIoop.png"
+  },
+  {
+    id: 73,
+    name: "生日1弹徽章<9月~10月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "",
     type: "徽章",
     size: "直径约 56mm",
     image: ""
   },
   {
-    id: 67,
-    name: "生日1弹徽章<5月~6月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
+    id: 74,
+    name: "生日1弹徽章<9月~10月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
+    character: "",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: ""
+  },
+  {
+    id: 75,
+    name: "生日1弹徽章<9月~10月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "",
     type: "徽章",
     size: "直径约 56mm",
