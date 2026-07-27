@@ -1624,8 +1624,51 @@ export const BASE_ITEMS = [
     size: "直径约 56mm",
     image: "https://imgbed.heliar.top/i/A9SRqj0p-PVhzhAJ.png"
   },
-
-
+  {
+    id: 179,
+    name: "扭蛋徽章",
+    subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3」 C賞",
+    character: "神崎美月，夏树未来",
+    type: "徽章",
+    size: "直径约 50mm",
+    image: "https://imgbed.heliar.top/i/6c6LYfuL29r7Weiu.png"
+  },
+  {
+    id: 180,
+    name: "扭蛋徽章",
+    subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3」 C賞",
+    character: "音城塞拉,冴草纪伊,风沢空,姬里玛利亚",
+    type: "徽章",
+    size: "直径约 50mm",
+    image: "https://imgbed.heliar.top/i/GXgh14yts-kZwsgt.png"
+  },
+  {
+    id: 181,
+    name: "扭蛋徽章",
+    subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3」 C賞",
+    character: "骑咲礼,艾尔莎·福特,花园绮罗",
+    type: "徽章",
+    size: "直径约 50mm",
+    image: "https://imgbed.heliar.top/i/TBD4LKOjkXVoKUIg.png"
+  },
+  {
+    id: 182,
+    name: "扭蛋徽章",
+    subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3」 C賞",
+    character: "香澄夜空,如月翼,二阶堂柚子,白鸟姬",
+    type: "徽章",
+    size: "直径约 50mm",
+    image: "https://imgbed.heliar.top/i/gVI9-TmJTHWN6nws.png"
+  },
+  {
+    id: 183,
+    name: "扭蛋徽章",
+    subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3」 C賞",
+    character: "明日香未来,神城卡莲",
+    type: "徽章",
+    size: "直径约 50mm",
+    image: "https://imgbed.heliar.top/i/F_KCbc_ykLKbPVGC.png"
+  },
 ];
 
 
