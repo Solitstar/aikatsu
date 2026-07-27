@@ -147,112 +147,171 @@ function App() {
   };
 
   const preloadImages = async (container) => {
+    console.group('🖼 导出图片预加载');
+    const startTime = performance.now();
+
     const imgs = container.querySelectorAll('img');
+    console.log(`  发现 ${imgs.length} 张图片待加载`);
+
+    if (imgs.length === 0) {
+      console.groupEnd();
+      return { originals: [], failCount: 0 };
+    }
+
     const originals = [];
 
-    // 确保容器在视口内以触发浏览器加载图片
+    // 将容器移入视口确保浏览器正常渲染（html2canvas 需要）
     const containerParent = container.parentElement;
     const originalStyle = containerParent ? containerParent.style.cssText : null;
     if (containerParent) {
-      containerParent.style.position = 'fixed';
-      containerParent.style.left = '0';
-      containerParent.style.top = '0';
-      containerParent.style.width = '850px';
-      containerParent.style.zIndex = '-1';
-      containerParent.style.opacity = '0';
-      containerParent.style.pointerEvents = 'none';
+      containerParent.style.cssText = 'position:fixed;left:0;top:0;width:850px;z-index:-1;opacity:0;pointer-events:none';
     }
 
-    const loadImage = async (src) => {
-      // 策略1: 直接用 fetch 请求图片（最可靠，服务器有 CORS 头即可）
+    /**
+     * Blob → dataURL 转换
+     */
+    const blobToDataUrl = (blob) =>
+      new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+
+    /**
+     * 发起单个 fetch 代理请求
+     */
+    const tryProxyFetch = async (proxyUrl, timeout = 10000) => {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeout);
       try {
-        const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), 6000);
-        const res = await fetch(src, {
-          signal: controller.signal,
-          mode: 'cors',
-          referrerPolicy: 'no-referrer',
-        });
+        const res = await fetch(proxyUrl, { signal: controller.signal });
         clearTimeout(timer);
-        if (res.ok) {
-          const blob = await res.blob();
-          const dataUrl = await new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onloadend = () => resolve(reader.result);
-            reader.onerror = reject;
-            reader.readAsDataURL(blob);
-          });
-          return dataUrl;
-        }
-      } catch { /* fetch 失败则使用后续策略 */ }
-
-      // 策略2: 通过新建 Image + Canvas 加载（适用于浏览器有缓存的情况）
-      try {
-        const result = await new Promise((resolve) => {
-          const img = new Image();
-          img.crossOrigin = 'anonymous';
-          img.referrerPolicy = 'no-referrer';
-          const timer = setTimeout(() => resolve(null), 6000);
-          img.onload = () => {
-            clearTimeout(timer);
-            try {
-              const c = document.createElement('canvas');
-              c.width = img.naturalWidth || 300;
-              c.height = img.naturalHeight || 300;
-              const ctx = c.getContext('2d');
-              ctx.drawImage(img, 0, 0);
-              resolve(c.toDataURL('image/png'));
-            } catch { resolve(null); }
-          };
-          img.onerror = () => { clearTimeout(timer); resolve(null); };
-          img.src = src;
-        });
-        if (result) return result;
-      } catch { /* 继续尝试代理 */ }
-
-      // 策略3: 多路代理服务 + 重试
-      const proxies = [
-        (url) => 'https://corsproxy.io/?' + encodeURIComponent(url),
-        (url) => 'https://wsrv.nl/?url=' + encodeURIComponent(url) + '&output=png',
-        (url) => 'https://images.weserv.nl/?url=' + encodeURIComponent(url) + '&output=png',
-        (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
-      ];
-      for (const proxyFn of proxies) {
-        for (let attempt = 0; attempt < 2; attempt++) {
-          try {
-            const controller = new AbortController();
-            const timer = setTimeout(() => controller.abort(), 8000);
-            const res = await fetch(proxyFn(src), { signal: controller.signal });
-            clearTimeout(timer);
-            if (!res.ok) continue;
-            const blob = await res.blob();
-            const dataUrl = await new Promise((resolve, reject) => {
-              const reader = new FileReader();
-              reader.onloadend = () => resolve(reader.result);
-              reader.onerror = reject;
-              reader.readAsDataURL(blob);
-            });
-            if (dataUrl && !dataUrl.startsWith('data:text/')) return dataUrl;
-          } catch {
-            if (attempt < 1) await new Promise(r => setTimeout(r, 800));
-          }
-        }
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const blob = await res.blob();
+        if (blob.size < 100) throw new Error('响应过小');
+        const dataUrl = await blobToDataUrl(blob);
+        if (dataUrl && dataUrl.startsWith('data:image/')) return dataUrl;
+        throw new Error('非图片响应');
+      } finally {
+        clearTimeout(timer);
       }
-      return null;
     };
 
-    // 等待一帧确保 DOM 图片属性已就绪
-    await new Promise(r => requestAnimationFrame(r));
+    /**
+     * 策略A: 直接 fetch CORS（server 有 Access-Control-Allow-Origin 时最快）
+     */
+    const strategyDirectFetch = async (src, timeout = 8000) => {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeout);
+      try {
+        const res = await fetch(src, { signal: controller.signal, mode: 'cors', referrerPolicy: 'no-referrer' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const blob = await res.blob();
+        const dataUrl = await blobToDataUrl(blob);
+        if (dataUrl && dataUrl.startsWith('data:image/')) return dataUrl;
+        throw new Error('非图片');
+      } finally {
+        clearTimeout(timer);
+      }
+    };
 
-    const tasks = Array.from(imgs).map(async (img) => {
+    /**
+     * 策略B: Canvas CORS 加载
+     */
+    const strategyCanvas = (src, timeout = 8000) =>
+      new Promise((resolve) => {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.referrerPolicy = 'no-referrer';
+        const timer = setTimeout(() => resolve(null), timeout);
+        img.onload = () => {
+          clearTimeout(timer);
+          try {
+            const c = document.createElement('canvas');
+            c.width = img.naturalWidth || 300;
+            c.height = img.naturalHeight || 300;
+            const ctx = c.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+            resolve(c.toDataURL('image/png'));
+          } catch { resolve(null); }
+        };
+        img.onerror = () => { clearTimeout(timer); resolve(null); };
+        img.src = src;
+      });
+
+    /**
+     * 所有代理 URL 构建函数（按可靠性排序）
+     */
+    const proxyBuilders = [
+      { name: 'corsproxy.io', fn: (u) => 'https://corsproxy.io/?' + encodeURIComponent(u) },
+      { name: 'wsrv.nl', fn: (u) => 'https://wsrv.nl/?url=' + encodeURIComponent(u) + '&output=png' },
+      { name: 'weserv.nl', fn: (u) => 'https://images.weserv.nl/?url=' + encodeURIComponent(u) + '&output=png' },
+      { name: 'allorigins', fn: (u) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
+      { name: 'corsflare', fn: (u) => 'https://cors-flare.deno.dev/' + encodeURIComponent(u) },
+    ];
+
+    /**
+     * 单张图片加载：并行竞速所有策略，取最先成功的结果
+     */
+    const loadImage = async (src) => {
+      // 构建所有竞速任务（每个策略包装为 {name, promise}）
+      const racers = [
+        { name: 'direct-fetch', promise: strategyDirectFetch(src) },
+        { name: 'canvas-cors', promise: strategyCanvas(src) },
+        ...proxyBuilders.map(({ name, fn }) => ({
+          name: `proxy:${name}`,
+          promise: tryProxyFetch(fn(src)),
+        })),
+      ];
+
+      // 并行竞速：任一成功即返回
+      // 手动实现 Promise.any 兼容性更好
+      return new Promise((resolve) => {
+        let settled = 0;
+        const errors = [];
+
+        racers.forEach(({ name, promise }) => {
+          promise
+            .then((result) => {
+              if (result) {
+                console.log(`    ✓ [${name}]`);
+                resolve(result);
+              } else {
+                onFail(name, '返回空');
+              }
+            })
+            .catch((err) => {
+              onFail(name, err.message || String(err));
+            });
+        });
+
+        function onFail(name, reason) {
+          errors.push({ name, reason });
+          settled++;
+          if (settled >= racers.length) {
+            console.log(`    ✗ 全部失败: ${errors.map(e => e.name).join(', ')}`);
+            resolve(null);
+          }
+        }
+      });
+    };
+
+    // 等待 React 渲染完成
+    await new Promise(r => requestAnimationFrame(r));
+    await new Promise(r => setTimeout(r, 100));
+
+    const tasks = Array.from(imgs).map(async (img, idx) => {
       const src = img.getAttribute('src') || img.src;
       if (!src || src.startsWith('data:')) return;
       originals.push({ img, src });
+      console.log(`  [${idx + 1}/${imgs.length}] 加载: ${src.substring(0, 60)}...`);
       const dataUrl = await loadImage(src);
       if (dataUrl) {
         img.setAttribute('src', dataUrl);
       }
     });
+
     await Promise.allSettled(tasks);
 
     const failCount = originals.filter(o => {
@@ -260,9 +319,9 @@ function App() {
       return !currentSrc || !currentSrc.startsWith('data:');
     }).length;
 
-    if (failCount > 0) {
-      console.warn(`图片预加载: ${originals.length - failCount}/${originals.length} 成功, ${failCount} 张失败`);
-    }
+    const elapsed = ((performance.now() - startTime) / 1000).toFixed(1);
+    console.log(`  完成: ${originals.length - failCount}/${originals.length} 成功, ${failCount} 失败 (耗时 ${elapsed}s)`);
+    console.groupEnd();
 
     // 恢复容器样式
     if (containerParent && originalStyle !== null) {
