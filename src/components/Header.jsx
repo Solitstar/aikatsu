@@ -1,7 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Header = ({ activeTab, onTabChange }) => {
   const [showAbout, setShowAbout] = useState(false);
+
+  useEffect(() => {
+    if (showAbout) {
+      document.body.classList.add('modal-open');
+      return () => document.body.classList.remove('modal-open');
+    }
+  }, [showAbout]);
+
   const tabs = [
     { key: 'collection', label: '图鉴' },
     { key: 'owned', label: '已拥有' },
@@ -45,11 +53,11 @@ const Header = ({ activeTab, onTabChange }) => {
 
       {showAbout && (
         <div
-          className="fixed inset-0 z-[60] overflow-y-auto"
+          className="fixed inset-0 z-[60] overflow-hidden"
           onClick={() => setShowAbout(false)}
         >
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
-          <div className="min-h-full flex items-center justify-center p-4">
+          <div className="absolute inset-0 overflow-y-auto flex items-start justify-center p-4 sm:items-center">
             <div
               className="relative w-full max-w-lg bg-white rounded-3xl shadow-soft overflow-hidden my-8"
               onClick={(e) => e.stopPropagation()}
