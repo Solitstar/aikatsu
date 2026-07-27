@@ -13,7 +13,7 @@ export const BASE_ITEMS = [
   {
     id: 2,
     name: "全息Live会场限定徽章",
-    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    subtitle: "アイカツ！ Liveイリュージョン 缶バッジセット 会場限定",
     character: "夏树未来,有栖川乙女,一之濑枫,冴草纪伊",
     type: "徽章",
     size: "直径约 40mm",
@@ -22,7 +22,7 @@ export const BASE_ITEMS = [
   {
     id: 3,
     name: "全息Live会场限定徽章",
-    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    subtitle: "アイカツ！ Liveイリュージョン 缶バッジセット 会場限定",
     character: "雾矢葵,藤堂尤里卡,音城塞拉",
     type: "徽章",
     size: "直径约 40mm",
@@ -31,7 +31,7 @@ export const BASE_ITEMS = [
   {
     id: 4,
     name: "全息Live会场限定徽章",
-    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    subtitle: "アイカツ！ Liveイリュージョン 缶バッジセット 会場限定",
     character: "紫吹兰,神崎美月,风沢空",
     type: "徽章",
     size: "直径约 40 mm",
@@ -40,7 +40,7 @@ export const BASE_ITEMS = [
   {
     id: 5,
    name: "全息Live会场限定徽章",
-    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    subtitle: "アイカツ！ Liveイリュージョン 缶バッジセット 会場限定",
     character: "星宫莓,大空明,姬里玛利亚,北大路樱",
     type: "徽章",
     size: "直径约 40 mm",
@@ -49,7 +49,7 @@ export const BASE_ITEMS = [
   {
     id: 6,
     name: "全息Live会场限定徽章",
-    subtitle: "アイカツ Liveイリュージョン 缶バッジセット 会場限定",
+    subtitle: "アイカツ！ Liveイリュージョン 缶バッジセット 会場限定",
     character: "其他",
     type: "徽章",
     size: "直径约 75mm",
@@ -58,7 +58,7 @@ export const BASE_ITEMS = [
   {
     id: 7,
     name: "2015Live徽章",
-    subtitle: "アイカツ スターアニス 2015年 ジャケバッチ ",
+    subtitle: "アイカツ！ スターアニス 2015年 ジャケバッチ ",
     character: "其他",
     type: "徽章",
     size: "约 40mm",
@@ -67,7 +67,7 @@ export const BASE_ITEMS = [
   {
     id: 8,
     name: "2016Live徽章",
-    subtitle: "アイカツ ミュージックフェスタ2016 缶バッジ ",
+    subtitle: "アイカツ！ ミュージックフェスタ2016 缶バッジ ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
@@ -75,7 +75,7 @@ export const BASE_ITEMS = [
   },
   {
     name: "2017Live徽章",
-    subtitle: "アイカツ ミュージックフェスタ2017 缶バッジ",
+    subtitle: "アイカツ！ ミュージックフェスタ2017 缶バッジ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
@@ -111,7 +111,7 @@ export const BASE_ITEMS = [
   {
     id: 13,
     name: "Vivid Kiss品牌徽章",
-    subtitle: "アイカツ デザインマート Vivid Kiss 缶バッジ",
+    subtitle: "アイカツ！ デザインマート Vivid Kiss 缶バッジ",
     character: "其他,夏树未来,新条雏姬",
     type: "徽章",
     size: "直径约 50mm",
@@ -120,7 +120,7 @@ export const BASE_ITEMS = [
   {
     id: 14,
     name: "Vivid Kiss品牌徽章",
-    subtitle: "アイカツ デザインマート Vivid Kiss 缶バッジ",
+    subtitle: "アイカツ！ デザインマート Vivid Kiss 缶バッジ",
     character: "其他,夏树未来,新条雏姬",
     type: "徽章",
     size: "直径约 30mm",
@@ -138,7 +138,7 @@ export const BASE_ITEMS = [
   {
     id: 16,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ ",
+    subtitle: "アイカツ！ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
@@ -147,29 +147,29 @@ export const BASE_ITEMS = [
   {
     id: 17,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ",
+    subtitle: "アイカツ！ワッペン缶バッジ",
     character: "星宫莓,雾矢葵,紫吹兰,有栖川乙女,藤堂尤里卡,北大路樱,一之濑枫,神崎美月",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/3wih2wM.png"
+    image: "https://imgbed.heliar.top/i/2w_ibZudaKaJDpnH?thumb=1"
   },
   {
     id: 19,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ",
+    subtitle: "アイカツ！ ワッペン缶バッジ",
     character: "星宫莓",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/v0P9Wot.png"
+    image: "https://imgbed.heliar.top/i/FIMenSVOfQxPQrr1?thumb=1"
     },
   {
     id: 18,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ ",
+    subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/V35msdn.png"
+    image: "https://imgbed.heliar.top/i/wj2RBao1ID0afAfr?thumb=1"
   },
   {
     id: 20,
@@ -178,106 +178,107 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/2xkRpPZ.png"
+    image: "https://imgbed.heliar.top/i/o3NnQwnVZbEhzlXV?thumb=1"
   },
   {
     id: 21,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ ",
+    subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/qoOBrVG.png"
+    image: "https://imgbed.heliar.top/i/IM7gpItzT4Gh3dP0?thumb=1"
   },
   {
     id: 22,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ ",
+    subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "星宫莓,紫吹兰",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/S4yh8dL.png"
+    image: "https://imgbed.heliar.top/i/1lmSnmHOeP72nJZ2?thumb=1"
   },
   {
     id: 23,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ ",
+    subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/v2y3c7X.pngg"
+    image: "https://imgbed.heliar.top/i/Jk1uEPluJp1NJxKE?thumb=1"
   },
   {
     id: 24,
     name: "布艺(食玩)徽章",
-    subtitle: "アイカツ ワッペン缶バッジ ",
+    subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/0z9i6XP.png"
+    image: "https://imgbed.heliar.top/i/MPVbhq4URMI2_jSJ?thumb=1"
   },
   {
     id: 25,
     name: "海景布徽章(初版)",
-    subtitle: "アイカツ メモリアルハンカチセット 缶バッジ",
+    subtitle: "アイカツ！ メモリアルハンカチセット 缶バッジ",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 44mm",
-    image: "https://i.imgur.com/85MiwUC.png"
+    image: "https://imgbed.heliar.top/i/aBUuvq3BIizbjKot?thumb=1"
   },
   {
     id: 26,
      name: "海景布徽章(再贩)",
-    subtitle: "アイカツ メモリアルハンカチセット 缶バッジ",
+    subtitle: "アイカツ！ メモリアルハンカチセット 缶バッジ",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 44mm",
-    image: "https://i.imgur.com/YXl6KQ6.png"
+    image: "https://imgbed.heliar.top/i/qjmkzP_Y9QUAbUDR?thumb=1"
   },
   {
     id: 27,
-    name: "夏树未来限定徽章",
-    subtitle: "夏樹みらい 限定缶バッジ",
+    name: "格言生日(满赠)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=limited%20edition%20badge%20yellow%20anime%20idol%20aikatsu&image_size=square_hd"
+    size: "直径约 44mm",
+    image: "https://imgbed.heliar.top/i/BIoNbs96s4PrLZjL?thumb=1"
   },
   {
     id: 28,
-    name: "夏树未来收藏徽章",
-    subtitle: "夏樹みらい コレクション缶バッジ",
+    name: "生日1弹徽章",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 75mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=collectible%20badge%20cute%20anime%20idol%20yellow%20aikatsu&image_size=square_hd"
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/lmCOA1UAScy4Lgph?thumb=1"
   },
   {
     id: 29,
-    name: "夏树未来特典徽章",
-    subtitle: "夏樹みらい 特典缶バッジ",
+    name: "生日2弹徽章",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=special%20badge%20yellow%20idol%20anime%20girl%20aikatsu%20merch&image_size=square_hd"
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/GOzyall8LPXxHuf7?thumb=1"
   },
   {
     id: 30,
-    name: "夏树未来扭蛋徽章",
-    subtitle: "夏樹みらい ガシャポン缶バッジ",
+     id: 29,
+    name: "生日3弹徽章",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=gacha%20badge%20yellow%20anime%20idol%20aikatsu%20cute&image_size=square_hd"
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/wroclmlPArQvw0ru?thumb=1"
   },
   {
     id: 31,
-    name: "夏树未来Q版徽章",
-    subtitle: "夏樹みらい デフォルメ缶バッジ",
+    name: "AVIOT耳机联动",
+    subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 57mm",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chibi%20badge%20yellow%20haired%20anime%20girl%20aikatsu&image_size=square_hd"
+    image: "https://imgbed.heliar.top/i/uRLJG98NM0UKS8un?thumb=1"
   },
   {
     id: 32,
