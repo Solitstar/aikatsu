@@ -1,5 +1,11 @@
 import { getCharacterInfo } from './characters';
 
+/**
+ * @typedef {import('../types/characters').CharacterName} CharacterName
+ * @typedef {import('../types/characters').GoodsType} GoodsType
+ */
+
+/** @type {Array<{id: number, name: string, subtitle: string, character: CharacterName, type: GoodsType, size: string, image: string}>} */
 export const BASE_ITEMS = [
   {
     id: 1,
