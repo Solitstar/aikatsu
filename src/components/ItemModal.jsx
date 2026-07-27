@@ -234,7 +234,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   </div>
                   <div className="flex">
                     <span className="w-16 text-text-secondary flex-shrink-0">角色</span>
-                    <span className="text-text-primary">{item.character}</span>
+                    <span className="text-text-primary">{item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean).join(' | ')}</span>
                   </div>
                   <div className="flex">
                     <span className="w-16 text-text-secondary flex-shrink-0">种类</span>

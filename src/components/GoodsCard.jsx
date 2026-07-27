@@ -1,4 +1,11 @@
 const GoodsCard = ({ item, onClick }) => {
+  const formatCardCharacter = (character) => {
+    if (!character) return '';
+    const chars = character.split(/[,，]/).map(c => c.trim()).filter(Boolean);
+    if (chars.length <= 1) return character;
+    return chars[0] + ' 等' + chars.length + '人';
+  };
+
   const getStatusBadge = () => {
     if (item.status === 'owned') {
       const qty = item.quantity || 1;
@@ -60,7 +67,7 @@ const GoodsCard = ({ item, onClick }) => {
         </h3>
         <div className="flex flex-wrap gap-1.5">
           <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-accent/15 text-accent font-medium">
-            {item.character}
+            {formatCardCharacter(item.character)}
           </span>
           <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-bg-primary text-text-secondary font-medium">
             {item.type}
