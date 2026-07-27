@@ -418,7 +418,7 @@ function App() {
 
         <footer className="mt-16 pb-8 text-center">
           <p className="text-text-secondary text-xs sm:text-sm">
-            💖 Made with love for Aikatsu fans
+            Made by Solitstar
           </p>
           <p className="text-text-secondary/60 text-xs mt-1">
             点击卡片查看详情，在详情页切换收藏状态
