@@ -712,6 +712,78 @@ export const BASE_ITEMS = [
     size: "直径约 56mm",
     image: "https://imgbed.heliar.top/i/OdXbUGL8U6dS-7uk.png"
   },
+  {
+    id: 80,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "姬石来希",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/ad_WQpxAzQ3IeU6k.png"
+  },
+  {
+    id: 81,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "月城爱弓",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/jlJr3HI8Rjox36H6.png"
+  },
+  {
+    id: 82,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "冴草纪伊",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/pSH5Nc-ilEA-KND9.png"
+  },
+  {
+    id: 83,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "双叶亚里亚",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/OtEvp1ifIhrPjGqA.png"
+  },
+  {
+    id: 84,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "香澄朝阳",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/wK9lSagqa4o8NGLR.png"
+  },
+  {
+    id: 85,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "藤堂尤里卡",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/wYykRwWxiQUShSGs.png"
+  },
+   {
+    id: 86,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "音城诺艾尔",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/SmvUH-_7m5BDjO81.png"
+  },
+    {
+    id: 87,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "白桦丽莎",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/7E-ZOiY4rmnRRfHu.png"
+  },
 ];
 
 export const TYPES = ["全部", "徽章", "亚克力立牌", "卡片", "文件夹", "毛绒玩偶"];
