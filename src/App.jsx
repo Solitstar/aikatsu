@@ -87,8 +87,16 @@ function App() {
     if (tab === 'collection') {
       setFilterStatus('全部');
     } else if (tab === 'owned') {
+      setFilterSeries('全部');
+      setFilterChar('全部');
+      setFilterType('全部');
+      setSearchKeyword('');
       setFilterStatus('owned');
     } else if (tab === 'wishlist') {
+      setFilterSeries('全部');
+      setFilterChar('全部');
+      setFilterType('全部');
+      setSearchKeyword('');
       setFilterStatus('wish');
     }
   };
@@ -147,8 +155,11 @@ function App() {
         if (!src || src.startsWith('data:')) return;
         originals.push({ img, src });
         try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 15000);
           const proxyUrl = 'https://images.weserv.nl/?url=' + encodeURIComponent(src);
-          const res = await fetch(proxyUrl);
+          const res = await fetch(proxyUrl, { signal: controller.signal });
+          clearTimeout(timeoutId);
           if (!res.ok) return;
           const blob = await res.blob();
           const dataUrl = await new Promise((resolve) => {
