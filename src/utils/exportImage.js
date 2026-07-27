@@ -281,24 +281,38 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
 
     const tx = imgX + IMG_SIZE + 16;
     const ty = itemY + ITEM_PADDING;
-    ctx.textAlign = 'left';
 
-    if (item.subtitle) {
-      ctx.font = '8px "Quicksand", "Noto Sans SC", sans-serif';
-      ctx.fillStyle = 'rgba(0,0,0,0.4)';
-      ctx.fillText(item.subtitle.substring(0, 80), tx, ty + 12);
-    }
-    ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
-    ctx.fillStyle = '#000000';
-    ctx.fillText(item.name, tx, ty + (item.subtitle ? 30 : 20));
+    // 文字垂直居中于图片区域 (128px)
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'alphabetic';
 
     const chars = item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean);
     const charStr = chars.length > 3
       ? chars.slice(0, 3).join(' | ') + ` 等${chars.length}人`
       : chars.join(' | ');
-    ctx.font = '9px "Quicksand", "Noto Sans SC", sans-serif';
-    ctx.fillStyle = 'rgba(0,0,0,0.5)';
-    ctx.fillText(`${charStr} · ${item.type}`, tx, ty + (item.subtitle ? 48 : 38));
+
+    if (item.subtitle) {
+      // 文字块约 56px 高，居中: (128-56)/2 = 36
+      const base = ty + 38;
+      ctx.font = '8px "Quicksand", "Noto Sans SC", sans-serif';
+      ctx.fillStyle = 'rgba(0,0,0,0.4)';
+      ctx.fillText(item.subtitle.substring(0, 80), tx, base);
+      ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
+      ctx.fillStyle = '#000000';
+      ctx.fillText(item.name, tx, base + 16);
+      ctx.font = '9px "Quicksand", "Noto Sans SC", sans-serif';
+      ctx.fillStyle = 'rgba(0,0,0,0.5)';
+      ctx.fillText(`${charStr} · ${item.type}`, tx, base + 32);
+    } else {
+      // 文字块约 32px 高，居中: (128-32)/2 = 48
+      const base = ty + 50;
+      ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
+      ctx.fillStyle = '#000000';
+      ctx.fillText(item.name, tx, base);
+      ctx.font = '9px "Quicksand", "Noto Sans SC", sans-serif';
+      ctx.fillStyle = 'rgba(0,0,0,0.5)';
+      ctx.fillText(`${charStr} · ${item.type}`, tx, base + 16);
+    }
 
     ctx.textAlign = 'right';
     const px = PADDING + CARD_WIDTH - ITEM_PADDING;
