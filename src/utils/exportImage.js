@@ -1,6 +1,6 @@
 /**
  * 纯 Canvas 2D 导出工具
- * 绕过 html2canvas 的跨域 CORS 限制，直接绘制分享图到 Canvas
+ * 彻底绕过跨域限制：优先尝试本地同源图片，远程代理竞速兜底
  */
 
 const WIDTH = 850;
@@ -9,69 +9,39 @@ const CARD_WIDTH = WIDTH - PADDING * 2;
 const IMG_SIZE = 128;
 const ITEM_PADDING = 16;
 
-// ---- 图片预加载 ----
+// ---- 图片加载 ----
 
-const blobToDataUrl = (blob) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onloadend = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(blob);
+/** 从 dataURL 或 URL 加载为 Image 对象 */
+function urlToImage(src) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => resolve(null);
+    img.src = src;
   });
+}
 
-const tryProxyFetch = async (proxyUrl) => {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 10000);
-  try {
-    const res = await fetch(proxyUrl, { signal: controller.signal });
-    clearTimeout(timer);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const blob = await res.blob();
-    if (blob.size < 100) throw new Error('too small');
-    const dataUrl = await blobToDataUrl(blob);
-    if (dataUrl?.startsWith('data:image/')) return dataUrl;
-    throw new Error('not image');
-  } finally {
-    clearTimeout(timer);
-  }
-};
-
-const strategyDirectFetch = async (src) => {
+/** 通过 fetch → blob → dataURL 加载图片 */
+async function fetchToDataUrl(url) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 8000);
   try {
-    const res = await fetch(src, { signal: controller.signal, mode: 'cors', referrerPolicy: 'no-referrer' });
+    const res = await fetch(url, { signal: controller.signal, referrerPolicy: 'no-referrer' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const blob = await res.blob();
-    const dataUrl = await blobToDataUrl(blob);
-    if (dataUrl?.startsWith('data:image/')) return dataUrl;
-    throw new Error('not image');
+    if (blob.size < 100) throw new Error('too small');
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
   } finally {
     clearTimeout(timer);
   }
-};
+}
 
-const strategyCanvas = (src) =>
-  new Promise((resolve) => {
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.referrerPolicy = 'no-referrer';
-    const timer = setTimeout(() => resolve(null), 8000);
-    img.onload = () => {
-      clearTimeout(timer);
-      try {
-        const c = document.createElement('canvas');
-        c.width = img.naturalWidth || 300;
-        c.height = img.naturalHeight || 300;
-        const ctx = c.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-        resolve(c.toDataURL('image/png'));
-      } catch { resolve(null); }
-    };
-    img.onerror = () => { clearTimeout(timer); resolve(null); };
-    img.src = src;
-  });
-
+/** 代理服务列表 */
 const proxyBuilders = [
   { name: 'corsproxy.io', fn: (u) => 'https://corsproxy.io/?' + encodeURIComponent(u) },
   { name: 'wsrv.nl', fn: (u) => 'https://wsrv.nl/?url=' + encodeURIComponent(u) + '&output=png' },
@@ -80,79 +50,95 @@ const proxyBuilders = [
   { name: 'corsflare', fn: (u) => 'https://cors-flare.deno.dev/' + encodeURIComponent(u) },
 ];
 
-/** 并行竞速加载单张图片，返回 dataURL 或 null */
-async function loadImageDataUrl(src) {
-  const racers = [
-    { name: 'direct', promise: strategyDirectFetch(src) },
-    { name: 'canvas', promise: strategyCanvas(src) },
-    ...proxyBuilders.map(({ name, fn }) => ({
-      name,
-      promise: tryProxyFetch(fn(src)),
-    })),
-  ];
-
+/** 远程代理竞速加载 */
+function loadViaProxy(remoteUrl) {
+  const racers = proxyBuilders.map(({ fn }) =>
+    fetchToDataUrl(fn(remoteUrl)).catch(() => null)
+  );
   return new Promise((resolve) => {
     let settled = 0;
     let resolved = false;
-    racers.forEach(({ promise }) => {
-      promise
-        .then((result) => {
-          if (!resolved && result) {
-            resolved = true;
-            resolve(result);
-          }
-        })
-        .catch(() => {})
-        .finally(() => {
-          settled++;
-          if (settled >= racers.length && !resolved) resolve(null);
-        });
+    racers.forEach((p) => {
+      p.then((result) => {
+        if (!resolved && result) {
+          resolved = true;
+          resolve(result);
+        }
+      }).catch(() => {}).finally(() => {
+        settled++;
+        if (settled >= racers.length && !resolved) resolve(null);
+      });
     });
   });
 }
 
-/** dataURL → Image 对象 */
-function dataUrlToImage(dataUrl) {
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = () => resolve(null);
-    img.src = dataUrl;
-  });
+/** 根据 item id 和远程 URL 推导本地路径候选列表 */
+function getLocalUrls(item) {
+  const urls = [];
+  // 从远程 URL 提取格式信息
+  if (item.image.endsWith('.png')) {
+    urls.push(`/aikatsu/images/item_${item.id}.png`);
+  } else if (item.image.includes('?thumb=1')) {
+    // Chevereto 缩略图通常是 JPEG/WebP
+    urls.push(`/aikatsu/images/item_${item.id}.jpg`);
+    urls.push(`/aikatsu/images/item_${item.id}.webp`);
+  }
+  // 兜底：都试一下
+  urls.push(`/aikatsu/images/item_${item.id}.png`);
+  if (!urls.includes(`/aikatsu/images/item_${item.id}.jpg`)) {
+    urls.push(`/aikatsu/images/item_${item.id}.jpg`);
+  }
+  return urls;
 }
 
-/** 预加载所有图片并转为 Image 对象，返回 { url → Image|null } 映射 */
-export async function preloadImagesAsObjects(imageUrls) {
-  const uniqueUrls = [...new Set(imageUrls)];
-  console.group('🖼 图片预加载 (Canvas直绘模式)');
-  console.log(`  共 ${uniqueUrls.length} 张待加载`);
+/**
+ * 加载单张图片的 Image 对象
+ * 策略：本地同源图片 (最快) → 远程代理竞速 (兜底)
+ */
+async function loadItemImage(item) {
+  // 策略1: 从本地 public/images/ 加载（同源，零跨域问题）
+  const localUrls = getLocalUrls(item);
+  for (const localUrl of localUrls) {
+    const img = await urlToImage(localUrl);
+    if (img) {
+      console.log(`    ✓ local: ${localUrl}`);
+      return img;
+    }
+  }
+
+  // 策略2: 远程代理竞速
+  console.log(`    ⚡ 本地无缓存，尝试代理加载...`);
+  const dataUrl = await loadViaProxy(item.image);
+  if (dataUrl) {
+    const img = await urlToImage(dataUrl);
+    if (img) {
+      console.log(`    ✓ proxy (dataURL)`);
+      return img;
+    }
+  }
+
+  console.log(`    ✗ 加载失败`);
+  return null;
+}
+
+/**
+ * 预加载所有商品图片，返回 { itemId → Image|null } 映射
+ */
+async function preloadItemImages(items) {
+  console.group('🖼 图片加载');
+  console.log(`  共 ${items.length} 张`);
   const startTime = performance.now();
 
-  // 步骤1: 通过代理竞速获取 dataURL
-  const dataUrlMap = {};
-  const tasks1 = uniqueUrls.map(async (url) => {
-    dataUrlMap[url] = await loadImageDataUrl(url);
-  });
-  await Promise.allSettled(tasks1);
-
-  const dataSuccess = Object.values(dataUrlMap).filter(Boolean).length;
-  console.log(`  步骤1 dataURL: ${dataSuccess}/${uniqueUrls.length}`);
-
-  // 步骤2: dataURL → Image 对象
   const imageMap = {};
-  const tasks2 = uniqueUrls.map(async (url) => {
-    const dataUrl = dataUrlMap[url];
-    if (dataUrl) {
-      imageMap[url] = await dataUrlToImage(dataUrl);
-    } else {
-      imageMap[url] = null;
-    }
+  const tasks = items.map(async (item) => {
+    console.log(`  [#${item.id}] ${item.name}`);
+    imageMap[item.id] = await loadItemImage(item);
   });
-  await Promise.allSettled(tasks2);
+  await Promise.allSettled(tasks);
 
-  const imgSuccess = Object.values(imageMap).filter(Boolean).length;
+  const success = Object.values(imageMap).filter(Boolean).length;
   const elapsed = ((performance.now() - startTime) / 1000).toFixed(1);
-  console.log(`  步骤2 Image对象: ${imgSuccess}/${uniqueUrls.length} (耗时 ${elapsed}s)`);
+  console.log(`  完成: ${success}/${items.length} 成功 (${elapsed}s)`);
   console.groupEnd();
 
   return imageMap;
@@ -174,7 +160,7 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-function drawImagePlaceholder(ctx, x, y, w, h, name) {
+function drawPlaceholder(ctx, x, y, w, h, name) {
   roundRect(ctx, x, y, w, h, 10);
   ctx.fillStyle = '#f1f5f9';
   ctx.fill();
@@ -187,24 +173,21 @@ function drawImagePlaceholder(ctx, x, y, w, h, name) {
   ctx.textBaseline = 'alphabetic';
 }
 
-function drawCardImage(ctx, imgObj, x, y, w, h, itemName) {
+function drawCardImage(ctx, imgObj, x, y, w, h, name) {
   roundRect(ctx, x, y, w, h, 10);
   ctx.save();
   ctx.clip();
   if (imgObj) {
     try {
-      // 按比例缩放居中裁剪
       const scale = Math.max(w / imgObj.width, h / imgObj.height);
       const sw = imgObj.width * scale;
       const sh = imgObj.height * scale;
-      const sx = x - (sw - w) / 2;
-      const sy = y - (sh - h) / 2;
-      ctx.drawImage(imgObj, sx, sy, sw, sh);
+      ctx.drawImage(imgObj, x - (sw - w) / 2, y - (sh - h) / 2, sw, sh);
     } catch {
-      drawImagePlaceholder(ctx, x, y, w, h, itemName);
+      drawPlaceholder(ctx, x, y, w, h, name);
     }
   } else {
-    drawImagePlaceholder(ctx, x, y, w, h, itemName);
+    drawPlaceholder(ctx, x, y, w, h, name);
   }
   ctx.restore();
 }
@@ -214,11 +197,10 @@ function drawCardImage(ctx, imgObj, x, y, w, h, itemName) {
 export async function renderShareImageToCanvas({ items, type, totalQuantity, totalPrice, totalPriceMin, totalPriceMax }) {
   console.group('🎨 Canvas 直绘分享图');
 
-  // 1. 预加载所有图片为 Image 对象
-  const imageUrls = items.map((item) => item.image);
-  const imageObjMap = await preloadImagesAsObjects(imageUrls);
+  // 1. 预加载所有图片
+  const imageMap = await preloadItemImages(items);
 
-  // 2. 计算尺寸
+  // 2. 计算画布尺寸
   const ITEM_ROW_H = IMG_SIZE + ITEM_PADDING * 2;
   const ITEM_GAP = 12;
   const height = PADDING + 130 + 100 + (items.length * (ITEM_ROW_H + ITEM_GAP) + 20) + 60 + PADDING;
@@ -229,7 +211,7 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
   const ctx = canvas.getContext('2d');
   ctx.scale(2, 2);
 
-  // 3. 背景
+  // 3. 背景渐变
   const gradient = ctx.createLinearGradient(0, 0, 0, height);
   if (type === 'owned') {
     gradient.addColorStop(0, '#fefce8');
@@ -243,7 +225,7 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
 
   let cy = PADDING;
 
-  // 4. 标题
+  // 4. 标题区域
   ctx.textAlign = 'center';
   ctx.fillStyle = '#000000';
   ctx.font = 'bold 30px "Quicksand", "Noto Sans SC", sans-serif';
@@ -288,22 +270,17 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
   // 6. 商品列表
   items.forEach((item) => {
     const itemY = cy;
-
-    // 白色卡片背景
     roundRect(ctx, PADDING, itemY, CARD_WIDTH, ITEM_ROW_H, 12);
     ctx.fillStyle = '#ffffff';
     ctx.fill();
 
-    // 图片
     const imgX = PADDING + ITEM_PADDING;
     const imgY = itemY + ITEM_PADDING;
-    const imgObj = imageObjMap[item.image];
+    const imgObj = imageMap[item.id];
     drawCardImage(ctx, imgObj, imgX, imgY, IMG_SIZE, IMG_SIZE, item.name);
 
-    // 文字
     const tx = imgX + IMG_SIZE + 16;
     const ty = itemY + ITEM_PADDING;
-
     ctx.textAlign = 'left';
 
     if (item.subtitle) {
@@ -311,7 +288,6 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
       ctx.fillStyle = 'rgba(0,0,0,0.4)';
       ctx.fillText(item.subtitle.substring(0, 80), tx, ty + 12);
     }
-
     ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
     ctx.fillStyle = '#000000';
     ctx.fillText(item.name, tx, ty + (item.subtitle ? 30 : 20));
@@ -324,7 +300,6 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
     ctx.fillStyle = 'rgba(0,0,0,0.5)';
     ctx.fillText(`${charStr} · ${item.type}`, tx, ty + (item.subtitle ? 48 : 38));
 
-    // 价格 / 数量（右侧）
     ctx.textAlign = 'right';
     const px = PADDING + CARD_WIDTH - ITEM_PADDING;
     const py = itemY + ITEM_ROW_H / 2;
