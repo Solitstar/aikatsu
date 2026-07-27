@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "download-images": "node scripts/download-images.cjs",
-    "build": "npm run download-images && vite build",
+    "write-version": "node scripts/write-version.cjs",
+    "build": "npm run download-images && npm run write-version && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bash deploy.sh"
