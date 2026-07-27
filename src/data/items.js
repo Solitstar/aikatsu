@@ -246,8 +246,8 @@ export const BASE_ITEMS = [
   },
   {
     id: 28,
-    name: "生日1弹徽章",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ",
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 56mm",
@@ -255,8 +255,8 @@ export const BASE_ITEMS = [
   },
   {
     id: 29,
-    name: "生日2弹徽章",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2",
+    name: "生日2弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 56mm",
@@ -264,8 +264,8 @@ export const BASE_ITEMS = [
   },
   {
     id: 30,
-    name: "生日3弹徽章",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3",
+    name: "生日3弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <7月~8月>",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 56mm",
@@ -414,6 +414,96 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 54mm",
     image: "https://imgbed.heliar.top/i/nxpAS2EvFbIzF9rs.png"
+  },
+  {
+    id: 47,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "阳明咲(Rose)",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/AZQ1rev1CMfRZ-YK.png"
+  },
+  {
+    id: 48,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "服部优",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/-5qZse47aCGXX-NX.png"
+  },
+  {
+    id: 49,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "友希爱音",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/eVEfH4KVexZwXSvk.png"
+  },
+  {
+    id: 50,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "紫吹兰",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/_Cs9DFGR07KY8LVQ.png"
+  },
+  {
+    id: 51,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "艾尔莎·福特",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/AIN4FHY8m2qjKiF3.png"
+  },
+  {
+    id: 52,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "红林珠璃",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/tpmYJ7RoNQwdUFHN.png"
+  },
+  {
+    id: 53,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "栗栖心音",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/Q51fJ5g3mmHmXuJr.png"
+  },
+  {
+    id: 54,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "晴香露卡",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/71z0ETumu6wnNeN0.png"
+  },
+  {
+    id: 55,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "蝶乃舞花",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/SKMiTOr7EYEBhyVZ.png"
+  },
+  {
+    id: 56,
+    name: "生日1弹徽章<7月~8月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
+    character: "如月翼",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/png8Fn4E4qFtIjcp.png"
   },
   
 ];
