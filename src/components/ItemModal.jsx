@@ -113,7 +113,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                             value={record.price || ''}
                             onChange={(e) => onUpdatePriceRecord(item.id, record.id, 'price', e.target.value)}
                             placeholder="0.00"
-                            className="w-20 px-2 py-1 rounded-lg border border-yellow-200 bg-white text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent font-quick"
+                            className="w-20 px-2 py-1 rounded-lg border border-yellow-200 bg-white text-text-primary text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent font-quick"
                           />
                         </div>
                         <div className="flex items-center gap-1">
@@ -176,7 +176,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                           value={item.wishPriceMin || ''}
                           onChange={(e) => onSetWishPriceMin(item.id, e.target.value)}
                           placeholder="0.00"
-                          className="flex-1 px-3 py-1.5 rounded-lg border border-rose-200 bg-white text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent font-quick"
+                          className="flex-1 px-3 py-1.5 rounded-lg border border-rose-200 bg-white text-text-primary text-base focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent font-quick"
                         />
                       </div>
                     </div>
@@ -191,7 +191,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                           value={item.wishPriceMax || ''}
                           onChange={(e) => onSetWishPriceMax(item.id, e.target.value)}
                           placeholder="0.00"
-                          className="flex-1 px-3 py-1.5 rounded-lg border border-rose-200 bg-white text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent font-quick"
+                          className="flex-1 px-3 py-1.5 rounded-lg border border-rose-200 bg-white text-text-primary text-base focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent font-quick"
                         />
                       </div>
                     </div>
