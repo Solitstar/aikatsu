@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPrice }) => {
+const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax }) => {
   useEffect(() => {
     if (!item) return;
     const handleEsc = (e) => {
@@ -15,7 +15,9 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   if (!item) return null;
 
   const totalPrice = item.totalPrice || 0;
-  const wishTotalPrice = (item.wishPrice || 0) * (item.wishQuantity || 0);
+  const wishTotalMin = (item.wishPriceMin || 0) * (item.wishQuantity || 0);
+  const wishTotalMax = (item.wishPriceMax || 0) * (item.wishQuantity || 0);
+  const hasRange = (item.wishPriceMax || 0) > 0;
 
   return (
     <div
@@ -158,18 +160,33 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
 
               {item.status === 'wish' && (
                 <div className="bg-rose-50/50 rounded-2xl p-4 mb-6 border border-rose-100">
-                  <p className="text-sm font-semibold text-rose-600 mb-3">心理价格</p>
+                  <p className="text-sm font-semibold text-rose-600 mb-3">心理价格范围</p>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">单价</label>
+                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">最低价</label>
                       <div className="flex-1 flex items-center gap-2">
                         <span className="text-text-secondary">¥</span>
                         <input
                           type="number"
                           min="0"
                           step="0.01"
-                          value={item.wishPrice || ''}
-                          onChange={(e) => onSetWishPrice(item.id, e.target.value)}
+                          value={item.wishPriceMin || ''}
+                          onChange={(e) => onSetWishPriceMin(item.id, e.target.value)}
+                          placeholder="0.00"
+                          className="flex-1 px-3 py-1.5 rounded-lg border border-rose-200 bg-white text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent font-quick"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <label className="text-sm text-text-secondary w-16 flex-shrink-0">最高价</label>
+                      <div className="flex-1 flex items-center gap-2">
+                        <span className="text-text-secondary">¥</span>
+                        <input
+                          type="number"
+                          min="0"
+                          step="0.01"
+                          value={item.wishPriceMax || ''}
+                          onChange={(e) => onSetWishPriceMax(item.id, e.target.value)}
                           placeholder="0.00"
                           className="flex-1 px-3 py-1.5 rounded-lg border border-rose-200 bg-white text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent font-quick"
                         />
@@ -198,7 +215,8 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                     <div className="flex items-center gap-3 pt-2 border-t border-rose-200/60">
                       <span className="text-sm text-text-secondary w-16 flex-shrink-0">总价</span>
                       <span className="font-quick font-bold text-lg text-rose-600">
-                        ¥ {wishTotalPrice.toFixed(2)}
+                        ¥ {wishTotalMin.toFixed(2)}
+                        {hasRange && <span className="text-base font-normal"> ~ ¥ {wishTotalMax.toFixed(2)}</span>}
                       </span>
                     </div>
                   </div>
