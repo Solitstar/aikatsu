@@ -40,6 +40,7 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
                 src={item.image}
                 alt={item.name}
                 className="w-full h-full object-cover"
+                crossOrigin="anonymous"
               />
             </div>
             <div className="flex-1 min-w-0 flex flex-col justify-center gap-0.5">
