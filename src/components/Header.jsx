@@ -90,7 +90,7 @@ const Header = ({ activeTab, onTabChange }) => {
                 <div className="bg-accent/5 rounded-xl p-4 space-y-2">
                   <p className="font-medium">📩 联系方式</p>
                   <p>邮箱：srcret5@163.com</p>
-                  <p>小红书：@Solitstar</p>
+      
                 </div>
 
                 <p className="text-text-secondary text-xs pt-2">制作：Solitstar</p>
