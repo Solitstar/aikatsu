@@ -150,19 +150,55 @@ function App() {
     const imgs = container.querySelectorAll('img');
     const originals = [];
 
+    // 确保容器在视口内以触发浏览器加载图片
+    const containerParent = container.parentElement;
+    const originalStyle = containerParent ? containerParent.style.cssText : null;
+    if (containerParent) {
+      containerParent.style.position = 'fixed';
+      containerParent.style.left = '0';
+      containerParent.style.top = '0';
+      containerParent.style.width = '850px';
+      containerParent.style.zIndex = '-1';
+      containerParent.style.opacity = '0';
+      containerParent.style.pointerEvents = 'none';
+    }
+
     const loadImage = async (src) => {
-      // 策略1: 直接 CORS 加载（最快，服务器支持 CORS 时有效）
+      // 策略1: 直接用 fetch 请求图片（最可靠，服务器有 CORS 头即可）
+      try {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 6000);
+        const res = await fetch(src, {
+          signal: controller.signal,
+          mode: 'cors',
+          referrerPolicy: 'no-referrer',
+        });
+        clearTimeout(timer);
+        if (res.ok) {
+          const blob = await res.blob();
+          const dataUrl = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result);
+            reader.onerror = reject;
+            reader.readAsDataURL(blob);
+          });
+          return dataUrl;
+        }
+      } catch { /* fetch 失败则使用后续策略 */ }
+
+      // 策略2: 通过新建 Image + Canvas 加载（适用于浏览器有缓存的情况）
       try {
         const result = await new Promise((resolve) => {
           const img = new Image();
           img.crossOrigin = 'anonymous';
-          const timer = setTimeout(() => resolve(null), 5000);
+          img.referrerPolicy = 'no-referrer';
+          const timer = setTimeout(() => resolve(null), 6000);
           img.onload = () => {
             clearTimeout(timer);
             try {
               const c = document.createElement('canvas');
-              c.width = img.naturalWidth;
-              c.height = img.naturalHeight;
+              c.width = img.naturalWidth || 300;
+              c.height = img.naturalHeight || 300;
               const ctx = c.getContext('2d');
               ctx.drawImage(img, 0, 0);
               resolve(c.toDataURL('image/png'));
@@ -174,10 +210,11 @@ function App() {
         if (result) return result;
       } catch { /* 继续尝试代理 */ }
 
-      // 策略2: 多代理 + 重试
+      // 策略3: 多路代理服务 + 重试
       const proxies = [
-        (url) => 'https://wsrv.nl/?url=' + encodeURIComponent(url) + '&output=webp',
-        (url) => 'https://images.weserv.nl/?url=' + encodeURIComponent(url),
+        (url) => 'https://corsproxy.io/?' + encodeURIComponent(url),
+        (url) => 'https://wsrv.nl/?url=' + encodeURIComponent(url) + '&output=png',
+        (url) => 'https://images.weserv.nl/?url=' + encodeURIComponent(url) + '&output=png',
         (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
       ];
       for (const proxyFn of proxies) {
@@ -187,21 +224,25 @@ function App() {
             const timer = setTimeout(() => controller.abort(), 8000);
             const res = await fetch(proxyFn(src), { signal: controller.signal });
             clearTimeout(timer);
-            if (!res.ok) break;
+            if (!res.ok) continue;
             const blob = await res.blob();
-            const dataUrl = await new Promise((resolve) => {
+            const dataUrl = await new Promise((resolve, reject) => {
               const reader = new FileReader();
               reader.onloadend = () => resolve(reader.result);
+              reader.onerror = reject;
               reader.readAsDataURL(blob);
             });
-            return dataUrl;
+            if (dataUrl && !dataUrl.startsWith('data:text/')) return dataUrl;
           } catch {
-            if (attempt < 1) await new Promise(r => setTimeout(r, 500));
+            if (attempt < 1) await new Promise(r => setTimeout(r, 800));
           }
         }
       }
       return null;
     };
+
+    // 等待一帧确保 DOM 图片属性已就绪
+    await new Promise(r => requestAnimationFrame(r));
 
     const tasks = Array.from(imgs).map(async (img) => {
       const src = img.getAttribute('src') || img.src;
@@ -213,10 +254,21 @@ function App() {
       }
     });
     await Promise.allSettled(tasks);
-    const failCount = originals.filter(o => !o.img.getAttribute('src')?.startsWith('data:')).length;
+
+    const failCount = originals.filter(o => {
+      const currentSrc = o.img.getAttribute('src');
+      return !currentSrc || !currentSrc.startsWith('data:');
+    }).length;
+
     if (failCount > 0) {
-      console.warn(`图片预加载: ${originals.length - failCount}/${originals.length} 成功`);
+      console.warn(`图片预加载: ${originals.length - failCount}/${originals.length} 成功, ${failCount} 张失败`);
     }
+
+    // 恢复容器样式
+    if (containerParent && originalStyle !== null) {
+      containerParent.style.cssText = originalStyle;
+    }
+
     return { originals, failCount };
   };
 
@@ -232,7 +284,7 @@ function App() {
       const result = await preloadImages(wishShareRef.current);
       originals = result.originals;
       if (result.failCount > 0) {
-        console.warn(`${result.failCount} 张图片未能加载，导出的图片中可能缺少部分商品图`);
+        alert(`⚠️ ${result.failCount} 张图片未能加载，导出的图片中可能缺少部分商品图。\n请检查网络连接后重试。`);
       }
       const scale = 2;
       const canvas = await html2canvas(wishShareRef.current, {
@@ -301,7 +353,7 @@ function App() {
       const result = await preloadImages(ownedShareRef.current);
       originals = result.originals;
       if (result.failCount > 0) {
-        console.warn(`${result.failCount} 张图片未能加载，导出的图片中可能缺少部分商品图`);
+        alert(`⚠️ ${result.failCount} 张图片未能加载，导出的图片中可能缺少部分商品图。\n请检查网络连接后重试。`);
       }
       const scale = 2;
       const canvas = await html2canvas(ownedShareRef.current, {
