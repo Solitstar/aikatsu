@@ -154,7 +154,7 @@ export const BASE_ITEMS = [
     image: "https://i.imgur.com/3wih2wM.png"
   },
   {
-    id: 18,
+    id: 19,
     name: "布艺(食玩)徽章",
     subtitle: "アイカツ ワッペン缶バッジ",
     character: "星宫莓",
@@ -163,7 +163,7 @@ export const BASE_ITEMS = [
     image: "https://i.imgur.com/v0P9Wot.png"
     },
   {
-    id: 19,
+    id: 18,
     name: "布艺(食玩)徽章",
     subtitle: "アイカツ ワッペン缶バッジ ",
     character: "其他",
