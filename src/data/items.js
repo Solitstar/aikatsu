@@ -402,14 +402,16 @@ export const TYPES = ["全部", "徽章", "亚克力立牌", "卡片", "文件�
 export const STATUS_OPTIONS = ["全部", "已拥有", "想要"];
 
 export const getItemsWithMeta = () => {
-  return BASE_ITEMS.map(item => {
-    const chars = item.character.split(/[,，]/);
-    const infos = chars.map(name => getCharacterInfo(name.trim()));
-    const series = [...new Set(infos.map(i => i.series))].join(', ');
-    return {
-      ...item,
-      series: series || '未知',
-      gender: infos[0].gender,
-    };
-  });
+  return BASE_ITEMS
+    .map(item => {
+      const chars = item.character.split(/[,，]/);
+      const infos = chars.map(name => getCharacterInfo(name.trim()));
+      const series = [...new Set(infos.map(i => i.series))].join(', ');
+      return {
+        ...item,
+        series: series || '未知',
+        gender: infos[0].gender,
+      };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
 };
