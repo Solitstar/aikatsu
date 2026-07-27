@@ -653,28 +653,37 @@ export const BASE_ITEMS = [
     id: 73,
     name: "生日1弹徽章<9月~10月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
-    character: "",
+    character: "冰上堇",
     type: "徽章",
     size: "直径约 56mm",
-    image: ""
+    image: "https://imgbed.heliar.top/i/RtXxXtvnuHS8knYH.png"
   },
   {
     id: 74,
     name: "生日1弹徽章<9月~10月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
-    character: "",
+    character: "神城卡莲",
     type: "徽章",
     size: "直径约 56mm",
-    image: ""
+    image: "https://imgbed.heliar.top/i/MVeJI6Wbs1jkngAV.png"
   },
   {
     id: 75,
     name: "生日1弹徽章<9月~10月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
-    character: "",
+    character: "风沢空",
     type: "徽章",
     size: "直径约 56mm",
-    image: ""
+    image: "https://imgbed.heliar.top/i/7nqO7ad7oudTy60x.png"
+  },
+  {
+    id: 76,
+    name: "生日1弹徽章<11月~12月>",
+    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
+    character: "樱庭劳拉",
+    type: "徽章",
+    size: "直径约 56mm",
+    image: "https://imgbed.heliar.top/i/8mi7_yj86Cvmqr4w.png"
   },
   
 ];
@@ -692,205 +701,6 @@ export const getItemsWithMeta = () => {
       const characterAlias = infos.map(i => i.alias || '').filter(Boolean).join(' ');
       return {
         ...item,
-  {
-    id: 77,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 78,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 79,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 80,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 81,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 82,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 83,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 84,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 85,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 86,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 87,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 77,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 78,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 79,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 80,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 81,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 82,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 83,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 84,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 85,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 86,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-  {
-    id: 87,
-    name: "生日1弹徽章<11月~12月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
-    character: "",
-    type: "徽章",
-    size: "直径约 56mm",
-    image: ""
-  },
-
         series: series || '未知',
         gender: infos[0].gender,
         characterRomaji,
