@@ -15,9 +15,12 @@ const loadFromStorage = () => {
           status: val,
           priceRecords: [],
           wishQuantity: 1,
-          wishPrice: 0,
+          wishPriceMin: 0,
+          wishPriceMax: 0,
         };
       } else {
+        // 迁移旧数据：旧的 wishPrice → wishPriceMin
+        const oldWishPrice = val.wishPriceMin !== undefined ? 0 : (val.wishPrice || 0);
         normalized[id] = {
           status: val.status,
           priceRecords: val.priceRecords && val.priceRecords.length > 0
@@ -26,7 +29,8 @@ const loadFromStorage = () => {
                 ? [{ price: val.price || 0, quantity: val.quantity || 1 }]
                 : [{ price: 0, quantity: val.quantity || 1 }]),
           wishQuantity: val.wishQuantity || 1,
-          wishPrice: val.wishPrice || 0,
+          wishPriceMin: val.wishPriceMin !== undefined ? val.wishPriceMin : oldWishPrice,
+          wishPriceMax: val.wishPriceMax || 0,
         };
       }
     });
@@ -74,7 +78,8 @@ export const useCollection = () => {
         quantity,
         totalPrice,
         wishQuantity: saved?.wishQuantity || 1,
-        wishPrice: saved?.wishPrice || 0,
+        wishPriceMin: saved?.wishPriceMin || 0,
+        wishPriceMax: saved?.wishPriceMax || 0,
       };
     });
   });
@@ -87,7 +92,8 @@ export const useCollection = () => {
           status: item.status,
           priceRecords: item.priceRecords || [],
           wishQuantity: item.wishQuantity || 1,
-          wishPrice: item.wishPrice || 0,
+          wishPriceMin: item.wishPriceMin || 0,
+          wishPriceMax: item.wishPriceMax || 0,
         };
       }
     });
@@ -239,12 +245,22 @@ export const useCollection = () => {
     );
   };
 
-  const setWishPrice = (id, price) => {
+  const setWishPriceMin = (id, price) => {
     setItems(prevItems =>
       prevItems.map(item => {
         if (item.id !== id) return item;
         const p = Math.max(0, parseFloat(price) || 0);
-        return { ...item, wishPrice: p };
+        return { ...item, wishPriceMin: p };
+      })
+    );
+  };
+
+  const setWishPriceMax = (id, price) => {
+    setItems(prevItems =>
+      prevItems.map(item => {
+        if (item.id !== id) return item;
+        const p = Math.max(0, parseFloat(price) || 0);
+        return { ...item, wishPriceMax: p };
       })
     );
   };
@@ -256,7 +272,8 @@ export const useCollection = () => {
   const wishCount = items.filter(item => item.status === 'wish').length;
   const wishItems = items.filter(item => item.status === 'wish');
   const wishTotalQuantity = items.reduce((sum, item) => sum + (item.status === 'wish' ? (item.wishQuantity || 0) : 0), 0);
-  const wishTotalPrice = items.reduce((sum, item) => sum + (item.status === 'wish' ? (item.wishPrice || 0) * (item.wishQuantity || 0) : 0), 0);
+  const wishTotalPriceMin = items.reduce((sum, item) => sum + (item.status === 'wish' ? (item.wishPriceMin || 0) * (item.wishQuantity || 0) : 0), 0);
+  const wishTotalPriceMax = items.reduce((sum, item) => sum + (item.status === 'wish' ? (item.wishPriceMax || 0) * (item.wishQuantity || 0) : 0), 0);
 
   return {
     items,
@@ -271,7 +288,8 @@ export const useCollection = () => {
     setWishQuantity,
     increaseWishQuantity,
     decreaseWishQuantity,
-    setWishPrice,
+    setWishPriceMin,
+    setWishPriceMax,
     ownedCount,
     ownedItems,
     ownedTotalQuantity,
@@ -279,7 +297,8 @@ export const useCollection = () => {
     wishCount,
     wishItems,
     wishTotalQuantity,
-    wishTotalPrice,
+    wishTotalPriceMin,
+    wishTotalPriceMax,
     totalCount: items.length,
   };
 };

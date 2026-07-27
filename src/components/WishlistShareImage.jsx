@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 
-const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) => {
+const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPriceMin, totalPriceMax }, ref) => {
+  const hasTotalRange = totalPriceMax > 0;
   return (
     <div
       ref={ref}
@@ -24,7 +25,10 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref
           </div>
           <div>
             <p className="text-xs text-black/50 mb-1">💰 心理总价</p>
-            <p className="text-2xl font-bold text-black">¥{totalPrice.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-black">
+              ¥{totalPriceMin.toFixed(2)}
+              {hasTotalRange && <span className="text-lg font-normal"> ~ ¥{totalPriceMax.toFixed(2)}</span>}
+            </p>
           </div>
         </div>
       </div>
@@ -52,10 +56,13 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref
             </div>
             <div className="text-right flex-shrink-0">
               <p className="text-black font-bold text-sm whitespace-nowrap">
-                ¥{((item.wishPrice || 0) * (item.wishQuantity || 1)).toFixed(2)}
+                ¥{((item.wishPriceMin || 0) * (item.wishQuantity || 1)).toFixed(2)}
+                {(item.wishPriceMax || 0) > 0 && <span className="text-xs font-normal"> ~ ¥{((item.wishPriceMax || 0) * (item.wishQuantity || 1)).toFixed(2)}</span>}
               </p>
               <p className="text-xs text-black/50 whitespace-nowrap">
-                ¥{(item.wishPrice || 0).toFixed(2)} × {item.wishQuantity || 1}
+                ¥{(item.wishPriceMin || 0).toFixed(2)}
+                {(item.wishPriceMax || 0) > 0 && <span> ~ ¥{(item.wishPriceMax || 0).toFixed(2)}</span>}
+                {' '}× {item.wishQuantity || 1}
               </p>
             </div>
           </div>

@@ -11,7 +11,7 @@ import WishlistShareImage from './components/WishlistShareImage';
 import OwnedShareImage from './components/OwnedShareImage';
 
 function App() {
-  const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPrice, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPrice, totalCount } = useCollection();
+  const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
   const [activeTab, setActiveTab] = useState('collection');
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
@@ -110,17 +110,17 @@ function App() {
       alert('心愿单是空的，没有可导出的内容~');
       return;
     }
-    const headers = ['商品名称', '角色', '系列', '种类', '心理单价(元)', '数量', '心理总价(元)'];
+    const headers = ['商品名称', '角色', '系列', '种类', '最低心理价(元)', '最高心理价(元)', '数量'];
     const rows = wishItems.map(item => [
       item.name,
       item.character,
       item.series,
       item.type,
-      (item.wishPrice || 0).toFixed(2),
+      (item.wishPriceMin || 0).toFixed(2),
+      (item.wishPriceMax || 0).toFixed(2),
       item.wishQuantity || 1,
-      ((item.wishPrice || 0) * (item.wishQuantity || 0)).toFixed(2),
     ]);
-    const totalRow = ['合计', '', '', '', '', wishTotalQuantity, wishTotalPrice.toFixed(2)];
+    const totalRow = ['心理总价范围', '', '', '', `¥${wishTotalPriceMin.toFixed(2)}`, `¥${wishTotalPriceMax.toFixed(2)}`, wishTotalQuantity];
     const csvContent = '\uFEFF' + [headers, ...rows, totalRow]
       .map(row => row.map(cell => `"${cell}"`).join(','))
       .join('\n');
@@ -377,7 +377,8 @@ function App() {
         onUpdatePriceRecord={updatePriceRecord}
         onIncreaseWishQty={increaseWishQuantity}
         onDecreaseWishQty={decreaseWishQuantity}
-        onSetWishPrice={setWishPrice}
+        onSetWishPriceMin={setWishPriceMin}
+        onSetWishPriceMax={setWishPriceMax}
       />
 
       <div className="fixed left-full top-0 pointer-events-none" aria-hidden="true">
@@ -385,7 +386,8 @@ function App() {
           ref={wishShareRef}
           items={wishItems}
           totalQuantity={wishTotalQuantity}
-          totalPrice={wishTotalPrice}
+          totalPriceMin={wishTotalPriceMin}
+          totalPriceMax={wishTotalPriceMax}
         />
         <OwnedShareImage
           ref={ownedShareRef}
