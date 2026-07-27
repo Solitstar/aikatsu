@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { renderShareImageToCanvas } from './utils/exportImage';
 import { useCollection } from './hooks/useCollection';
+import { useVersionCheck } from './hooks/useVersionCheck';
 import { getCharactersBySeriesAndGender } from './data/characters';
 import Header from './components/Header';
 import StatsBar from './components/StatsBar';
@@ -13,6 +14,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('collection');
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
+  const { hasUpdate, dismiss: dismissUpdate } = useVersionCheck();
 
   const getInitialFilter = (param, defaultValue) => {
     const params = new URLSearchParams(window.location.search);
@@ -224,6 +226,23 @@ function App() {
 
   return (
     <div className="min-h-screen bg-bg-primary">
+      {hasUpdate && (
+        <div className="sticky top-0 z-[100] bg-accent text-white px-4 py-2.5 flex items-center justify-center gap-3 shadow-md">
+          <span className="text-sm font-medium">网站已更新，建议刷新页面</span>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-4 py-1 rounded-full bg-white text-accent text-sm font-bold hover:bg-white/90 transition-colors"
+          >
+            立即刷新
+          </button>
+          <button
+            onClick={dismissUpdate}
+            className="text-white/70 hover:text-white text-sm transition-colors"
+          >
+            ✕
+          </button>
+        </div>
+      )}
       <Header activeTab={activeTab} onTabChange={handleTabChange} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">

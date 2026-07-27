@@ -33,6 +33,9 @@ jobs:
       - name: Download images
         run: npm run download-images
 
+      - name: Write version
+        run: npm run write-version
+
       - name: Build
         run: npx vite build
 
