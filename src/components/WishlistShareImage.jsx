@@ -43,6 +43,8 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPriceMin, to
               <img
                 src={item.image}
                 alt={item.name}
+                crossOrigin="anonymous"
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
