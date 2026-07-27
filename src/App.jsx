@@ -150,44 +150,74 @@ function App() {
     const imgs = container.querySelectorAll('img');
     const originals = [];
 
-    const loadViaProxy = async (src) => {
+    const loadImage = async (src) => {
+      // 策略1: 直接 CORS 加载（最快，服务器支持 CORS 时有效）
+      try {
+        const result = await new Promise((resolve) => {
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          const timer = setTimeout(() => resolve(null), 5000);
+          img.onload = () => {
+            clearTimeout(timer);
+            try {
+              const c = document.createElement('canvas');
+              c.width = img.naturalWidth;
+              c.height = img.naturalHeight;
+              const ctx = c.getContext('2d');
+              ctx.drawImage(img, 0, 0);
+              resolve(c.toDataURL('image/png'));
+            } catch { resolve(null); }
+          };
+          img.onerror = () => { clearTimeout(timer); resolve(null); };
+          img.src = src;
+        });
+        if (result) return result;
+      } catch { /* 继续尝试代理 */ }
+
+      // 策略2: 多代理 + 重试
       const proxies = [
         (url) => 'https://wsrv.nl/?url=' + encodeURIComponent(url) + '&output=webp',
         (url) => 'https://images.weserv.nl/?url=' + encodeURIComponent(url),
+        (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
       ];
       for (const proxyFn of proxies) {
-        try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 10000);
-          const res = await fetch(proxyFn(src), { signal: controller.signal });
-          clearTimeout(timeoutId);
-          if (!res.ok) continue;
-          const blob = await res.blob();
-          const dataUrl = await new Promise((resolve) => {
-            const reader = new FileReader();
-            reader.onloadend = () => resolve(reader.result);
-            reader.readAsDataURL(blob);
-          });
-          return dataUrl;
-        } catch {
-          continue;
+        for (let attempt = 0; attempt < 2; attempt++) {
+          try {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 8000);
+            const res = await fetch(proxyFn(src), { signal: controller.signal });
+            clearTimeout(timer);
+            if (!res.ok) break;
+            const blob = await res.blob();
+            const dataUrl = await new Promise((resolve) => {
+              const reader = new FileReader();
+              reader.onloadend = () => resolve(reader.result);
+              reader.readAsDataURL(blob);
+            });
+            return dataUrl;
+          } catch {
+            if (attempt < 1) await new Promise(r => setTimeout(r, 500));
+          }
         }
       }
       return null;
     };
 
-    await Promise.all(
-      Array.from(imgs).map(async (img) => {
-        const src = img.getAttribute('src') || img.src;
-        if (!src || src.startsWith('data:')) return;
-        originals.push({ img, src });
-        const dataUrl = await loadViaProxy(src);
-        if (dataUrl) {
-          img.setAttribute('src', dataUrl);
-        }
-      })
-    );
-    return originals;
+    const tasks = Array.from(imgs).map(async (img) => {
+      const src = img.getAttribute('src') || img.src;
+      if (!src || src.startsWith('data:')) return;
+      originals.push({ img, src });
+      const dataUrl = await loadImage(src);
+      if (dataUrl) {
+        img.setAttribute('src', dataUrl);
+      }
+    });
+    await Promise.allSettled(tasks);
+    const failCount = originals.filter(o => !o.img.getAttribute('src')?.startsWith('data:')).length;
+    if (failCount > 0) {
+      console.warn(`图片预加载: ${originals.length - failCount}/${originals.length} 成功`);
+    }
+    return { originals, failCount };
   };
 
   const exportWishlistImage = async () => {
@@ -199,7 +229,11 @@ function App() {
     setExportingImage(true);
     let originals = [];
     try {
-      originals = await preloadImages(wishShareRef.current);
+      const result = await preloadImages(wishShareRef.current);
+      originals = result.originals;
+      if (result.failCount > 0) {
+        console.warn(`${result.failCount} 张图片未能加载，导出的图片中可能缺少部分商品图`);
+      }
       const scale = 2;
       const canvas = await html2canvas(wishShareRef.current, {
         scale,
@@ -264,7 +298,11 @@ function App() {
     setExportingImage(true);
     let originals = [];
     try {
-      originals = await preloadImages(ownedShareRef.current);
+      const result = await preloadImages(ownedShareRef.current);
+      originals = result.originals;
+      if (result.failCount > 0) {
+        console.warn(`${result.failCount} 张图片未能加载，导出的图片中可能缺少部分商品图`);
+      }
       const scale = 2;
       const canvas = await html2canvas(ownedShareRef.current, {
         scale,
