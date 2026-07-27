@@ -34,7 +34,7 @@ jobs:
         run: npm run download-images
 
       - name: Build
-        run: vite build
+        run: npx vite build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
