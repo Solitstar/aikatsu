@@ -147,7 +147,7 @@ function App() {
       const scale = 2;
       const canvas = await html2canvas(wishShareRef.current, {
         scale,
-        useCORS: true,
+        useCORS: false,
         allowTaint: true,
         backgroundColor: null,
         width: wishShareRef.current.scrollWidth,
@@ -210,7 +210,7 @@ function App() {
       const scale = 2;
       const canvas = await html2canvas(ownedShareRef.current, {
         scale,
-        useCORS: true,
+        useCORS: false,
         allowTaint: true,
         backgroundColor: null,
         width: ownedShareRef.current.scrollWidth,
