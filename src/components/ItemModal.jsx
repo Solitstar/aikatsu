@@ -1,6 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax }) => {
+const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder }) => {
+  const [showFolderPicker, setShowFolderPicker] = useState(false);
+  const [newFolderName, setNewFolderName] = useState('');
+
+  const itemType = item?.status;
+  const currentFolder = folders.find(f => f.id === itemFolderId);
   useEffect(() => {
     if (!item) return;
     const handleEsc = (e) => {
@@ -88,6 +93,76 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   心愿单
                 </button>
               </div>
+
+              {/* 文件夹选择 */}
+              {itemType && (
+                <div className="bg-bg-primary/50 rounded-2xl p-4 mb-6">
+                  <p className="text-sm font-semibold text-text-primary mb-2">
+                    📁 {itemType === 'owned' ? '收藏文件夹' : '愿望文件夹'}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      onClick={() => onMoveToFolder(null)}
+                      className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                        !itemFolderId
+                          ? 'bg-accent text-white shadow-sm'
+                          : 'bg-white text-text-secondary border border-accent/20 hover:bg-accent/5'
+                      }`}
+                    >
+                      未分类
+                    </button>
+                    {folders.map(f => (
+                      <button
+                        key={f.id}
+                        onClick={() => onMoveToFolder(f.id)}
+                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                          itemFolderId === f.id
+                            ? 'bg-accent text-white shadow-sm'
+                            : 'bg-white text-text-secondary border border-accent/20 hover:bg-accent/5'
+                        }`}
+                      >
+                        {f.name}
+                      </button>
+                    ))}
+                    <button
+                      onClick={() => setShowFolderPicker(!showFolderPicker)}
+                      className="px-3 py-1.5 rounded-full text-xs font-medium bg-white text-accent border border-dashed border-accent/30 hover:bg-accent/5 transition-all"
+                    >
+                      + 新建
+                    </button>
+                  </div>
+
+                  {showFolderPicker && (
+                    <div className="flex items-center gap-2 mt-2">
+                      <input
+                        value={newFolderName}
+                        onChange={(e) => setNewFolderName(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' && newFolderName.trim()) {
+                            const fid = onCreateFolder(newFolderName.trim());
+                            if (fid) {
+                              onMoveToFolder(fid);
+                              setNewFolderName('');
+                              setShowFolderPicker(false);
+                            }
+                          }
+                          if (e.key === 'Escape') { setShowFolderPicker(false); setNewFolderName(''); }
+                        }}
+                        placeholder="文件夹名..."
+                        className="flex-1 px-3 py-1.5 rounded-lg border border-accent/30 bg-white text-text-primary text-sm
+                                   focus:outline-none focus:border-accent"
+                        autoFocus
+                      />
+                      <button
+                        onClick={() => { setShowFolderPicker(false); setNewFolderName(''); }}
+                        className="text-xs text-text-secondary hover:text-text-primary"
+                      >
+                        取消
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
 
               {item.status === 'owned' && (
                 <div className="bg-yellow-50/50 rounded-2xl p-4 mb-6 border border-yellow-100">

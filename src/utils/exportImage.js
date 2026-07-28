@@ -21,10 +21,14 @@ const COLORS = {
 
 // ---- 图片加载 ----
 
-/** 从 dataURL 或 URL 加载为 Image 对象 */
+/** 从 dataURL 或 URL 加载为 Image 对象（远程 URL 加 CORS 标记） */
 function urlToImage(src) {
   return new Promise((resolve) => {
     const img = new Image();
+    // 远程 URL 需要 CORS，否则 Canvas 会被污染导致 toDataURL 失败
+    if (src.startsWith('http')) {
+      img.crossOrigin = 'anonymous';
+    }
     img.onload = () => resolve(img);
     img.onerror = () => resolve(null);
     img.src = src;
@@ -125,6 +129,14 @@ async function loadItemImage(item) {
       console.log(`    ✓ proxy (dataURL)`);
       return img;
     }
+  }
+
+  // 策略3: 直接加载远程 URL（部分 CDN 如 Imgur 支持 CORS）
+  console.log(`    🌐 尝试直接加载远程 URL...`);
+  const directImg = await urlToImage(item.image);
+  if (directImg) {
+    console.log(`    ✓ direct (CORS)`);
+    return directImg;
   }
 
   console.log(`    ✗ 加载失败`);

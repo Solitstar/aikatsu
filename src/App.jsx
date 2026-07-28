@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { renderShareImageToCanvas } from './utils/exportImage';
 import { useCollection } from './hooks/useCollection';
 import { useVersionCheck } from './hooks/useVersionCheck';
+import { useFolders } from './hooks/useFolders';
 import { getCharactersBySeriesAndGender } from './data/characters';
 import Header from './components/Header';
 import StatsBar from './components/StatsBar';
@@ -9,6 +10,8 @@ import FilterBar from './components/FilterBar';
 import CardGrid from './components/CardGrid';
 import ItemModal from './components/ItemModal';
 import SearchBar from './components/SearchBar';
+import CollectionProgress from './components/CollectionProgress';
+import FolderBar from './components/FolderBar';
 
 function App() {
   const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
@@ -16,6 +19,8 @@ function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
   const { hasUpdate, dismiss: dismissUpdate } = useVersionCheck();
+  const { folders, createFolder, renameFolder, deleteFolder, addItemToFolder, removeItemFromFolder, getItemFolderId } = useFolders();
+  const [activeFolder, setActiveFolder] = useState(null); // null=全部, '__uncategorized__'=未分类, folderId=指定文件夹
 
   const getInitialFilter = (param, defaultValue) => {
     const params = new URLSearchParams(window.location.search);
@@ -59,9 +64,22 @@ function App() {
         (item.characterRomaji || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
         (item.characterAlias || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
         (item.characterPinyin || '').toLowerCase().includes(searchKeyword.toLowerCase());
-      return matchSeries && matchChar && matchType && matchStatus && matchSearch;
+
+      // 文件夹过滤
+      const folderType = activeTab === 'owned' ? 'owned' : activeTab === 'wishlist' ? 'wish' : null;
+      let matchFolder = true;
+      if (folderType && activeFolder !== null) {
+        const fid = getItemFolderId(folderType, item.id);
+        if (activeFolder === '__uncategorized__') {
+          matchFolder = !fid;
+        } else {
+          matchFolder = fid === activeFolder;
+        }
+      }
+
+      return matchSeries && matchChar && matchType && matchStatus && matchSearch && matchFolder;
     });
-  }, [items, filterSeries, filterChar, filterType, filterStatus, searchKeyword]);
+  }, [items, filterSeries, filterChar, filterType, filterStatus, searchKeyword, activeTab, activeFolder, getItemFolderId]);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -85,6 +103,7 @@ function App() {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
+    setActiveFolder(null);
     if (tab === 'collection') {
       setFilterStatus('全部');
     } else if (tab === 'owned') {
@@ -104,6 +123,42 @@ function App() {
 
   const handleCardClick = (item) => {
     setSelectedItem(item);
+  };
+
+  // 文件夹操作
+  const currentFolderType = activeTab === 'owned' ? 'owned' : activeTab === 'wishlist' ? 'wish' : null;
+
+  const handleSelectFolder = (folderId) => {
+    setActiveFolder(folderId);
+  };
+
+  const handleCreateFolder = (name) => {
+    if (currentFolderType) createFolder(currentFolderType, name);
+  };
+
+  const handleRenameFolder = (folderId, newName) => {
+    if (currentFolderType) renameFolder(currentFolderType, folderId, newName);
+  };
+
+  const handleDeleteFolder = (folderId) => {
+    if (currentFolderType) deleteFolder(currentFolderType, folderId);
+  };
+
+  const handleMoveToFolder = (itemId, folderId) => {
+    if (!currentFolderType) return;
+    if (folderId === null) {
+      // 从未分类中移除所有文件夹归属
+      const currentFid = getItemFolderId(currentFolderType, itemId);
+      if (currentFid) removeItemFromFolder(currentFolderType, currentFid, itemId);
+    } else {
+      addItemToFolder(currentFolderType, folderId, itemId);
+    }
+  };
+
+  const handleCreateFolderForModal = (name) => {
+    if (!currentFolderType) return null;
+    const folder = createFolder(currentFolderType, name);
+    return folder ? folder.id : null;
   };
 
   const handleModalToggle = (id, targetStatus) => {
@@ -267,6 +322,10 @@ function App() {
           totalCount={totalCount}
         />
 
+        {(activeTab === 'owned' || activeTab === 'wishlist') && (
+          <CollectionProgress items={items} ownedItems={ownedItems} />
+        )}
+
         {activeTab === 'collection' && (
           <>
             <div className="mb-6">
@@ -292,7 +351,18 @@ function App() {
         )}
 
         {activeTab === 'wishlist' && (
-          <div className="flex justify-end gap-3 mb-6">
+          <>
+            <div className="mb-4">
+              <FolderBar
+                folders={folders.wish}
+                activeFolder={activeFolder}
+                onSelectFolder={handleSelectFolder}
+                onCreateFolder={handleCreateFolder}
+                onRenameFolder={handleRenameFolder}
+                onDeleteFolder={handleDeleteFolder}
+              />
+            </div>
+            <div className="flex justify-end gap-3 mb-6">
             <button
               onClick={exportWishlistCSV}
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-rose-100 text-rose-600 font-medium text-sm
@@ -315,10 +385,22 @@ function App() {
               {exportingImage ? '生成中...' : '导出图片'}
             </button>
           </div>
+          </>
         )}
 
         {activeTab === 'owned' && (
-          <div className="flex justify-end gap-3 mb-6">
+          <>
+            <div className="mb-4">
+              <FolderBar
+                folders={folders.owned}
+                activeFolder={activeFolder}
+                onSelectFolder={handleSelectFolder}
+                onCreateFolder={handleCreateFolder}
+                onRenameFolder={handleRenameFolder}
+                onDeleteFolder={handleDeleteFolder}
+              />
+            </div>
+            <div className="flex justify-end gap-3 mb-6">
             <button
               onClick={exportOwnedCSV}
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-yellow-100 text-yellow-700 font-medium text-sm
@@ -341,6 +423,7 @@ function App() {
               {exportingImage ? '生成中...' : '导出图片'}
             </button>
           </div>
+          </>
         )}
 
         <CardGrid items={filteredItems} onCardClick={handleCardClick} />
@@ -366,6 +449,10 @@ function App() {
         onDecreaseWishQty={decreaseWishQuantity}
         onSetWishPriceMin={setWishPriceMin}
         onSetWishPriceMax={setWishPriceMax}
+        folders={currentFolderType ? folders[currentFolderType] : []}
+        itemFolderId={modalItem && currentFolderType ? getItemFolderId(currentFolderType, modalItem.id) : null}
+        onMoveToFolder={(folderId) => modalItem && handleMoveToFolder(modalItem.id, folderId)}
+        onCreateFolder={handleCreateFolderForModal}
       />
     </div>
   );
