@@ -53,6 +53,21 @@ const GoodsCard = ({ item, onClick }) => {
           alt={item.name}
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={(e) => {
+            const img = e.target;
+            // 按顺序尝试 fallback
+            const tries = img.dataset.fallbackTries ? parseInt(img.dataset.fallbackTries) : 0;
+            const fallbacks = [
+              `/aikatsu/images/item_${item.id}.png`,
+              `/aikatsu/images/item_${item.id}.jpg`,
+              // 最终占位：内联 SVG
+              `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23f3f4f6' width='200' height='200'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='14'%3E${encodeURIComponent(item.name)}%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' fill='%23d1d5db' font-size='11'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
+            ];
+            if (tries < fallbacks.length) {
+              img.src = fallbacks[tries];
+              img.dataset.fallbackTries = tries + 1;
+            }
+          }}
         />
       </div>
 
