@@ -803,7 +803,7 @@ export const BASE_ITEMS = [
     character: "黑泽凛",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/Ow0IX4u"
+    image: "https://i.imgur.com/Ow0IX4u.png."
   },  
   {
     id: 88,
@@ -848,7 +848,7 @@ export const BASE_ITEMS = [
     character: "白银莉莉",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/T4mJxUG"
+    image: "https://i.imgur.com/T4mJxUG.png"
   }, 
   {
     id: 93,
@@ -857,7 +857,7 @@ export const BASE_ITEMS = [
     character: "结城昂",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/JbMkoZq"
+    image: "https://i.imgur.com/JbMkoZq.png"
   }, 
   {
     id: 94,
@@ -875,7 +875,7 @@ export const BASE_ITEMS = [
     character: "堂岛妮娜",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/ZpZEIfA"
+    image: "https://i.imgur.com/ZpZEIfA.png"
   }, 
   {
     id: 96,
@@ -884,7 +884,7 @@ export const BASE_ITEMS = [
     character: "天羽圆香",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/HbLM7DG"
+    image: "https://i.imgur.com/HbLM7DG.png"
   }, 
   {
     id: 97,
@@ -929,7 +929,7 @@ export const BASE_ITEMS = [
     character: "虹野梦",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/JY3mbD6"
+    image: "https://i.imgur.com/JY3mbD6.png"
   }, 
   {
     id: 102,
@@ -938,7 +938,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/XrKeU0y"
+    image: "https://i.imgur.com/XrKeU0y.png"
   }, 
   {
     id: 103,
@@ -983,7 +983,7 @@ export const BASE_ITEMS = [
     character: "三轮光",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/vynGCbm"
+    image: "https://i.imgur.com/vynGCbm.png"
   }, 
   {
     id: 108,
@@ -1946,7 +1946,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/HwdAfHx"
+    image: "https://i.imgur.com/HwdAfHx.png"
   },
   {
     id: 216,
@@ -1964,7 +1964,7 @@ export const BASE_ITEMS = [
     character: "一之濑枫",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/1jEc5mU"
+    image: "https://i.imgur.com/1jEc5mU.png"
   },
   {
     id: 218,
@@ -2135,7 +2135,7 @@ export const BASE_ITEMS = [
     character: "七仓小春",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/uUW77LS"
+    image: "https://i.imgur.com/uUW77LS.png"
   },  
   {
     id: 238,
@@ -2144,7 +2144,7 @@ export const BASE_ITEMS = [
     character: "艾尔莎·福特",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/N98zO3B"
+    image: "https://i.imgur.com/N98zO3B.png"
   },  
   {
     id: 239,
@@ -2153,7 +2153,7 @@ export const BASE_ITEMS = [
     character: "骑咲礼",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/u74OYLw"
+    image: "https://i.imgur.com/u74OYLw.png"
   },  
   {
     id: 240,
@@ -2171,7 +2171,7 @@ export const BASE_ITEMS = [
     character: "二阶堂柚子",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/uOab1aR"
+    image: "https://i.imgur.com/uOab1aR.png"
   },  
   {
     id: 242,
@@ -2180,7 +2180,7 @@ export const BASE_ITEMS = [
     character: "花园绮罗",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/6ibU0KN"
+    image: "https://i.imgur.com/6ibU0KN.png"
   },  
   {
     id: 243,
@@ -2198,7 +2198,7 @@ export const BASE_ITEMS = [
     character: "双叶亚里亚",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/UxooART"
+    image: "https://i.imgur.com/UxooART.png"
   },  
   {
     id: 245,
@@ -2216,7 +2216,7 @@ export const BASE_ITEMS = [
     character: "虹野梦",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/ngW1VCp"
+    image: "https://i.imgur.com/ngW1VCp.png"
   },  
   {
     id: 247,
@@ -2234,7 +2234,7 @@ export const BASE_ITEMS = [
     character: "香澄真昼",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/HSnB35A"
+    image: "https://i.imgur.com/HSnB35A.png"
   },  
   {
     id: 249,
@@ -2252,7 +2252,7 @@ export const BASE_ITEMS = [
     character: "春风若叶",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/hlMBlA3"
+    image: "https://i.imgur.com/hlMBlA3.png"
   },  
   {
     id: 251,
@@ -2288,7 +2288,7 @@ export const BASE_ITEMS = [
     character: "天翔响",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/IDTEFkR"
+    image: "https://i.imgur.com/IDTEFkR.png"
   },  
   {
     id: 255,
@@ -2297,7 +2297,7 @@ export const BASE_ITEMS = [
     character: "明日香未来",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/UMMObb3"
+    image: "https://i.imgur.com/UMMObb3.png"
   },  
   {
     id: 256,
@@ -2315,7 +2315,7 @@ export const BASE_ITEMS = [
     character: "白百合辉夜",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/1bk4hKF"
+    image: "https://i.imgur.com/1bk4hKF.png"
   },  
   {
     id: 258,
@@ -2324,7 +2324,7 @@ export const BASE_ITEMS = [
     character: "白百合咲夜",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/Ajzxt5P"
+    image: "https://i.imgur.com/Ajzxt5P.png"
   }, 
   {
     id: 259,
@@ -2333,7 +2333,7 @@ export const BASE_ITEMS = [
     character: "友希爱音",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/QGCwLDx"
+    image: "https://i.imgur.com/QGCwLDx.png"
   },
   {
     id: 260,
@@ -2342,7 +2342,7 @@ export const BASE_ITEMS = [
     character: "日向绘麻",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://i.imgur.com/PeaWztk"
+    image: "https://i.imgur.com/PeaWztk.png"
   },
   {
     id: 261,
