@@ -1946,7 +1946,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 65mm",
-    image: "https://imgbed.heliar.top/i/F-jH7NMzlxtUVCXf.pngg"
+    image: "https://imgbed.heliar.top/i/F-jH7NMzlxtUVCXf.png"
   },
   {
     id: 216,
