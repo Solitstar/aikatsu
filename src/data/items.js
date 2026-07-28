@@ -797,9 +797,9 @@ export const BASE_ITEMS = [
     image: "https://imgbed.heliar.top/i/7E-ZOiY4rmnRRfHu.png"
   },
   {
-    id: 87,
+    id: 236,
     name: "生日1弹徽章<1月~2月>",
-    subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
+    subtitle: "スポーツオーソリティ限定 アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "黑泽凛",
     type: "徽章",
     size: "直径约 56mm",
