@@ -1,6 +1,8 @@
 /**
  * 下载 items.js 中所有远程图片到 public/images/ 目录
- * 用法: node scripts/download-images.cjs
+ * 用法:
+ *   node scripts/download-images.cjs               # 下载全部（跳过已存在）
+ *   node scripts/download-images.cjs --retry-failed  # 只重试上一次失败的
  */
 const fs = require('fs');
 const path = require('path');
@@ -8,6 +10,7 @@ const https = require('https');
 const http = require('http');
 
 const OUT_DIR = path.join(__dirname, '..', 'public', 'images');
+const FAILED_LOG = path.join(__dirname, 'failed-downloads.json');
 
 // 从 items.js 源码中提取所有 image URL 和 id
 function extractImages() {
@@ -16,7 +19,6 @@ function extractImages() {
     'utf-8'
   );
   const items = [];
-  // 匹配每个 item 块
   const itemRegex = /\{\s*\n\s*id:\s*(\d+),[\s\S]*?image:\s*"([^"]+)"/g;
   let match;
   while ((match = itemRegex.exec(content)) !== null) {
@@ -25,43 +27,84 @@ function extractImages() {
   return items;
 }
 
-function download(url, destPath) {
+function loadFailedIds() {
+  if (!fs.existsSync(FAILED_LOG)) return null;
+  try {
+    const data = JSON.parse(fs.readFileSync(FAILED_LOG, 'utf-8'));
+    if (Array.isArray(data) && data.length > 0) return data;
+  } catch (e) { /* ignore */ }
+  return null;
+}
+
+function saveFailedIds(ids) {
+  if (ids.length > 0) {
+    fs.writeFileSync(FAILED_LOG, JSON.stringify(ids, null, 2), 'utf-8');
+    console.log(`\n💾 失败列表已保存到 ${FAILED_LOG} (${ids.length} 项)`);
+    console.log(`   等图床恢复后运行: node scripts/download-images.cjs --retry-failed`);
+  } else {
+    // 全部成功，删除失败日志
+    if (fs.existsSync(FAILED_LOG)) fs.unlinkSync(FAILED_LOG);
+  }
+}
+
+function download(url, destPath, retries = 2) {
   return new Promise((resolve, reject) => {
-    const file = fs.createWriteStream(destPath);
-    const mod = url.startsWith('https') ? https : http;
-    mod.get(url, { timeout: 30000 }, (res) => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        // 跟随重定向
+    const attempt = (remaining) => {
+      const file = fs.createWriteStream(destPath);
+      const mod = url.startsWith('https') ? https : http;
+      mod.get(url, { timeout: 30000 }, (res) => {
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          file.close();
+          try { fs.unlinkSync(destPath); } catch (e) { /* ignore */ }
+          return download(res.headers.location, destPath, remaining).then(resolve).catch(reject);
+        }
+        if (res.statusCode !== 200) {
+          file.close();
+          try { fs.unlinkSync(destPath); } catch (e) { /* ignore */ }
+          if (remaining > 0 && res.statusCode >= 500) {
+            // 502/503 等服务器错误，等待后重试
+            setTimeout(() => attempt(remaining - 1), 2000);
+            return;
+          }
+          reject(new Error(`HTTP ${res.statusCode}`));
+          return;
+        }
+        res.pipe(file);
+        file.on('finish', () => {
+          file.close();
+          resolve();
+        });
+        file.on('error', (err) => {
+          file.close();
+          try { fs.unlinkSync(destPath); } catch (e) { /* ignore */ }
+          reject(err);
+        });
+      }).on('error', (err) => {
         file.close();
-        fs.unlinkSync(destPath);
-        return download(res.headers.location, destPath).then(resolve).catch(reject);
-      }
-      if (res.statusCode !== 200) {
+        try { fs.unlinkSync(destPath); } catch (e) { /* ignore */ }
+        if (remaining > 0) {
+          setTimeout(() => attempt(remaining - 1), 2000);
+        } else {
+          reject(err);
+        }
+      }).on('timeout', function() {
+        this.destroy();
         file.close();
-        fs.unlinkSync(destPath);
-        reject(new Error(`HTTP ${res.statusCode}`));
-        return;
-      }
-      res.pipe(file);
-      file.on('finish', () => {
-        file.close();
-        resolve();
+        try { fs.unlinkSync(destPath); } catch (e) { /* ignore */ }
+        if (remaining > 0) {
+          setTimeout(() => attempt(remaining - 1), 2000);
+        } else {
+          reject(new Error('timeout'));
+        }
       });
-      file.on('error', (err) => {
-        file.close();
-        fs.unlinkSync(destPath);
-        reject(err);
-      });
-    }).on('error', reject).on('timeout', function() {
-      this.destroy();
-      file.close();
-      if (fs.existsSync(destPath)) fs.unlinkSync(destPath);
-      reject(new Error('timeout'));
-    });
+    };
+    attempt(retries);
   });
 }
 
 async function main() {
+  const retryFailed = process.argv.includes('--retry-failed');
+
   console.log('📥 图片下载工具\n');
 
   if (!fs.existsSync(OUT_DIR)) {
@@ -69,12 +112,35 @@ async function main() {
     console.log(`📁 创建目录: ${OUT_DIR}\n`);
   }
 
-  const items = extractImages();
-  console.log(`📋 发现 ${items.length} 件商品\n`);
+  let items = extractImages();
+
+  if (retryFailed) {
+    const failedIds = loadFailedIds();
+    if (!failedIds) {
+      console.log('ℹ️  没有失败记录，执行全量下载...\n');
+    } else {
+      console.log(`🔄 重试模式: 仅下载上次失败的 ${failedIds.length} 张图片\n`);
+      items = items.filter(it => failedIds.includes(it.id));
+      if (items.length === 0) {
+        console.log('⚠️  失败列表中的图片 ID 在 items.js 中找不到，可能已被删除。');
+        fs.unlinkSync(FAILED_LOG);
+        return;
+      }
+    }
+  } else {
+    const failedIds = loadFailedIds();
+    if (failedIds) {
+      console.log(`💡 检测到上次有 ${failedIds.length} 张下载失败`);
+      console.log(`   运行 --retry-failed 可只重试失败项\n`);
+    }
+  }
+
+  console.log(`📋 待处理: ${items.length} 件商品\n`);
 
   let success = 0;
   let fail = 0;
   let skipped = 0;
+  const failedList = [];
 
   for (let i = 0; i < items.length; i++) {
     const { id, url } = items[i];
@@ -99,6 +165,7 @@ async function main() {
     } catch (err) {
       console.log(`❌ ${err.message}`);
       fail++;
+      failedList.push(id);
     }
   }
 
@@ -108,6 +175,9 @@ async function main() {
   console.log(`❌ 失败: ${fail}`);
   console.log(`📁 图片目录: ${OUT_DIR}`);
   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━`);
+
+  // 保存失败列表
+  saveFailedIds(failedList);
 }
 
 main().catch(console.error);
