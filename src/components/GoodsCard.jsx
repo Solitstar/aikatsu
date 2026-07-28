@@ -1,4 +1,10 @@
+import { useState } from 'react';
+
 const GoodsCard = ({ item, onClick }) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgError, setImgError] = useState(false);
+  const [fallbackStep, setFallbackStep] = useState(0);
+
   const formatCardCharacter = (character) => {
     if (!character) return '';
     const chars = character.split(/[,，]/).map(c => c.trim()).filter(Boolean);
@@ -35,6 +41,21 @@ const GoodsCard = ({ item, onClick }) => {
     return '';
   };
 
+  const fallbacks = [
+    `/aikatsu/images/item_${item.id}.png`,
+    `/aikatsu/images/item_${item.id}.jpg`,
+    `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23f3f4f6' width='200' height='200'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='14'%3E${encodeURIComponent(item.name.substring(0, 8))}%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' fill='%23d1d5db' font-size='11'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
+  ];
+
+  const handleImgError = (e) => {
+    if (fallbackStep < fallbacks.length) {
+      e.target.src = fallbacks[fallbackStep];
+      setFallbackStep(fallbackStep + 1);
+    } else {
+      setImgError(true);
+    }
+  };
+
   return (
     <div
       onClick={() => onClick(item)}
@@ -47,27 +68,24 @@ const GoodsCard = ({ item, onClick }) => {
     >
       {getStatusBadge()}
 
-      <div className="aspect-square overflow-hidden bg-bg-primary/30">
+      {/* 图片容器 - 使用 object-contain 完整展示图片 */}
+      <div className="relative aspect-square overflow-hidden bg-[#f4f5f7]">
+        {/* 骨架屏加载动画 */}
+        {!imgLoaded && !imgError && (
+          <div className="absolute inset-0 animate-pulse bg-gradient-to-b from-gray-200 via-gray-100 to-gray-200" />
+        )}
+
         <img
           src={item.image}
           alt={item.name}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          onError={(e) => {
-            const img = e.target;
-            // 按顺序尝试 fallback
-            const tries = img.dataset.fallbackTries ? parseInt(img.dataset.fallbackTries) : 0;
-            const fallbacks = [
-              `/aikatsu/images/item_${item.id}.png`,
-              `/aikatsu/images/item_${item.id}.jpg`,
-              // 最终占位：内联 SVG
-              `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23f3f4f6' width='200' height='200'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='14'%3E${encodeURIComponent(item.name)}%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' fill='%23d1d5db' font-size='11'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
-            ];
-            if (tries < fallbacks.length) {
-              img.src = fallbacks[tries];
-              img.dataset.fallbackTries = tries + 1;
-            }
+          onLoad={() => { setImgLoaded(true); setImgError(false); }}
+          onError={handleImgError}
+          style={{
+            opacity: imgLoaded ? 1 : 0,
+            transition: 'opacity 0.3s ease-in-out',
           }}
+          className="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 
