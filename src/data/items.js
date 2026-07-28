@@ -1751,15 +1751,6 @@ export const BASE_ITEMS = [
     image: "https://imgbed.heliar.top/i/8JnTPfbZcE9F9uHZ.png"
   },
   {
-    id: 193,
-    name: "抽抽乐徽章",
-    subtitle: "アイカツ！ キャラバッジコレクションC 缶バッジ",
-    character: "栗栖心音",
-    type: "徽章",
-    size: "直径约 50mm",
-    image: "https://imgbed.heliar.top/i/8JnTPfbZcE9F9uHZ.png"
-  },
-  {
     id: 194,
     name: "抽抽乐徽章",
     subtitle: "アイカツ！ キャラバッジコレクションC 缶バッジ",
