@@ -20,7 +20,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 57mm",
-    image: "/aikatsu/images/item_1.png"
+    image: "https://imgbed.heliar.top/i/5_zGTYEL-iAR4PHh?thumb=1"
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const BASE_ITEMS = [
     character: "雾矢葵,藤堂尤里卡,音城塞拉",
     type: "徽章",
     size: "直径约 40mm",
-    image: "/aikatsu/images/item_3.png"
+    image: "https://imgbed.heliar.top/i/eqofr6OrOwFnm_RL?thumb=1"
   },
   {
     id: 4,
@@ -101,7 +101,7 @@ export const BASE_ITEMS = [
     character: "其他",
     type: "徽章",
     size: "直径约 40mm",
-    image: "/aikatsu/images/item_10.png"
+    image: "https://imgbed.heliar.top/i/E2dVUb09HVYQpYMh?thumb=1"
   },
   {
     id: 11,
@@ -209,7 +209,7 @@ export const BASE_ITEMS = [
     character: "星宫莓,紫吹兰",
     type: "徽章",
     size: "直径约 40mm",
-    image: "/aikatsu/images/item_22.png"
+    image: "https://imgbed.heliar.top/i/bFh5q3lIfnfyl6p4?thumb=1"
   },
   {
     id: 23,
@@ -227,7 +227,7 @@ export const BASE_ITEMS = [
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
     size: "直径约 40mm",
-    image: "/aikatsu/images/item_24.png"
+    image: "https://imgbed.heliar.top/i/ceyhDXPvmmiLPCPr?thumb=1"
   },
   {
     id: 25,
@@ -263,7 +263,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_28.png"
+    image: "https://imgbed.heliar.top/i/pO698USquT6DL_lP?thumb=1"
   },
   {
     id: 29,
@@ -281,7 +281,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_30.png"
+    image: "https://imgbed.heliar.top/i/kTdCeOBirJZ15jnC?thumb=1"
   },
   {
     id: 31,
@@ -290,7 +290,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_31.png"
+    image: "https://imgbed.heliar.top/i/uRLJG98NM0UKS8un?thumb=1"
   },
   {
     id: 32,
@@ -308,7 +308,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 54mm",
-    image: "/aikatsu/images/item_33.png"
+    image: "https://imgbed.heliar.top/i/p_D2pgtOEAkzoXP2?thumb=1"
   },
   {
     id: 34,
@@ -803,7 +803,7 @@ export const BASE_ITEMS = [
     character: "黑泽凛",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_236.png"
+    image: "https://imgur.com/Ow0IX4u"
   },  
   {
     id: 88,
@@ -857,7 +857,7 @@ export const BASE_ITEMS = [
     character: "结城昂",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_93.png"
+    image: "https://imgur.com/JbMkoZq"
   }, 
   {
     id: 94,
@@ -875,7 +875,7 @@ export const BASE_ITEMS = [
     character: "堂岛妮娜",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_95.png"
+    image: "https://imgur.com/ZpZEIfA"
   }, 
   {
     id: 96,
@@ -884,7 +884,7 @@ export const BASE_ITEMS = [
     character: "天羽圆香",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_96.png"
+    image: "https://imgur.com/HbLM7DG"
   }, 
   {
     id: 97,
@@ -929,7 +929,7 @@ export const BASE_ITEMS = [
     character: "虹野梦",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_101.png"
+    image: "https://imgur.com/JY3mbD6"
   }, 
   {
     id: 102,
@@ -938,7 +938,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_102.png"
+    image: "https://imgur.com/XrKeU0y"
   }, 
   {
     id: 103,
@@ -983,7 +983,7 @@ export const BASE_ITEMS = [
     character: "三轮光",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_107.png"
+    image: "https://imgur.com/vynGCbm"
   }, 
   {
     id: 108,
@@ -1019,7 +1019,7 @@ export const BASE_ITEMS = [
     character: "姬里玛利亚",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_111.png"
+    image: "https://imgbed.heliar.top/i/V-x8IuqdKsDDZPnd.png"
   }, 
   {
     id: 112,
@@ -1055,7 +1055,7 @@ export const BASE_ITEMS = [
     character: "骑咲礼",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_115.png"
+    image: "https://imgbed.heliar.top/i/rK0OiSU29iSOQo-R.png"
   }, 
   {
     id: 116,
@@ -1118,7 +1118,7 @@ export const BASE_ITEMS = [
     character: "白百合辉夜",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_122.png"
+    image: "https://imgbed.heliar.top/i/NQqy7x5F3DtanMKl.png"
   }, 
   {
     id: 123,
@@ -1226,7 +1226,7 @@ export const BASE_ITEMS = [
     character: "春风若叶",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_134.png"
+    image: "https://imgbed.heliar.top/i/GSeUvwQmo92qGimw.png"
   }, 
   {
     id: 135,
@@ -1253,7 +1253,7 @@ export const BASE_ITEMS = [
     character: "神崎美月",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_137.png"
+    image: "https://imgbed.heliar.top/i/auwfE1HVZM5a6Jsn.png"
   }, 
   {
     id: 138,
@@ -1271,7 +1271,7 @@ export const BASE_ITEMS = [
     character: "神城卡莲",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_139.png"
+    image: "https://imgbed.heliar.top/i/SyhZqqNUq89CFZ1a.png"
   }, 
   {
     id: 140,
@@ -1289,7 +1289,7 @@ export const BASE_ITEMS = [
     character: "早乙女亚子",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_141.png"
+    image: "https://imgbed.heliar.top/i/a5cmqCPwnDyzaUUz.png"
   }, 
   {
     id: 142,
@@ -1298,7 +1298,7 @@ export const BASE_ITEMS = [
     character: "香澄真昼",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_142.png"
+    image: "https://imgbed.heliar.top/i/6YByQFI2suM1m1f2.png"
   }, 
   {
     id: 143,
@@ -1307,7 +1307,7 @@ export const BASE_ITEMS = [
     character: "樱庭劳拉",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_143.png"
+    image: "https://imgbed.heliar.top/i/wCCYrr3Nbcz9deFI.png"
   }, 
   {
     id: 144,
@@ -1334,7 +1334,7 @@ export const BASE_ITEMS = [
     character: "一之濑枫",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_146.png"
+    image: "https://imgbed.heliar.top/i/vEX6QyLm6wn0AhUI.png"
   }, 
   {
     id: 147,
@@ -1370,7 +1370,7 @@ export const BASE_ITEMS = [
     character: "白桦丽莎",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_150.png"
+    image: "https://imgbed.heliar.top/i/uJDomKzndC2z64oa.png"
   }, 
   {
     id: 151,
@@ -1424,7 +1424,7 @@ export const BASE_ITEMS = [
     character: "凑美绪",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_156.png"
+    image: "https://imgbed.heliar.top/i/RLzZc7xNr1-0jl7D.png"
   }, 
   {
     id: 157,
@@ -1433,7 +1433,7 @@ export const BASE_ITEMS = [
     character: "梅小路响子",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_157.png"
+    image: "https://imgbed.heliar.top/i/ntkn-9mB5Dp3N07h.png"
   }, 
   {
     id: 158,
@@ -1460,7 +1460,7 @@ export const BASE_ITEMS = [
     character: "雾矢葵",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_160.png"
+    image: "https://imgbed.heliar.top/i/E1JynJ_oa3yDSX8o.png"
   }, 
   {
     id: 161,
@@ -1550,7 +1550,7 @@ export const BASE_ITEMS = [
     character: "日向绘麻",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_170.png"
+    image: "https://imgbed.heliar.top/i/llILztHk3MSuS46k.png"
   },
   {
     id: 171,
@@ -1559,7 +1559,7 @@ export const BASE_ITEMS = [
     character: "本谷栞",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_171.png"
+    image: "https://imgbed.heliar.top/i/Briwb9Poagva8fgG.png"
   },
   {
     id: 172,
@@ -1577,7 +1577,7 @@ export const BASE_ITEMS = [
     character: "大空明",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_173.png"
+    image: "https://imgbed.heliar.top/i/nJ8z31bBJPaot92d.png"
   },
   {
     id: 174,
@@ -1586,7 +1586,7 @@ export const BASE_ITEMS = [
     character: "花园绮罗",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_174.png"
+    image: "https://imgbed.heliar.top/i/BI93CTC4ksLGN8sp.png"
   },
   {
     id: 175,
@@ -1595,7 +1595,7 @@ export const BASE_ITEMS = [
     character: "三轮光",
     type: "徽章",
     size: "直径约 56mm",
-    image: "/aikatsu/images/item_175.png"
+    image: "https://imgbed.heliar.top/i/kf4jJoozCo9TAi0n.png"
   },
   {
     id: 176,
@@ -1667,7 +1667,7 @@ export const BASE_ITEMS = [
     character: "明日香未来,神城卡莲",
     type: "徽章",
     size: "直径约 50mm",
-    image: "/aikatsu/images/item_183.png"
+    image: "https://imgbed.heliar.top/i/F_KCbc_ykLKbPVGC.png"
   },
   {
     id: 184,
@@ -1712,7 +1712,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 57mm",
-    image: "/aikatsu/images/item_188.png"
+    image: "https://imgbed.heliar.top/i/IUDF6MniyyIDp4FV.png"
   },
    {
     id: 189,
@@ -1721,7 +1721,7 @@ export const BASE_ITEMS = [
     character: "神崎美月",
     type: "徽章",
     size: "直径约 57mm",
-    image: "/aikatsu/images/item_189.png"
+    image: "https://imgbed.heliar.top/i/u77PMsiAYH6RGO_W.png"
   },
   {
     id: 190,
@@ -1757,7 +1757,7 @@ export const BASE_ITEMS = [
     character: "冴草纪伊",
     type: "徽章",
     size: "直径约 50mm",
-    image: "/aikatsu/images/item_194.png"
+    image: "https://imgbed.heliar.top/i/Nzlrezn4dVSuBRBR.png"
   },
   {
     id: 195,
@@ -1766,7 +1766,7 @@ export const BASE_ITEMS = [
     character: "风沢空",
     type: "徽章",
     size: "直径约 50mm",
-    image: "/aikatsu/images/item_195.png"
+    image: "https://imgbed.heliar.top/i/ScU_Mlf51ezDKcrH.png"
   },
   {
     id: 196,
@@ -1784,7 +1784,7 @@ export const BASE_ITEMS = [
     character: "音城塞拉",
     type: "徽章",
     size: "直径约 50mm",
-    image: "/aikatsu/images/item_197.png"
+    image: "https://imgbed.heliar.top/i/PE0igALOoL2Rb4V_.png"
   },
   {
     id: 198,
@@ -1820,7 +1820,7 @@ export const BASE_ITEMS = [
     character: "紫吹兰",
     type: "徽章",
     size: "直径约 50mm",
-    image: "/aikatsu/images/item_201.png"
+    image: "https://imgbed.heliar.top/i/gOq76SykWcFMhI2y.png"
   },
   {
     id: 202,
@@ -1838,7 +1838,7 @@ export const BASE_ITEMS = [
     character: "北大路樱",
     type: "徽章",
     size: "直径约 50mm",
-    image: "/aikatsu/images/item_203.png"
+    image: "https://imgbed.heliar.top/i/ru9cWDGofrTYLtvY.png"
   },
   {
     id: 204,
@@ -1847,7 +1847,7 @@ export const BASE_ITEMS = [
     character: "一之濑枫",
     type: "徽章",
     size: "直径约 50mm",
-    image: "/aikatsu/images/item_204.png"
+    image: "https://imgbed.heliar.top/i/nlq_Kb9EIt_mGVf0.png"
   },
   {
     id: 205,
@@ -1874,7 +1874,7 @@ export const BASE_ITEMS = [
     character: "夏树未来",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_207.png"
+    image: "https://imgbed.heliar.top/i/eEqna3BQkR7zrxzw.png"
   },
   {
     id: 208,
@@ -1901,7 +1901,7 @@ export const BASE_ITEMS = [
     character: "姬里玛利亚",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_210.png"
+    image: "https://imgbed.heliar.top/i/PG6zPh_uEuBXaV1h.png"
   },
   {
     id: 211,
@@ -1919,7 +1919,7 @@ export const BASE_ITEMS = [
     character: "音城诺艾尔",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_212.png"
+    image: "https://imgbed.heliar.top/i/temD_fabClgA9t9F.png"
   },
   {
     id: 213,
@@ -1937,7 +1937,7 @@ export const BASE_ITEMS = [
     character: "冴草纪伊",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_214.png"
+    image: "https://imgbed.heliar.top/i/RmaU0OLN4Tt26JVB.png"
   },
   {
     id: 215,
@@ -1946,7 +1946,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_215.png"
+    image: "https://imgur.com/HwdAfHx"
   },
   {
     id: 216,
@@ -1955,7 +1955,7 @@ export const BASE_ITEMS = [
     character: "神谷紫苑",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_216.png"
+    image: "https://imgbed.heliar.top/i/cJF5b59Qz3Yt5BPM.png"
   },
   {
     id: 217,
@@ -1973,7 +1973,7 @@ export const BASE_ITEMS = [
     character: "有栖川乙女",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_218.png"
+    image: "https://imgbed.heliar.top/i/4abNIrlsIIDlnH82.png"
   },
   {
     id: 219,
@@ -1991,7 +1991,7 @@ export const BASE_ITEMS = [
     character: "白银莉莉",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_220.png"
+    image: "https://imgur.com/sH2xeyi"
   },
   {
     id: 221,
@@ -2009,7 +2009,7 @@ export const BASE_ITEMS = [
     character: "紫吹兰",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_222.png"
+    image: "https://imgbed.heliar.top/i/PVolTW8rrZM7k3jq.png"
   },
   {
     id: 223,
@@ -2045,7 +2045,7 @@ export const BASE_ITEMS = [
     character: "藤原雅",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_226.png"
+    image: "https://imgbed.heliar.top/i/GTJbvCZwbMTmS1-k.png"
   },
   {
     id: 227,
@@ -2054,7 +2054,7 @@ export const BASE_ITEMS = [
     character: "白桦丽莎",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_227.png"
+    image: "https://imgbed.heliar.top/i/GA-BrNznD62qtbuA.png"
   },
   {
     id: 228,
@@ -2090,7 +2090,7 @@ export const BASE_ITEMS = [
     character: "天羽圆香",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_231.png"
+    image: "https://imgbed.heliar.top/i/Lx1p6Z7uPOL2PFo9.png"
   },
   {
     id: 232,
@@ -2099,7 +2099,7 @@ export const BASE_ITEMS = [
     character: "冰上堇",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_232.png"
+    image: "https://imgbed.heliar.top/i/Mmgsdw9lRu-p_7iC.png"
   },
   {
     id: 233,
@@ -2117,7 +2117,7 @@ export const BASE_ITEMS = [
     character: "服部优",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_234.png"
+    image: "https://imgbed.heliar.top/i/tJ8iUx2rQt9mjDBE.png"
   },
   {
     id: 235,
@@ -2135,7 +2135,7 @@ export const BASE_ITEMS = [
     character: "七仓小春",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_237.png"
+    image: "https://imgur.com/uUW77LS"
   },  
   {
     id: 238,
@@ -2144,7 +2144,7 @@ export const BASE_ITEMS = [
     character: "艾尔莎·福特",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_238.png"
+    image: "https://imgur.com/N98zO3B"
   },  
   {
     id: 239,
@@ -2153,7 +2153,7 @@ export const BASE_ITEMS = [
     character: "骑咲礼",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_239.png"
+    image: "https://imgur.com/u74OYLw"
   },  
   {
     id: 240,
@@ -2162,7 +2162,7 @@ export const BASE_ITEMS = [
     character: "早乙女亚子",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_240.png"
+    image: "https://imgbed.heliar.top/i/lzFCZqKgpOiuYtro.png"
   },  
   {
     id: 241,
@@ -2171,7 +2171,7 @@ export const BASE_ITEMS = [
     character: "二阶堂柚子",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_241.png"
+    image: "https://imgur.com/uOab1aR"
   },  
   {
     id: 242,
@@ -2180,7 +2180,7 @@ export const BASE_ITEMS = [
     character: "花园绮罗",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_242.png"
+    image: "https://imgur.com/6ibU0KN"
   },  
   {
     id: 243,
@@ -2189,7 +2189,7 @@ export const BASE_ITEMS = [
     character: "白鸟姬",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_243.png"
+    image: "https://imgbed.heliar.top/i/IDDjOMojPDEErc-u.png"
   },  
   {
     id: 244,
@@ -2198,7 +2198,7 @@ export const BASE_ITEMS = [
     character: "双叶亚里亚",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_244.png"
+    image: "https://imgur.com/UxooART"
   },  
   {
     id: 245,
@@ -2207,7 +2207,7 @@ export const BASE_ITEMS = [
     character: "如月翼",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_245.png"
+    image: "https://imgbed.heliar.top/i/4qt9z1oiwKf9FOqV.png"
   },  
   {
     id: 246,
@@ -2216,7 +2216,7 @@ export const BASE_ITEMS = [
     character: "虹野梦",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_246.png"
+    image: "https://imgur.com/ngW1VCp"
   },  
   {
     id: 247,
@@ -2225,7 +2225,7 @@ export const BASE_ITEMS = [
     character: "樱庭劳拉",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_247.png"
+    image: "https://imgbed.heliar.top/i/ToXLeUV9GHZoFt3R.png"
   },  
   {
     id: 248,
@@ -2234,7 +2234,7 @@ export const BASE_ITEMS = [
     character: "香澄真昼",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_248.png"
+    image: "https://imgur.com/HSnB35A"
   },  
   {
     id: 249,
@@ -2243,7 +2243,7 @@ export const BASE_ITEMS = [
     character: "香澄夜空",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_249.png"
+    image: "https://imgbed.heliar.top/i/LmR8FK3NTGl9LkDG.png"
   },  
   {
     id: 250,
@@ -2252,7 +2252,7 @@ export const BASE_ITEMS = [
     character: "春风若叶",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_250.png"
+    image: "https://imgur.com/hlMBlA3"
   },  
   {
     id: 251,
@@ -2261,7 +2261,7 @@ export const BASE_ITEMS = [
     character: "神城卡莲",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_251.png"
+    image: "https://imgbed.heliar.top/i/lzvPCuWhYjmlPrXg.png"
   },  
   {
     id: 252,
@@ -2270,7 +2270,7 @@ export const BASE_ITEMS = [
     character: "艾莉西亚·夏洛特",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_252.png"
+    image: "https://imgbed.heliar.top/i/lBJYm0hNCbv5XWtN.png"
   },  
   {
     id: 253,
@@ -2279,7 +2279,7 @@ export const BASE_ITEMS = [
     character: "姬石来希",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_253.png"
+    image: "https://imgbed.heliar.top/i/wJnheg5gcguXy0wZ.png"
   },  
   {
     id: 254,
@@ -2288,7 +2288,7 @@ export const BASE_ITEMS = [
     character: "天翔响",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_254.png"
+    image: "https://imgur.com/IDTEFkR"
   },  
   {
     id: 255,
@@ -2297,7 +2297,7 @@ export const BASE_ITEMS = [
     character: "明日香未来",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_255.png"
+    image: "https://imgur.com/UMMObb3"
   },  
   {
     id: 256,
@@ -2306,7 +2306,7 @@ export const BASE_ITEMS = [
     character: "蝶乃舞花",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_256.png"
+    image: "https://imgbed.heliar.top/i/E44M6gm3KVzW85Uz.png"
   },  
   {
     id: 257,
@@ -2315,7 +2315,7 @@ export const BASE_ITEMS = [
     character: "白百合辉夜",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_257.png"
+    image: "https://imgur.com/1bk4hKF"
   },  
   {
     id: 258,
@@ -2324,7 +2324,7 @@ export const BASE_ITEMS = [
     character: "白百合咲夜",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_258.png"
+    image: "https://imgur.com/Ajzxt5P"
   }, 
   {
     id: 259,
@@ -2333,7 +2333,7 @@ export const BASE_ITEMS = [
     character: "友希爱音",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_259.png"
+    image: "https://imgur.com/QGCwLDx"
   },
   {
     id: 260,
@@ -2342,7 +2342,7 @@ export const BASE_ITEMS = [
     character: "日向绘麻",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_260.png"
+    image: "https://imgur.com/PeaWztk"
   },
   {
     id: 261,
@@ -2351,7 +2351,7 @@ export const BASE_ITEMS = [
     character: "凑美绪",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_261.png"
+    image: "https://imgbed.heliar.top/i/HVp1NEKki9iorfZC.png"
   },
   {
     id: 193,
@@ -2360,7 +2360,7 @@ export const BASE_ITEMS = [
     character: "天翔响",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_193.png"
+    image: "https://imgbed.heliar.top/i/gFXT-u64kVu974_g.png"
   },
   {
     id: 262,
@@ -2369,7 +2369,7 @@ export const BASE_ITEMS = [
     character: "艾莉西亚·夏洛特",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_262.png"
+    image: "https://imgbed.heliar.top/i/RwDyOlLtI-UOPitL.png"
   },
   {
     id: 263,
@@ -2378,7 +2378,7 @@ export const BASE_ITEMS = [
     character: "神城卡莲",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_263.png"
+    image: "https://imgbed.heliar.top/i/s-mtzor2Mznw7wZJ.png"
   },
   {
     id: 264,
@@ -2387,7 +2387,7 @@ export const BASE_ITEMS = [
     character: "姬石来希",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_264.png"
+    image: "https://imgbed.heliar.top/i/gxjZR58OWATqS2nS.png"
   },
   {
     id: 265,
@@ -2396,7 +2396,7 @@ export const BASE_ITEMS = [
     character: "明日香未来",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_265.png"
+    image: "https://imgbed.heliar.top/i/hlf2wdZN3Rvwdfnb.png"
   },
   {
     id: 266,
@@ -2405,7 +2405,7 @@ export const BASE_ITEMS = [
     character: "白百合辉夜",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_266.png"
+    image: "https://imgbed.heliar.top/i/toxTOdR1YFnVKawN.png"
   },
   {
     id: 267,
@@ -2414,7 +2414,7 @@ export const BASE_ITEMS = [
     character: "白百合咲夜",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_267.png"
+    image: "https://imgbed.heliar.top/i/f0zarEqd2KMOI-hH.png"
   },
   {
     id: 268,
@@ -2423,7 +2423,7 @@ export const BASE_ITEMS = [
     character: "日向绘麻",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_268.png"
+    image: "https://imgbed.heliar.top/i/_cKntURZmBODotZ3.png"
   },
   {
     id: 269,
@@ -2432,7 +2432,7 @@ export const BASE_ITEMS = [
     character: "凑美绪",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_269.png"
+    image: "https://imgbed.heliar.top/i/3S6OHIFHavcMzsEt.png"
   },
   {
     id: 270,
@@ -2441,7 +2441,7 @@ export const BASE_ITEMS = [
     character: "春风若叶",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_270.png"
+    image: "https://imgbed.heliar.top/i/GaX2dEbKKS8nCIe4.png"
   },
   {
     id: 271,
@@ -2450,7 +2450,7 @@ export const BASE_ITEMS = [
     character: "友希爱音",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_271.png"
+    image: "https://imgbed.heliar.top/i/vRLVvGxh2D3KZqFT.png"
   },
   {
     id: 272,
@@ -2459,7 +2459,7 @@ export const BASE_ITEMS = [
     character: "蝶乃舞花",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_272.png"
+    image: "https://imgbed.heliar.top/i/Il4rxLS62MZkyXUc.png"
   },
   {
     id: 273,
@@ -2468,7 +2468,7 @@ export const BASE_ITEMS = [
     character: "新海琳娜",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_273.png"
+    image: "https://imgbed.heliar.top/i/CefvW_YrjdhgkvI_.png"
   },
   {
     id: 274,
@@ -2477,7 +2477,7 @@ export const BASE_ITEMS = [
     character: "真波玛琳",
     type: "徽章",
     size: "直径约 65mm",
-    image: "/aikatsu/images/item_274.png"
+    image: "https://imgbed.heliar.top/i/zGA_75Wzz57GwHOI.png"
   },
   {
     id: 275,
@@ -2486,7 +2486,7 @@ export const BASE_ITEMS = [
     character: "姬石来希",
     type: "徽章",
     size: "直径约 57mm",
-    image: "/aikatsu/images/item_275.png"
+    image: "https://imgbed.heliar.top/i/dQQxOF7spQjKYuqS.png"
   },
   {
     id: 276,
@@ -2495,7 +2495,7 @@ export const BASE_ITEMS = [
     character: "神城卡莲",
     type: "徽章",
     size: "直径约 57mm",
-    image: "/aikatsu/images/item_276.png"
+    image: "https://imgbed.heliar.top/i/t6isngb9RfPvBsRl.png"
   },
   {
     id: 277,
