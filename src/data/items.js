@@ -4301,11 +4301,72 @@ export const BASE_ITEMS = [
     id: 477,
     name: "(2弹)豆豆眼/涂鸦徽章",
     subtitle: "アイカツスターズ！ 04 グラフアートイラスト 缶バッジ",
-    character: "",
+    character: "花园绮罗",
     type: "徽章",
     size: "直径约 65mm",
-    image: ""
+    image: "https://i.imgur.com/tKIt7ng.png"
   },
+  {
+    id: 478,
+    name: "(2弹)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 04 グラフアートイラスト 缶バッジ",
+    character: "艾尔莎·福特",
+    type: "徽章",
+    size: "直径约 65mm",
+    image: "https://i.imgur.com/ZfcGdkC.png"
+  },
+  {
+    id: 479,
+    name: "(2弹)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 04 グラフアートイラスト 缶バッジ",
+    character: "白鸟姬",
+    type: "徽章",
+    size: "直径约 65mm",
+    image: "https://i.imgur.com/tTk9Ejk.png"
+  },
+  {
+    id: 480,
+    name: "(2弹)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 04 グラフアートイラスト 缶バッジ",
+    character: "双叶亚里亚",
+    type: "徽章",
+    size: "直径约 65mm",
+    image: "https://i.imgur.com/P4bxuHv.png"
+  },
+  {
+    id: 481,
+    name: "(2弹)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 04 グラフアートイラスト 缶バッジ",
+    character: "骑咲礼",
+    type: "徽章",
+    size: "直径约 65mm",
+    image: "https://i.imgur.com/trCc5hW.png"
+  },
+  {
+    id: 482,
+    name: "(2弹)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 04 グラフアートイラスト 缶バッジ",
+    character: "如月翼",
+    type: "徽章",
+    size: "直径约 65mm",
+    image: "https://i.imgur.com/T0dlp7X.png"
+  },
+  {
+    id: 483,
+    name: "(2弹)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 04 グラフアートイラスト 缶バッジ",
+    character: "香澄夜空",
+    type: "徽章",
+    size: "直径约 65mm",
+    image: "https://i.imgur.com/qpyrhqq.png"
+  },
+
+
+
+
+
+  
+
   
   
 

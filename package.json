@@ -7,8 +7,9 @@
     "dev": "vite",
     "download-images": "node scripts/download-images.cjs",
     "convert-webp": "node scripts/convert-to-webp.cjs",
+    "watch-images": "node scripts/watch-images.cjs",
     "write-version": "node scripts/write-version.cjs",
-    "build": "npm run download-images -- --force && npm run convert-webp -- --force && npm run write-version && vite build",
+    "build": "npm run download-images && npm run convert-webp && npm run write-version && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bash deploy.sh"
@@ -25,6 +26,7 @@
     "autoprefixer": "^10.5.4",
     "oxlint": "^1.71.0",
     "postcss": "^8.5.23",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.19",
     "vite": "^8.1.1"
   }

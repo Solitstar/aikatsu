@@ -8,8 +8,8 @@ const CardGrid = ({ items, onCardClick }) => {
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-5">
-      {items.map(item => (
-        <GoodsCard key={item.id} item={item} onClick={onCardClick} />
+      {items.map((item, index) => (
+        <GoodsCard key={item.id} item={item} onClick={onCardClick} priority={index < 6} />
       ))}
     </div>
   );

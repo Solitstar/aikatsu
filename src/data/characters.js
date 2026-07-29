@@ -74,7 +74,9 @@ const CHARACTER_DATABASE = [
   { name: '天翔响', series: '友代', gender: '女', romaji: 'Tensho Hibiki', pinyin: 'tianxiangxiang' },
   { name: '艾莉西亚·夏洛特', series: '友代', gender: '女', romaji: 'Alicia Charlotte', pinyin: 'ailixiyaxialuote' },
   { name: '春风若叶', series: '友代', gender: '女', romaji: 'Harukaze Wakaba', pinyin: 'chunfengruoye' },
-
+  { name: '玉置可可', series: '友代', gender: '女', romaji: 'Coco', pinyin: 'yuzhikeke' },
+  { name: '新海琳娜', series: '友代', gender: '女', romaji: 'Shinkai Rinna', pinyin: 'xinhailinna' },
+  { name: '真波玛琳', series: '友代', gender: '女', romaji: 'Mamime Meh', pinyin: 'zhenbomalin' },
   // 大游行(On Parade)
   { name: '姬石来希', series: '大游行', gender: '女', romaji: 'Kiseki Raki', pinyin: 'jishilaixi' },
 
