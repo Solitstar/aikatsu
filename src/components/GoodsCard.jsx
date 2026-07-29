@@ -41,9 +41,16 @@ const GoodsCard = ({ item, onClick }) => {
     return '';
   };
 
+  // 图片加载优先级：本地缓存(WebP → PNG → JPG) → 远程URL → SVG占位
+  const localWebp = `/aikatsu/images/item_${item.id}.webp`;
+  const localPng = `/aikatsu/images/item_${item.id}.png`;
+  const localJpg = `/aikatsu/images/item_${item.id}.jpg`;
+  const initialSrc = localWebp; // 优先WebP格式（体积最小）
+
   const fallbacks = [
-    `/aikatsu/images/item_${item.id}.png`,
-    `/aikatsu/images/item_${item.id}.jpg`,
+    localPng,           // 2. 本地PNG缓存
+    localJpg,           // 3. 本地JPG缓存
+    item.image,         // 4. 远程图床（imgbed / imgur）
     `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23f3f4f6' width='200' height='200'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='14'%3E${encodeURIComponent(item.name.substring(0, 8))}%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' fill='%23d1d5db' font-size='11'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
   ];
 
@@ -78,7 +85,7 @@ const GoodsCard = ({ item, onClick }) => {
         )}
 
         <img
-          src={item.image}
+          src={initialSrc}
           alt={item.name}
           loading="lazy"
           decoding="async"
