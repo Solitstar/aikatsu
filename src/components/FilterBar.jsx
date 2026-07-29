@@ -8,19 +8,11 @@ const FilterBar = ({
   filterSeries,
   filterChar,
   filterType,
-  filterStatus,
   onSeriesChange,
   onCharChange,
   onTypeChange,
-  onStatusChange,
   onReset,
 }) => {
-  const statusOptions = [
-    { value: '全部', label: '全部' },
-    { value: 'owned', label: '已拥有 ⭐️' },
-    { value: 'wish', label: '想要 ❤️' },
-  ];
-
   const availableCharacters = ['全部', ...getCharactersBySeriesAndGender(filterSeries, '全部')];
   if (!availableCharacters.includes('其他')) {
     availableCharacters.push('其他');
@@ -62,20 +54,6 @@ const FilterBar = ({
           {renderSelect('系列', filterSeries, onSeriesChange, SERIES_LIST, 'w-full sm:w-32')}
           {renderSelect('角色', filterChar, onCharChange, availableCharacters, 'w-full sm:w-40')}
           {renderSelect('种类', filterType, onTypeChange, TYPES, 'w-full sm:w-36')}
-
-          <div className={wrapperClass}>
-            <label className="block text-xs text-text-secondary mb-1.5 ml-1">持有状态</label>
-            <select
-              value={filterStatus}
-              onChange={(e) => onStatusChange(e.target.value)}
-              className={selectClass + " w-full sm:w-40"}
-            >
-              {statusOptions.map(opt => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-            <span className={chevronClass}>▾</span>
-          </div>
         </div>
 
         <button
