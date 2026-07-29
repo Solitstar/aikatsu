@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const GoodsCard = ({ item, onClick }) => {
+const GoodsCard = ({ item, onClick, priority = false }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
   const [fallbackStep, setFallbackStep] = useState(0);
@@ -87,7 +87,8 @@ const GoodsCard = ({ item, onClick }) => {
         <img
           src={initialSrc}
           alt={item.name}
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
+          fetchpriority={priority ? "high" : "auto"}
           decoding="async"
           onLoad={() => { setImgLoaded(true); setImgError(false); }}
           onError={handleImgError}

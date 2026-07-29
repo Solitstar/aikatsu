@@ -3,6 +3,30 @@ import { useEffect, useState } from 'react';
 const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder }) => {
   const [showFolderPicker, setShowFolderPicker] = useState(false);
   const [newFolderName, setNewFolderName] = useState('');
+  const [imgSrc, setImgSrc] = useState('');
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [fallbackStep, setFallbackStep] = useState(0);
+
+  // 图片加载优先级：本地缓存 → 远程URL → SVG占位
+  useEffect(() => {
+    if (!item) return;
+    setImgLoaded(false);
+    setFallbackStep(0);
+    setImgSrc(`/aikatsu/images/item_${item.id}.webp`); // 优先WebP
+  }, [item?.id]);
+
+  const handleImgError = () => {
+    const next = [
+      `/aikatsu/images/item_${item.id}.png`,
+      `/aikatsu/images/item_${item.id}.jpg`,
+      item.image,
+      `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23f3f4f6' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='16'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
+    ];
+    if (fallbackStep < next.length) {
+      setImgSrc(next[fallbackStep]);
+      setFallbackStep(fallbackStep + 1);
+    }
+  };
 
   const itemType = item?.status;
   const currentFolder = folders.find(f => f.id === itemFolderId);
@@ -51,10 +75,16 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
             <div className="w-full sm:w-2/5 flex-shrink-0">
               <div className="aspect-square rounded-2xl overflow-hidden bg-bg-primary/30 shadow-card">
+                {!imgLoaded && (
+                  <div className="w-full h-full animate-pulse bg-gradient-to-b from-gray-200 via-gray-100 to-gray-200" />
+                )}
                 <img
-                  src={item.image}
+                  src={imgSrc || item.image}
                   alt={item.name}
                   className="w-full h-full object-cover"
+                  style={{ display: imgLoaded ? 'block' : 'none' }}
+                  onLoad={() => setImgLoaded(true)}
+                  onError={handleImgError}
                 />
               </div>
             </div>
