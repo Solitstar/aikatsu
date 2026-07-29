@@ -104,8 +104,10 @@ function download(url, destPath, retries = 2) {
 
 async function main() {
   const retryFailed = process.argv.includes('--retry-failed');
+  const force = process.argv.includes('--force');
 
   console.log('📥 图片下载工具\n');
+  if (force) console.log('⚠️  强制模式：将覆盖已存在的文件\n');
 
   if (!fs.existsSync(OUT_DIR)) {
     fs.mkdirSync(OUT_DIR, { recursive: true });
@@ -149,8 +151,8 @@ async function main() {
     const filename = `item_${id}.${ext}`;
     const destPath = path.join(OUT_DIR, filename);
 
-    // 跳过已存在的文件
-    if (fs.existsSync(destPath) && fs.statSync(destPath).size > 100) {
+    // 跳过已存在的文件（非强制模式）
+    if (!force && fs.existsSync(destPath) && fs.statSync(destPath).size > 100) {
       console.log(`[${i + 1}/${items.length}] ⏭  跳过 (已存在) item_${id}.${ext}`);
       skipped++;
       continue;

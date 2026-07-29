@@ -803,7 +803,7 @@ export const BASE_ITEMS = [
     character: "黑泽凛",
     type: "徽章",
     size: "直径约 56mm",
-    image: "https://i.imgur.com/Ow0IX4u.png."
+    image: "https://i.imgur.com/Ow0IX4u.png"
   },  
   {
     id: 88,
