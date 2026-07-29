@@ -40,16 +40,6 @@ function App() {
     }
   }, [filterSeries, filterChar]);
 
-  useEffect(() => {
-    if (filterStatus === 'wish') {
-      setActiveTab('wishlist');
-    } else if (filterStatus === 'owned') {
-      setActiveTab('owned');
-    } else {
-      setActiveTab('collection');
-    }
-  }, [filterStatus]);
-
   const filteredItems = useMemo(() => {
     return items.filter(item => {
       const matchSeries = filterSeries === '全部' || item.series.includes(filterSeries);
@@ -86,18 +76,16 @@ function App() {
     if (filterSeries !== '全部') params.set('series', filterSeries);
     if (filterChar !== '全部') params.set('character', filterChar);
     if (filterType !== '全部') params.set('type', filterType);
-    if (filterStatus !== '全部') params.set('status', filterStatus);
     if (searchKeyword) params.set('search', searchKeyword);
     const query = params.toString();
     const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
     window.history.replaceState({}, '', newUrl);
-  }, [filterSeries, filterChar, filterType, filterStatus, searchKeyword]);
+  }, [filterSeries, filterChar, filterType, searchKeyword]);
 
   const handleReset = () => {
     setFilterSeries('全部');
     setFilterChar('全部');
     setFilterType('全部');
-    setFilterStatus('全部');
     setSearchKeyword('');
   };
 
@@ -340,11 +328,9 @@ function App() {
               filterSeries={filterSeries}
               filterChar={filterChar}
               filterType={filterType}
-              filterStatus={filterStatus}
               onSeriesChange={setFilterSeries}
               onCharChange={setFilterChar}
               onTypeChange={setFilterType}
-              onStatusChange={setFilterStatus}
               onReset={handleReset}
             />
           </>
