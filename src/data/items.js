@@ -4099,9 +4099,37 @@ export const BASE_ITEMS = [
     size: "直径约 57x53mm",
     image: "https://i.imgur.com/SlpPx1S.png"
   },
-
-
+  {
+    id: 455,
+    name: "(大衣装展)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 01/トレーディング グラフアートイラスト缶バッジ",
+    character: "双叶亚里亚",
+    type: "徽章",
+    size: "直径约 57x53mm",
+    image: "https://i.imgur.com/BK0zLqM.png"
+  },
+  {
+    id: 456,
+    name: "(大衣装展)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツフレンズ！＆オンパレード！ 01/トレーディング グラフアートイラスト缶バッジ",
+    character: "艾莉西亚·夏洛特",
+    type: "徽章",
+    size: "直径约 57x53mm",
+    image: "https://i.imgur.com/eEhFJj9.png"
+  },
+  {
+    id: 457,
+    name: "(大衣装展)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツフレンズ！＆オンパレード！ 01/トレーディング グラフアートイラスト缶バッジ",
+    character: "凑美绪",
+    type: "徽章",
+    size: "直径约 57x53mm",
+    image: "https://i.imgur.com/CAyRcsA.png"
+  },
   
+
+
+
   
 
 
