@@ -20,7 +20,7 @@ export const BASE_ITEMS = [
     character: "星宫莓",
     type: "徽章",
     size: "直径约 57mm",
-    image: "https://imgbed.heliar.top/i/5_zGTYEL-iAR4PHh?thumb=1"
+    image: "https://i.imgur.com/4vrU4zr.png"
   },
   {
     id: 2,
@@ -4353,13 +4353,61 @@ export const BASE_ITEMS = [
   },
   {
     id: 483,
-    name: "(2弹)豆豆眼/涂鸦徽章",
-    subtitle: "アイカツスターズ！ 04 グラフアートイラスト 缶バッジ",
+    name: "(校礼)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
+    character: "如月翼",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://i.imgur.com/iTWEpp4.png"
+  },
+  {
+    id: 484,
+    name: "(校礼)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
+    character: "白鸟姬",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://i.imgur.com/YqbwYhw.png"
+  },
+  {
+    id: 485,
+    name: "(校礼)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
     character: "香澄夜空",
     type: "徽章",
-    size: "直径约 65mm",
-    image: "https://i.imgur.com/qpyrhqq.png"
+    size: "直径约 57mm",
+    image: "https://i.imgur.com/l1XhhBz.png"
   },
+  {
+    id: 486,
+    name: "(校礼)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
+    character: "艾尔莎·福特",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://i.imgur.com/gh8nBC9.png"
+  },
+  {
+    id: 487,
+    name: "(校礼)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
+    character: "双叶亚里亚",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://i.imgur.com/ehXwMNu.png"
+  },
+  {
+    id: 488,
+    name: "(校礼)豆豆眼/涂鸦徽章",
+    subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
+    character: "花园绮罗",
+    type: "徽章",
+    size: "直径约 57mm",
+    image: "https://i.imgur.com/ynpetbf.png"
+  },
+
+
+
 
 
 
