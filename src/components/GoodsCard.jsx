@@ -71,7 +71,7 @@ const GoodsCard = ({ item, onClick }) => {
       {getStatusBadge()}
 
       {/* 图片容器 - 使用 object-contain 完整展示图片 */}
-      <div className="relative aspect-square overflow-hidden bg-[#f4f5f7]">
+      <div className="relative aspect-square overflow-hidden bg-[#f4f5f7] rounded-t-2xl">
         {/* 骨架屏加载动画 */}
         {!imgLoaded && !imgError && (
           <div className="absolute inset-0 animate-pulse bg-gradient-to-b from-gray-200 via-gray-100 to-gray-200" />

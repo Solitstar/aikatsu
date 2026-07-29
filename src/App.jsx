@@ -308,6 +308,7 @@ function App() {
           wishCount={wishCount}
           wishTotalQuantity={wishTotalQuantity}
           totalCount={totalCount}
+          activeTab={activeTab}
         />
 
         {(activeTab === 'owned' || activeTab === 'wishlist') && (
