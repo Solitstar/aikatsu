@@ -71,7 +71,6 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
         cursor-pointer transition-all duration-300 ease-out
         hover:shadow-soft hover:-translate-y-1
         content-visibility-auto contain-intrinsic-size-[auto_280px]
-        will-change-transform
         ${getCardBorder()}
       `}
     >
