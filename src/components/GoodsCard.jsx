@@ -42,9 +42,10 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
   };
 
   // 图片加载优先级：本地缓存(WebP → PNG → JPG) → 远程URL → SVG占位
-  const localWebp = `/aikatsu/images/item_${item.id}.webp`;
-  const localPng = `/aikatsu/images/item_${item.id}.png`;
-  const localJpg = `/aikatsu/images/item_${item.id}.jpg`;
+  const base = import.meta.env.BASE_URL; // '/' dev, '/aikatsu/' build
+  const localWebp = `${base}images/item_${item.id}.webp`;
+  const localPng = `${base}images/item_${item.id}.png`;
+  const localJpg = `${base}images/item_${item.id}.jpg`;
   const initialSrc = localWebp; // 优先WebP格式（体积最小）
 
   const fallbacks = [

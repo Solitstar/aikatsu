@@ -10,15 +10,17 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   // 图片加载优先级：本地缓存 → 远程URL → SVG占位
   useEffect(() => {
     if (!item) return;
+    const base = import.meta.env.BASE_URL;
     setImgLoaded(false);
     setFallbackStep(0);
-    setImgSrc(`/aikatsu/images/item_${item.id}.webp`); // 优先WebP
+    setImgSrc(`${base}images/item_${item.id}.webp`);
   }, [item?.id]);
 
   const handleImgError = () => {
+    const base = import.meta.env.BASE_URL;
     const next = [
-      `/aikatsu/images/item_${item.id}.png`,
-      `/aikatsu/images/item_${item.id}.jpg`,
+      `${base}images/item_${item.id}.png`,
+      `${base}images/item_${item.id}.jpg`,
       item.image,
       `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23f3f4f6' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='16'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
     ];
