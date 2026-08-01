@@ -5,21 +5,25 @@ import { TYPES } from '../data/items';
 const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) => {
   const [selectedChar, setSelectedChar] = useState('全部');
   const [selectedType, setSelectedType] = useState('全部');
+  const [selectedCharCount, setSelectedCharCount] = useState('全部');
   const [searchText, setSearchText] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const searchRef = useRef(null);
   const dropdownRef = useRef(null);
 
+  const CHAR_COUNT_OPTIONS = ['全部', '单人', '多人', '其他(不含角色)'];
+
   const totalCount = items.length;
   const ownedCount = ownedItems.length;
 
-  // 角色数量匹配函数
+  // 角色数量匹配函数 — 同时受全局筛选和本地筛选影响
   const charCountMatch = (item) => {
-    if (filterCharCount === '全部') return true;
+    const effective = selectedCharCount !== '全部' ? selectedCharCount : filterCharCount;
+    if (effective === '全部') return true;
     const chars = (item.character || '').split(/[,，]/).map(c => c.trim()).filter(Boolean);
-    if (filterCharCount === '单人') return chars.length === 1 && item.character !== '其他';
-    if (filterCharCount === '多人') return chars.length > 1;
-    if (filterCharCount === '其他') return item.character === '其他';
+    if (effective === '单人') return chars.length === 1 && !chars.includes('其他');
+    if (effective === '多人') return chars.length > 1 && !chars.includes('其他');
+    if (effective === '其他(不含角色)') return chars.includes('其他');
     return true;
   };
 
@@ -54,7 +58,7 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
   };
 
   // 按角色+种类统计
-  const hasFilter = selectedChar !== '全部' || selectedType !== '全部';
+  const hasFilter = selectedChar !== '全部' || selectedType !== '全部' || selectedCharCount !== '全部';
   const charStats = useMemo(() => {
     if (!hasFilter) return null;
 
@@ -82,7 +86,7 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
       uncollected: charTotal.length - charOwned.length,
       percent,
     };
-  }, [selectedChar, selectedType, items, ownedItems, filterCharCount]);
+  }, [selectedChar, selectedType, selectedCharCount, items, ownedItems, filterCharCount]);
 
   const progressColor = 'from-pink-300 to-accent';
 
@@ -112,7 +116,7 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
       {/* 角色+种类筛选 */}
       <div className="border-t border-accent/10 pt-4">
         <label className="block text-xs text-text-secondary mb-2 font-medium">
-          按角色和种类查看收集进度
+          按角色、种类和角色数查看收集进度
         </label>
         <div className="flex flex-col sm:flex-row gap-2 mb-4">
           {/* 角色搜索 */}
@@ -193,6 +197,24 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
             </select>
             <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-accent text-sm">▾</span>
           </div>
+
+          {/* 角色数选择 */}
+          <div className="relative w-full sm:w-36">
+            <select
+              value={selectedCharCount}
+              onChange={(e) => setSelectedCharCount(e.target.value)}
+              className="appearance-none w-full px-4 py-2.5 pr-8 rounded-xl bg-bg-primary border border-accent/20
+                         text-text-primary text-sm font-medium
+                         cursor-pointer transition-all duration-300
+                         hover:border-accent/40 hover:shadow-soft
+                         focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
+            >
+              {CHAR_COUNT_OPTIONS.map(opt => (
+                <option key={opt} value={opt}>{opt}</option>
+              ))}
+            </select>
+            <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-accent text-sm">▾</span>
+          </div>
         </div>
 
         {/* 角色详情统计 */}
@@ -201,6 +223,7 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
             <h4 className="font-bold text-sm text-text-primary mb-3">
               {selectedChar !== '全部' ? selectedChar : '全部角色'}
               {selectedType !== '全部' && ` · ${selectedType}`}
+              {selectedCharCount !== '全部' && ` · ${selectedCharCount}`}
               {' '}收集详情
             </h4>
 

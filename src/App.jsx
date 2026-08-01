@@ -55,9 +55,9 @@ function App() {
       // 角色数量筛选：单人/多人/其他
       const charList = (item.character || '').split(/[,，]/).map(c => c.trim()).filter(Boolean);
       const matchCharCount = filterCharCount === '全部' ||
-        (filterCharCount === '单人' && charList.length === 1 && item.character !== '其他') ||
-        (filterCharCount === '多人' && charList.length > 1) ||
-        (filterCharCount === '其他' && item.character === '其他');
+        (filterCharCount === '单人' && charList.length === 1 && !charList.includes('其他')) ||
+        (filterCharCount === '多人' && charList.length > 1 && !charList.includes('其他')) ||
+        (filterCharCount === '其他(不含角色)' && charList.includes('其他'));
 
       const matchSearch = !searchKeyword ||
         normalize(item.name).includes(normalizedKw) ||

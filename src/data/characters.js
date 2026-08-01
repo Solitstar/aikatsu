@@ -24,7 +24,9 @@ const CHARACTER_DATABASE = [
   { name: '星宫赖智', series: '初代', gender: '男', romaji: 'Hoshimiya Raichi', pinyin: 'xinggonglaizhi' },
   { name: '凉川直人', series: '初代', gender: '男', romaji: 'Suzukawa Naoto', pinyin: 'liangchuanzhiren' },
   { name: '乔尼·别府', series: '初代', gender: '男', romaji: 'Johnny Beppu', pinyin: 'qiaonibiefu' },
-
+  { name: 'Hiro', series: '初代', gender: '男', romaji: 'Hiro', pinyin: 'xiluo' },
+  { name: 'Shurato', series: '初代', gender: '男', romaji: 'Shurato', pinyin: 'xiulate' },
+  { name: 'King', series: '初代', gender: '男', romaji: 'King', pinyin: 'king' },
   // 明代
   { name: '大空明', series: '明代', gender: '女', romaji: 'Ozora Akari', pinyin: 'dakongming' },
   { name: '冰上堇', series: '明代', gender: '女', romaji: 'Hikami Sumire', pinyin: 'bingshangjin' },
@@ -61,6 +63,7 @@ const CHARACTER_DATABASE = [
   { name: '结城昂', series: '星代', gender: '男', romaji: 'Yuki Subaru', pinyin: 'jiechengang' },
   { name: '香澄朝阳', series: '星代', gender: '男', romaji: 'Kasumi Asahi', pinyin: 'xiangchengchaoyang' },
   { name: '诸星辉', series: '星代', gender: '男', romaji: 'Moroboshi Hikaru', pinyin: 'zhuxinghui' },
+  { name: '白鸟姬', series: '星代', gender: '女', romaji: 'Shiratori Hime', pinyin: 'bainiaoji' },
 
   // 友代(Friends)
   { name: '友希爱音', series: '友代', gender: '女', romaji: 'Yuki Aine', pinyin: 'youxiaiyin' },
@@ -101,7 +104,8 @@ const CHARACTER_DATABASE = [
 ];
 
 export const getCharacterInfo = (name) => {
-  return CHARACTER_DATABASE.find(c => c.name === name) || { series: '未知', gender: '男，女', romaji: '', alias: '', pinyin: '' };
+  const clean = name.replace(/[\(（][^\)）]*[\)）]/, '').trim();
+  return CHARACTER_DATABASE.find(c => c.name === name || c.name === clean) || { series: '未知', gender: '男，女', romaji: '', alias: '', pinyin: '' };
 };
 
 export const getCharactersBySeriesAndGender = (series, gender) => {

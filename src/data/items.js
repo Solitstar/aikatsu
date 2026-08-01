@@ -431,7 +431,7 @@ export const BASE_ITEMS = [
     id: 47,
     name: "生日1弹徽章<7月~8月>",
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
-    character: "阳明咲(Rose)",
+    character: "阳明咲",
     type: "徽章",
     size: "直径约 56mm",
     image: "https://i.imgur.com/HQPkPBl.png"
@@ -5136,7 +5136,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 570,
-    name: "(Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "大空明",
     type: "徽章",
@@ -5145,7 +5145,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 571,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "星宫莓",
     type: "徽章",
@@ -5154,7 +5154,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 572,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "有栖川乙女",
     type: "徽章",
@@ -5163,7 +5163,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 573,
-    name: "(Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "新条雏姬",
     type: "徽章",
@@ -5172,7 +5172,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 574,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "一之濑枫",
     type: "徽章",
@@ -5181,7 +5181,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 575,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "红林珠璃",
     type: "徽章",
@@ -5190,7 +5190,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 576,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "冰上堇",
     type: "徽章",
@@ -5199,7 +5199,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 577,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "神谷紫苑",
     type: "徽章",
@@ -5208,7 +5208,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 578,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "天羽圆香",
     type: "徽章",
@@ -5217,7 +5217,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 579,
-    name: "(Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "紫吹兰",
     type: "徽章",
@@ -5226,7 +5226,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 580,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "神崎美月",
     type: "徽章",
@@ -5235,7 +5235,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 581,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "雾矢葵",
     type: "徽章",
@@ -5244,7 +5244,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 582,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "紫吹兰",
     type: "徽章",
@@ -5253,7 +5253,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 583,
-    name: "(Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
@@ -5262,7 +5262,7 @@ export const BASE_ITEMS = [
     },
     {
     id: 584,
-    name: "(格言Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "新条雏姬",
     type: "徽章",
@@ -5271,14 +5271,14 @@ export const BASE_ITEMS = [
     },
     {
     id: 585,
-    name: "(Q版)Cafe徽章",
+    name: "(格言/Q版)Cafe徽章",
     subtitle: "アイカツ! シリーズ アニON MUSIC CAFE マグバッジ ",
     character: "冰上堇",
     type: "徽章",
     size: "直径约 75mm",
     image: "https://i.imgur.com/CDKrn1F.png"
     }
-    
+
 
 
 

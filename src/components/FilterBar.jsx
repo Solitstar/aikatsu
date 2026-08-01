@@ -15,7 +15,7 @@ const FilterBar = ({
   onCharCountChange,
   onReset,
 }) => {
-  const CHAR_COUNT_OPTIONS = ['全部', '单人', '多人', '其他'];
+  const CHAR_COUNT_OPTIONS = ['全部', '单人', '多人', '其他(不含角色)'];
   const availableCharacters = ['全部', ...getCharactersBySeriesAndGender(filterSeries, '全部')];
   if (!availableCharacters.includes('其他')) {
     availableCharacters.push('其他');
