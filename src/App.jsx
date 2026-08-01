@@ -31,6 +31,7 @@ function App() {
   const [filterChar, setFilterChar] = useState(() => getInitialFilter('character', '全部'));
   const [filterType, setFilterType] = useState(() => getInitialFilter('type', '全部'));
   const [filterStatus, setFilterStatus] = useState(() => getInitialFilter('status', '全部'));
+  const [filterCharCount, setFilterCharCount] = useState(() => getInitialFilter('charcount', '全部'));
   const [searchKeyword, setSearchKeyword] = useState(() => getInitialFilter('search', ''));
 
   useEffect(() => {
@@ -50,6 +51,13 @@ function App() {
       const matchChar = filterChar === '全部' || item.character.includes(filterChar);
       const matchType = filterType === '全部' || item.type === filterType;
       const matchStatus = filterStatus === '全部' || item.status === filterStatus;
+
+      // 角色数量筛选：单人/多人/其他
+      const charList = (item.character || '').split(/[,，]/).map(c => c.trim()).filter(Boolean);
+      const matchCharCount = filterCharCount === '全部' ||
+        (filterCharCount === '单人' && charList.length === 1 && item.character !== '其他') ||
+        (filterCharCount === '多人' && charList.length > 1) ||
+        (filterCharCount === '其他' && item.character === '其他');
 
       const matchSearch = !searchKeyword ||
         normalize(item.name).includes(normalizedKw) ||
@@ -72,25 +80,27 @@ function App() {
         }
       }
 
-      return matchSeries && matchChar && matchType && matchStatus && matchSearch && matchFolder;
+      return matchSeries && matchChar && matchType && matchStatus && matchCharCount && matchSearch && matchFolder;
     });
-  }, [items, filterSeries, filterChar, filterType, filterStatus, searchKeyword, activeTab, activeFolder, getItemFolderId]);
+  }, [items, filterSeries, filterChar, filterType, filterStatus, filterCharCount, searchKeyword, activeTab, activeFolder, getItemFolderId]);
 
   useEffect(() => {
     const params = new URLSearchParams();
     if (filterSeries !== '全部') params.set('series', filterSeries);
     if (filterChar !== '全部') params.set('character', filterChar);
     if (filterType !== '全部') params.set('type', filterType);
+    if (filterCharCount !== '全部') params.set('charcount', filterCharCount);
     if (searchKeyword) params.set('search', searchKeyword);
     const query = params.toString();
     const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
     window.history.replaceState({}, '', newUrl);
-  }, [filterSeries, filterChar, filterType, searchKeyword]);
+  }, [filterSeries, filterChar, filterType, filterCharCount, searchKeyword]);
 
   const handleReset = () => {
     setFilterSeries('全部');
     setFilterChar('全部');
     setFilterType('全部');
+    setFilterCharCount('全部');
     setSearchKeyword('');
   };
 
@@ -103,12 +113,14 @@ function App() {
       setFilterSeries('全部');
       setFilterChar('全部');
       setFilterType('全部');
+      setFilterCharCount('全部');
       setSearchKeyword('');
       setFilterStatus('owned');
     } else if (tab === 'wishlist') {
       setFilterSeries('全部');
       setFilterChar('全部');
       setFilterType('全部');
+      setFilterCharCount('全部');
       setSearchKeyword('');
       setFilterStatus('wish');
     }
@@ -317,7 +329,7 @@ function App() {
         />
 
         {(activeTab === 'owned' || activeTab === 'wishlist') && (
-          <CollectionProgress items={items} ownedItems={ownedItems} />
+          <CollectionProgress items={items} ownedItems={ownedItems} filterCharCount={filterCharCount} />
         )}
 
         {activeTab === 'collection' && (
@@ -334,9 +346,11 @@ function App() {
               filterSeries={filterSeries}
               filterChar={filterChar}
               filterType={filterType}
+              filterCharCount={filterCharCount}
               onSeriesChange={setFilterSeries}
               onCharChange={setFilterChar}
               onTypeChange={setFilterType}
+              onCharCountChange={setFilterCharCount}
               onReset={handleReset}
             />
           </>

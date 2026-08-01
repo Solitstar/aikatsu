@@ -2,7 +2,7 @@ import { useState, useMemo, useRef, useEffect } from 'react';
 import { getCharactersBySeriesAndGender } from '../data/characters';
 import { TYPES } from '../data/items';
 
-const CollectionProgress = ({ items, ownedItems }) => {
+const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) => {
   const [selectedChar, setSelectedChar] = useState('全部');
   const [selectedType, setSelectedType] = useState('全部');
   const [searchText, setSearchText] = useState('');
@@ -12,6 +12,17 @@ const CollectionProgress = ({ items, ownedItems }) => {
 
   const totalCount = items.length;
   const ownedCount = ownedItems.length;
+
+  // 角色数量匹配函数
+  const charCountMatch = (item) => {
+    if (filterCharCount === '全部') return true;
+    const chars = (item.character || '').split(/[,，]/).map(c => c.trim()).filter(Boolean);
+    if (filterCharCount === '单人') return chars.length === 1 && item.character !== '其他';
+    if (filterCharCount === '多人') return chars.length > 1;
+    if (filterCharCount === '其他') return item.character === '其他';
+    return true;
+  };
+
   const overallPercent = totalCount > 0 ? Math.round((ownedCount / totalCount) * 100) : 0;
 
   const allCharacters = ['全部', ...getCharactersBySeriesAndGender('全部', '全部')];
@@ -51,14 +62,14 @@ const CollectionProgress = ({ items, ownedItems }) => {
       const matchChar = selectedChar === '全部' ||
         item.character.split(/[,，]/).map(c => c.trim()).includes(selectedChar);
       const matchType = selectedType === '全部' || item.type === selectedType;
-      return matchChar && matchType;
+      return matchChar && matchType && charCountMatch(item);
     });
 
     const charOwned = ownedItems.filter(item => {
       const matchChar = selectedChar === '全部' ||
         item.character.split(/[,，]/).map(c => c.trim()).includes(selectedChar);
       const matchType = selectedType === '全部' || item.type === selectedType;
-      return matchChar && matchType;
+      return matchChar && matchType && charCountMatch(item);
     });
 
     const percent = charTotal.length > 0
@@ -71,7 +82,7 @@ const CollectionProgress = ({ items, ownedItems }) => {
       uncollected: charTotal.length - charOwned.length,
       percent,
     };
-  }, [selectedChar, selectedType, items, ownedItems]);
+  }, [selectedChar, selectedType, items, ownedItems, filterCharCount]);
 
   const progressColor = 'from-pink-300 to-accent';
 
