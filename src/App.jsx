@@ -41,15 +41,20 @@ function App() {
   }, [filterSeries, filterChar]);
 
   const filteredItems = useMemo(() => {
+    // 标准化函数：去掉括号、书名号、空格等符号，用于模糊匹配
+    const normalize = (s) => s.replace(/[\(\)（）\（\）\[\]【】〈〉《》\s\-·\.]+/g, '').toLowerCase();
+    const normalizedKw = normalize(searchKeyword);
+
     return items.filter(item => {
       const matchSeries = filterSeries === '全部' || item.series.includes(filterSeries);
       const matchChar = filterChar === '全部' || item.character.includes(filterChar);
       const matchType = filterType === '全部' || item.type === filterType;
       const matchStatus = filterStatus === '全部' || item.status === filterStatus;
+
       const matchSearch = !searchKeyword ||
-        item.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+        normalize(item.name).includes(normalizedKw) ||
         item.character.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        item.type.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+        normalize(item.type).includes(normalizedKw) ||
         (item.subtitle || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
         (item.characterRomaji || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
         (item.characterAlias || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
