@@ -1,7 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const Header = ({ activeTab, onTabChange }) => {
   const [showAbout, setShowAbout] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(() => {
+    navigator.clipboard.writeText(
+      '链接: https://pan.baidu.com/s/1npzIJw_LyAmH7q6YodruJQ  提取码: love'
+    ).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }, []);
 
   useEffect(() => {
     if (showAbout) {
@@ -90,7 +100,27 @@ const Header = ({ activeTab, onTabChange }) => {
                 <div className="bg-accent/5 rounded-xl p-4 space-y-2">
                   <p className="font-medium">📩 联系方式</p>
                   <p>邮箱：srcret5@163.com</p>
-      
+                </div>
+
+                <hr className="border-accent/20 my-4" />
+
+                <p className="font-semibold"> 关于以前的图鉴</p>
+                <p>图片已不再更新，需要的友友请自行下载（百度云盘）</p>
+
+                <div className="flex items-center gap-2">
+                  <code className="flex-1 bg-bg-primary rounded-lg px-3 py-2 text-xs text-text-secondary break-all select-all">
+                    链接: https://pan.baidu.com/s/1npzIJw_LyAmH7q6YodruJQ  提取码: love
+                  </code>
+                  <button
+                    onClick={handleCopy}
+                    className={`flex-shrink-0 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
+                      copied
+                        ? 'bg-green-100 text-green-600'
+                        : 'bg-accent/10 text-accent hover:bg-accent hover:text-white'
+                    }`}
+                  >
+                    {copied ? '✓ 已复制' : '复制链接'}
+                  </button>
                 </div>
 
                 <p className="text-text-secondary text-xs pt-2">制作：Solitstar</p>

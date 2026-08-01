@@ -8,11 +8,14 @@ const FilterBar = ({
   filterSeries,
   filterChar,
   filterType,
+  filterCharCount,
   onSeriesChange,
   onCharChange,
   onTypeChange,
+  onCharCountChange,
   onReset,
 }) => {
+  const CHAR_COUNT_OPTIONS = ['全部', '单人', '多人', '其他'];
   const availableCharacters = ['全部', ...getCharactersBySeriesAndGender(filterSeries, '全部')];
   if (!availableCharacters.includes('其他')) {
     availableCharacters.push('其他');
@@ -54,6 +57,7 @@ const FilterBar = ({
           {renderSelect('系列', filterSeries, onSeriesChange, SERIES_LIST, 'w-full sm:w-32')}
           {renderSelect('角色', filterChar, onCharChange, availableCharacters, 'w-full sm:w-40')}
           {renderSelect('种类', filterType, onTypeChange, TYPES, 'w-full sm:w-36')}
+          {renderSelect('角色数', filterCharCount, onCharCountChange, CHAR_COUNT_OPTIONS, 'w-full sm:w-28')}
         </div>
 
         <button
