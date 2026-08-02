@@ -240,12 +240,13 @@ export const BASE_ITEMS = [
   },
   {
     id: 26,
-     name: "海景布徽章(再贩)",
+    name: "海景布徽章(再贩)",
     subtitle: "アイカツ！ メモリアルハンカチセット 缶バッジ",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/hatSXC1.png"
+    remark: "初版海景布数量限定50个，版权标与再贩版本不同，此处展示的图片是再贩版本",
   },
   {
     id: 27,
@@ -9831,6 +9832,231 @@ export const BASE_ITEMS = [
     size: "直径约 75mm",
     image: "https://i.imgur.com/84byHT1.png"
     },
+    {
+    id: 1092,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "艾尔莎·福特",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/svqW2ie.png"
+    },
+    {
+    id: 1093,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "有栖川乙女",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/mdiRfAP.png"
+    },
+    {
+    id: 1094,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "姬石来希",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/fjeWy0K.png"
+    },
+    {
+    id: 1095,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "虹野梦",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/sRW0i6b.png"
+    },
+    {
+    id: 1096,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "骑咲礼",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/GUCbBvx.png"
+    },
+    {
+    id: 1097,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "姬里玛丽亚",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/pkNki1e.png"
+    },
+    {
+    id: 1098,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "友希爱音",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/V8ASuRq.png"
+    },
+    {
+    id: 1099,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "凑美绪",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/J7KI6XG.png"
+    },
+    {
+    id: 1100,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "白鸟姬",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/RSLsX0z.png"
+    },
+    {
+    id: 1101,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "紫吹兰",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/EYyg9xv.png"
+    },
+    {
+    id: 1102,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "香澄真昼",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/AUm5EKU.png"
+    },
+    {
+    id: 1103,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "花园绮罗",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/Jj0Hsiy.png"
+    },
+    {
+    id: 1104,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "音城塞拉",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/aToFMKa.png"
+    },
+    {
+    id: 1105,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "音城诺艾尔",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/5v4v3Jc.png"
+    },
+    {
+    id: 1106,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "藤堂尤里卡",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/RHAqkfx.png"
+    },
+    {
+    id: 1107,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "冴草纪伊",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/cozpQVL.png"
+    },
+    {
+    id: 1108,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "北大路樱",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/WDbswjw.png"
+    },
+    {
+    id: 1109,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "冰上堇",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/SlPjaSo.png"
+    },
+    {
+    id: 1110,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "风沢空",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/V3VyUgJ.png"
+    },
+    {
+    id: 1111,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "新条雏姬",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/Zit88wq.png"
+    },
+    {
+    id: 1112,
+    name: "娃娃机徽章2弹",
+    subtitle: "アイカツオンパレード！　缶バッジ2",
+    character: "大空明",
+    type: "徽章",
+    size: "直径约 75mm",
+    image: "https://i.imgur.com/7deVhyh.png"
+    },
+    {
+    id: 1113,
+    name: "CD徽章",
+    subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
+    character: "夏树未来,风沢空,姬里玛利亚",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/IdTIEvS.png"
+    },
+
+    
+    
+
+    
+
+
+    
+
+
+
+    
+
+
+
+
+
+    
+
+    
+    
+
+
+    
+
+
+
 
 
 
