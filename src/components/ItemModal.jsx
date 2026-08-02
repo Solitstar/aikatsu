@@ -40,10 +40,10 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   const handleImgError = () => {
     const base = import.meta.env.BASE_URL;
     // 当前版本图片失败：留在当前版本按兜底链尝试，不强制回退第一张
+    // 注意：webp 已作为初始 src 加载，失败后从 png 开始，避免重复设置相同 src 导致不重新加载
     const currentUrl = (imageList[selectedIdx] && imageList[selectedIdx].url) || item.image;
     const lb = localBase(selectedIdx);
     const next = [
-      `${base}images/${lb}.webp`,
       `${base}images/${lb}.png`,
       `${base}images/${lb}.jpg`,
       currentUrl,
