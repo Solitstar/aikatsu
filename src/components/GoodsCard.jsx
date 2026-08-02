@@ -99,7 +99,7 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
           src={initialSrc}
           alt={displayName}
           loading={priority ? "eager" : "lazy"}
-          fetchpriority={priority ? "high" : "auto"}
+          fetchPriority={priority ? "high" : "auto"}
           decoding="async"
           onLoad={() => { setImgLoaded(true); setImgError(false); }}
           onError={handleImgError}
