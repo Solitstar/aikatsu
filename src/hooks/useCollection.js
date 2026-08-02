@@ -23,6 +23,7 @@ const loadFromStorage = () => {
         const oldWishPrice = val.wishPriceMin !== undefined ? 0 : (val.wishPrice || 0);
         normalized[id] = {
           status: val.status,
+          version: val.version || null,
           priceRecords: val.priceRecords && val.priceRecords.length > 0
             ? val.priceRecords
             : (val.price > 0
@@ -74,6 +75,7 @@ export const useCollection = () => {
       return {
         ...item,
         status: saved?.status || null,
+        version: saved?.version || null,
         priceRecords: records,
         quantity,
         totalPrice,
@@ -90,6 +92,7 @@ export const useCollection = () => {
       if (item.status) {
         statusMap[item.id] = {
           status: item.status,
+          version: item.version || null,
           priceRecords: item.priceRecords || [],
           wishQuantity: item.wishQuantity || 1,
           wishPriceMin: item.wishPriceMin || 0,
@@ -116,7 +119,7 @@ export const useCollection = () => {
     );
   };
 
-  const setStatus = (id, status) => {
+  const setStatus = (id, status, version) => {
     setItems(prevItems =>
       prevItems.map(item => {
         if (item.id !== id) return item;
@@ -127,6 +130,7 @@ export const useCollection = () => {
         return {
           ...item,
           status,
+          version: version !== undefined ? version : item.version,
           priceRecords: records,
           quantity,
           totalPrice,

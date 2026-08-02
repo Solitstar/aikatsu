@@ -230,28 +230,34 @@ export const BASE_ITEMS = [
     image: "https://i.imgur.com/nKgl0he.png"
   },
   {
-    id: 25,
-    name: "海景布徽章(初版/再贩)",
-    subtitle: "アイカツ！ メモリアルハンカチセット 缶バッジ",
-    character: "藤堂尤里卡",
-    type: "徽章",
-    size: "直径约 44mm",
-    image: "https://i.imgur.com/CQHpdqz.png",
-    remark: "初版海景布数量限定50个，版权标与再贩版本不同，此处展示的图片是再贩版本",
+  id: 25,
+  name: "海景布徽章(初版/再贩)",
+  subtitle: "アイカツ！メモリアルハンカチセット ",
+  character: "新条雏姬",
+  type: "徽章",
+  size: "直径约 44mm",
+  image: "https://i.imgur.com/MlJlnat.png",
+  images:
+  [
+  { label: '初版',url: 'https://i.imgur.com/pF35zUS.png', name: '海景布徽章(初版)' },
+  { label: '再贩',url: 'https://i.imgur.com/MlJlnat.png', name: '海景布徽章(再贩)' },
+  ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
   },
   {
-    id: 26,
+  id: 26,
   name: "海景布徽章(初版/再贩)",
-  subtitle: "アイカツ！トレーディングジャケバッジ",
+  subtitle: "アイカツ！メモリアルハンカチセット ",
   character: "夏树未来",
   type: "徽章",
-  size: "直径约 40mm",
+  size: "直径约 44mm",
   image: "https://i.imgur.com/hatSXC1.png",
   images:
   [
   { label: '初版',url: 'https://i.imgur.com/reTxLtg.png', name: '海景布徽章(初版)' },
   { label: '再贩',url: 'https://i.imgur.com/hatSXC1.png', name: '海景布徽章(再贩)' },
-  ]
+  ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
   },
   {
     id: 27,
@@ -9260,147 +9266,241 @@ export const BASE_ITEMS = [
     },
     {
     id: 1027,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "神崎美月",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/abB6YRL.png"
+    image: "https://i.imgur.com/drNVqnn.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/abB6YRL.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/drNVqnn.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1028,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "神崎美月",
-    type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/drNVqnn.png"
-    },
-    {
-    id: 1029,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "雾矢葵",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/0ReAvIf.png"
+    image: "https://i.imgur.com/mdwnx3a.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/0ReAvIf.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/mdwnx3a.png', name: '邮票徽章(再贩)' },
+    ]
+    
+    },
+     {
+    id: 1029,
+    name: "邮票徽章(初版/再贩)",
+    subtitle: "アイカツ！トレーディングジャケバッジ",
+    character: "紫吹兰",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/aQYb8nz.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/nMgFK81.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/aQYb8nz.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1030,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "雾矢葵",
+    character: "冴草纪伊",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/mdwnx3a.png"
+    image: "https://i.imgur.com/pV1rqXI.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/teYpoLJ.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/pV1rqXI.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1031,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "紫吹兰",
+    character: "星宫莓",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/nMgFK81.png"
+    image: "https://i.imgur.com/pV1rqXI.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/gHwzKDr.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/WybXogu.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1032,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "紫吹兰",
+    character: "栗栖心音",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/aQYb8nz.png"
+    image: "https://i.imgur.com/XAuu4q0.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/wL7P4za.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/XAuu4q0.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1033,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "冴草纪伊",
+    character: "藤原雅",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/teYpoLJ.png"
+    image: "https://i.imgur.com/ft4pEoB.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/uY7qq2F.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/ft4pEoB.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1034,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "冴草纪伊",
+    character: "红林珠璃",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/pV1rqXI.png"
+    image: "https://i.imgur.com/5pEblkK.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/L7ZRfme.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/5pEblkK.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
-    {
+      {
     id: 1035,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "星宫莓",
+    character: "风沢空",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/gHwzKDr.png"
+    image: "https://i.imgur.com/5pEblkK.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/mlZWsMI.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/7eYqFjT.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1036,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "星宫莓",
+    character: "天羽圆香",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/WybXogu.png"
+    image: "https://i.imgur.com/NykwmFe.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/I1kCoWj.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/NykwmFe.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1037,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "栗栖心音",
+    character: "黑泽凛",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/wL7P4za.png"
+    image: "https://i.imgur.com/U18TsDL.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/8DuCGTO.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/U18TsDL.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1038,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "栗栖心音",
+    character: "大地乃野",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/XAuu4q0.png"
+    image: "https://i.imgur.com/IA6A5DR.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/bo18YXg.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/IA6A5DR.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1039,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "藤原雅",
+    character: "白桦丽莎",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/uY7qq2F.png"
+    image: "https://i.imgur.com/A3EwtQw.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/hItSDuf.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/A3EwtQw.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
     {
     id: 1040,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "藤原雅",
+    character: "大空明",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/ft4pEoB.png"
+    image: "https://i.imgur.com/Rzh1eLs.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/gXidLUu.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/Rzh1eLs.png', name: '邮票徽章(再贩)' },
+    ]
     },
     {
     id: 1041,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "红林珠璃",
+    character: "音城塞拉",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/L7ZRfme.png"
+    image: "https://i.imgur.com/vBSRyW5.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/bWRCeLc.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/vBSRyW5.png', name: '邮票徽章(再贩)' },
+    ]
+    
     },
-    {
+     {
     id: 1042,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "红林珠璃",
+    character: "堂岛妮娜",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/5pEblkK.png"
+    image: "https://i.imgur.com/8iHvk0K.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/DJzFqvh.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/8iHvk0K.png', name: '邮票徽章(再贩)' },
+    ]
     },
     {
     id: 1043,
@@ -9413,192 +9513,315 @@ export const BASE_ITEMS = [
     },
     {
     id: 1044,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "风沢空",
+    character: "新条雏姬",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/7eYqFjT.png"
+    image: "https://i.imgur.com/CRK7mej.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/xXW3EqB.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/CRK7mej.png', name: '邮票徽章(再贩)' },
+    ]
     },
     {
     id: 1045,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "天羽圆香",
+    character: "冰上堇",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/I1kCoWj.png"
+    image: "https://i.imgur.com/mKBziXf.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/rOjiOKm.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/mKBziXf.png', name: '邮票徽章(再贩)' },
+    ]
     },
     {
     id: 1046,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "天羽圆香",
+    character: "姬里玛丽亚",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/NykwmFe.png"
+    image: "https://i.imgur.com/mKBziXf.png",
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/jGW71sa.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/Cpb9L1a.png', name: '邮票徽章(再贩)' },
+    ]
     },
     {
     id: 1047,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "黑泽凛",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "姬里玛丽亚",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/8DuCGTO.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/X9afoJ5.png",
+    images:
+    [
+     { label: '初版',url: 'https://i.imgur.com/pYraOpr.png', name: '海景布徽章(初版)' },
+     { label: '再贩',url: 'https://i.imgur.com/X9afoJ5.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1048,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "黑泽凛",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "神崎美月",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/U18TsDL.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/zVb5hMs.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/P4nxaWz.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/zVb5hMs.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1049,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "大地乃野",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "风沢空",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/bo18YXg.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/FYsRsBF.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/P4nxaWz.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/OZ7S4en.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
-    id: 1050,       
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "大地乃野",
+    id: 1050,
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "音城塞拉",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/IA6A5DR.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/K5ttBTX.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/STjCRNz.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/K5ttBTX.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1051,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "白桦丽莎",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/hItSDuf.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/KD4YyT9.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/JQT65WQ.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/KD4YyT9.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1052,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "白桦丽莎",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "天羽圆香",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/A3EwtQw.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/KSYeY2P.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/NQ22FXY.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/KSYeY2P.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1053,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "大空明",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "黑泽凛",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/gXidLUu.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/KFYd4PJ.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/TYwoRin.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/KFYd4PJ.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1054,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "大空明",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/Rzh1eLs.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/CQHpdqz.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/4iaxX6g.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/CQHpdqz.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
-    {
+  {
     id: 1055,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "音城塞拉",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/bWRCeLc.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/Hxfeu0W.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/f3iTJuA.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/Hxfeu0W.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1056,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "音城塞拉",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "一之濑枫",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/vBSRyW5.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/DMm9vEZ.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/hkz0ewy.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/DMm9vEZ.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1057,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "堂岛妮娜",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "藤原雅",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/DJzFqvh.png"
-    },
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/7XQSWiM.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/2HeC3Jw.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/7XQSWiM.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
+    },,
     {
     id: 1058,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "堂岛妮娜",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "栗栖心音",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/8iHvk0K.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/Xbu8UXF.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/KPAAMiD.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/Xbu8UXF.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1059,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "新条雏姬",
+    name: "海景布徽章(初版/再贩)<可丽饼>",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "大空明",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/xXW3EqB.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/TquL3wv.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/xv4rx3S.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/TquL3wv.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1060,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "新条雏姬",
+    name: "海景布徽章(初版/再贩)<运动服>",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "大空明",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/CRK7mej.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/3O2guDP.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/sQ4Oh9j.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/3O2guDP.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1061,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "冰上堇",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "北大路樱",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/rOjiOKm.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/3O2guDP.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/4arpez2.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/TyqMc8B.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1062,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "冰上堇",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/mKBziXf.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/eXe7Y6B.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/s7n2AeW.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1063,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "姬里玛利亚",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "雾矢葵",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/jGW71sa.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/Z80g6Mq.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/cghrHQ2.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1064,
-    name: "邮票徽章(再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "姬里玛利亚",
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "红林珠璃",
     type: "徽章",
-    size: "直径约 40mm",
-    image: "https://i.imgur.com/Cpb9L1a.png"
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/teuhcnh.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/hWjwzts.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
     {
     id: 1065,
@@ -10034,13 +10257,64 @@ export const BASE_ITEMS = [
     },
     {
     id: 1113,
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "冰上堇",
+    type: "徽章",
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/oHw842e.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/B3CuTsL.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/oHw842e.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
+    },
+    {
+    id: 1114,
+    name: "海景布徽章(初版/再贩)",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "星宫莓",
+    type: "徽章",
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/7C5ZJO3.png",
+    images:
+    [
+    { label: '初版',url: 'https://i.imgur.com/B3CuTsL.png', name: '海景布徽章(初版)' },
+    { label: '再贩',url: 'https://i.imgur.com/7C5ZJO3.png', name: '海景布徽章(再贩)' },
+    ],
+    remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
+    },
+    {
+    id: 1115,
+    name: "品牌布徽章",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "堂岛妮娜",
+    type: "徽章",
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/4FwOGFs.png"
+    },
+    {
+    id: 1116,
+    name: "品牌布徽章",
+    subtitle: "アイカツ！メモリアルハンカチセット ",
+    character: "大地乃野,白桦丽莎",
+    type: "徽章",
+    size: "直径约 44mm",
+    image: "https://i.imgur.com/9FU1Kx3.png"
+    },
+    {
+    id: 1117,
     name: "CD徽章",
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
-    character: "夏树未来,风沢空,姬里玛利亚",
+    character: "夏树未来,神崎美月",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/IdTIEvS.png"
-    },
+    image: "https://i.imgur.com/lWZw1rg.png",
+    remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别。使用cd封面便于观看故无版权标识,仅作参考",
+},
+     
+
 
     
     

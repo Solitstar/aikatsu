@@ -18,31 +18,35 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     });
   })();
 
+  // 本地缓存文件名：多版本商品用 item_{id}_v{idx}，单图商品用 item_{id}
+  const localBase = (idx) => `item_${item.id}${imageList.length > 1 ? `_v${idx}` : ''}`;
+
   // 图片加载优先级：本地缓存 → 远程URL → SVG占位
   useEffect(() => {
     if (!item) return;
-    setSelectedIdx(0);
-    setDisplayName(item.name);
+    // 恢复已保存的版本（如 初版/再贩）
+    const savedIdx = item.version
+      ? imageList.findIndex(img => img.label === item.version)
+      : -1;
+    const idx = savedIdx >= 0 ? savedIdx : 0;
+    setSelectedIdx(idx);
+    setDisplayName(imageList[idx].name ? imageList[idx].name : item.name);
     setImgLoaded(false);
     setFallbackStep(0);
     const base = import.meta.env.BASE_URL;
-    setImgSrc(`${base}images/item_${item.id}.webp`);
+    setImgSrc(`${base}images/${localBase(idx)}.webp`);
   }, [item?.id]);
 
   const handleImgError = () => {
     const base = import.meta.env.BASE_URL;
-    // 副图加载失败 → 回退到第一张
-    if (selectedIdx > 0) {
-      setSelectedIdx(0);
-      setImgLoaded(false);
-      setFallbackStep(0);
-      setImgSrc(`${base}images/item_${item.id}.webp`);
-      return;
-    }
+    // 当前版本图片失败：留在当前版本按兜底链尝试，不强制回退第一张
+    const currentUrl = (imageList[selectedIdx] && imageList[selectedIdx].url) || item.image;
+    const lb = localBase(selectedIdx);
     const next = [
-      `${base}images/item_${item.id}.png`,
-      `${base}images/item_${item.id}.jpg`,
-      (imageList[0] && imageList[0].url) || item.image,
+      `${base}images/${lb}.webp`,
+      `${base}images/${lb}.png`,
+      `${base}images/${lb}.jpg`,
+      currentUrl,
       `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23f3f4f6' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='16'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
     ];
     if (fallbackStep < next.length) {
@@ -55,7 +59,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     setSelectedIdx(idx);
     setImgLoaded(false);
     setFallbackStep(0);
-    setImgSrc(idx === 0 ? `${import.meta.env.BASE_URL}images/item_${item.id}.webp` : imageList[idx].url);
+    setImgSrc(`${import.meta.env.BASE_URL}images/${localBase(idx)}.webp`);
     // 版本自带标题时更新商品标题
     if (imageList[idx].name) {
       setDisplayName(imageList[idx].name);
@@ -65,6 +69,8 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   };
 
   const itemType = item?.status;
+  // 多图商品才有版本概念，收藏时保存当前选中版本的 label
+  const selectedVersion = imageList.length > 1 ? imageList[selectedIdx]?.label : undefined;
   const currentFolder = folders.find(f => f.id === itemFolderId);
   useEffect(() => {
     if (!item) return;
@@ -186,7 +192,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
 
               <div className="flex flex-wrap gap-3 mb-6">
                 <button
-                  onClick={() => onToggleStatus(item.id, 'owned')}
+                  onClick={() => onToggleStatus(item.id, 'owned', selectedVersion)}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white transition-all ${
                     item.status === 'owned'
                       ? 'bg-yellow-500 shadow-md ring-2 ring-yellow-300'
@@ -199,7 +205,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   已拥有
                 </button>
                 <button
-                  onClick={() => onToggleStatus(item.id, 'wish')}
+                  onClick={() => onToggleStatus(item.id, 'wish', selectedVersion)}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white transition-all ${
                     item.status === 'wish'
                       ? 'bg-rose-600 shadow-md ring-2 ring-rose-300'
