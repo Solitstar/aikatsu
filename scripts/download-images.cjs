@@ -12,17 +12,28 @@ const http = require('http');
 const OUT_DIR = path.join(__dirname, '..', 'public', 'images');
 const FAILED_LOG = path.join(__dirname, 'failed-downloads.json');
 
-// 从 items.js 源码中提取所有 image URL 和 id
+// 从 items.js 源码中提取所有图片 URL 和 id（含多版本 images 数组）
+// 返回 { id, url, version }，version 为 null 表示主图，数字表示 images 数组索引
 function extractImages() {
   const content = fs.readFileSync(
     path.join(__dirname, '..', 'src', 'data', 'items.js'),
     'utf-8'
   );
   const items = [];
-  const itemRegex = /\{\s*\n\s*id:\s*(\d+),[\s\S]*?image:\s*"([^"]+)"/g;
+  const idRegex = /id:\s*(\d+)\s*,/g;
+  const ids = [];
   let match;
-  while ((match = itemRegex.exec(content)) !== null) {
-    items.push({ id: parseInt(match[1]), url: match[2] });
+  while ((match = idRegex.exec(content)) !== null) {
+    ids.push({ id: parseInt(match[1]), start: match.index });
+  }
+  for (let i = 0; i < ids.length; i++) {
+    const block = content.slice(ids[i].start, i + 1 < ids.length ? ids[i + 1].start : undefined);
+    const imgMatch = block.match(/image:\s*"([^"]+)"/);
+    if (imgMatch) items.push({ id: ids[i].id, url: imgMatch[1], version: null });
+    const urlMatches = [...block.matchAll(/url:\s*'([^']+)'/g)];
+    urlMatches.forEach((um, vi) => {
+      items.push({ id: ids[i].id, url: um[1], version: vi });
+    });
   }
   return items;
 }
@@ -105,9 +116,14 @@ function download(url, destPath, retries = 2) {
 async function main() {
   const retryFailed = process.argv.includes('--retry-failed');
   const force = process.argv.includes('--force');
+  const idsArg = process.argv.indexOf('--ids');
+  const idsFilter = idsArg !== -1
+    ? process.argv[idsArg + 1].split(',').map(s => parseInt(s)).filter(n => !isNaN(n))
+    : null;
 
   console.log('📥 图片下载工具\n');
   if (force) console.log('⚠️  强制模式：将覆盖已存在的文件\n');
+  if (idsFilter) console.log(`🎯 指定商品: ${idsFilter.join(', ')}\n`);
 
   if (!fs.existsSync(OUT_DIR)) {
     fs.mkdirSync(OUT_DIR, { recursive: true });
@@ -115,6 +131,7 @@ async function main() {
   }
 
   let items = extractImages();
+  if (idsFilter) items = items.filter(it => idsFilter.includes(it.id));
 
   if (retryFailed) {
     const failedIds = loadFailedIds();
@@ -145,20 +162,20 @@ async function main() {
   const failedList = [];
 
   for (let i = 0; i < items.length; i++) {
-    const { id, url } = items[i];
+    const { id, url, version } = items[i];
     const extMatch = url.match(/\.(png|jpg|jpeg|webp|gif)/i);
     const ext = extMatch ? extMatch[1] : 'png';
-    const filename = `item_${id}.${ext}`;
+    const filename = version === null ? `item_${id}.${ext}` : `item_${id}_v${version}.${ext}`;
     const destPath = path.join(OUT_DIR, filename);
 
     // 跳过已存在的文件（非强制模式）
     if (!force && fs.existsSync(destPath) && fs.statSync(destPath).size > 100) {
-      console.log(`[${i + 1}/${items.length}] ⏭  跳过 (已存在) item_${id}.${ext}`);
+      console.log(`[${i + 1}/${items.length}] ⏭  跳过 (已存在) ${filename}`);
       skipped++;
       continue;
     }
 
-    process.stdout.write(`[${i + 1}/${items.length}] ⬇  下载 item_${id}.${ext}... `);
+    process.stdout.write(`[${i + 1}/${items.length}] ⬇  下载 ${filename}... `);
     try {
       await download(url, destPath);
       const size = (fs.statSync(destPath).size / 1024).toFixed(1);
@@ -178,8 +195,10 @@ async function main() {
   console.log(`📁 图片目录: ${OUT_DIR}`);
   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━`);
 
-  // 保存失败列表
-  saveFailedIds(failedList);
+  // 保存失败列表（--ids 指定模式不覆盖全量失败日志）
+  if (!idsFilter) {
+    saveFailedIds(failedList);
+  }
 }
 
 main().catch(console.error);

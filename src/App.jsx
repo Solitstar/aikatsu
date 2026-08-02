@@ -177,13 +177,13 @@ function App() {
     return folder ? folder.id : null;
   };
 
-  const handleModalToggle = (id, targetStatus) => {
+  const handleModalToggle = (id, targetStatus, version) => {
     const currentItem = items.find(i => i.id === id);
     if (!currentItem) return;
     if (currentItem.status === targetStatus) {
       setStatus(id, null);
     } else {
-      setStatus(id, targetStatus);
+      setStatus(id, targetStatus, version);
     }
   };
 
