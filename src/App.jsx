@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import { renderShareImageToCanvas } from './utils/exportImage';
 import { useCollection } from './hooks/useCollection';
 import { useVersionCheck } from './hooks/useVersionCheck';
@@ -14,7 +14,7 @@ import CollectionProgress from './components/CollectionProgress';
 import FolderBar from './components/FolderBar';
 
 function App() {
-  const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
+  const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, setItemNote, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
   const [activeTab, setActiveTab] = useState('collection');
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
@@ -33,6 +33,17 @@ function App() {
   const [filterStatus, setFilterStatus] = useState(() => getInitialFilter('status', '全部'));
   const [filterCharCount, setFilterCharCount] = useState(() => getInitialFilter('charcount', '全部'));
   const [searchKeyword, setSearchKeyword] = useState(() => getInitialFilter('search', ''));
+  const [showBackTop, setShowBackTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowBackTop(window.scrollY > 300);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   useEffect(() => {
     const availableChars = getCharactersBySeriesAndGender(filterSeries, '全部');
@@ -455,11 +466,27 @@ function App() {
         onDecreaseWishQty={decreaseWishQuantity}
         onSetWishPriceMin={setWishPriceMin}
         onSetWishPriceMax={setWishPriceMax}
+        onSetItemNote={setItemNote}
         folders={currentFolderType ? folders[currentFolderType] : []}
         itemFolderId={modalItem && currentFolderType ? getItemFolderId(currentFolderType, modalItem.id) : null}
         onMoveToFolder={(folderId) => modalItem && handleMoveToFolder(modalItem.id, folderId)}
         onCreateFolder={handleCreateFolderForModal}
       />
+
+      {showBackTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed right-4 sm:right-6 z-50 w-10 h-10 rounded-full bg-accent/80 hover:bg-accent text-white
+                     shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center
+                     active:scale-90"
+          style={{ bottom: 'calc(1.5rem + env(safe-area-inset-bottom, 0px))' }}
+          aria-label="回到顶部"
+        >
+          <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 15l7-7 7 7" />
+          </svg>
+        </button>
+      )}
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder }) => {
+const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, onSetItemNote, folders, itemFolderId, onMoveToFolder, onCreateFolder }) => {
   const [showFolderPicker, setShowFolderPicker] = useState(false);
   const [newFolderName, setNewFolderName] = useState('');
+  const [noteDraft, setNoteDraft] = useState('');
+  const [noteSaved, setNoteSaved] = useState(false);
   const [imgSrc, setImgSrc] = useState('');
   const [imgLoaded, setImgLoaded] = useState(false);
   const [fallbackStep, setFallbackStep] = useState(0);
@@ -14,6 +16,9 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     setImgLoaded(false);
     setFallbackStep(0);
     setImgSrc(`${base}images/item_${item.id}.webp`);
+    // 打开弹窗时同步备注草稿
+    setNoteDraft(item.note || '');
+    setNoteSaved(false);
   }, [item?.id]);
 
   const handleImgError = () => {
@@ -334,6 +339,43 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   </div>
                 </div>
               )}
+
+              {/* 自定义说明 */}
+              <div className="bg-bg-primary/50 rounded-2xl p-4 mb-6">
+                <div className="flex items-center justify-between mb-2">
+                  <p className="text-sm font-semibold text-text-primary">
+                    📝 自定义说明
+                  </p>
+                  {noteSaved && (
+                    <span className="text-xs text-emerald-500 font-medium">✓ 已保存</span>
+                  )}
+                </div>
+                <textarea
+                  value={noteDraft}
+                  onChange={(e) => { setNoteDraft(e.target.value); setNoteSaved(false); }}
+                  placeholder="记录这个商品的备注，如入手渠道、注意事项、吐槽等..."
+                  rows={3}
+                  className="w-full px-3 py-2 rounded-xl border border-accent/20 bg-white text-text-primary text-sm
+                             focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent
+                             resize-none leading-relaxed"
+                />
+                <div className="flex items-center justify-end gap-3 mt-2">
+                  <span className={`text-xs ${noteDraft.length > 200 ? 'text-red-400' : 'text-text-secondary/60'}`}>
+                    {noteDraft.length}/200
+                  </span>
+                  <button
+                    onClick={() => {
+                      onSetItemNote(item.id, noteDraft);
+                      setNoteSaved(true);
+                    }}
+                    disabled={!noteDraft.trim() && !item.note}
+                    className="px-4 py-1.5 rounded-full bg-accent text-white text-xs font-medium
+                               hover:bg-accent/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                  >
+                    保存说明
+                  </button>
+                </div>
+              </div>
 
               <div className="border-t border-accent/20 pt-5">
                 <div className="space-y-3 text-sm">

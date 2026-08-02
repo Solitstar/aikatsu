@@ -17,6 +17,7 @@ const loadFromStorage = () => {
           wishQuantity: 1,
           wishPriceMin: 0,
           wishPriceMax: 0,
+          note: '',
         };
       } else {
         // 迁移旧数据：旧的 wishPrice → wishPriceMin
@@ -31,6 +32,7 @@ const loadFromStorage = () => {
           wishQuantity: val.wishQuantity || 1,
           wishPriceMin: val.wishPriceMin !== undefined ? val.wishPriceMin : oldWishPrice,
           wishPriceMax: val.wishPriceMax || 0,
+          note: val.note || '',
         };
       }
     });
@@ -80,6 +82,7 @@ export const useCollection = () => {
         wishQuantity: saved?.wishQuantity || 1,
         wishPriceMin: saved?.wishPriceMin || 0,
         wishPriceMax: saved?.wishPriceMax || 0,
+        note: saved?.note || '',
       };
     });
   });
@@ -87,13 +90,14 @@ export const useCollection = () => {
   useEffect(() => {
     const statusMap = {};
     items.forEach(item => {
-      if (item.status) {
+      if (item.status || item.note) {
         statusMap[item.id] = {
           status: item.status,
           priceRecords: item.priceRecords || [],
           wishQuantity: item.wishQuantity || 1,
           wishPriceMin: item.wishPriceMin || 0,
           wishPriceMax: item.wishPriceMax || 0,
+          note: item.note || '',
         };
       }
     });
@@ -265,6 +269,15 @@ export const useCollection = () => {
     );
   };
 
+  const setItemNote = (id, note) => {
+    setItems(prevItems =>
+      prevItems.map(item => {
+        if (item.id !== id) return item;
+        return { ...item, note };
+      })
+    );
+  };
+
   const ownedCount = items.filter(item => item.status === 'owned').length;
   const ownedItems = items.filter(item => item.status === 'owned');
   const ownedTotalQuantity = items.reduce((sum, item) => sum + (item.status === 'owned' ? (item.quantity || 0) : 0), 0);
@@ -290,6 +303,7 @@ export const useCollection = () => {
     decreaseWishQuantity,
     setWishPriceMin,
     setWishPriceMax,
+    setItemNote,
     ownedCount,
     ownedItems,
     ownedTotalQuantity,
