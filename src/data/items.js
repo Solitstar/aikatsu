@@ -9238,8 +9238,12 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/cCe2fqO.png",
-    images:"https://i.imgur.com/5g87piZ.png",
-    remark: "初版柄图完整，再贩柄图不完整，此处展示的图片是初贩版本"
+    images:
+    [
+      { label: '初版',url: 'https://i.imgur.com/cCe2fqO.png' },
+      { label: '再贩',url: 'https://i.imgur.com/5g87piZ.png' },
+    ]
+    
     },
     {
     id: 1026,
