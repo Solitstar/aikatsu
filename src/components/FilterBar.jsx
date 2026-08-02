@@ -34,13 +34,13 @@ const FilterBar = ({
   const wrapperClass = "relative";
   const chevronClass = "absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-accent text-sm";
 
-  const renderSelect = (label, value, onChange, options, widthClass = "w-full sm:w-36") => (
+  const renderSelect = (label, value, onChange, options, widthClass = "") => (
     <div className={wrapperClass}>
       <label className="block text-xs text-text-secondary mb-1.5 ml-1">{label}</label>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={selectClass + " " + widthClass}
+        className={selectClass + " w-full " + widthClass}
       >
         {options.map(opt => (
           <option key={opt} value={opt}>{opt}</option>
@@ -52,12 +52,12 @@ const FilterBar = ({
 
   return (
     <div className="bg-card-bg rounded-2xl shadow-card p-4 sm:p-6 mb-6">
-      <div className="flex flex-col lg:flex-row flex-wrap gap-4 items-stretch lg:items-center">
-        <div className="flex flex-col sm:flex-row flex-wrap gap-4 flex-1">
-          {renderSelect('系列', filterSeries, onSeriesChange, SERIES_LIST, 'w-full sm:w-32')}
-          {renderSelect('角色', filterChar, onCharChange, availableCharacters, 'w-full sm:w-40')}
-          {renderSelect('种类', filterType, onTypeChange, TYPES, 'w-full sm:w-36')}
-          {renderSelect('角色数', filterCharCount, onCharCountChange, CHAR_COUNT_OPTIONS, 'w-full sm:w-28')}
+      <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 items-stretch lg:items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 flex-1">
+          {renderSelect('系列', filterSeries, onSeriesChange, SERIES_LIST)}
+          {renderSelect('角色', filterChar, onCharChange, availableCharacters)}
+          {renderSelect('种类', filterType, onTypeChange, TYPES)}
+          {renderSelect('角色数', filterCharCount, onCharCountChange, CHAR_COUNT_OPTIONS)}
         </div>
 
         <button

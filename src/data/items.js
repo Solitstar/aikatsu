@@ -231,12 +231,12 @@ export const BASE_ITEMS = [
   },
   {
     id: 25,
-    name: "海景布徽章(初版限50)",
+    name: "星光学院校徽 金属徽章",
     subtitle: "アイカツ！ メモリアルハンカチセット 缶バッジ",
-    character: "夏树未来",
+    character: "其他",
     type: "徽章",
     size: "直径约 44mm",
-    image: "https://i.imgur.com/Fnv4MP4.png"
+    image: "https://i.imgur.com/u4BrpGy.png"
   },
   {
     id: 26,
