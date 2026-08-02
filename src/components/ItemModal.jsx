@@ -135,15 +135,12 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 {item.remark && (
                   <button
                     onClick={() => setShowRemark(!showRemark)}
-                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                       showRemark
                         ? 'bg-blue-100 text-blue-700 ring-2 ring-blue-400'
                         : 'bg-white text-text-secondary border border-text-secondary/20 hover:border-blue-400 hover:text-blue-600'
                     }`}
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                    </svg>
                     备注
                   </button>
                 )}
@@ -397,51 +394,53 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
               </div>
 
               {/* 自定义说明 */}
-              <div className="bg-bg-primary/50 rounded-2xl p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <p className="text-sm font-semibold text-text-primary flex items-center gap-1.5">
-                    <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                    </svg>
-                    自定义说明
-                  </p>
-                  <div className="flex items-center gap-2">
-                    {noteSaved && (
-                      <span className="text-xs text-emerald-500 font-medium">✓ 已保存</span>
+              {noteCollapsed ? (
+                <button
+                  onClick={() => setNoteCollapsed(false)}
+                  className="w-full text-left bg-bg-primary/50 rounded-xl px-3.5 py-2.5 border border-accent/10 hover:border-accent/30 hover:bg-accent/5 transition-colors flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4 text-accent/70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                  {noteDraft.trim() ? (
+                    <span className="text-sm text-text-primary truncate">{noteDraft}</span>
+                  ) : (
+                    <span className="text-sm text-text-secondary/60">添加说明</span>
+                  )}
+                </button>
+              ) : (
+                <div className="bg-bg-primary/50 rounded-xl border border-accent/10 p-2.5">
+                  <textarea
+                    value={noteDraft}
+                    onChange={(e) => { setNoteDraft(e.target.value); setNoteSaved(false); }}
+                    placeholder="添加说明..."
+                    rows={2}
+                    autoFocus
+                    className="w-full px-2.5 py-1.5 rounded-lg bg-transparent text-text-primary text-sm
+                               focus:outline-none resize-none leading-relaxed"
+                  />
+                  <div className="flex items-center justify-between mt-1 pl-2.5">
+                    {noteSaved ? (
+                      <span className="text-xs text-emerald-500">已保存</span>
+                    ) : (
+                      <span className="text-xs text-text-secondary/50">{noteDraft.length}/200</span>
                     )}
-                    {(noteCollapsed || (noteDraft.trim() && !noteCollapsed)) && (
-                      <button
-                        onClick={() => setNoteCollapsed(!noteCollapsed)}
-                        className="flex items-center gap-1 text-xs text-text-secondary hover:text-accent transition-colors"
-                      >
-                        <svg
-                          className={`w-3.5 h-3.5 transition-transform duration-300 ${noteCollapsed ? '' : 'rotate-180'}`}
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <div className="flex items-center gap-2">
+                      {noteSaved && (
+                        <button
+                          onClick={() => { setNoteSaved(false); }}
+                          className="text-xs text-text-secondary/60 hover:text-text-primary transition-colors"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                        </svg>
-                        {noteCollapsed ? '展开' : '收起'}
+                          编辑
+                        </button>
+                      )}
+                      <button
+                        onClick={() => { setNoteCollapsed(true); }}
+                        disabled={!noteDraft.trim() && !item.note}
+                        className="text-xs text-text-secondary/60 hover:text-text-primary transition-colors disabled:opacity-40"
+                      >
+                        取消
                       </button>
-                    )}
-                  </div>
-                </div>
-
-                {!noteCollapsed ? (
-                  <>
-                    <textarea
-                      value={noteDraft}
-                      onChange={(e) => { setNoteDraft(e.target.value); setNoteSaved(false); }}
-                      placeholder="记录这个商品的备注，如入手渠道、注意事项、吐槽等..."
-                      rows={3}
-                      autoFocus={!noteCollapsed}
-                      className="w-full px-3 py-2 rounded-xl border border-accent/20 bg-white text-text-primary text-sm
-                                 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent
-                                 resize-none leading-relaxed"
-                    />
-                    <div className="flex items-center justify-end gap-3 mt-2">
-                      <span className={`text-xs ${noteDraft.length > 200 ? 'text-red-400' : 'text-text-secondary/60'}`}>
-                        {noteDraft.length}/200
-                      </span>
                       <button
                         onClick={() => {
                           onSetItemNote(item.id, noteDraft);
@@ -449,32 +448,15 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                           setNoteCollapsed(true); // 保存后自动收纳
                         }}
                         disabled={!noteDraft.trim() && !item.note}
-                        className="px-4 py-1.5 rounded-full bg-accent text-white text-xs font-medium
-                                   hover:bg-accent/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                        className="px-3 py-1 rounded-lg bg-accent text-white text-xs font-medium
+                                   hover:bg-accent/90 transition-colors disabled:opacity-40"
                       >
-                        保存说明
+                        保存
                       </button>
                     </div>
-                  </>
-                ) : (
-                  <button
-                    onClick={() => setNoteCollapsed(false)}
-                    className={`w-full text-left rounded-xl px-3 py-2.5 border transition-colors ${
-                      noteDraft.trim()
-                        ? 'bg-white/60 border-accent/15 hover:border-accent/40'
-                        : 'bg-white/40 border-dashed border-accent/20 hover:border-accent/40 text-text-secondary/60'
-                    }`}
-                  >
-                    {noteDraft.trim() ? (
-                      <p className="text-sm text-text-primary leading-relaxed line-clamp-2">
-                        {noteDraft}
-                      </p>
-                    ) : (
-                      <span className="text-xs">点击添加说明...</span>
-                    )}
-                  </button>
-                )}
-              </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
