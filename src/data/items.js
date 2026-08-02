@@ -237,11 +237,10 @@ export const BASE_ITEMS = [
   type: "徽章",
   size: "直径约 44mm",
   image: "https://i.imgur.com/MlJlnat.png",
-  images:
-  [
-  { label: '初版',url: 'https://i.imgur.com/pF35zUS.png', name: '海景布徽章(初版)' },
-  { label: '再贩',url: 'https://i.imgur.com/MlJlnat.png', name: '海景布徽章(再贩)' },
-  ],
+  images: [
+      { label: '初版', url: 'https://i.imgur.com/pF35zUS.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/MlJlnat.png', name: '海景布徽章(再贩)' },
+    ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
   },
   {
@@ -252,11 +251,10 @@ export const BASE_ITEMS = [
   type: "徽章",
   size: "直径约 44mm",
   image: "https://i.imgur.com/hatSXC1.png",
-  images:
-  [
-  { label: '初版',url: 'https://i.imgur.com/reTxLtg.png', name: '海景布徽章(初版)' },
-  { label: '再贩',url: 'https://i.imgur.com/hatSXC1.png', name: '海景布徽章(再贩)' },
-  ],
+  images: [
+      { label: '初版', url: 'https://i.imgur.com/reTxLtg.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/hatSXC1.png', name: '海景布徽章(再贩)' },
+    ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
   },
   {
@@ -9248,22 +9246,22 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/cCe2fqO.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/cCe2fqO.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/5g87piZ.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/cCe2fqO.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/5g87piZ.png', name: '邮票徽章(再贩)' },
     ]
     
     },
     {
     id: 1026,
-    name: "邮票徽章(初版/再贩)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "夏树未来",
+    name: "CD徽章",
+    subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
+    character: "虹野梦,樱庭劳拉,香澄真昼",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/5g87piZ.png"
-    },
+    image: "https://i.imgur.com/dX5sFBg.png",
+    remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别。使用cd封面便于观看故无版权标识,仅作参考",
+},
     {
     id: 1027,
     name: "邮票徽章(初版/再贩)",
@@ -9272,10 +9270,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/drNVqnn.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/abB6YRL.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/drNVqnn.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/abB6YRL.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/drNVqnn.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9287,10 +9284,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/mdwnx3a.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/0ReAvIf.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/mdwnx3a.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/0ReAvIf.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/mdwnx3a.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9302,10 +9298,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/aQYb8nz.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/nMgFK81.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/aQYb8nz.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/nMgFK81.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/aQYb8nz.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9317,10 +9312,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/pV1rqXI.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/teYpoLJ.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/pV1rqXI.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/teYpoLJ.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/pV1rqXI.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9332,10 +9326,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/pV1rqXI.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/gHwzKDr.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/WybXogu.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/gHwzKDr.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/WybXogu.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9347,10 +9340,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/XAuu4q0.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/wL7P4za.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/XAuu4q0.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/wL7P4za.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/XAuu4q0.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9362,10 +9354,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/ft4pEoB.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/uY7qq2F.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/ft4pEoB.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/uY7qq2F.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/ft4pEoB.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9377,10 +9368,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/5pEblkK.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/L7ZRfme.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/5pEblkK.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/L7ZRfme.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/5pEblkK.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9392,10 +9382,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/5pEblkK.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/mlZWsMI.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/7eYqFjT.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/mlZWsMI.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/7eYqFjT.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9407,10 +9396,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/NykwmFe.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/I1kCoWj.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/NykwmFe.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/I1kCoWj.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/NykwmFe.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9422,10 +9410,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/U18TsDL.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/8DuCGTO.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/U18TsDL.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/8DuCGTO.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/U18TsDL.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9437,10 +9424,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/IA6A5DR.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/bo18YXg.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/IA6A5DR.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/bo18YXg.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/IA6A5DR.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9452,10 +9438,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/A3EwtQw.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/hItSDuf.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/A3EwtQw.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/hItSDuf.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/A3EwtQw.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9467,10 +9452,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/Rzh1eLs.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/gXidLUu.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/Rzh1eLs.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/gXidLUu.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/Rzh1eLs.png', name: '邮票徽章(再贩)' },
     ]
     },
     {
@@ -9481,10 +9465,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/vBSRyW5.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/bWRCeLc.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/vBSRyW5.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/bWRCeLc.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/vBSRyW5.png', name: '邮票徽章(再贩)' },
     ]
     
     },
@@ -9496,21 +9479,23 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/8iHvk0K.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/DJzFqvh.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/8iHvk0K.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/DJzFqvh.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/8iHvk0K.png', name: '邮票徽章(再贩)' },
     ]
     },
     {
     id: 1043,
-    name: "邮票徽章(初版)",
-    subtitle: "アイカツ！トレーディングジャケバッジ",
-    character: "风沢空",
+    name: "CD徽章",
+    subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
+    character: "虹野梦",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/mlZWsMI.png"
-    },
+    image: "https://i.imgur.com/j1YEH7o.png",
+    remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别。使用cd封面便于观看故无版权标识,仅作参考",
+},
+     
+
     {
     id: 1044,
     name: "邮票徽章(初版/再贩)",
@@ -9519,10 +9504,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/CRK7mej.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/xXW3EqB.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/CRK7mej.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/xXW3EqB.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/CRK7mej.png', name: '邮票徽章(再贩)' },
     ]
     },
     {
@@ -9533,10 +9517,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/mKBziXf.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/rOjiOKm.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/mKBziXf.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/rOjiOKm.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/mKBziXf.png', name: '邮票徽章(再贩)' },
     ]
     },
     {
@@ -9547,10 +9530,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 40mm",
     image: "https://i.imgur.com/mKBziXf.png",
-    images:
-    [
-      { label: '初版',url: 'https://i.imgur.com/jGW71sa.png', name: '邮票徽章(初版)' },
-      { label: '再贩',url: 'https://i.imgur.com/Cpb9L1a.png', name: '邮票徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/jGW71sa.png', name: '邮票徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/Cpb9L1a.png', name: '邮票徽章(再贩)' },
     ]
     },
     {
@@ -9561,10 +9543,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/X9afoJ5.png",
-    images:
-    [
-     { label: '初版',url: 'https://i.imgur.com/pYraOpr.png', name: '海景布徽章(初版)' },
-     { label: '再贩',url: 'https://i.imgur.com/X9afoJ5.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/pYraOpr.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/X9afoJ5.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9576,10 +9557,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/zVb5hMs.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/P4nxaWz.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/zVb5hMs.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/P4nxaWz.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/zVb5hMs.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9591,10 +9571,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/FYsRsBF.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/P4nxaWz.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/OZ7S4en.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/P4nxaWz.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/OZ7S4en.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9606,10 +9585,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/K5ttBTX.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/STjCRNz.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/K5ttBTX.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/STjCRNz.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/K5ttBTX.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9621,10 +9599,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/KD4YyT9.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/JQT65WQ.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/KD4YyT9.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/JQT65WQ.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/KD4YyT9.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9636,10 +9613,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/KSYeY2P.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/NQ22FXY.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/KSYeY2P.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/NQ22FXY.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/KSYeY2P.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9651,10 +9627,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/KFYd4PJ.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/TYwoRin.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/KFYd4PJ.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/TYwoRin.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/KFYd4PJ.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9666,10 +9641,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/CQHpdqz.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/4iaxX6g.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/CQHpdqz.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/4iaxX6g.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/CQHpdqz.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9681,10 +9655,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/Hxfeu0W.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/f3iTJuA.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/Hxfeu0W.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/f3iTJuA.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/Hxfeu0W.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9696,10 +9669,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/DMm9vEZ.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/hkz0ewy.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/DMm9vEZ.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/hkz0ewy.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/DMm9vEZ.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9711,13 +9683,12 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/7XQSWiM.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/2HeC3Jw.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/7XQSWiM.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/2HeC3Jw.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/7XQSWiM.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
-    },,
+    },
     {
     id: 1058,
     name: "海景布徽章(初版/再贩)",
@@ -9726,10 +9697,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/Xbu8UXF.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/KPAAMiD.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/Xbu8UXF.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/KPAAMiD.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/Xbu8UXF.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9741,10 +9711,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/TquL3wv.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/xv4rx3S.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/TquL3wv.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/xv4rx3S.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/TquL3wv.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9756,10 +9725,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/3O2guDP.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/sQ4Oh9j.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/3O2guDP.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/sQ4Oh9j.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/3O2guDP.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9771,10 +9739,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/3O2guDP.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/4arpez2.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/TyqMc8B.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/4arpez2.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/TyqMc8B.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9786,10 +9753,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/eXe7Y6B.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/s7n2AeW.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/s7n2AeW.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9801,10 +9767,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/Z80g6Mq.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/cghrHQ2.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/cghrHQ2.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -9816,10 +9781,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/teuhcnh.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/hWjwzts.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/hWjwzts.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/eXe7Y6B.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -10263,10 +10227,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/oHw842e.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/B3CuTsL.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/oHw842e.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/B3CuTsL.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/oHw842e.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -10278,10 +10241,9 @@ export const BASE_ITEMS = [
     type: "徽章",
     size: "直径约 44mm",
     image: "https://i.imgur.com/7C5ZJO3.png",
-    images:
-    [
-    { label: '初版',url: 'https://i.imgur.com/B3CuTsL.png', name: '海景布徽章(初版)' },
-    { label: '再贩',url: 'https://i.imgur.com/7C5ZJO3.png', name: '海景布徽章(再贩)' },
+    images: [
+      { label: '初版', url: 'https://i.imgur.com/B3CuTsL.png', name: '海景布徽章(初版)' },
+      { label: '再贩', url: 'https://i.imgur.com/7C5ZJO3.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
     },
@@ -10313,6 +10275,17 @@ export const BASE_ITEMS = [
     image: "https://i.imgur.com/lWZw1rg.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别。使用cd封面便于观看故无版权标识,仅作参考",
 },
+ {
+    id: 1118,
+    name: "CD徽章",
+    subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
+    character: "虹野梦，艾尔莎·福特,",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/ORozQdd.png",
+    remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别。使用cd封面便于观看故无版权标识,仅作参考",
+},
+     
      
 
 

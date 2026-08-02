@@ -71,7 +71,6 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   const itemType = item?.status;
   // 多图商品才有版本概念，收藏时保存当前选中版本的 label
   const selectedVersion = imageList.length > 1 ? imageList[selectedIdx]?.label : undefined;
-  const currentFolder = folders.find(f => f.id === itemFolderId);
   useEffect(() => {
     if (!item) return;
     const handleEsc = (e) => {
