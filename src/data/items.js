@@ -241,13 +241,17 @@ export const BASE_ITEMS = [
   },
   {
     id: 26,
-    name: "海景布徽章(初版/再贩)",
-    subtitle: "アイカツ！ メモリアルハンカチセット 缶バッジ",
-    character: "夏树未来",
-    type: "徽章",
-    size: "直径约 44mm",
-    image: "https://i.imgur.com/hatSXC1.png",
-    remark: "初版海景布数量限定50个，版权标与再贩版本不同，此处展示的图片是再贩版本",
+  name: "邮票徽章(初版/再贩)",
+  subtitle: "アイカツ！トレーディングジャケバッジ",
+  character: "夏树未来",
+  type: "徽章",
+  size: "直径约 40mm",
+  image: "https://i.imgur.com/hatSXC1.png",
+  images:
+  [
+  { label: '初版',url: 'https://i.imgur.com/reTxLtg.png' },
+  { label: '再贩',url: 'https://i.imgur.com/hatSXC1.png' },
+  ]
   },
   {
     id: 27,
