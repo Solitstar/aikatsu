@@ -5,6 +5,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   const [newFolderName, setNewFolderName] = useState('');
   const [noteDraft, setNoteDraft] = useState('');
   const [noteSaved, setNoteSaved] = useState(false);
+  const [noteCollapsed, setNoteCollapsed] = useState(false);
   const [imgSrc, setImgSrc] = useState('');
   const [imgLoaded, setImgLoaded] = useState(false);
   const [fallbackStep, setFallbackStep] = useState(0);
@@ -19,6 +20,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     // 打开弹窗时同步备注草稿
     setNoteDraft(item.note || '');
     setNoteSaved(false);
+    setNoteCollapsed(!!item.note); // 有备注时默认收纳
   }, [item?.id]);
 
   const handleImgError = () => {
@@ -355,35 +357,75 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                     </svg>
                     自定义说明
                   </p>
-                  {noteSaved && (
-                    <span className="text-xs text-emerald-500 font-medium">✓ 已保存</span>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {noteSaved && (
+                      <span className="text-xs text-emerald-500 font-medium">✓ 已保存</span>
+                    )}
+                    {(noteCollapsed || (noteDraft.trim() && !noteCollapsed)) && (
+                      <button
+                        onClick={() => setNoteCollapsed(!noteCollapsed)}
+                        className="flex items-center gap-1 text-xs text-text-secondary hover:text-accent transition-colors"
+                      >
+                        <svg
+                          className={`w-3.5 h-3.5 transition-transform duration-300 ${noteCollapsed ? '' : 'rotate-180'}`}
+                          fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                        </svg>
+                        {noteCollapsed ? '展开' : '收起'}
+                      </button>
+                    )}
+                  </div>
                 </div>
-                <textarea
-                  value={noteDraft}
-                  onChange={(e) => { setNoteDraft(e.target.value); setNoteSaved(false); }}
-                  placeholder="记录这个商品的备注，如入手渠道、注意事项、吐槽等..."
-                  rows={3}
-                  className="w-full px-3 py-2 rounded-xl border border-accent/20 bg-white text-text-primary text-sm
-                             focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent
-                             resize-none leading-relaxed"
-                />
-                <div className="flex items-center justify-end gap-3 mt-2">
-                  <span className={`text-xs ${noteDraft.length > 200 ? 'text-red-400' : 'text-text-secondary/60'}`}>
-                    {noteDraft.length}/200
-                  </span>
+
+                {!noteCollapsed ? (
+                  <>
+                    <textarea
+                      value={noteDraft}
+                      onChange={(e) => { setNoteDraft(e.target.value); setNoteSaved(false); }}
+                      placeholder="记录这个商品的备注，如入手渠道、注意事项、吐槽等..."
+                      rows={3}
+                      autoFocus={!noteCollapsed}
+                      className="w-full px-3 py-2 rounded-xl border border-accent/20 bg-white text-text-primary text-sm
+                                 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent
+                                 resize-none leading-relaxed"
+                    />
+                    <div className="flex items-center justify-end gap-3 mt-2">
+                      <span className={`text-xs ${noteDraft.length > 200 ? 'text-red-400' : 'text-text-secondary/60'}`}>
+                        {noteDraft.length}/200
+                      </span>
+                      <button
+                        onClick={() => {
+                          onSetItemNote(item.id, noteDraft);
+                          setNoteSaved(true);
+                          setNoteCollapsed(true); // 保存后自动收纳
+                        }}
+                        disabled={!noteDraft.trim() && !item.note}
+                        className="px-4 py-1.5 rounded-full bg-accent text-white text-xs font-medium
+                                   hover:bg-accent/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                      >
+                        保存说明
+                      </button>
+                    </div>
+                  </>
+                ) : (
                   <button
-                    onClick={() => {
-                      onSetItemNote(item.id, noteDraft);
-                      setNoteSaved(true);
-                    }}
-                    disabled={!noteDraft.trim() && !item.note}
-                    className="px-4 py-1.5 rounded-full bg-accent text-white text-xs font-medium
-                               hover:bg-accent/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                    onClick={() => setNoteCollapsed(false)}
+                    className={`w-full text-left rounded-xl px-3 py-2.5 border transition-colors ${
+                      noteDraft.trim()
+                        ? 'bg-white/60 border-accent/15 hover:border-accent/40'
+                        : 'bg-white/40 border-dashed border-accent/20 hover:border-accent/40 text-text-secondary/60'
+                    }`}
                   >
-                    保存说明
+                    {noteDraft.trim() ? (
+                      <p className="text-sm text-text-primary leading-relaxed line-clamp-2">
+                        {noteDraft}
+                      </p>
+                    ) : (
+                      <span className="text-xs">点击添加说明...</span>
+                    )}
                   </button>
-                </div>
+                )}
               </div>
 
               <div className="border-t border-accent/20 pt-5">
