@@ -43,8 +43,11 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
 
   // 图片加载优先级：本地缓存(WebP → PNG → JPG) → 远程URL → SVG占位
   const base = import.meta.env.BASE_URL; // '/' dev, '/aikatsu/' build
-  // 多版本商品优先使用本地 v0 版本缓存
-  const vSuffix = item?.images?.length > 1 ? '_v0' : '';
+  // 多版本商品按收藏版本显示对应图（无收藏版本时默认第 0 版）
+  const versionIdx = item?.images?.length > 1
+    ? Math.max(0, item.images.findIndex(img => (img.label || img.name) === item.version))
+    : 0;
+  const vSuffix = item?.images?.length > 1 ? `_v${versionIdx}` : '';
   const localWebp = `${base}images/item_${item.id}${vSuffix}.webp`;
   const localPng = `${base}images/item_${item.id}${vSuffix}.png`;
   const localJpg = `${base}images/item_${item.id}${vSuffix}.jpg`;
@@ -53,7 +56,7 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
   const fallbacks = [
     localPng,           // 2. 本地PNG缓存
     localJpg,           // 3. 本地JPG缓存
-    item.images?.[0]?.url || item.image, // 4. 远程图床（优先版本0图）
+    item.images?.[versionIdx]?.url || item.image, // 4. 远程图床（优先当前版本图）
     `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23f3f4f6' width='200' height='200'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='14'%3E${encodeURIComponent(item.name.substring(0, 8))}%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' fill='%23d1d5db' font-size='11'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
   ];
 
