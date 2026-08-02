@@ -42,7 +42,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     const next = [
       `${base}images/item_${item.id}.png`,
       `${base}images/item_${item.id}.jpg`,
-      item.image,
+      (imageList[0] && imageList[0].url) || item.image,
       `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23f3f4f6' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='16'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
     ];
     if (fallbackStep < next.length) {

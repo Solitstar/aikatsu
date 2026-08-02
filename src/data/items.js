@@ -249,8 +249,8 @@ export const BASE_ITEMS = [
   image: "https://i.imgur.com/hatSXC1.png",
   images:
   [
-  { label: '初版',url: 'https://i.imgur.com/reTxLtg.png' },
-  { label: '再贩',url: 'https://i.imgur.com/hatSXC1.png' },
+  { label: '初版',url: 'https://i.imgur.com/reTxLtg.png', name: '海景布徽章(初版)' },
+  { label: '再贩',url: 'https://i.imgur.com/hatSXC1.png', name: '海景布徽章(再贩)' },
   ]
   },
   {
@@ -9244,8 +9244,8 @@ export const BASE_ITEMS = [
     image: "https://i.imgur.com/cCe2fqO.png",
     images:
     [
-      { label: '初版',url: 'https://i.imgur.com/cCe2fqO.png' },
-      { label: '再贩',url: 'https://i.imgur.com/5g87piZ.png' },
+      { label: '初版',url: 'https://i.imgur.com/cCe2fqO.png', name: '邮票徽章(初版)' },
+      { label: '再贩',url: 'https://i.imgur.com/5g87piZ.png', name: '邮票徽章(再贩)' },
     ]
     
     },
