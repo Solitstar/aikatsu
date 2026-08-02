@@ -9572,7 +9572,7 @@ export const BASE_ITEMS = [
     size: "直径约 44mm",
     image: "https://i.imgur.com/FYsRsBF.png",
     images: [
-      { label: '初版', url: 'https://i.imgur.com/P4nxaWz.png', name: '海景布徽章(初版)' },
+      { label: '初版', url: 'https://i.imgur.com/CC2I8O0.png', name: '海景布徽章(初版)' },
       { label: '再贩', url: 'https://i.imgur.com/OZ7S4en.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
@@ -10242,7 +10242,7 @@ export const BASE_ITEMS = [
     size: "直径约 44mm",
     image: "https://i.imgur.com/7C5ZJO3.png",
     images: [
-      { label: '初版', url: 'https://i.imgur.com/B3CuTsL.png', name: '海景布徽章(初版)' },
+      { label: '初版', url: 'https://i.imgur.com/leJjyoY.png', name: '海景布徽章(初版)' },
       { label: '再贩', url: 'https://i.imgur.com/7C5ZJO3.png', name: '海景布徽章(再贩)' },
     ],
     remark: "初版海景布数量限定50个,再贩无数量限定，初版和再贩的版权标不同",
