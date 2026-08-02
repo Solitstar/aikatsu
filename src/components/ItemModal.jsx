@@ -1,30 +1,36 @@
 import { useEffect, useState } from 'react';
 
-const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, onSetItemNote, folders, itemFolderId, onMoveToFolder, onCreateFolder }) => {
+const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder }) => {
   const [showFolderPicker, setShowFolderPicker] = useState(false);
   const [newFolderName, setNewFolderName] = useState('');
-  const [noteDraft, setNoteDraft] = useState('');
-  const [noteSaved, setNoteSaved] = useState(false);
-  const [noteCollapsed, setNoteCollapsed] = useState(false);
   const [imgSrc, setImgSrc] = useState('');
   const [imgLoaded, setImgLoaded] = useState(false);
   const [fallbackStep, setFallbackStep] = useState(0);
+  const [selectedIdx, setSelectedIdx] = useState(0);
+
+  // 多图列表：images 存在时使用多图，否则单图
+  const imageList = item?.images?.length ? item.images : item ? [item.image] : [];
 
   // 图片加载优先级：本地缓存 → 远程URL → SVG占位
   useEffect(() => {
     if (!item) return;
-    const base = import.meta.env.BASE_URL;
+    setSelectedIdx(0);
     setImgLoaded(false);
     setFallbackStep(0);
+    const base = import.meta.env.BASE_URL;
     setImgSrc(`${base}images/item_${item.id}.webp`);
-    // 打开弹窗时同步备注草稿
-    setNoteDraft(item.note || '');
-    setNoteSaved(false);
-    setNoteCollapsed(!!item.note); // 有备注时默认收纳
   }, [item?.id]);
 
   const handleImgError = () => {
     const base = import.meta.env.BASE_URL;
+    // 副图加载失败 → 回退到第一张
+    if (selectedIdx > 0) {
+      setSelectedIdx(0);
+      setImgLoaded(false);
+      setFallbackStep(0);
+      setImgSrc(`${base}images/item_${item.id}.webp`);
+      return;
+    }
     const next = [
       `${base}images/item_${item.id}.png`,
       `${base}images/item_${item.id}.jpg`,
@@ -35,6 +41,13 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
       setImgSrc(next[fallbackStep]);
       setFallbackStep(fallbackStep + 1);
     }
+  };
+
+  const handleSelectImage = (idx) => {
+    setSelectedIdx(idx);
+    setImgLoaded(false);
+    setFallbackStep(0);
+    setImgSrc(idx === 0 ? `${import.meta.env.BASE_URL}images/item_${item.id}.webp` : imageList[idx]);
   };
 
   const itemType = item?.status;
@@ -96,6 +109,28 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   onError={handleImgError}
                 />
               </div>
+              {/* 多图缩略图栏 */}
+              {imageList.length > 1 && (
+                <div className="flex gap-2 mt-2">
+                  {imageList.map((src, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleSelectImage(idx)}
+                      className={`w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 transition-all ${
+                        selectedIdx === idx
+                          ? 'ring-2 ring-accent shadow-md'
+                          : 'opacity-60 hover:opacity-100'
+                      }`}
+                    >
+                      <img
+                        src={idx === 0 ? `${import.meta.env.BASE_URL}images/item_${item.id}.webp` : src}
+                        alt={`${item.name} ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="flex-1 flex flex-col justify-center">
@@ -137,10 +172,10 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
               <div className="flex flex-wrap gap-3 mb-6">
                 <button
                   onClick={() => onToggleStatus(item.id, 'owned')}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white transition-all ${
                     item.status === 'owned'
-                      ? 'bg-yellow-100 text-yellow-700 ring-2 ring-yellow-400'
-                      : 'bg-white text-text-secondary border border-text-secondary/20 hover:border-yellow-400 hover:text-yellow-600'
+                      ? 'bg-yellow-500 shadow-md ring-2 ring-yellow-300'
+                      : 'bg-yellow-400 hover:bg-yellow-500'
                   }`}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -150,10 +185,10 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 </button>
                 <button
                   onClick={() => onToggleStatus(item.id, 'wish')}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white transition-all ${
                     item.status === 'wish'
-                      ? 'bg-rose-100 text-rose-700 ring-2 ring-rose-400'
-                      : 'bg-white text-text-secondary border border-text-secondary/20 hover:border-rose-400 hover:text-rose-500'
+                      ? 'bg-rose-600 shadow-md ring-2 ring-rose-300'
+                      : 'bg-rose-400 hover:bg-rose-500'
                   }`}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -377,78 +412,6 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   </div>
                 </div>
               )}
-
-              {/* 自定义说明 */}
-              <div className="border-t border-accent/20 pt-5">
-                {noteCollapsed ? (
-                  <button
-                    onClick={() => setNoteCollapsed(false)}
-                    className="w-full flex items-center gap-1.5 text-left group"
-                  >
-                    <span className="w-16 text-text-secondary flex-shrink-0">说明</span>
-                    {noteDraft.trim() ? (
-                      <span className="text-sm text-text-primary truncate group-hover:text-accent transition-colors">
-                        {noteDraft}
-                      </span>
-                    ) : (
-                      <span className="text-sm text-text-secondary/60 group-hover:text-accent/70 transition-colors">
-                        添加说明
-                      </span>
-                    )}
-                  </button>
-                ) : (
-                  <div>
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-16 text-text-secondary flex-shrink-0">说明</span>
-                      <textarea
-                        value={noteDraft}
-                        onChange={(e) => { setNoteDraft(e.target.value); setNoteSaved(false); }}
-                        placeholder="添加说明..."
-                        rows={2}
-                        autoFocus
-                        className="w-full px-2.5 py-1.5 rounded-lg bg-bg-primary/50 text-text-primary text-sm
-                                   focus:outline-none resize-none leading-relaxed"
-                      />
-                    </div>
-                    <div className="flex items-center justify-between mt-1.5 pl-[4.5rem]">
-                      {noteSaved ? (
-                        <span className="text-xs text-emerald-500">已保存</span>
-                      ) : (
-                        <span className="text-xs text-text-secondary/50">{noteDraft.length}/200</span>
-                      )}
-                      <div className="flex items-center gap-3">
-                        {noteSaved && (
-                          <button
-                            onClick={() => { setNoteSaved(false); }}
-                            className="text-xs text-text-secondary/60 hover:text-text-primary transition-colors"
-                          >
-                            编辑
-                          </button>
-                        )}
-                        <button
-                          onClick={() => { setNoteCollapsed(true); }}
-                          disabled={!noteDraft.trim() && !item.note}
-                          className="text-xs text-text-secondary/60 hover:text-text-primary transition-colors disabled:opacity-40"
-                        >
-                          取消
-                        </button>
-                        <button
-                          onClick={() => {
-                            onSetItemNote(item.id, noteDraft);
-                            setNoteSaved(true);
-                            setNoteCollapsed(true); // 保存后自动收纳
-                          }}
-                          disabled={!noteDraft.trim() && !item.note}
-                          className="px-3 py-1 rounded-lg bg-accent text-white text-xs font-medium
-                                     hover:bg-accent/90 transition-colors disabled:opacity-40"
-                        >
-                          保存
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
             </div>
           </div>
         </div>

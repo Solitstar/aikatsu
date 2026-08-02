@@ -14,7 +14,7 @@ import CollectionProgress from './components/CollectionProgress';
 import FolderBar from './components/FolderBar';
 
 function App() {
-  const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, setItemNote, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
+  const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
   const [activeTab, setActiveTab] = useState('collection');
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
@@ -466,7 +466,6 @@ function App() {
         onDecreaseWishQty={decreaseWishQuantity}
         onSetWishPriceMin={setWishPriceMin}
         onSetWishPriceMax={setWishPriceMax}
-        onSetItemNote={setItemNote}
         folders={currentFolderType ? folders[currentFolderType] : []}
         itemFolderId={modalItem && currentFolderType ? getItemFolderId(currentFolderType, modalItem.id) : null}
         onMoveToFolder={(folderId) => modalItem && handleMoveToFolder(modalItem.id, folderId)}
