@@ -231,12 +231,13 @@ export const BASE_ITEMS = [
   },
   {
     id: 25,
-    name: "星光学院校徽 金属徽章",
+    name: "海景布徽章(初版/再贩)",
     subtitle: "アイカツ！ メモリアルハンカチセット 缶バッジ",
-    character: "其他",
+    character: "藤堂尤里卡",
     type: "徽章",
     size: "直径约 44mm",
-    image: "https://i.imgur.com/u4BrpGy.png"
+    image: "https://i.imgur.com/CQHpdqz.png",
+    remark: "初版海景布数量限定50个，版权标与再贩版本不同，此处展示的图片是再贩版本",
   },
   {
     id: 26,
@@ -9231,16 +9232,18 @@ export const BASE_ITEMS = [
     },
     {
     id: 1025,
-    name: "邮票徽章(初版)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "夏树未来",
     type: "徽章",
     size: "直径约 40mm",
-    image: "https://i.imgur.com/cCe2fqO.png"
+    image: "https://i.imgur.com/cCe2fqO.png",
+    images:"https://i.imgur.com/5g87piZ.png",
+    remark: "初版柄图完整，再贩柄图不完整，此处展示的图片是初贩版本"
     },
     {
     id: 1026,
-    name: "邮票徽章(再贩)",
+    name: "邮票徽章(初版/再贩)",
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "夏树未来",
     type: "徽章",
