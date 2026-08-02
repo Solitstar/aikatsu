@@ -134,8 +134,11 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
               {/* 文件夹选择 */}
               {itemType && (
                 <div className="bg-bg-primary/50 rounded-2xl p-4 mb-6">
-                  <p className="text-sm font-semibold text-text-primary mb-2">
-                    📁 {itemType === 'owned' ? '收藏文件夹' : '愿望文件夹'}
+                  <p className="text-sm font-semibold text-text-primary mb-2 flex items-center gap-1.5">
+                    <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+                    </svg>
+                    {itemType === 'owned' ? '收藏文件夹' : '愿望文件夹'}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <button
@@ -209,7 +212,10 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                       onClick={() => onAddPriceRecord(item.id)}
                       className="flex items-center gap-1 px-3 py-1 rounded-full bg-yellow-200 text-yellow-700 text-xs font-medium hover:bg-yellow-300 transition-colors"
                     >
-                      ➕ 添加记录
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
+                      </svg>
+                      添加记录
                     </button>
                   </div>
                   <div className="space-y-2">
@@ -343,8 +349,11 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
               {/* 自定义说明 */}
               <div className="bg-bg-primary/50 rounded-2xl p-4 mb-6">
                 <div className="flex items-center justify-between mb-2">
-                  <p className="text-sm font-semibold text-text-primary">
-                    📝 自定义说明
+                  <p className="text-sm font-semibold text-text-primary flex items-center gap-1.5">
+                    <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                    自定义说明
                   </p>
                   {noteSaved && (
                     <span className="text-xs text-emerald-500 font-medium">✓ 已保存</span>
@@ -395,6 +404,12 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                     <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>
                     <span className="text-text-primary">{item.size || '-'}</span>
                   </div>
+                  {item.remark && (
+                    <div className="flex">
+                      <span className="w-16 text-text-secondary flex-shrink-0">备注</span>
+                      <span className="text-text-primary">{item.remark}</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
