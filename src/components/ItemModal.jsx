@@ -7,13 +7,14 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   const [imgLoaded, setImgLoaded] = useState(false);
   const [fallbackStep, setFallbackStep] = useState(0);
   const [selectedIdx, setSelectedIdx] = useState(0);
+  const [displayName, setDisplayName] = useState('');
 
-  // 多图列表：images 存在时使用多图，否则单图（支持字符串或 {label, url} 对象）
+  // 多图列表：images 存在时使用多图，否则单图（支持字符串或 {label, url, name} 对象）
   const imageList = (() => {
     const raw = item?.images?.length ? item.images : item ? [item.image] : [];
     return raw.map((img, i) => {
-      if (typeof img === 'string') return { label: `图${i + 1}`, url: img };
-      return { label: img.label || `图${i + 1}`, url: img.url };
+      if (typeof img === 'string') return { label: `图${i + 1}`, url: img, name: null };
+      return { label: img.label || `图${i + 1}`, url: img.url, name: img.name || null };
     });
   })();
 
@@ -21,6 +22,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   useEffect(() => {
     if (!item) return;
     setSelectedIdx(0);
+    setDisplayName(item.name);
     setImgLoaded(false);
     setFallbackStep(0);
     const base = import.meta.env.BASE_URL;
@@ -54,6 +56,12 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     setImgLoaded(false);
     setFallbackStep(0);
     setImgSrc(idx === 0 ? `${import.meta.env.BASE_URL}images/item_${item.id}.webp` : imageList[idx].url);
+    // 版本自带标题时更新商品标题
+    if (imageList[idx].name) {
+      setDisplayName(imageList[idx].name);
+    } else {
+      setDisplayName(item.name);
+    }
   };
 
   const itemType = item?.status;
@@ -147,7 +155,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 </p>
               )}
               <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4">
-                {item.name}
+                {displayName || item.name}
               </h3>
 
               {/* 商品信息 */}
