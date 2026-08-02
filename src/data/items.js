@@ -241,7 +241,7 @@ export const BASE_ITEMS = [
   },
   {
     id: 26,
-  name: "邮票徽章(初版/再贩)",
+  name: "海景布徽章(初版/再贩)",
   subtitle: "アイカツ！トレーディングジャケバッジ",
   character: "夏树未来",
   type: "徽章",
