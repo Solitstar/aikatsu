@@ -53,6 +53,11 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
   const localJpg = `${base}images/item_${item.id}${vSuffix}.jpg`;
   const initialSrc = localWebp; // 优先WebP格式（体积最小）
 
+  // 多版本商品已收藏时，标题直接显示所选版本的完整名字
+  const displayName = item.images?.length > 1 && item.version && item.images[versionIdx]?.name
+    ? item.images[versionIdx].name
+    : item.name;
+
   const fallbacks = [
     localPng,           // 2. 本地PNG缓存
     localJpg,           // 3. 本地JPG缓存
@@ -92,7 +97,7 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
 
         <img
           src={initialSrc}
-          alt={item.name}
+          alt={displayName}
           loading={priority ? "eager" : "lazy"}
           fetchpriority={priority ? "high" : "auto"}
           decoding="async"
@@ -113,7 +118,7 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
           </p>
         )}
         <h3 className="font-medium text-text-primary text-xs sm:text-base mb-1.5 sm:mb-2 line-clamp-2 leading-tight">
-          {item.name}
+          {displayName}
         </h3>
         <div className="flex flex-wrap gap-1 sm:gap-1.5">
           <span className="inline-block text-[10px] sm:text-xs px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-accent/15 text-accent font-medium truncate max-w-full">
