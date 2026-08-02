@@ -8,8 +8,14 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   const [fallbackStep, setFallbackStep] = useState(0);
   const [selectedIdx, setSelectedIdx] = useState(0);
 
-  // 多图列表：images 存在时使用多图，否则单图
-  const imageList = item?.images?.length ? item.images : item ? [item.image] : [];
+  // 多图列表：images 存在时使用多图，否则单图（支持字符串或 {label, url} 对象）
+  const imageList = (() => {
+    const raw = item?.images?.length ? item.images : item ? [item.image] : [];
+    return raw.map((img, i) => {
+      if (typeof img === 'string') return { label: `图${i + 1}`, url: img };
+      return { label: img.label || `图${i + 1}`, url: img.url };
+    });
+  })();
 
   // 图片加载优先级：本地缓存 → 远程URL → SVG占位
   useEffect(() => {
@@ -47,7 +53,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     setSelectedIdx(idx);
     setImgLoaded(false);
     setFallbackStep(0);
-    setImgSrc(idx === 0 ? `${import.meta.env.BASE_URL}images/item_${item.id}.webp` : imageList[idx]);
+    setImgSrc(idx === 0 ? `${import.meta.env.BASE_URL}images/item_${item.id}.webp` : imageList[idx].url);
   };
 
   const itemType = item?.status;
@@ -109,26 +115,27 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   onError={handleImgError}
                 />
               </div>
-              {/* 多图缩略图栏 */}
+              {/* 淘宝式图片选择按钮 */}
               {imageList.length > 1 && (
-                <div className="flex gap-2 mt-2">
-                  {imageList.map((src, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleSelectImage(idx)}
-                      className={`w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 transition-all ${
-                        selectedIdx === idx
-                          ? 'ring-2 ring-accent shadow-md'
-                          : 'opacity-60 hover:opacity-100'
-                      }`}
-                    >
-                      <img
-                        src={idx === 0 ? `${import.meta.env.BASE_URL}images/item_${item.id}.webp` : src}
-                        alt={`${item.name} ${idx + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
+                <div className="mt-3">
+                  <div className="flex flex-wrap gap-2">
+                    {imageList.map((img, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => handleSelectImage(idx)}
+                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+                          selectedIdx === idx
+                            ? 'bg-accent text-white border-accent shadow-md'
+                            : 'bg-white text-text-secondary border-accent/20 hover:border-accent/50 hover:text-text-primary'
+                        }`}
+                      >
+                        {img.label}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-[10px] text-text-secondary/60 mt-1.5">
+                    当前：{imageList[selectedIdx].label}
+                  </p>
                 </div>
               )}
             </div>
