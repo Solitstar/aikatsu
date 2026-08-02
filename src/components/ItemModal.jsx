@@ -6,6 +6,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   const [noteDraft, setNoteDraft] = useState('');
   const [noteSaved, setNoteSaved] = useState(false);
   const [noteCollapsed, setNoteCollapsed] = useState(false);
+  const [showRemark, setShowRemark] = useState(false);
   const [imgSrc, setImgSrc] = useState('');
   const [imgLoaded, setImgLoaded] = useState(false);
   const [fallbackStep, setFallbackStep] = useState(0);
@@ -131,7 +132,33 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   <span>❤️</span>
                   心愿单
                 </button>
+                {item.remark && (
+                  <button
+                    onClick={() => setShowRemark(!showRemark)}
+                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                      showRemark
+                        ? 'bg-blue-100 text-blue-700 ring-2 ring-blue-400'
+                        : 'bg-white text-text-secondary border border-text-secondary/20 hover:border-blue-400 hover:text-blue-600'
+                    }`}
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                    </svg>
+                    备注
+                  </button>
+                )}
               </div>
+
+              {item.remark && showRemark && (
+                <div className="bg-blue-50/50 rounded-2xl p-4 mb-6 border border-blue-100 animate-fadeIn">
+                  <div className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-sm text-text-primary leading-relaxed">{item.remark}</p>
+                  </div>
+                </div>
+              )}
 
               {/* 文件夹选择 */}
               {itemType && (
@@ -348,8 +375,29 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 </div>
               )}
 
+              <div className="border-t border-accent/20 pt-5">
+                <div className="space-y-3 text-sm">
+                  <div className="flex">
+                    <span className="w-16 text-text-secondary flex-shrink-0">系列</span>
+                    <span className="text-text-primary">{item.series}</span>
+                  </div>
+                  <div className="flex">
+                    <span className="w-16 text-text-secondary flex-shrink-0">角色</span>
+                    <span className="text-text-primary">{item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean).join(' | ')}</span>
+                  </div>
+                  <div className="flex">
+                    <span className="w-16 text-text-secondary flex-shrink-0">种类</span>
+                    <span className="text-text-primary">{item.type}</span>
+                  </div>
+                  <div className="flex">
+                    <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>
+                    <span className="text-text-primary">{item.size || '-'}</span>
+                  </div>
+                </div>
+              </div>
+
               {/* 自定义说明 */}
-              <div className="bg-bg-primary/50 rounded-2xl p-4 mb-6">
+              <div className="bg-bg-primary/50 rounded-2xl p-4">
                 <div className="flex items-center justify-between mb-2">
                   <p className="text-sm font-semibold text-text-primary flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -426,33 +474,6 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                     )}
                   </button>
                 )}
-              </div>
-
-              <div className="border-t border-accent/20 pt-5">
-                <div className="space-y-3 text-sm">
-                  <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">系列</span>
-                    <span className="text-text-primary">{item.series}</span>
-                  </div>
-                  <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">角色</span>
-                    <span className="text-text-primary">{item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean).join(' | ')}</span>
-                  </div>
-                  <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">种类</span>
-                    <span className="text-text-primary">{item.type}</span>
-                  </div>
-                  <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>
-                    <span className="text-text-primary">{item.size || '-'}</span>
-                  </div>
-                  {item.remark && (
-                    <div className="flex">
-                      <span className="w-16 text-text-secondary flex-shrink-0">备注</span>
-                      <span className="text-text-primary">{item.remark}</span>
-                    </div>
-                  )}
-                </div>
               </div>
             </div>
           </div>
