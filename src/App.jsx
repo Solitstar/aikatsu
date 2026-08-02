@@ -14,7 +14,7 @@ import CollectionProgress from './components/CollectionProgress';
 import FolderBar from './components/FolderBar';
 
 function App() {
-  const { items, toggleStatus, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
+  const { items, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
   const [activeTab, setActiveTab] = useState('collection');
   const [selectedItem, setSelectedItem] = useState(null);
   const [exportingImage, setExportingImage] = useState(false);
