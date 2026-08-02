@@ -16,8 +16,8 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
     if (item.status === 'owned') {
       const qty = item.quantity || 1;
       return (
-        <div className="absolute top-3 left-3 z-10">
-          <span className="bg-yellow-400 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+        <div className="absolute top-1.5 left-1.5 sm:top-3 sm:left-3 z-10">
+          <span className="bg-yellow-400 text-white text-[10px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full shadow-md flex items-center gap-0.5 sm:gap-1">
             ⭐️ {qty > 1 ? `×${qty}` : '已拥有'}
           </span>
         </div>
@@ -25,8 +25,8 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
     }
     if (item.status === 'wish') {
       return (
-        <div className="absolute top-3 left-3 z-10">
-          <span className="bg-rose-400 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+        <div className="absolute top-1.5 left-1.5 sm:top-3 sm:left-3 z-10">
+          <span className="bg-rose-400 text-white text-[10px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full shadow-md flex items-center gap-0.5 sm:gap-1">
             ❤️ 想要
           </span>
         </div>
@@ -97,24 +97,24 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
             opacity: imgLoaded ? 1 : 0,
             transition: 'opacity 0.3s ease-in-out',
           }}
-          className="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-contain p-1.5 sm:p-2 transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 
-      <div className="p-3 sm:p-4">
+      <div className="p-2.5 sm:p-4">
         {item.subtitle && (
-          <p className="text-xs text-text-secondary font-quick mb-0.5 truncate">
+          <p className="text-[10px] sm:text-xs text-text-secondary font-quick mb-0.5 truncate">
             {item.subtitle}
           </p>
         )}
-        <h3 className="font-medium text-text-primary text-sm sm:text-base mb-2 line-clamp-2 leading-tight">
+        <h3 className="font-medium text-text-primary text-xs sm:text-base mb-1.5 sm:mb-2 line-clamp-2 leading-tight">
           {item.name}
         </h3>
-        <div className="flex flex-wrap gap-1.5">
-          <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-accent/15 text-accent font-medium">
+        <div className="flex flex-wrap gap-1 sm:gap-1.5">
+          <span className="inline-block text-[10px] sm:text-xs px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-accent/15 text-accent font-medium truncate max-w-full">
             {formatCardCharacter(item.character)}
           </span>
-          <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-bg-primary text-text-secondary font-medium">
+          <span className="hidden sm:inline-block text-xs px-2.5 py-1 rounded-full bg-bg-primary text-text-secondary font-medium">
             {item.type}
           </span>
         </div>
