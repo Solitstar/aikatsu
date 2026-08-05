@@ -284,7 +284,7 @@ export const BASE_ITEMS = [{
   },
   {
     id: 27,
-    name: "格言生日(特典)徽章",
+    name: "格言/Q版生日(特典)徽章",
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "夏树未来",
     type: "徽章",
@@ -15683,7 +15683,7 @@ export const BASE_ITEMS = [{
     name: "剧场版《偶像活动Stars!》 海报",
     subtitle: "「劇場版アイカツスターズ！」ライブ缶バッジ",
     character: "虹野梦，樱庭劳拉，白鸟姬，香澄夜空，二阶堂柚子，如月翼，星宫莓，大空明",
-    type: "纸制品",
+    type: "海报",
     size: "B2",
     price: "2,800円(含税)", 
     image: "https://i.imgur.com/iuWY6vZ.png",
@@ -15784,7 +15784,7 @@ export const BASE_ITEMS = [{
     name: "剧场版《偶像活动！～纪念舞台~闪耀的组合杯～》 海报",
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ A4クリアファイル",
     character: "大空明，天羽圆香，冰上堇，黑泽凛，红林珠璃，新条雏姬，藤原雅，栗栖心音",
-    type: "纸制品",
+    type: "海报",
     size: "B2",
     price: "2,800(含税)", 
     image: "https://i.imgur.com/S9kJY2r.png",
@@ -16508,7 +16508,502 @@ id: 1662,
     size: "约W20xH115cm",
     price: "[set]3,080円(含税)",
     image: "https://i.imgur.com/oNW6E0f.png"
+  },  {
+id: 1663,
+    name: "组合徽章",
+    subtitle: "アイカツ！スタイル　ユニットおうえんグッズセット【第3弾】",
+    character: "其他,星宫莓，大空明"  ,
+    type: "徽章",
+    size: "直径约 75mm",
+    price: "[set]3,080円(含税)",
+    image: "https://i.imgur.com/BAArsxE.png"
+  },{
+id: 1664,
+    name: "组合毛巾",
+    subtitle: "アイカツ！スタイル　ユニットおうえんグッズセット【第3弾】",
+    character: "其他,星宫莓，大空明",
+    type: "家纺",
+    size: "约W20xH115cm",
+    price: "[set]3,080円(含税)",
+    image: "https://i.imgur.com/rH1V3lQ.png"
+  },  {
+id: 1665,
+    name: "组合徽章",
+    subtitle: "アイカツ！スタイル　ユニットおうえんグッズセット【第3弾】",
+    character: "其他,春风若叶，姬石来希"  ,
+    type: "徽章",
+    size: "直径约 75mm",
+    price: "[set]3,080円(含税)",
+    image: "https://i.imgur.com/2FiQP3W.png"
+  },{
+id: 1666,
+    name: "组合毛巾",
+    subtitle: "アイカツ！スタイル　ユニットおうえんグッズセット【第3弾】",
+    character: "其他,春风若叶，姬石来希",
+    type: "家纺",
+    size: "约W20xH115cm",
+    price: "[set]3,080円(含税)",
+    image: "https://i.imgur.com/isRHkOp.png"
+  }, {
+id: 1667,
+    name: "一番赏A赏 收纳册",
+    subtitle: "アイカツ！A賞 ビジュアルコレクションブック",
+    character: "星宫莓，雾矢葵，紫吹兰，音城塞拉，冴草纪伊，风沢空",
+    type: "文具",
+    size: "约34cm",
+    price: "[1次]300円(含税)",
+    image: "https://i.imgur.com/JooJ8lq.png"
+  }, {
+id: 1668,
+    name: "一番赏B赏 桌垫",
+    subtitle: "アイカツ！B賞 デスクマット",
+    character: "星宫莓，雾矢葵，紫吹兰",
+    type: "日用品",
+    size: "约34cm",
+    price: "[1次]300円(含税)",
+    image: "https://i.imgur.com/1Wmb0YN.png"
+  },  {
+id: 1669,
+    name: "一番赏B赏 桌垫",
+    subtitle: "アイカツ！B賞 デスクマット",
+    character: "音城塞拉，冴草纪伊，风沢空",
+    type: "日用品",
+    size: "约34cm",
+    price: "[1次]300円(含税)",
+    image: "https://i.imgur.com/Nw0lLXi.png"
+  },  {
+id: 1670,
+    name: "一番赏D赏 徽章",
+    subtitle: "アイカツ！D賞 缶バッジ",
+    character: "其他",
+    type: "日用品",
+    size: "直径约 35mm",
+    price: "[1次]300円(含税)",
+    image: "https://i.imgur.com/pVOOfij.png"
+  }, {
+id: 1671,
+    name: "一番赏D赏 徽章",
+    subtitle: "アイカツ！D賞 缶バッジ",
+    character: "星宫莓，雾矢葵，紫吹兰",
+    type: "日用品",
+    size: "直径约 35mm",
+    price: "[1次]300円(含税)",
+    image: "https://i.imgur.com/bDyFs5K.png"
   }, 
+  {
+id: 1672,
+    name: "CD方形徽章",
+    subtitle: "アイカツ！ ジャケバッジ 缶バッジ",
+    character: "星宫莓,神崎美月，大空明",
+    type: "徽章",
+    size: "直径约 40mm",
+    image: "https://i.imgur.com/zG6k2YG.png"
+}, {
+id: 1673,
+    name: "Happy Rainbow品牌徽章",
+    subtitle: "アイカツ！ デザインマート Happy Rainbow 缶バッジ",
+    character: "其他，有栖川乙女",
+    type: "徽章",
+    size: "直径约 30mm",
+    image: "https://i.imgur.com/BkE5sYi.png"
+  }, {
+id: 1674,
+    name: "Happy Rainbow品牌徽章",
+    subtitle: "アイカツ！ デザインマート Happy Rainbow 缶バッジ",
+    character: "其他，有栖川乙女",
+    type: "徽章",
+    size: "直径约 50mm",
+    image: "https://i.imgur.com/AbqSL9B.png"
+  }, {
+id: 1675,
+    name: "Happy Rainbow品牌徽章",
+    subtitle: "アイカツ！ デザインマート Happy Rainbow 缶バッジ",
+    character: "其他，有栖川乙女",
+    type: "徽章",
+    size: "直径约 30mm",
+    image: "https://i.imgur.com/d4mSsgy.png"
+  }, {
+id: 1676,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "有栖川乙女",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/iKIisHV.png"
+  },{
+id: 1677,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "骑咲礼",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/3raA9Be.png"
+  },{
+id: 1678,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "香澄夜空",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/QFg4072.png"
+  },{
+id: 1679,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "天翔响",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/PhEMEID.png"
+  },{
+id: 1680,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "明日香未来",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/Nb8yXkr.png"
+  },{
+id: 1681,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "红林珠璃",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/8cCEy0L.png"
+  },{
+id: 1682,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "友希爱音",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/bmAO78w.png"
+  },{
+id: 1683,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "服部优",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/E22Gxd6.png"
+  },{
+id: 1684,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "如月翼",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/HDCPS9U.png"
+  },{
+id: 1685,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "风沢空",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/3Hl6pAa.png"
+  },{
+id: 1686,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "神城卡莲",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/AstMXUr.png"
+  },{
+id: 1687,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "冰上堇",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/QeMIdEu.png"
+  },{
+id: 1688,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "香澄真昼",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/EYufcrk.png"
+  },{
+id: 1689,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "二阶堂柚子",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/yiyEMvL.png"
+  },{
+id: 1690,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "白百合辉夜",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/vt4QQa1.png"
+  },{
+id: 1691,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "新条雏姬",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/SwmqiiB.png"
+  },{
+id: 1692,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "白百合咲夜",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/ttiGcNk.png"
+  },{
+id: 1693,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "冴草纪伊",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/4FFtvDd.png"
+  },{
+id: 1694,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "白桦丽莎",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/xvVWSR9.png"
+  },{
+id: 1695,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "双叶亚里亚",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/jsUCijW.png"
+  },{
+id: 1696,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "藤堂尤里卡",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/xCcaA0c.png"
+  },{
+id: 1697,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "姬石来希",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/2LtSxha.png"
+  },{
+id: 1698,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "白鸟姬",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/OqSW2fs.png"
+  },{
+id: 1699,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "艾莉西亚·夏洛特",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/pPKwyMl.png"
+  },{
+id: 1700,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "堂岛妮娜",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/Ie2KtH3.png"
+  },{
+id: 1701,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "天羽圆香",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/4PpouHy.png"
+  },{
+id: 1702,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "紫吹兰",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/E7oJKKQ.png"
+  },{
+id: 1703,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "艾尔莎·福特",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/ThOjCjE.png"
+  },{
+id: 1704,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "栗栖心音",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/OiBhOfI.png"
+  },{
+id: 1705,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "蝶乃舞花",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/veMTD1q.png"
+  },{
+id: 1706,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "波间照南",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/DWuuipg.png"
+  },{
+id: 1707,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "花园绮罗",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/jpJT8S0.png"
+  },{
+id: 1708,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "虹野梦",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/BH1fh64.png"
+  },{
+id: 1709,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "日向绘麻",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/iHponz2.png"
+  },{
+id: 1710,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "星宫莓",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/RrWboIZ.png"
+  },{
+id: 1711,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "三轮光",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/kYDGp7N.png"
+  },{
+id: 1712,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "黑泽凛",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/vmNujyS.png"
+  },{
+id: 1713,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "雾矢葵",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/EmMq7tt.png"
+  },{
+id: 1714,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "神谷紫苑",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/xMjGYCB.png"
+  },{
+id: 1715,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "白银莉莉",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/LqzqZb0.png"
+  },{
+id: 1716,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "凑美绪",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/y81tePZ.png"
+  },{
+id: 1717,
+    name: "格言/Q版生日(特典)徽章",
+    subtitle: "アイカツ！スタイル バースデー缶バッジ",
+    character: "大地乃野",
+    type: "徽章",
+    size: "直径约 44mm",
+    price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
+    image: "https://i.imgur.com/KUgJhmn.png"
+  },
+
+
+
 
 
 
@@ -16904,7 +17399,7 @@ id: 1662,
 ];
 
 
-export const TYPES = ["全部", "徽章", "立牌", "文具", "毛绒玩偶", "挂件", "家纺", "挂画", "画板", "纸制品", "饰品", "日用品"];
+export const TYPES = ["全部", "徽章", "立牌", "文具", "毛绒玩偶", "挂件", "家纺", "挂画", "画板", "纸制品", "饰品", "日用品", "海报"];
 export const STATUS_OPTIONS = ["全部", "已拥有", "想要"];
 
 export const getItemsWithMeta = () => {

@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Auto fix item ids
+        run: npm run auto-id
+
       - name: Download images
         run: npm run download-images
 
