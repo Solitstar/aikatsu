@@ -8,6 +8,7 @@
     "download-images": "node scripts/download-images.cjs",
     "convert-webp": "node scripts/convert-to-webp.cjs",
     "write-version": "node scripts/write-version.cjs",
+    "auto-id": "node scripts/auto-id.cjs",
     "build": "npm run download-images -- --force && npm run convert-webp -- --force && npm run write-version && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
