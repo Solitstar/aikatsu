@@ -9,6 +9,12 @@ const SearchBar = ({ value, onChange, onClear }) => {
   const wrapperRef = useRef(null);
 
   const updateSuggestions = useCallback((keyword) => {
+    if (!keyword.trim()) {
+      setSuggestions([]);
+      setShowDropdown(false);
+      setActiveIndex(-1);
+      return;
+    }
     const results = searchCharacters(keyword);
     setSuggestions(results);
     setShowDropdown(results.length > 0);

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import GoodsCard from './GoodsCard';
 import EmptyState from './EmptyState';
 
@@ -15,4 +16,4 @@ const CardGrid = ({ items, onCardClick }) => {
   );
 };
 
-export default CardGrid;
+export default memo(CardGrid);

@@ -1,9 +1,9 @@
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect, useCallback, useDeferredValue } from 'react';
 import { renderShareImageToCanvas } from './utils/exportImage';
 import { useCollection } from './hooks/useCollection';
 import { useVersionCheck } from './hooks/useVersionCheck';
 import { useFolders } from './hooks/useFolders';
-import { getCharactersBySeriesAndGender } from './data/characters';
+import { getCharactersBySeriesAndGender, ALL_CHARACTERS } from './data/characters';
 import Header from './components/Header';
 import StatsBar from './components/StatsBar';
 import FilterBar from './components/FilterBar';
@@ -12,6 +12,25 @@ import ItemModal from './components/ItemModal';
 import SearchBar from './components/SearchBar';
 import CollectionProgress from './components/CollectionProgress';
 import FolderBar from './components/FolderBar';
+
+// 标准化：去掉括号、书名号、空格等符号，用于模糊匹配
+const normalize = (s) => String(s || '').replace(/[\(\)（）\（\）\[\]【】〈〉《》\s\-·\.]+/g, '').toLowerCase();
+
+// 角色名表（按长度降序，优先匹配长名字避免子串误判）
+const NORMALIZED_CHARS = ALL_CHARACTERS.map(normalize).filter(Boolean).sort((a, b) => b.length - a.length);
+
+// 从搜索词中提取角色名（支持无空格连续输入，如"星宫莓亚克力"），返回 { chars: 提取到的角色名列表, rest: 剩余关键词 }
+const extractCharParts = (kw) => {
+  let rest = normalize(kw);
+  const chars = [];
+  for (const cn of NORMALIZED_CHARS) {
+    if (rest.includes(cn)) {
+      chars.push(cn);
+      rest = rest.replace(cn, '');
+    }
+  }
+  return { chars, rest };
+};
 
 function App() {
   const { items, setStatus, addPriceRecord, removePriceRecord, updatePriceRecord, increaseWishQuantity, decreaseWishQuantity, setWishPriceMin, setWishPriceMax, ownedCount, ownedItems, ownedTotalQuantity, ownedTotalPrice, wishCount, wishItems, wishTotalQuantity, wishTotalPriceMin, wishTotalPriceMax, totalCount } = useCollection();
@@ -32,7 +51,9 @@ function App() {
   const [filterType, setFilterType] = useState(() => getInitialFilter('type', '全部'));
   const [filterStatus, setFilterStatus] = useState(() => getInitialFilter('status', '全部'));
   const [filterCharCount, setFilterCharCount] = useState(() => getInitialFilter('charcount', '全部'));
-  const [searchKeyword, setSearchKeyword] = useState(() => getInitialFilter('search', ''));
+  const [searchInput, setSearchInput] = useState(() => getInitialFilter('search', ''));
+  // 延迟过滤：输入即时响应，过滤/重渲染在低优先级执行，缓解移动端搜索卡顿
+  const searchKeyword = useDeferredValue(searchInput);
   const [showBackTop, setShowBackTop] = useState(false);
 
   useEffect(() => {
@@ -53,9 +74,8 @@ function App() {
   }, [filterSeries, filterChar]);
 
   const filteredItems = useMemo(() => {
-    // 标准化函数：去掉括号、书名号、空格等符号，用于模糊匹配
-    const normalize = (s) => s.replace(/[\(\)（）\（\）\[\]【】〈〉《》\s\-·\.]+/g, '').toLowerCase();
-    const normalizedKw = normalize(searchKeyword);
+    // 解析搜索词（仅当关键词变化时执行一次，从关键词中提取角色名）
+    const parsedKw = searchKeyword ? extractCharParts(searchKeyword) : null;
 
     return items.filter(item => {
       const matchSeries = filterSeries === '全部' || item.series.includes(filterSeries);
@@ -70,14 +90,22 @@ function App() {
         (filterCharCount === '多人' && charList.length > 1 && !charList.includes('其他')) ||
         (filterCharCount === '其他(不含角色)' && charList.includes('其他'));
 
-      const matchSearch = !searchKeyword ||
-        normalize(item.name).includes(normalizedKw) ||
-        item.character.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        normalize(item.type).includes(normalizedKw) ||
-        (item.subtitle || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        (item.characterRomaji || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        (item.characterAlias || '').toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        (item.characterPinyin || '').toLowerCase().includes(searchKeyword.toLowerCase());
+      // 关键词匹配：提取出的角色名必须都在商品角色中，剩余关键词匹配任意字段
+      const matchSearch = !searchKeyword || !parsedKw || (() => {
+        const { chars, rest } = parsedKw;
+        const itemChars = normalize(item.character);
+        if (!chars.every(cn => itemChars.includes(cn))) return false;
+        if (!rest) return true;
+        return (
+          normalize(item.name).includes(rest) ||
+          itemChars.includes(rest) ||
+          normalize(item.type).includes(rest) ||
+          normalize(item.subtitle).includes(rest) ||
+          normalize(item.characterRomaji).includes(rest) ||
+          normalize(item.characterAlias).includes(rest) ||
+          normalize(item.characterPinyin).includes(rest)
+        );
+      })();
 
       // 文件夹过滤
       const folderType = activeTab === 'owned' ? 'owned' : activeTab === 'wishlist' ? 'wish' : null;
@@ -112,7 +140,7 @@ function App() {
     setFilterChar('全部');
     setFilterType('全部');
     setFilterCharCount('全部');
-    setSearchKeyword('');
+    setSearchInput('');
   };
 
   const handleTabChange = (tab) => {
@@ -125,21 +153,21 @@ function App() {
       setFilterChar('全部');
       setFilterType('全部');
       setFilterCharCount('全部');
-      setSearchKeyword('');
+      setSearchInput('');
       setFilterStatus('owned');
     } else if (tab === 'wishlist') {
       setFilterSeries('全部');
       setFilterChar('全部');
       setFilterType('全部');
       setFilterCharCount('全部');
-      setSearchKeyword('');
+      setSearchInput('');
       setFilterStatus('wish');
     }
   };
 
-  const handleCardClick = (item) => {
+  const handleCardClick = useCallback((item) => {
     setSelectedItem(item);
-  };
+  }, []);
 
   // 文件夹操作
   const currentFolderType = activeTab === 'owned' ? 'owned' : activeTab === 'wishlist' ? 'wish' : null;
@@ -347,9 +375,9 @@ function App() {
           <>
             <div className="mb-6">
               <SearchBar
-                value={searchKeyword}
-                onChange={setSearchKeyword}
-                onClear={() => setSearchKeyword('')}
+                value={searchInput}
+                onChange={setSearchInput}
+                onClear={() => setSearchInput('')}
               />
             </div>
 
