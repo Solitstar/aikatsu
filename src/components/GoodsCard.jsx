@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 
 const GoodsCard = ({ item, onClick, priority = false }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
@@ -135,4 +135,4 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
   );
 };
 
-export default GoodsCard;
+export default memo(GoodsCard);
