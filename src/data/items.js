@@ -18,7 +18,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ DMMスクラッチくじ 缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[1次]770円",
     image: "https://i.imgur.com/4vrU4zr.png"
   },
@@ -28,8 +28,8 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Liveイリュージョン 缶バッジセット 会場限定",
     character: "夏树未来,有栖川乙女,一之濑枫,冴草纪伊",
     type: "徽章",
-    size: "直径约 40mm",
-    price: "[1组]2,500円+税",
+    size: "直径约40mm",
+    price: "[set]2,500円+税",
     image: "https://i.imgur.com/r9WVleS.png"
   },
   {
@@ -38,8 +38,8 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Liveイリュージョン 缶バッジセット 会場限定",
     character: "雾矢葵,藤堂尤里卡,音城塞拉",
     type: "徽章",
-    size: "直径约 40mm",
-    price: "[1组]2,500円+税",
+    size: "直径约40mm",
+    price: "[set]2,500円+税",
     image: "https://i.imgur.com/SjKEpKy.png"
   },
   {
@@ -49,7 +49,7 @@ export const BASE_ITEMS = [{
     character: "紫吹兰,神崎美月,风沢空",
     type: "徽章",
     size: "直径约 40 mm",
-    price: "[1组]2,500円+税",
+    price: "[set]2,500円+税",
     image: "https://i.imgur.com/weiCRTt.png"
   },
   {
@@ -59,7 +59,7 @@ export const BASE_ITEMS = [{
     character: "星宫莓,大空明,姬里玛利亚,北大路樱",
     type: "徽章",
     size: "直径约 40 mm",
-    price: "[1组]2,500円+税",
+    price: "[set]2,500円+税",
     image: "https://i.imgur.com/I2FD8OH.png"
   },
   {
@@ -69,7 +69,7 @@ export const BASE_ITEMS = [{
     character: "其他",
     type: "徽章",
     size: "直径约 75mm",
-    price: "[1组]2,500円+税",
+    price: "[set]2,500円+税",
     image: "https://i.imgur.com/KGLhRgQ.png"
   },
   {
@@ -88,7 +88,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ ミュージックフェスタ2016 缶バッジ ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円",
     image: "https://i.imgur.com/Yw2Rw9B.png"
   },
@@ -98,7 +98,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ ミュージックフェスタ2017 缶バッジ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円",
     image: "https://i.imgur.com/eHrEIQY.png"
   },
@@ -108,7 +108,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ミュージックフェスタ in アイカツ武道館 缶バッジ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円",
     image: "https://i.imgur.com/Q3QrBBH.png"
   },
@@ -118,7 +118,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツオンパレード！ユニットライブツアー ユニパレ！ 缶バッジ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円",
     image: "https://i.imgur.com/bAZRPZy.png"
   },
@@ -128,7 +128,7 @@ export const BASE_ITEMS = [{
     subtitle: "BEST FRIENDS!スペシャルLIVE~Thanks⇄OK~缶バッジ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円",
     image: "https://i.imgur.com/6dprmFA.png"
   },
@@ -138,7 +138,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ デザインマート Vivid Kiss 缶バッジ",
     character: "其他,夏树未来,新条雏姬",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[1组]500円+税",
     image: "https://i.imgur.com/NEMxoN0.png"
   },
@@ -168,7 +168,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円+税",
     image: "https://i.imgur.com/n61sHMf.png"
   },
@@ -178,7 +178,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ワッペン缶バッジ",
     character: "星宫莓,雾矢葵,紫吹兰,有栖川乙女,藤堂尤里卡,北大路樱,一之濑枫,神崎美月",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
       price: "300円+税",
     image: "https://i.imgur.com/yu3df6Q.png"
   },
@@ -188,7 +188,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ ワッペン缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円+税",
     image: "https://i.imgur.com/93CBXpE.png"
     },
@@ -198,7 +198,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円+税",
     image: "https://i.imgur.com/N5xhvnZ.png"
   },
@@ -208,7 +208,7 @@ export const BASE_ITEMS = [{
     subtitle: "AIKATSU☆STARS Special Live Tour MUSIC of DREAM!!缶バッジ ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円",
     image: "https://i.imgur.com/1LIWzAD.png"
   },
@@ -218,7 +218,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円+税",
     image: "https://i.imgur.com/ExrHhFA.png"
   },
@@ -228,7 +228,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "星宫莓,紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円+税",
     image: "https://i.imgur.com/yT7EssS.png"
   },
@@ -238,7 +238,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "其他",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円+税",
     image: "https://i.imgur.com/Ffv2pMB.png"
   },
@@ -248,7 +248,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ ワッペン缶バッジ ",
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円+税",
     image: "https://i.imgur.com/nKgl0he.png"
   },
@@ -258,7 +258,7 @@ export const BASE_ITEMS = [{
   subtitle: "アイカツ！メモリアルハンカチセット ",
   character: "新条雏姬",
   type: "徽章",
-  size: "直径约 44mm",
+  size: "直径约44mm",
   price: "初版1,000円+税 再贩1,500円",
   image: "https://i.imgur.com/MlJlnat.png",
   images: [
@@ -273,7 +273,7 @@ export const BASE_ITEMS = [{
   subtitle: "アイカツ！メモリアルハンカチセット ",
   character: "夏树未来",
   type: "徽章",
-  size: "直径约 44mm",
+  size: "直径约44mm",
   price: "初版1,000円+税 再贩1,500円",
   image: "https://i.imgur.com/hatSXC1.png",
   images: [
@@ -288,7 +288,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/6G6ZD6a.png"
   },
@@ -298,7 +298,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "440円(含税)",
     image: "https://i.imgur.com/2ywATC4.png"
   },
@@ -308,7 +308,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://imgbed.heliar.top/i/AseYvebWfeXnPqwl.png"
   },
@@ -318,7 +318,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <7月~8月>",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/iFG2HK6.png"
   },
@@ -328,7 +328,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",
     image: "https://i.imgur.com/Ohif41L.png"
   },
@@ -338,7 +338,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "夏树未来，神崎美月",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/rWe1Wki.png"
   },
@@ -348,7 +348,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/QSX9Kam.png"
   },
@@ -358,7 +358,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/a7rKLVC.png"
   },
@@ -368,7 +368,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/rXnGqIi.png"
   },
@@ -378,7 +378,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "藤堂尤里卡,一之濑枫",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/3ecsidB.png"
   },
@@ -388,7 +388,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/0z60kok.png"
   },
@@ -398,7 +398,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "大空明",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/OBVi4sW.png"
   },
@@ -408,7 +408,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "有栖川乙女,北大路樱,神谷紫苑,大地乃野,白桦丽莎",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/51IeZNd.png"
   },
@@ -418,7 +418,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/N8RJyrJ.png"
   },
@@ -428,7 +428,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/k9tQ8Mj.png"
   },
@@ -438,7 +438,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "黑泽凛,天羽圆香",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/erZAtdR.png"
   },
@@ -448,7 +448,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "服部优,堂岛妮娜,栗栖心音,藤原雅",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",       
     image: "https://i.imgur.com/iYqKAEw.png"
   },
@@ -458,7 +458,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "音城塞拉,冴草纪伊,风沢空,姬里玛利亚,音城诺艾尔",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/Agjot8T.png"
   },
@@ -468,7 +468,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "星宫苹果,星宫赖智,光石织姬",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/qGNZUMH.png"
   },
@@ -478,7 +478,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ Canバッジ54",
     character: "凉川直人,乔尼·别府,濑名翼,四叶春",
     type: "徽章",
-    size: "直径约 54mm",
+    size: "直径约54mm",
     price: "440円(含税)(含税)",
     image: "https://i.imgur.com/ZIfb6fv.png"
   },
@@ -488,7 +488,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "阳明咲",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/HQPkPBl.png"
   },
@@ -498,7 +498,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "服部优",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/haM82uK.png"
   },
@@ -508,7 +508,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "友希爱音",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/WdGNOnD.png"
   },
@@ -518,7 +518,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/XkUbbWr.png"
   },
@@ -528,7 +528,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "艾尔莎·福特",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/K3shyY2.png"
   },
@@ -538,7 +538,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/kp2AbFy.png"
   },
@@ -548,7 +548,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/002AFTn.png"
   },
@@ -558,7 +558,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "晴香露卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/T1UQfYF.png"
   },
@@ -568,7 +568,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "蝶乃舞花",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/bfoiC8I.png"
   },
@@ -578,7 +578,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <7月~8月>",
     character: "如月翼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/ZSC0Xhh.png"
   },
@@ -588,7 +588,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/IqL4MoU.png"
   },
@@ -598,7 +598,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "香澄夜空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/XjybLrP.png"
   },
@@ -608,7 +608,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "骑咲礼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/5Ccg2bM.png"
   },
@@ -618,7 +618,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "明日香未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/n8l0WqC.png"
   },
@@ -628,7 +628,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "二阶堂柚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",
     image: "https://i.imgur.com/JlAWXsQ.png"
   },
@@ -638,7 +638,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円", 
     image: "https://i.imgur.com/rleur8l.png"
   },
@@ -648,7 +648,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "珠树琉璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円", 
     image: "https://i.imgur.com/HUnuo2F.png"
   },
@@ -658,7 +658,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "天翔响",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円", 
     image: "https://i.imgur.com/gO4ka15.png"
   },
@@ -668,7 +668,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "白百合辉夜,白百合咲夜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円", 
     image: "https://i.imgur.com/RADcb8Z.png"
   },
@@ -678,7 +678,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "白百合辉夜,白百合咲夜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円", 
     image: "https://i.imgur.com/1jPpqSR.png"
   },
@@ -688,7 +688,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <5月~6月>",
     character: "糸井纱良",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円", 
     image: "https://i.imgur.com/3kcv2Yw.png"
   },
@@ -698,7 +698,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "春风若叶",
     type: "徽章",
-    size: "直径约 56mm",  
+    size: "直径约56mm",  
     price: "400円", 
     image: "https://i.imgur.com/eObYInO.png"
   },
@@ -708,7 +708,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/LFyb5ut.png"
   },
@@ -718,7 +718,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/96bFywv.png"
   },
@@ -728,7 +728,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/Gg8xn58.png"
   },
@@ -738,7 +738,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/gzhL2q95KACnIoop.png"
   },
@@ -748,7 +748,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/RtXxXtvnuHS8knYH.png"
   },
@@ -758,7 +758,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "神城卡莲",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/MVeJI6Wbs1jkngAV.png"
   },
@@ -768,7 +768,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <9月~10月>",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/7nqO7ad7oudTy60x.png"
   },
@@ -778,7 +778,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/8mi7_yj86Cvmqr4w.png"
   },
@@ -788,7 +788,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/18GV_thQOX-dx8qK.png"
   },
@@ -798,7 +798,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "凉川直人",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/YMaxOWQ.png"
   },
@@ -808,7 +808,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/3yuKOvj.png"
   },
@@ -818,7 +818,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "姬石来希",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/k6xyJqE.png"
   },
@@ -828,7 +828,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "月城爱弓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/5rx3rIy.png"
   },
@@ -838,7 +838,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/mIbrv2z.png"
   },
@@ -848,7 +848,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "双叶亚里亚",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/rq1XIia.png"
   },
@@ -858,7 +858,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "香澄朝阳",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/dpX497h.png"
   },
@@ -868,7 +868,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/FvzE8FY.png"
   },
@@ -878,7 +878,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "音城诺艾尔",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/sj1dvf8.png"
   },
@@ -888,7 +888,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <11月~12月>",
     character: "白桦丽莎",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/FgYn6LS.png"
   },
@@ -898,7 +898,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/Ow0IX4u.png"
   },  
@@ -908,7 +908,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "凑美绪",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/4xj81vguiYhTnaE1.png"
   }, 
@@ -918,7 +918,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "大地乃野",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/cYyhEg6meKqfqt4s.png"
   }, 
@@ -928,7 +928,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "梅小路响子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     image: "https://i.imgur.com/sjO4hRQ.png"
   }, 
   {
@@ -937,7 +937,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/bXRq1J8huwDUib0u.png"
   }, 
@@ -947,7 +947,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "白银莉莉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/T4mJxUG.png"
   }, 
@@ -957,7 +957,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "结城昂",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/JbMkoZq.png"
   }, 
@@ -967,7 +967,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "神谷紫苑",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/fqgObei0gpDtGXU5.png"
   }, 
@@ -977,7 +977,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "堂岛妮娜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/ZpZEIfA.png"
   }, 
@@ -987,7 +987,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/HbLM7DG.png"
   }, 
@@ -997,7 +997,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "栗六杏",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/iN9ykKf87HoqxN5Z.png"
   }, 
@@ -1007,7 +1007,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "吉良彼方",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/VZdft0slA7D70ZSG.png"
   }, 
@@ -1017,7 +1017,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "白鸟姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/bqzagJ6.png"
   }, 
@@ -1027,7 +1027,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <1月~2月>",  
     character: "艾莉西亚·夏洛特",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/MOqIju1pUDaawrT5.png"
   }, 
@@ -1037,7 +1037,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/JY3mbD6.png"
   }, 
@@ -1047,7 +1047,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/XrKeU0y.png"
   }, 
@@ -1057,7 +1057,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "吉良彼方",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/UU2_wBzWN1KSdgG1.png"
   }, 
@@ -1067,7 +1067,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "日向绘麻",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/Uzakmov1cbHk2N6B.png"
   }, 
@@ -1077,7 +1077,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/imjnbf2LIdBpzqBb.png"
   }, 
@@ -1087,7 +1087,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/onFv8uf.png"
   }, 
@@ -1097,7 +1097,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "三轮光",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/vynGCbm.png"
   }, 
@@ -1107,7 +1107,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "音羽舞樱",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/JqGGppN.png"
   }, 
@@ -1117,7 +1117,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "本谷栞",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",       
     image: "https://i.imgur.com/ClknRaJ.png"
   }, 
@@ -1127,7 +1127,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",       
     image: "https://imgbed.heliar.top/i/2gIcdiAIcjiaFKo6.png"
   }, 
@@ -1137,7 +1137,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "姬里玛利亚",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://i.imgur.com/BxXxC1B.png"
   }, 
@@ -1147,7 +1147,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ <3月~4月>",    
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "400円",     
     image: "https://imgbed.heliar.top/i/tWU4XlvfKjDXptFg.png"
   }, 
@@ -1157,7 +1157,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/xii7XjP.png"
   }, 
@@ -1167,7 +1167,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "香澄夜空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/HCb42bQ.png"
   }, 
@@ -1177,7 +1177,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "骑咲礼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/B5gV2vz.png"
   }, 
@@ -1187,7 +1187,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "明日香未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/6x8t3EK.png"
   }, 
@@ -1197,7 +1197,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "二阶堂柚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/HGvtAHL.png"
   }, 
@@ -1207,7 +1207,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/ujWWbmY.png"
   }, 
@@ -1217,7 +1217,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "珠树琉璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/lap3LBF.png"
   }, 
@@ -1227,7 +1227,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "天翔响",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/Y5e8ZRj.png"
   }, 
@@ -1237,7 +1237,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "白百合咲夜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/1mTuvRQ.png"
   }, 
@@ -1247,7 +1247,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "白百合辉夜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/5hjKFic.png"
   }, 
@@ -1257,7 +1257,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <5月~6月>",      
     character: "糸井纱良",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/YSOyXxs.png"
   }, 
@@ -1267,7 +1267,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "阳明咲",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/oUz63QP.png"
   }, 
@@ -1277,7 +1277,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "服部优",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/TmgEaSI.png"
   }, 
@@ -1287,7 +1287,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "友希爱音",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/DBlVJvG.png"
   }, 
@@ -1297,7 +1297,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/SxsofOt.png"
   }, 
@@ -1307,7 +1307,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "艾尔莎·福特",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/YaqaKYU.png"
   }, 
@@ -1317,7 +1317,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/g9zYrFr.png"
   }, 
@@ -1327,7 +1327,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "如月翼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/AMzCLFi.png"
   }, 
@@ -1337,7 +1337,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "蝶乃舞花",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/W3HctYZ.png"
   }, 
@@ -1347,7 +1347,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "晴香露卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/OlG0fyM.png"
   }, 
@@ -1357,7 +1357,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <7月~8月>",            
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     image: "https://i.imgur.com/rLEvJdH.png"
   }, 
   {
@@ -1366,7 +1366,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "春风若叶",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/Am4s2ke.png"
   }, 
@@ -1376,7 +1376,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "姫乃Mieru",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/nCEfmeU.png"
   }, 
@@ -1386,7 +1386,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",     
     image: "https://i.imgur.com/yQb1OTh.png"
   }, 
@@ -1396,7 +1396,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/u71gWGp.png"
   }, 
@@ -1406,7 +1406,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/m5fw9qg.png"
   }, 
@@ -1416,7 +1416,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "神城卡莲",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/vh5lJy1.png"
   }, 
@@ -1426,7 +1426,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "风沢空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/YDXI5d2.png"
   }, 
@@ -1436,7 +1436,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/ZpMLRR6.png"
   }, 
@@ -1446,7 +1446,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <9月~10月>",             
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/e27AYf6.png"
   }, 
@@ -1456,7 +1456,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/clPqtuf.png"
   }, 
@@ -1466,7 +1466,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "和央Parin",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/kfLv7RV.png"
   }, 
@@ -1476,7 +1476,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/YLSSRbq.png"
   }, 
@@ -1486,7 +1486,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",  
+    size: "直径约56mm",  
     price: "473円(含税)",       
     image: "https://i.imgur.com/p32uJLL.png"
   }, 
@@ -1496,7 +1496,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "姬石来希",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/ydBhPzB.png"
   }, 
@@ -1506,7 +1506,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "月城爱弓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/mlJIDnE.png"
   }, 
@@ -1516,7 +1516,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/IF2rFcT.png"
   }, 
@@ -1526,7 +1526,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "白桦丽莎",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/pDtRHR5.png"
   }, 
@@ -1536,7 +1536,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "凛堂Taimu",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/xqFOiAA.png"
   }, 
@@ -1546,7 +1546,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "双叶亚里亚",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/LJPpNOs.png"
   }, 
@@ -1556,7 +1556,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "音城诺艾尔",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/h5IGUeW.png"
   }, 
@@ -1566,7 +1566,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <11月~12月>",              
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/H2CzAcY.png"
   }, 
@@ -1576,7 +1576,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/SP9WU9m.png"
   }, 
@@ -1586,7 +1586,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "凑美绪",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/j6Z9lfp.png"
   }, 
@@ -1596,7 +1596,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "梅小路响子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",         
     image: "https://i.imgur.com/UtqIFo9.png"
   }, 
@@ -1606,7 +1606,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "大地乃野",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",         
     image: "https://i.imgur.com/v6wWPyU.png"
   }, 
@@ -1616,7 +1616,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "堂岛妮娜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/pl9Lgkn.png"
   }, 
@@ -1626,7 +1626,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/1PfzOl2.png"
   }, 
@@ -1636,7 +1636,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "白银莉莉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/WIxujA1.png"
   }, 
@@ -1646,7 +1646,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "神谷紫苑",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/rGSd0rh.png"
   }, 
@@ -1656,7 +1656,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "凛堂Taimu",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/A661V9R.png"
   },
@@ -1666,7 +1666,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/yFlb2ZY.png"
   },
@@ -1676,7 +1676,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "栗六杏",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/NfLMN7G.png"
   },
@@ -1686,7 +1686,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "艾莉西亚·夏洛特",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/EKMiDxD.png"
   },
@@ -1696,7 +1696,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <1~2月>",              
     character: "白鸟姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/uxZW6ns.png"
   },
@@ -1706,7 +1706,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/vSxomPL.png"
   },
@@ -1716,7 +1716,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/udPcwkG.png"
   },
@@ -1726,7 +1726,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "日向绘麻",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/MwVuC33.png"
   },
@@ -1736,7 +1736,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "本谷栞",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/b6F20Rq.png"
   },
@@ -1746,7 +1746,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "音羽舞樱",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/NYEXKPs.png"
   },
@@ -1756,7 +1756,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/uRLGtH1.png"
   },
@@ -1766,7 +1766,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/Emn302k.png"
   },
@@ -1776,7 +1776,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "三轮光",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/1Yu08dH.png"
   },
@@ -1786,7 +1786,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/JZ28bng.png"
   },
@@ -1796,7 +1796,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/pI6wmcV.png"
   },
@@ -1806,7 +1806,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season2 <3~4月>",              
     character: "姬里玛利亚",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",       
     image: "https://i.imgur.com/iRcYYyX.png"
   },
@@ -1816,7 +1816,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3 C賞",
     character: "神崎美月，夏树未来",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "300円",       
     image: "https://i.imgur.com/7jsEEIJ.png"
   },
@@ -1826,7 +1826,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3 C賞",
     character: "音城塞拉,冴草纪伊,风沢空,姬里玛利亚",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "300円",       
     image: "https://i.imgur.com/JGZK1NE.png"
   },
@@ -1836,7 +1836,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3 C賞",
     character: "骑咲礼,艾尔莎·福特,花园绮罗",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "300円",       
     image: "https://i.imgur.com/EM6ryV5.png"
   },
@@ -1846,7 +1846,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3 C賞",
     character: "香澄夜空,如月翼,二阶堂柚子,白鸟姬",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     image: "https://i.imgur.com/srNtNFC.png"
   },
   {
@@ -1855,7 +1855,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと3」 C賞",
     character: "明日香未来,神城卡莲",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "300円",       
     image: "https://i.imgur.com/oz1hkbR.png"
   },
@@ -1865,7 +1865,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと4」 C賞",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "300円",       
     image: "https://i.imgur.com/O7N4HAk.png"
   },
@@ -1875,7 +1875,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと4」 C賞",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "300円",       
     image: "https://i.imgur.com/lDGzGJy.png"
   },
@@ -1885,7 +1885,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと4」 C賞",
     character: "姬里玛利亚",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "300円",       
     image: "https://i.imgur.com/mStJFYG.png"
   },
@@ -1895,7 +1895,7 @@ export const BASE_ITEMS = [{
     subtitle: "ホログラム缶バッチ 「ガシャポンくじ アイカツ!シリーズ あそーと4」 C賞",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "300円",       
     image: "https://i.imgur.com/oU8N8g8.png"
   },
@@ -1905,7 +1905,7 @@ export const BASE_ITEMS = [{
     subtitle: "WM Late Summer Collection 缶バッジセット",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "1,100円(set)",       
     image: "https://i.imgur.com/dKXcS1S.png"
   },
@@ -1915,7 +1915,7 @@ export const BASE_ITEMS = [{
     subtitle: "WM Late Summer Collection 缶バッジセット",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "1,100円(set)",       
     image: "https://i.imgur.com/j2fxK5M.png"
   },
@@ -1925,7 +1925,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションC ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/hjc1eXh.png"
   },
@@ -1935,7 +1935,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションC ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/2U2fwTR.png"
   },
@@ -1945,7 +1945,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションC ",
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/BygxqRM.png"
   },
@@ -1955,7 +1955,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションC ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/nHGbtMG.png"
   },
@@ -1965,7 +1965,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションC ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/ZHil7y5.png"
   },
@@ -1975,7 +1975,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションC ",
     character: "姬里玛利亚",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/kGrdAVS.png"
   },
@@ -1985,7 +1985,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションC ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/ilo0Mre.png"
   },
@@ -1995,7 +1995,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションC ",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/dHJXRSa.png"
   },
@@ -2005,7 +2005,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションA ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/7FFxeHf.png"
   },
@@ -2015,7 +2015,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションA ",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/yBRcRYz.png"
   },
@@ -2025,7 +2025,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションA ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/faMo28u.png"
   },
@@ -2035,7 +2035,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションA ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/9nNFXh6.png"
   },
@@ -2045,7 +2045,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションA ",
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/whjgr38.png"
   },
@@ -2055,7 +2055,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションA ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/DiRdF6u.png"
   },
@@ -2065,7 +2065,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションA ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/t8YLQZt.png"
   },
@@ -2075,7 +2075,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクションA ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,640円(含税)",       
     image: "https://i.imgur.com/WRLnm9B.png"
   },
@@ -2765,7 +2765,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 07/グラフアートイラスト 缶バッジ",
     character: "姬石来希",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/J65ZdWz.png"
   },
@@ -2775,7 +2775,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 07/グラフアートイラスト 缶バッジ",
     character: "神城卡莲",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/WQqdyUt.png"
   },
@@ -2785,7 +2785,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 07/グラフアートイラスト 缶バッジ",
     character: "音城诺艾尔",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/xuglHjk.png"
   },
@@ -2795,7 +2795,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 07/グラフアートイラスト 缶バッジ",
     character: "春风若叶",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/GSp2nM1.png"
   },
@@ -2805,7 +2805,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 07/グラフアートイラスト 缶バッジ",
     character: "明日香未来",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/GBhdEML.png"
   },
@@ -2815,7 +2815,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 07/グラフアートイラスト 缶バッジ",
     character: "天翔响",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/Nlfen3Q.png"
   },
@@ -2825,7 +2825,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 07/グラフアートイラスト 缶バッジ",
     character: "艾莉西亚·夏洛特",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/1Gby4jW.png"
   },
@@ -2835,7 +2835,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 06/グラフアートイラスト 缶バッジ",
     character: "蝶乃舞花",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/thvUolF.png"
   },
@@ -2845,7 +2845,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 06/グラフアートイラスト 缶バッジ",
     character: "友希爱音",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/8NazC9X.png"
   },
@@ -2855,7 +2855,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 06/グラフアートイラスト 缶バッジ",
     character: "凑美绪",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/y9AceQR.png"
   },
@@ -2865,7 +2865,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 06/グラフアートイラスト 缶バッジ",
     character: "日向绘麻",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/JSdqGIb.png"
   },
@@ -2875,7 +2875,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 06/グラフアートイラスト 缶バッジ",
     character: "白百合咲夜",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/gODEYLW.png"
   },
@@ -2885,7 +2885,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 06/グラフアートイラスト 缶バッジ",
     character: "白百合辉夜",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/ifvuw9K.png"
   },
@@ -2895,7 +2895,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ ＆アイカツオンパレード！ 06/グラフアートイラスト 缶バッジ",
     character: "玉置可可",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/9POhzQE.png"
   },
@@ -2905,7 +2905,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 02/チアver. トレーディング 缶バッジ",
     character: "姫乃Mieru",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",                                                   
     image: "https://i.imgur.com/aYEGhHo.png"
   },
@@ -2915,7 +2915,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 02/チアver. トレーディング 缶バッジ",
     character: "姫乃Mieru",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",                                                   
     image: "https://i.imgur.com/xMdp1wg.png"
   },
@@ -2925,7 +2925,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 02/チアver. トレーディング 缶バッジ",
     character: "真未梦Meh",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",                                                   
     image: "https://i.imgur.com/CcFO8Hy.png"
   },
@@ -2935,7 +2935,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 02/チアver. トレーディング 缶バッジ",
     character: "真未梦Meh",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/WCQdTKA.png"
   },
@@ -2945,7 +2945,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 02/チアver. トレーディング 缶バッジ",
     character: "和央Parin",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/3IOq9QD.png"
   },
@@ -2955,7 +2955,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 02/チアver. トレーディング 缶バッジ",
     character: "和央Parin",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/RaHbShh.png"
   },
@@ -2965,7 +2965,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 02/チアver. トレーディング 缶バッジ",
     character: "凛堂Taimu",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/RX4IMod.png"
   },
@@ -2975,7 +2975,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 02/チアver. トレーディング 缶バッジ",
     character: "凛堂Taimu",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/ybtEPUR.png"
   },
@@ -2985,7 +2985,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 03/トレーディング (場面写) 缶バッジ",
     character: "姫乃Mieru",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]2,750円(含税)",       
     image: "https://i.imgur.com/DOivKKh.png"
   },
@@ -2995,7 +2995,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 03/トレーディング (場面写) 缶バッジ",
     character: "真未梦Meh",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]2,750円(含税)",       
     image: "https://i.imgur.com/I3G4ceb.png"
   },
@@ -3005,7 +3005,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 03/トレーディング (場面写) 缶バッジ",
     character: "和央Parin",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]2,750円(含税)",       
     image: "https://i.imgur.com/g8QjuKV.png"
   },
@@ -3015,7 +3015,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 03/トレーディング (場面写) 缶バッジ",
     character: "凛堂Taimu",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]2,750円(含税)",       
     image: "https://i.imgur.com/Z3Kp2Kq.png"
   },
@@ -3025,7 +3025,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツアカデミー！ 03/トレーディング(場面写)缶バッジ",
     character: "姫乃Mieru,真未梦Meh,和央Parin,凛堂Taimu",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]2,750円(含税)",       
     image: "https://i.imgur.com/cxvUuoy.png"
   },
@@ -3035,7 +3035,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ 05/梅雨ver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "友希爱音",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/Is8lRj7.png"
   },
@@ -3045,7 +3045,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ 05/梅雨ver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "友希爱音",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/bupn4LV.png"
   },
@@ -3055,7 +3055,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ 05/梅雨ver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "凑美绪",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/z9AsDlY.png"
   },
@@ -3065,7 +3065,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ 05/梅雨ver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "凑美绪",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/WLdMjny.png"
   },
@@ -3075,7 +3075,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ 05/梅雨ver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "天翔响",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/DzcS3kw.png"
   },
@@ -3085,7 +3085,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ 05/梅雨ver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "天翔响",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/KrqJIg8.png"
   },
@@ -3095,7 +3095,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ 05/梅雨ver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "艾莉西亚·夏洛特",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/bkwORXO.png"
   },
@@ -3105,7 +3105,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！ 05/梅雨ver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "艾莉西亚·夏洛特",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/D8wHlJf.png"
   },
@@ -3115,7 +3115,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 10/イースターver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/v9WAM0v.png"
   },
@@ -3125,7 +3125,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 10/イースターver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/rHbiszp.png"
   },
@@ -3135,7 +3135,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 10/イースターver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/ydqiHcv.png"
   },
@@ -3145,7 +3145,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 10/イースターver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/Xr8F5vj.png"
   },
@@ -3155,7 +3155,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 10/イースターver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/dQfFYGl.png"
   },
@@ -3165,7 +3165,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 10/イースターver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "白鸟姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/DM8OqOk.png"
   },
@@ -3175,7 +3175,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 10/イースターver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",       
     image: "https://i.imgur.com/QZ1tjjP.png"
   },
@@ -3185,7 +3185,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツプラネット！ 03/ユニットver. トレーディング(グラフアートイラスト)缶バッジ",
     character: "音羽舞樱",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/3elGI1w.png"
   },
@@ -3195,7 +3195,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツプラネット！ 03/ユニットver. トレーディング(グラフアートイラスト)缶バッジ",
     character: "阳明咲",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/3vBhVHz.png"
   },
@@ -3205,7 +3205,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツプラネット！ 03/ユニットver. トレーディング(グラフアートイラスト)缶バッジ",
     character: "梅小路响子",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/Mr28Ixd.png"
   },
@@ -3215,7 +3215,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツプラネット！ 03/ユニットver. トレーディング(グラフアートイラスト)缶バッジ",
     character: "珠树琉璃",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/cP8g2wE.png"
   },
@@ -3225,7 +3225,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツプラネット！ 03/ユニットver. トレーディング(グラフアートイラスト)缶バッジ",
     character: "本谷栞",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/4Qvk66K.png"
   },
@@ -3235,7 +3235,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツプラネット！ 03/ユニットver. トレーディング(グラフアートイラスト)缶バッジ",
     character: "糸井纱良",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/bDrRj0c.png"
   },
@@ -3245,7 +3245,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツプラネット！ 03/ユニットver. トレーディング(グラフアートイラスト)缶バッジ",
     character: "月城爱弓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/CinPclU.png"
   },
@@ -3255,7 +3255,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツプラネット！ 03/ユニットver. トレーディング(グラフアートイラスト)缶バッジ",
     character: "栗六杏",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/QdSQeMX.png"
   },
@@ -3265,7 +3265,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 02/トレーディング(描き下ろしイラスト)缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/IR7mo4e.png"
   },
@@ -3275,7 +3275,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 02/トレーディング(描き下ろしイラスト)缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/DPfGgj1.png"
   },
@@ -3285,7 +3285,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 02/トレーディング(描き下ろしイラスト)缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/pPjmlwa.png"
   },
@@ -3295,7 +3295,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 03/トレーディング(ミニキャライラスト)缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/CqdX4A8.png"
   },
@@ -3305,7 +3305,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 03/トレーディング(ミニキャライラスト)缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/Xl7U7c2.png"
   },
@@ -3315,7 +3315,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 03/トレーディング(ミニキャライラスト)缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/kqKw4Lm.png"
   },
@@ -3325,7 +3325,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 03/トレーディング(ミニキャライラスト)缶バッジ",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/zn1aMgD.png"
   },
@@ -3335,7 +3335,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 03/トレーディング(ミニキャライラスト)缶バッジ",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/TMqEgkw.png"
   },
@@ -3345,7 +3345,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！ 03/トレーディング(ミニキャライラスト)缶バッジ",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/HNmOohb.png"
   },
@@ -3355,7 +3355,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 13/雪柄コーデver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/VcGgFT3.png"
   },
@@ -3365,7 +3365,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 13/雪柄コーデver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/LlQAeM4.png"
   },
@@ -3375,7 +3375,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 13/雪柄コーデver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/bIiVMus.png"
   },
@@ -3385,7 +3385,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 13/雪柄コーデver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://i.imgur.com/rq0Iblz.png"
   },
@@ -3395,7 +3395,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 13/雪柄コーデver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://imgbed.heliar.top/i/red7AzD5nW8Tj1P-.png"
   },
@@ -3405,7 +3405,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 13/雪柄コーデver. トレーディング(描き下ろしイラスト)缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",       
     image: "https://imgbed.heliar.top/i/fvB4dLJP3KEoLMq6.png"
   },
@@ -3415,7 +3415,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 08/オフィスガールver. トレーディング 缶バッジ",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://imgbed.heliar.top/i/vgNAJyYsbFGmt5e1.png"
   },
@@ -3425,7 +3425,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 08/オフィスガールver. トレーディング 缶バッジ",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://imgbed.heliar.top/i/ZYmgN4h5gE7-QVwv.png"
   },
@@ -3435,7 +3435,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 08/オフィスガールver. トレーディング 缶バッジ",
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/UecdtSr.png"
   },
@@ -3445,7 +3445,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 08/オフィスガールver. トレーディング 缶バッジ",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://imgbed.heliar.top/i/4RXcAB6kAVDu0IQR.png"
   },
@@ -3455,7 +3455,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 08/オフィスガールver. トレーディング 缶バッジ",
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://imgbed.heliar.top/i/gMI_6x8d0lkZTsum.png"
   },
@@ -3465,7 +3465,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 08/オフィスガールver. トレーディング 缶バッジ",
     character: "二阶堂柚子",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://imgbed.heliar.top/i/1_kHctJq8HOCPqOA.png"
   },
@@ -3475,7 +3475,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 08/オフィスガールver. トレーディング 缶バッジ",
     character: "白银莉莉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://imgbed.heliar.top/i/C9Uabq9yOi1XqnzC.png"
   },
@@ -3485,7 +3485,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 09/オフィスガールver. トレーディング 缶バッジ",
     character: "白鸟姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price:  "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/pMNqZui.png"
   },
@@ -3495,7 +3495,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 09/オフィスガールver. トレーディング 缶バッジ",
     character: "如月翼",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/RFEz4cu.png"
   },
@@ -3505,7 +3505,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 09/オフィスガールver. トレーディング 缶バッジ",
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/DJNcVw6.png"
   },
@@ -3515,7 +3515,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 09/オフィスガールver. トレーディング 缶バッジ",
     character: "骑咲礼",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/aqG7H8q.png"
   },
@@ -3525,7 +3525,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 09/オフィスガールver. トレーディング 缶バッジ",
     character: "香澄夜空",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/BLYCAoD.png"
   },
@@ -3535,7 +3535,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 09/オフィスガールver. トレーディング 缶バッジ",
     character: "双叶亚里亚",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/8IILnPR.png"
   },
@@ -3545,7 +3545,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 09/オフィスガールver. トレーディング 缶バッジ",
     character: "艾尔莎·福特",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/casbSqj.png"
   },
@@ -3785,7 +3785,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 08 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/lbzwVXW.png"
   },
@@ -3795,7 +3795,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 08 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/CY8ZEzC.png"
   },
@@ -3805,7 +3805,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 08 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "神谷紫苑",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/pDCr2O9.png"
   },
@@ -3815,7 +3815,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 08 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/HtZuAWH.png"
   },
@@ -3825,7 +3825,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 08 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/FSDbNWw.png"
   },
@@ -3835,7 +3835,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 08 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/ECHWoWc.png"
   },
@@ -3845,7 +3845,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 08 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/HLvEusy.png"
   },
@@ -3855,7 +3855,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 08 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "星宫莓",  
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/Xh3qC9I.png"
   },
@@ -3865,7 +3865,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/vLh9jOJ.png"
   },
@@ -3875,7 +3875,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/al3UjrQ.png"
   },
@@ -3885,7 +3885,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/Xsc3nMG.png"
   },
@@ -3895,7 +3895,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/qgdwdgi.png"
   },
@@ -3905,7 +3905,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/bKS0a0F.png"
   },
@@ -3915,7 +3915,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "姬里玛利亚",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/asRBzOl.png"
   },
@@ -3925,7 +3925,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/C5elYPH.png"
   },
@@ -3935,7 +3935,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/8jVFITg.png"
   },
@@ -3945,7 +3945,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 09 オフィスガールver. グラフアートイラスト缶バッジ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)",    
     image: "https://i.imgur.com/G85QzpD.png"
   },
@@ -3955,7 +3955,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 11/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",    
     image: "https://i.imgur.com/vRtK0sM.png"
   },
@@ -3965,7 +3965,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 11/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",    
     image: "https://i.imgur.com/EwGB2t5.png"
   },
@@ -3975,7 +3975,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 11/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "神谷紫苑",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",    
     image: "https://i.imgur.com/0vv55qa.png"
   },
@@ -3985,7 +3985,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 11/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "三轮光",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",    
     image: "https://i.imgur.com/v2rUpGy.png"
   },
@@ -3995,7 +3995,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 11/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",    
     image: "https://i.imgur.com/eo5NLDe.png"
   },
@@ -4005,7 +4005,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 11/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,300円(含税)",    
     image: "https://i.imgur.com/ytx3nNY.png"
   },
@@ -4015,7 +4015,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/2QmEpvS.png"
   },
@@ -4025,7 +4025,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/4i5SIns.png"
   },
@@ -4035,7 +4035,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/Jk8wn5d.png"
   },
@@ -4045,7 +4045,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/1DTvMb4.png"
   },
@@ -4055,7 +4055,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "姬里玛丽亚",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/Cqz0jix.png"
   },
@@ -4065,7 +4065,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/bA102Uw.png"
   },
@@ -4075,7 +4075,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",    
     image: "https://i.imgur.com/AoGQ49f.png"
   },
@@ -4085,7 +4085,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/8SdkERn.png"
   },
@@ -4095,7 +4095,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/CKqrY2x.png"
   },
@@ -4105,7 +4105,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/exg1E2B.png"
   },
@@ -4115,7 +4115,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "服部优",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/uz9iVrJ.png"
   },
@@ -4125,7 +4125,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/PB8MMX9.png"
   },
@@ -4135,7 +4135,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/2qJ5SrM.png"
   },
@@ -4145,7 +4145,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "大地乃野",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/9sWMswU.png"
   },
@@ -4155,7 +4155,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/ABirZMK.png"
   },
@@ -4165,7 +4165,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "白桦丽莎",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/wvVAVz6.png"
   },
@@ -4175,7 +4175,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/UywLF38.png"
   },
@@ -4185,7 +4185,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 12/スクールドレスver. (グラフアートイラスト)缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]6,050円(含税)",    
     image: "https://i.imgur.com/xxMDb1A.png"
   },
@@ -4845,7 +4845,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
     character: "如月翼",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",   
     image: "https://i.imgur.com/iTWEpp4.png"
   },
@@ -4855,7 +4855,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
     character: "白鸟姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",   
     image: "https://i.imgur.com/YqbwYhw.png"
   },
@@ -4865,7 +4865,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
     character: "香澄夜空",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",   
     image: "https://i.imgur.com/l1XhhBz.png"
   },
@@ -4875,7 +4875,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
     character: "艾尔莎·福特",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",   
     image: "https://i.imgur.com/gh8nBC9.png"
   },
@@ -4885,7 +4885,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
     character: "双叶亚里亚",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",   
     image: "https://i.imgur.com/ehXwMNu.png"
   },
@@ -4895,7 +4895,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",   
     image: "https://i.imgur.com/ynpetbf.png"
   },
@@ -4905,7 +4905,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",   
     image: "https://i.imgur.com/G61P5DI.png"
    },
@@ -4915,7 +4915,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",   
     image: "https://i.imgur.com/sRowB75.png"
    },
@@ -4925,7 +4925,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",   
     image: "https://i.imgur.com/DGC10ge.png"
    },
@@ -4935,7 +4935,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",   
     image: "https://i.imgur.com/Ew3VKys.png"
    },
@@ -4945,7 +4945,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",   
     image: "https://i.imgur.com/7Vf0Wqu.png"
    },
@@ -4955,7 +4955,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",   
     image: "https://i.imgur.com/PwKKEBY.png"
    },
@@ -4965,7 +4965,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",   
     image: "https://i.imgur.com/yJwNQ6n.png"
    },
@@ -4975,7 +4975,7 @@ export const BASE_ITEMS = [{
     subtitle: "AVIOT アイカツ！ イヤホン 缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "550円",   
     image: "https://i.imgur.com/HDaXsrL.png"
    },
@@ -6284,7 +6284,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/E6KSzLN.png"
     },
@@ -6294,7 +6294,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/yjMbZqJ.png"
     },
@@ -6304,7 +6304,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/v6APevi.png"
     },
@@ -6314,7 +6314,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/gkclUJo.png"
     },
@@ -6324,7 +6324,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/nbCFnuW.png"
     },
@@ -6334,7 +6334,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/QMyoava.png"
     },
@@ -6344,7 +6344,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/gJPvsBD.png"
     },
@@ -6354,7 +6354,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/QVO806o.png"
     },
@@ -6364,7 +6364,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/WzAcX2H.png"
     },
@@ -6374,7 +6374,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/GLTXwjS.png"
     },
@@ -6384,7 +6384,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/tXDtcjy.png"
     },
@@ -6394,7 +6394,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/vZybMFw.png"
     },
@@ -6404,7 +6404,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし カントリーワンピースver. トレーディンググリッター缶バッジ ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]605円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/MgIDxIl.png"
     },
@@ -6424,7 +6424,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "场贩购入BOX特典 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/XustEC4.png"
     },
@@ -6434,7 +6434,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/MMp0jIe.png"
     },
@@ -6444,7 +6444,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/F993tkG.png"
     },
@@ -6454,7 +6454,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/1QdWLa1.png"
     },
@@ -6464,7 +6464,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/ql0zLQ4.png"
     },
@@ -6474,7 +6474,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円 [BOX]8,470円(含税)",       
     image: "https://i.imgur.com/sMfURQV.png"
     },
@@ -6484,7 +6484,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/yVlzdqR.png"
     },
@@ -6494,7 +6494,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/EQfqBb2.png"
     },
@@ -6504,7 +6504,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/nx3qB9O.png"
     },
@@ -6514,7 +6514,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし レトロストライプver. トレーディング缶バッジ ",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/7zEixCe.png"
     },
@@ -6634,7 +6634,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/hwQaEPW.png"
     },
@@ -6644,7 +6644,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/DhAkC8a.png"
     },
@@ -6654,7 +6654,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/armEh95.png"
     },
@@ -6664,7 +6664,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/J6Z4L0y.png"
     },
@@ -6674,7 +6674,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/LufFgfI.png"
     },
@@ -6684,7 +6684,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/HlhBVCS.png"
     },
@@ -6694,7 +6694,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/ZlZZ72g.png"
     },
@@ -6704,7 +6704,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/4PNU6fl.png"
     },
@@ -6714,7 +6714,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/9eWOHCz.png"
     },
@@ -6724,7 +6724,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし ROUND1ver. トレーディング缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円(含税) [BOX]4,400円(含税)",       
     image: "https://i.imgur.com/4xz04wE.png"
     },
@@ -6804,7 +6804,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/7AbJYoQ.png"
     },
@@ -6814,7 +6814,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/8VoDzJV.png"
     },
@@ -6824,7 +6824,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/jTQW8gp.png"
     },
@@ -6834,7 +6834,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/NztRATe.png"
     },
@@ -6844,7 +6844,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/WC4To5j.png"
     },
@@ -6854,7 +6854,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/IhgsBv4.png"
     },
@@ -6864,7 +6864,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/Od8xQdL.png"
     },
@@ -6874,7 +6874,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/Rkyo8CZ.png"
     },
@@ -6884,7 +6884,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/Iy2ppnQ.png"
     },
@@ -6894,7 +6894,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/JKhclB8.png"
     },
@@ -6904,7 +6904,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/M0C0lxE.png"
     },
@@ -6914,7 +6914,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]495円 [BOX]5,940円(含税)",       
     image: "https://i.imgur.com/S6TrqvS.png"
     },
@@ -7004,7 +7004,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",    
     image: "https://i.imgur.com/0hF6R1N.png"
     },
@@ -7014,7 +7014,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",       
     image: "https://i.imgur.com/gQpOLmU.png"
     },
@@ -7024,7 +7024,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "姬里玛丽亚",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",       
     image: "https://i.imgur.com/6nPcTV2.png"
     },
@@ -7034,7 +7034,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",       
     image: "https://i.imgur.com/sWXKCQE.png"
     },
@@ -7044,7 +7044,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",       
     image: "https://i.imgur.com/gzzpsOd.png"
     },
@@ -7054,7 +7054,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",       
     image: "https://i.imgur.com/0mXNCCh.png"
     },
@@ -7064,7 +7064,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",       
     image: "https://i.imgur.com/7y2Nvix.png"
     },
@@ -7074,7 +7074,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",       
     image: "https://i.imgur.com/cSqRD7x.png"
     },
@@ -7084,7 +7084,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング Ani-Art clear label グリッター缶バッジ ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]594円 [BOX]5,346円(含税)",       
     image: "https://i.imgur.com/Nxelo8e.png"
     },
@@ -7094,7 +7094,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/SdScFMI.png"
     },
@@ -7104,7 +7104,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/FqY6FAC.png"
     },
@@ -7114,7 +7114,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/wGU8sMA.png"
     },
@@ -7124,7 +7124,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "姬里玛丽亚",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/7zMzDSb.png"
     },
@@ -7134,7 +7134,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/iBxNBsw.png"
     },
@@ -7144,7 +7144,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/g4F8Yfy.png"
     },
@@ -7154,7 +7154,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/a57LM8U.png"
     },
@@ -7164,7 +7164,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/WhMWyN1.png"
     },
@@ -7174,7 +7174,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ Ani-Art clear label 缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]473円 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/DQwnUoS.png"
     },
@@ -7204,7 +7204,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ 特典 ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "animate购入BOX特典 [BOX]4,257円(含税)",       
     image: "https://i.imgur.com/o4axf9H.png"
     },
@@ -7214,7 +7214,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "440円(含税) [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/pFHngmC.png"
     },
@@ -7224,7 +7224,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/FiN5W12.png"
     },
@@ -7234,7 +7234,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/44u5yqA.png"
     },
@@ -7244,7 +7244,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/N7rUxql.png"
     },
@@ -7254,7 +7254,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/87jzgwY.png"
     },    
@@ -7264,7 +7264,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/zIfRnjd.png"
     },    
@@ -7274,7 +7274,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/jL1wVSt.png"
     },    
@@ -7284,7 +7284,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/3HXhYoX.png"
     },    
@@ -7294,7 +7294,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディング缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]3,960円(含税)",       
     image: "https://i.imgur.com/KVSEQmA.png"
     },    
@@ -7304,7 +7304,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/1hnPKSi.png"
     },    
@@ -7314,7 +7314,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/C8u2gvw.png"
     },    
@@ -7324,7 +7324,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/HNGAabF.png"
     },    
@@ -7334,7 +7334,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/L3Dx5VV.png"
     },    
@@ -7344,7 +7344,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/vNGxOh0.png"
     },    
@@ -7354,7 +7354,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/kLtyUAw.png"
     },    
@@ -7364,7 +7364,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/v9S02xx.png"
     },    
@@ -7374,7 +7374,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]4,960円(含税)",       
     image: "https://i.imgur.com/CL5E8Ms.png"
     },   
@@ -7384,7 +7384,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしイラスト アニマルコーデver. トレーディングホログラム缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]4,950円(含税)",       
     image: "https://i.imgur.com/dWTd0EC.png"
     },   
@@ -7414,7 +7414,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/rSi2z90.png"
     },  
@@ -7424,7 +7424,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/TZdt5UZ.png"
     },  
@@ -7434,7 +7434,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/bUkjqLm.png"
     },  
@@ -7444,7 +7444,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/iPwgP2t.png"
     },  
@@ -7454,7 +7454,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/3YivVcq.png"
     },  
@@ -7464,7 +7464,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/hvugYQN.png"
     },  
@@ -7474,7 +7474,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/CFPsHj7.png"
     },  
@@ -7484,7 +7484,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/0HX3eSp.png"
     }, 
@@ -7494,7 +7494,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/RybVy36.png"
     }, 
@@ -7504,7 +7504,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/Kxi47NS.png"
     }, 
@@ -7514,7 +7514,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/erqt8wQ.png"
     }, 
@@ -7524,7 +7524,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろし チャイナドレスver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/87lPJz8.png"
     }, 
@@ -7554,7 +7554,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",   
     image: "https://i.imgur.com/pMu5RQL.png"
     }, 
@@ -7564,7 +7564,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/Cy6qBPM.png"
     }, 
@@ -7574,7 +7574,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/pYTx4pY.png"
     }, 
@@ -7584,7 +7584,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/a87y4eC.png"
     }, 
@@ -7594,7 +7594,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/tc0NQBP.png"
     }, 
@@ -7604,7 +7604,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/f8TWYqj.png"
     }, 
@@ -7614,7 +7614,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/yzI6Bug.png"
     }, 
@@ -7624,7 +7624,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/Pi7XDbo.png"
     }, 
@@ -7634,7 +7634,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/XkxBckP.png"
     }, 
@@ -7644,7 +7644,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/FqZpNtw.png"
     }, 
@@ -7654,7 +7654,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/1PsjDv0.png"
     }, 
@@ -7664,7 +7664,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 描き下ろしカジュアルロックver. トレーディング缶バッジ ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",       
     image: "https://i.imgur.com/ezvqxj5.png"
     }, 
@@ -7734,7 +7734,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/m5uQsEo.png"
     },
@@ -7744,7 +7744,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/Jd6FtpV.png"
     },
@@ -7754,7 +7754,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/cx8V7Co.png"
     },
@@ -7764,7 +7764,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ ",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/vJRJV0T.png"
     },
@@ -7774,7 +7774,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ",
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/M3RRY9a.png"
     },
@@ -7784,7 +7784,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/cj0rjqg.png"
     },
@@ -7794,7 +7794,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/RlOZO46.png"
     },
@@ -7804,7 +7804,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/iSOJ2QF.png"
     },
@@ -7814,7 +7814,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/AdCWu08.png"
     },
@@ -7824,7 +7824,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/9GiRM1n.png"
     },
@@ -7834,7 +7834,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ",
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/4zYsbvB.png"
     },
@@ -7844,7 +7844,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし 袴ver. トレーディング和紙缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/Jfe4Ljd.png"
     },
@@ -7854,7 +7854,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし いちご&ユリカ&さくら 袴ver. 和紙缶バッジ イベント限定特典",
     character: "星宫莓，北大路樱，藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "场贩购入BOX特典 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/EhSkHhx.png"
     },
@@ -7864,7 +7864,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY ～未来へのSTARWAY～ 浅草花やしき 描き下ろし あかり&スミレ&みやび 袴ver. 和紙缶バッジ AMNIBUS＆ARMA BIANCA＆アニメイト限定特典",
     character: "大空明，冰上堇，藤原雅",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "通贩购入BOX特典 [BOX]6,600円(含税)",       
     image: "https://i.imgur.com/Ip9mm4e.png"
     },
@@ -7874,7 +7874,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ 特典",
     character: "星宫莓，大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "场贩购入BOX特典 [BOX]5,490円(含税)",       
     image: "https://i.imgur.com/Zrtddgg.png"
     },
@@ -7884,7 +7884,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ 10th STORY～未来へのSTARWAY～描き下ろし 歩みver. トレーディング缶バッジ 特典",
     character: "紫吹兰，藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "场贩购入BOX特典 [BOX]5,490円(含税)",       
     image: "https://i.imgur.com/UdjmPun.png"
     },
@@ -7894,7 +7894,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "白桦丽莎",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/gwgD7bS.png"
     },
@@ -7904,7 +7904,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "大空明",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/JInD9AB.png"
     },
@@ -7914,7 +7914,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/FeeWp9S.png"
     },
@@ -7924,7 +7924,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/crkhxEC.png"
     },
@@ -7934,7 +7934,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/9wzZ1pF.png"
     },
@@ -7944,7 +7944,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/6KpFOMx.png"
     },
@@ -7954,7 +7954,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "大地乃野",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/LplCflS.png"
     },
@@ -7964,7 +7964,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/VZfoU8D.png"
     },
@@ -7974,7 +7974,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ キャラバッジコレクション B",
     character: "大空明",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     price: "[单个]300円+税 [BOX]2,970円(含税)",       
     image: "https://i.imgur.com/pY9gReU.png"
     },
@@ -7984,9 +7984,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
-    price: "385円(含税)(含税)",       
-    image: "https://i.imgur.com/wz7Mg7Z.png"
+    size: "直径约56mm",
+    price: "385円(含税)",       
+    image: "https://i.imgur.com/BrWsx6x.png"
     },
     {
     id: 798,
@@ -7994,9 +7994,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 56mm",
-    price: "385円(含税)(含税)",       
-    image: "https://i.imgur.com/NqH59sy.png"
+    size: "直径约56mm",
+    price: "385円(含税)",       
+    image: "https://i.imgur.com/CoIzds2.png"
     },
     {
     id: 799,
@@ -8004,9 +8004,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "月城爱弓",
     type: "徽章",
-    size: "直径约 56mm",
-    price: "385円(含税)(含税)",       
-    image: "https://i.imgur.com/POxqxsF.png"
+    size: "直径约56mm",
+    price: "385円(含税)",       
+    image: "https://i.imgur.com/X0EUWQ1.png"
     },
     {
     id: 800,
@@ -8014,9 +8014,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
-    price: "385円(含税)(含税)",       
-    image: "https://i.imgur.com/PAuCl0c.png"
+    size: "直径约56mm",
+    price: "385円(含税)",       
+    image: "https://i.imgur.com/ATlcKLV.png"
     },
     {
     id: 801,
@@ -8024,9 +8024,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "本谷栞",
     type: "徽章",
-    size: "直径约 56mm",
-    price: "385円(含税)(含税)",       
-    image: "https://i.imgur.com/d3Lpwqp.png"
+    size: "直径约56mm",
+    price: "385円(含税)",       
+    image: "https://i.imgur.com/kNhqVt5.png"
     },
     {
     id: 802,
@@ -8034,9 +8034,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "阳明咲",
     type: "徽章",
-    size: "直径约 56mm",
-    price: "385円(含税)(含税)",       
-    image: "https://i.imgur.com/iZlDIfW.png"
+    size: "直径约56mm",
+    price: "385円(含税)",       
+    image: "https://i.imgur.com/lctVbuh.png"
     },
     {
     id: 803,
@@ -8044,9 +8044,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/JGgJx1l.png"
+    image: "https://i.imgur.com/LTgcF3J.png"
     },
     {
     id: 804,
@@ -8054,9 +8054,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
-   price: "385円(含税)",  
-    image: "https://i.imgur.com/ClOlNHJ.png"
+    size: "直径约56mm",
+    price: "385円(含税)",  
+    image: "https://i.imgur.com/uM2LuVN.png"
     },
     {
     id: 805,
@@ -8064,9 +8064,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/7BxO9j4.png"
+    image: "https://i.imgur.com/CVqfLkq.png"
     },
     {
     id: 806,
@@ -8074,9 +8074,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "珠树琉璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/Q2d7Bmp.png"
+    image: "https://i.imgur.com/C6XCyPm.png"
     },
     {
     id: 807,
@@ -8084,9 +8084,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/4AgbYGL.png"
+    image: "https://i.imgur.com/mlorQtB.png"
     },
     {
     id: 808,
@@ -8094,9 +8094,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/8CLeLer.png"
+    image: "https://i.imgur.com/2Dt440c.png"
     },
     {
     id: 809,
@@ -8104,9 +8104,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/ADIw0LP.png"
+    image: "https://i.imgur.com/TC2mEy0.png"
     },
     {
     id: 810,
@@ -8114,9 +8114,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/UxVFxxP.png"
+    image: "https://i.imgur.com/miCVXPB.png"
     },
     {
     id: 811,
@@ -8124,9 +8124,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/4i82uAp.png"
+    image: "https://i.imgur.com/vSXXSND.png"
     },
     {
     id: 812,
@@ -8134,9 +8134,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "音羽舞樱",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/JaiTdEB.png"
+    image: "https://i.imgur.com/PyueCDr.png"
     },
     {
     id: 813,
@@ -8144,9 +8144,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "梅小路响子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/Nxnir8g.png"
+    image: "https://i.imgur.com/F3nvDaq.png"
     },
     {
     id: 814,
@@ -8154,9 +8154,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/K0Zbqvn.png"
+    image: "https://i.imgur.com/WVFHddu.png"
     },
     {
     id: 815,
@@ -8164,9 +8164,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "糸井纱良",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/FOvedBX.png"
+    image: "https://i.imgur.com/CnDoffv.png"
     },
     {
     id: 816,
@@ -8174,9 +8174,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "栗六杏",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/j9QOq7L.png"
+    image: "https://i.imgur.com/D8xB3AE.png"
     },
     {
     id: 817,
@@ -8184,9 +8184,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/R2uye5k.png"
+    image: "https://i.imgur.com/qgzlJLZ.png"
     },
     {
     id: 818,
@@ -8194,9 +8194,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/e2z5yxK.png"
+    image: "https://i.imgur.com/uDFndiW.png"
     },
     {
     id: 819,
@@ -8204,9 +8204,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/BTrLxhH.png"
+    image: "https://i.imgur.com/uB95gic.png"
     },
     {
     id: 820,
@@ -8214,9 +8214,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！＆アイカツプラネット トレーディング缶バッジ -Stage-",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "385円(含税)",  
-    image: "https://i.imgur.com/xnW41BH.png"
+    image: "https://i.imgur.com/AlXR1sG.png"
     },
     {
     id: 821,
@@ -8224,7 +8224,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/Oi2rkj1.png"
     },
@@ -8234,7 +8234,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/ORWQ6uY.png"
     },
@@ -8244,7 +8244,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/NGHLgo1.png"
     },
@@ -8254,7 +8254,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "白桦丽莎",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/mlO3TmF.png"
     },
@@ -8264,7 +8264,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "大地乃野",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://imgur.com/a2zKjb5.png"
     },
@@ -8274,7 +8274,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/0lIUJsX.png"
     },
@@ -8284,7 +8284,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/kTjtpWC.png"
     },
@@ -8294,7 +8294,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://imgur.com/KYcs2aT.png"
     },
@@ -8304,7 +8304,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "神谷紫苑",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://imgur.com/vkcsJrB.png"
     },
@@ -8314,7 +8314,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/S8kjpx3.png"
     },
@@ -8324,7 +8324,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://imgur.com/KO2zEd2.png"
     },
@@ -8334,7 +8334,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://imgur.com/bPXC2ks.png"
     },
@@ -8344,7 +8344,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/LISREoI.png"
     },
@@ -8354,7 +8354,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "堂岛妮娜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/n7AJty3.png"
     },
@@ -8364,7 +8364,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/vqVMMKL.png"
     },
@@ -8374,7 +8374,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/rbQ9QIR.png"
     },
@@ -8384,7 +8384,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/6X0Jolk.png"
     },
@@ -8394,7 +8394,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/mDYmBFF.png"
     },
@@ -8404,7 +8404,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/f5FrLcn.png"
     },
@@ -8414,7 +8414,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/hkHUlVX.png"
     },
@@ -8424,7 +8424,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/a20dwAb.png"
     },
@@ -8434,7 +8434,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/6Jh70Oe.png"
     },
@@ -8444,7 +8444,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/Ukj31ZY.png"
     },
@@ -8454,7 +8454,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ -Stage! 2025-",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "440円(含税)",  
     image: "https://i.imgur.com/IdGWQpi.png"
     },
@@ -8464,7 +8464,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ ～Link Ribbon～",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/jPueeNf.png"
     },
@@ -8474,7 +8474,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ ～Link Ribbon～",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/dwlU1NZ.png"
     },
@@ -8484,7 +8484,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ ～Link Ribbon～",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/oYwSKdj.png"
     },
@@ -8494,7 +8494,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ ～Link Ribbon～",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/1KOJIYM.png"
     },
@@ -8504,7 +8504,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ ～Link Ribbon～",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/n6nhJg2.png"
     },
@@ -8514,7 +8514,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ ～Link Ribbon～",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/wvgJVqt.png"
     },
@@ -8524,7 +8524,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ ～Link Ribbon～",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/Prk0tx9.png"
     },
@@ -8534,7 +8534,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ ～Link Ribbon～",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/IjKalVG.png"
     },
@@ -8544,7 +8544,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツスターズ！BOX",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/UO8Xnyt.png"
     },
@@ -8554,7 +8554,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツスターズ！BOX",
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/C5zBdQs.png"
     },
@@ -8564,7 +8564,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツスターズ！BOX",
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/vhre8AY.png"
     },
@@ -8574,7 +8574,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツスターズ！BOX",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/GYjdUFx.png"
     },
@@ -8584,7 +8584,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツスターズ！BOX",
     character: "白鸟姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/L3PWIdq.png"
     },
@@ -8594,7 +8594,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツスターズ！BOX",
     character: "白银莉莉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/Z5XdnTh.png"
     },
@@ -8604,7 +8604,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツスターズ！BOX",
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/hUZI2x9.png"
     },
@@ -8614,7 +8614,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツスターズ！BOX",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
    price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/LChqh64.png"
     },
@@ -8624,7 +8624,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツ！BOX",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]2,640円(含税)",  
     image: "https://i.imgur.com/kFBXwnJ.png"
     },
@@ -8634,7 +8634,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツ！BOX",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]2,640円(含税)",  
     image: "https://i.imgur.com/pEEqeQf.png"
     },
@@ -8644,7 +8644,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツ！BOX",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]2,640円(含税)",  
     image: "https://i.imgur.com/hoCykjz.png"
     },
@@ -8654,7 +8654,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツ！BOX",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]2,640円(含税)",  
     image: "https://i.imgur.com/GwUnx71.png"
     },
@@ -8664,7 +8664,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツ！BOX",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]2,640円(含税)",  
     image: "https://i.imgur.com/e0VECHp.png"
     },
@@ -8674,7 +8674,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定】アイカツ！シリーズ トレーディング缶バッジ～セピア・ラ・モード～アイカツ！BOX",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]2,640円(含税)",  
     image: "https://i.imgur.com/b9CNbI0.png"
     },
@@ -8684,7 +8684,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "二阶堂柚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/LShFB4c.png"
     },
@@ -8694,7 +8694,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/nOwu0Jo.png"
     },
@@ -8704,7 +8704,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "白银莉莉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/KnZgJ5i.png"
     },
@@ -8714,7 +8714,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/FNhn1bt.png"
     },
@@ -8724,7 +8724,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/6FCCahg.png"
     },
@@ -8734,7 +8734,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "双叶亚里亚",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/Rt7Vn4k.png"
     },
@@ -8744,7 +8744,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/8JmHCZc.png"
     },
@@ -8754,7 +8754,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "骑咲礼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/xGJDkWh.png"
     },
@@ -8764,7 +8764,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "如月翼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/LFx1Tcr.png"
     },
@@ -8774,7 +8774,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/hbNj23k.png"
     },
@@ -8784,7 +8784,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "艾尔莎·福特",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/LsLGt0O.png"
     },
@@ -8794,7 +8794,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "香澄夜空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/D0cGjcG.png"
     },
@@ -8804,7 +8804,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "白鸟姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/WiExInQ.png"
     },
@@ -8814,7 +8814,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ トレ－ディング缶バッジ-Stage!2026-",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]6,160円(含税)",  
     image: "https://i.imgur.com/rse0o8C.png"
     },
@@ -8824,7 +8824,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！ トレーディング缶バッジ -Flower-",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/OU6fVUU.png"
     },
@@ -8834,7 +8834,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！ トレーディング缶バッジ -Flower-",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/Wvvn8RF.png"
     },
@@ -8844,7 +8844,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！ トレーディング缶バッジ -Flower-",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/MdVkyu9.png"
     },
@@ -8854,7 +8854,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！ トレーディング缶バッジ -Flower-",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/VNxA2DD.png"
     },
@@ -8864,7 +8864,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！ トレーディング缶バッジ -Flower-",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/gkET2R9.png"
     },
@@ -8874,7 +8874,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！ トレーディング缶バッジ -Flower-",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/YwaeJyY.png"
     },
@@ -8884,7 +8884,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！ トレーディング缶バッジ -Flower-",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/O6ziMvQ.png"
     },
@@ -8894,7 +8894,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！ トレーディング缶バッジ -Flower-",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/MofL1L2.png"
     },
@@ -8904,7 +8904,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ～Girly RED～-",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/iHJacjO.png"
     },
@@ -8914,7 +8914,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ～Girly RED～-",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/Sw7WFVy.png"
     },
@@ -8924,7 +8924,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ～Girly RED～-",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/cZgI809.png"
     },
@@ -8934,7 +8934,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ～Girly RED～-",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/eG4ddyq.png"
     },
@@ -8944,7 +8944,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ～Girly RED～-",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/7WmfeWm.png"
     },
@@ -8954,7 +8954,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ～Girly RED～-",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/drM1oqd.png"
     },
@@ -8964,7 +8964,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ～Girly RED～-",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/Oapo05h.png"
     },
@@ -8974,7 +8974,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ トレーディング缶バッジ～Girly RED～-",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "[单个]440円 [BOX]3,520円(含税)",  
     image: "https://i.imgur.com/uzhvXVS.png"
     },
@@ -8984,7 +8984,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー A",
     character: "白银莉莉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://imgur.com/3Xpn0IO.png"
     },
@@ -8994,7 +8994,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー A",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
       price: "770円(含税)",  
     image: "https://imgur.com/aeW6OBJ.png"
     },
@@ -9004,7 +9004,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー A",
     character: "二阶堂柚子，白银莉莉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/9ynlwLD.png"
     },
@@ -9014,7 +9014,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー A",
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/JnaCios.png"
     },
@@ -9024,7 +9024,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー A",
     character: "骑咲礼,双叶亚里亚,花园绮罗",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/cpccGlh.png"
     },
@@ -9034,7 +9034,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー A",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/jMjdcFa.png"
     },
@@ -9044,7 +9044,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー B",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/V7Wo82E.png"
     },
@@ -9054,7 +9054,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー B",
     character: "骑咲礼",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/YFF31dP.png"
     },
@@ -9064,7 +9064,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー B",
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/klRHkmw.png"
     },
@@ -9074,7 +9074,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー B",
     character: "如月翼,白鸟姬,香澄夜空,二阶堂柚子",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/Gejd2KJ.png"
     },
@@ -9084,7 +9084,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー B",
     character: "香澄真昼,虹野梦,七仓小春,樱庭劳拉,早乙女亚子,",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/0A0vekD.png"
     },
@@ -9094,7 +9094,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ チェスクッキー B",
     character: "虹野梦,结城昂",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/ahrGyW0.png"
     },
@@ -9104,7 +9104,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！- トレーディング缶バッジ～Dream harmony！～",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",
     image: "https://i.imgur.com/Ikmz4ME.png"
     },
@@ -9114,7 +9114,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！- トレーディング缶バッジ～Dream harmony！～",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",
     image: "https://i.imgur.com/AQ7HhJx.png"
     },
@@ -9124,7 +9124,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！- トレーディング缶バッジ～Dream harmony！～",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",
     image: "https://i.imgur.com/QHVV4YY.png"
     },
@@ -9134,7 +9134,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！- トレーディング缶バッジ～Dream harmony！～",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",
     image: "https://i.imgur.com/1CZtOJq.png"
     },
@@ -9144,7 +9144,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！- トレーディング缶バッジ～Dream harmony！～",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",
     image: "https://i.imgur.com/YKfQLVD.png"
     },
@@ -9154,7 +9154,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！- トレーディング缶バッジ～Dream harmony！～",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]440円 [BOX]5,280円(含税)",
     image: "https://i.imgur.com/dwVocUo.png"
     },
@@ -9164,7 +9164,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×プリパラ THE MOVIE -出会いのキセキ！- トレーディング缶バッジ～Dream harmony！～",
     character: "大空明,冰上堇,新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "animate购入BOX特典 [BOX]5,280円(含税)",
     image: "https://i.imgur.com/rAYfKPl.png"
     },
@@ -9174,7 +9174,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.A",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/Gj1kI3O.png"
     },
@@ -9184,7 +9184,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.A",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/qbNfiz7.png"
     },
@@ -9194,7 +9194,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.A",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/kHko2Fq.png"
     },
@@ -9204,7 +9204,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.A",
     character: "大空明,冰上堇",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/CbWIn1g.png"
     },
@@ -9214,7 +9214,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.A",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/KKiQ2KS.png"
     },
@@ -9224,7 +9224,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.A",
     character: "紫吹兰,雾矢葵",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/ZHjKQYX.png"
     },
@@ -9234,7 +9234,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.B",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/c1DUXMV.png"
     },
@@ -9244,7 +9244,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.B",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/u86Jcoz.png"
     },
@@ -9254,7 +9254,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.B",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/0xBjwbp.png"
     },
@@ -9264,7 +9264,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.B",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/b1JDaIF.png"
     },
@@ -9274,7 +9274,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.B",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/5lftabF.png"
     },
@@ -9284,7 +9284,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チョコインサブレ BOX.B",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/nY0djak.png"
     },
@@ -9294,7 +9294,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "有栖川乙女，藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/rSiIENb.png"
     },
@@ -9304,7 +9304,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "星宫莓,有栖川乙女,雾矢葵,紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/dOoHaVV.png"
     },
@@ -9314,7 +9314,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/ayoPHU6.png"
     },
@@ -9324,7 +9324,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/QPWcjl0.png"
     },
@@ -9334,7 +9334,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/eyeyw5Z.png"
     },
@@ -9344,7 +9344,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/LramuLj.png"
     },
@@ -9354,7 +9354,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "凉川直人",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/jlZmH4R.png"
     },
@@ -9364,7 +9364,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/oEAQhR2.png"
     },
@@ -9374,7 +9374,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "黑泽凛,天羽圆香",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/jURZCrN.png"
     },
@@ -9384,7 +9384,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "新条雏姬,大空明,冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/7x2c7g6.png"
     },
@@ -9394,7 +9394,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/oGxZ1px.png"
     },
@@ -9404,7 +9404,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "濑名翼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/uzT3Hbl.png"
     },
@@ -9414,7 +9414,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "虹野梦,结城昂",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/tmXxVoL.png"
     },
@@ -9424,7 +9424,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/HzcfpA5.png"
     },
@@ -9434,7 +9434,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/svUqcBV.png"
     },
@@ -9444,7 +9444,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/tMjFh1z.png"
     },
@@ -9454,7 +9454,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/hCQ1Vlx.png"
     },
@@ -9464,7 +9464,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.A",
     character: "香澄真昼,香澄夜空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/bSuDoxh.png"
     },
@@ -9474,7 +9474,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/sYYARDo.png"
     },
@@ -9484,7 +9484,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "香澄真昼,骑咲礼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/lU58Gpf.png"
     },
@@ -9494,7 +9494,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "骑咲礼,艾尔莎·福特",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/Fk7UK0I.png"
     },
@@ -9504,7 +9504,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/Pcs8i7o.png"
     },
@@ -9514,7 +9514,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/YnV5IB3.png"
     },
@@ -9524,7 +9524,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！チーズソフトクッキー ～Summer Memorial～ BOX.B",
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
      price: "990円(含税)",  
     image: "https://i.imgur.com/HKYiwyH.png"
     },
@@ -9534,7 +9534,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/Sm3lkQ9.png"
     },
@@ -9544,7 +9544,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "星宫莓,雾矢葵,有栖川乙女,紫吹兰",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/rrQ6cYf.png"
     },
@@ -9554,7 +9554,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "紫吹兰,藤堂尤里卡,音城塞拉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/z9Tytt4.png"
     },
@@ -9564,7 +9564,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/PbuAfSD.png"
     },
@@ -9583,7 +9583,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "大空明,红林珠璃",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/DtHNw2s.png"
     },
@@ -9593,7 +9593,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "雾矢葵,有栖川乙女",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/yTQtBFA.png"
     },
@@ -9603,7 +9603,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/ZMqUcpO.png"
     },
@@ -9613,7 +9613,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/HEJtAx1.png"
     },
@@ -9623,7 +9623,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
      price: "770円(含税)",  
     image: "https://i.imgur.com/NiYAOel.png"
     },
@@ -9753,7 +9753,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ! あかりGeneration×マリオンクレープ 描き下ろし トレーディング 缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/niaz7Jh.png"
     },
@@ -9763,7 +9763,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ! あかりGeneration×マリオンクレープ 描き下ろし トレーディング 缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/UQfSRrD.png"
     },
@@ -9773,7 +9773,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ! あかりGeneration×マリオンクレープ 描き下ろし トレーディング 缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/Rtg8BnV.png"
     },
@@ -9783,7 +9783,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ! あかりGeneration×マリオンクレープ 描き下ろし トレーディング 缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/HgdhalC.png"
     },
@@ -9793,7 +9793,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ! あかりGeneration×マリオンクレープ 描き下ろし トレーディング 缶バッジ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/08RsyK2.png"
     },
@@ -9803,7 +9803,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ! あかりGeneration×マリオンクレープ 描き下ろし トレーディング 缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "[单个]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/19CvzJM.png"
     },
@@ -9813,7 +9813,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×マリオンクレープ 描きおろしトレーディング缶バッジ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "600円(含税)", 
     image: "https://i.imgur.com/QFhcRyb.png"
     },
@@ -9823,7 +9823,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×マリオンクレープ 描きおろしトレーディング缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "600円(含税)", 
     image: "https://i.imgur.com/ikxf8GH.png"
     },
@@ -9833,7 +9833,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×マリオンクレープ 描きおろしトレーディング缶バッジ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "600円(含税)", 
     image: "https://i.imgur.com/bAC3LaG.png"
     },
@@ -9843,7 +9843,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×マリオンクレープ 描きおろしトレーディング缶バッジ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "600円(含税)", 
     image: "https://i.imgur.com/Ldpnr1N.png"
     },
@@ -9853,7 +9853,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×マリオンクレープ 描きおろしトレーディング缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "600円(含税)", 
     image: "https://i.imgur.com/1kX3PGJ.png"
     },
@@ -9863,7 +9863,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！×マリオンクレープ 描きおろしトレーディング缶バッジ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "600円(含税)", 
     image: "https://i.imgur.com/3n26CJN.png"
     },
@@ -9873,7 +9873,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！14/コンプリートセット 缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
 
     image: "https://i.imgur.com/R8ttxsL.png"
     },
@@ -9883,7 +9883,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！14/コンプリートセット 缶バッジ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)", 
     image: "https://i.imgur.com/JYCnBte.png"
     },
@@ -9893,7 +9893,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！14/コンプリートセット 缶バッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)", 
     image: "https://i.imgur.com/UdavwDG.png"
     },
@@ -9903,7 +9903,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！14/コンプリートセット 缶バッジ",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)", 
     image: "https://i.imgur.com/1cCkUhb.png"
     },
@@ -9913,7 +9913,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！14/コンプリートセット 缶バッジ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)", 
     image: "https://i.imgur.com/2cJQZ6L.png"
     },
@@ -9923,7 +9923,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！14/コンプリートセット 缶バッジ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)", 
     image: "https://i.imgur.com/RnCLEwX.png"
     },
@@ -9933,7 +9933,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！14/コンプリートセット 缶バッジ",
     character: "姬里玛丽亚",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)", 
     image: "https://i.imgur.com/WiLvYmN.png"
     },
@@ -9943,7 +9943,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！14/コンプリートセット 缶バッジ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]4,400円(含税)", 
     image: "https://i.imgur.com/gkXZEQh.png"
     },
@@ -10263,7 +10263,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "夏树未来",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/cCe2fqO.png",
     images: [
@@ -10278,7 +10278,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "虹野梦,樱庭劳拉,香澄真昼",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/ASrSEHI.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -10289,7 +10289,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/drNVqnn.png",
     images: [
@@ -10304,7 +10304,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/mdwnx3a.png",
     images: [
@@ -10319,7 +10319,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/aQYb8nz.png",
     images: [
@@ -10334,7 +10334,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/pV1rqXI.png",
     images: [
@@ -10349,7 +10349,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/pV1rqXI.png",
     images: [
@@ -10364,7 +10364,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/XAuu4q0.png",
     images: [
@@ -10379,7 +10379,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/ft4pEoB.png",
     images: [
@@ -10394,7 +10394,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/5pEblkK.png",
     images: [
@@ -10409,7 +10409,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/5pEblkK.png",
     images: [
@@ -10424,7 +10424,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/NykwmFe.png",
     images: [
@@ -10439,7 +10439,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/U18TsDL.png",
     images: [
@@ -10454,7 +10454,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "大地乃野",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/IA6A5DR.png",
     images: [
@@ -10469,7 +10469,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "白桦丽莎",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/A3EwtQw.png",
     images: [
@@ -10484,7 +10484,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/Rzh1eLs.png",
     images: [
@@ -10498,7 +10498,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/vBSRyW5.png",
     images: [
@@ -10513,7 +10513,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "堂岛妮娜",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/8iHvk0K.png",
     images: [
@@ -10527,7 +10527,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/vsZvUsu.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -10540,7 +10540,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/CRK7mej.png",
     images: [
@@ -10554,7 +10554,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/mKBziXf.png",
     images: [
@@ -10568,7 +10568,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！トレーディングジャケバッジ",
     character: "姬里玛丽亚",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/mKBziXf.png",
     images: [
@@ -10582,7 +10582,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "姬里玛丽亚",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/X9afoJ5.png",
     images: [
@@ -10597,7 +10597,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
      price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/zVb5hMs.png",
     images: [
@@ -10612,7 +10612,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/FYsRsBF.png",
     images: [
@@ -10627,7 +10627,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/K5ttBTX.png",
     images: [
@@ -10642,7 +10642,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/KD4YyT9.png",
     images: [
@@ -10657,7 +10657,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,080円 再贩1,500円(含税)", 
     image: "https://i.imgur.com/KSYeY2P.png",
     images: [
@@ -10672,7 +10672,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,080円 再贩1,500円(含税)", 
     image: "https://i.imgur.com/KFYd4PJ.png",
     images: [
@@ -10687,7 +10687,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/CQHpdqz.png",
     images: [
@@ -10702,7 +10702,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/Hxfeu0W.png",
     images: [
@@ -10717,7 +10717,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/DMm9vEZ.png",
     images: [
@@ -10732,7 +10732,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/7XQSWiM.png",
     images: [
@@ -10747,7 +10747,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,080円 再贩1,500円(含税)", 
     image: "https://i.imgur.com/Xbu8UXF.png",
     images: [
@@ -10762,7 +10762,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/TquL3wv.png",
     images: [
@@ -10777,7 +10777,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/3O2guDP.png",
     images: [
@@ -10792,7 +10792,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/3O2guDP.png",
     images: [
@@ -10807,7 +10807,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/eXe7Y6B.png",
     images: [
@@ -10822,7 +10822,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/Z80g6Mq.png",
     images: [
@@ -10837,7 +10837,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/teuhcnh.png",
     images: [
@@ -11284,7 +11284,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/oHw842e.png",
     images: [
@@ -11299,7 +11299,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "初版1,000円+税 再贩1,500円(含税)", 
     image: "https://i.imgur.com/7C5ZJO3.png",
     images: [
@@ -11314,7 +11314,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "堂岛妮娜",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "1,500円(含税)", 
     image: "https://i.imgur.com/4FwOGFs.png"
     },
@@ -11324,7 +11324,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルハンカチセット ",
     character: "大地乃野,白桦丽莎",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "1,500円(含税)", 
     image: "https://i.imgur.com/9FU1Kx3.png"
     },
@@ -11334,7 +11334,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "夏树未来,神崎美月",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/gTVimq6.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11345,7 +11345,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "虹野梦，艾尔莎·福特",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/Z4EUtl7.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11356,7 +11356,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "虹野梦，双叶亚里亚",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/NAsW6mB.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11367,7 +11367,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓，藤堂尤里卡",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/dJO5GdC.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11378,7 +11378,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/fwogPJW.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11389,7 +11389,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,虹野梦,大空明",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/YN8O8M8.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11400,7 +11400,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "骑咲礼,艾尔莎·福特,双叶亚里亚,花园绮罗",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/VfTfWAO.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11411,7 +11411,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "二阶堂柚子,早乙女亚子",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/3OgqGl5.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11422,7 +11422,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "香澄夜空,如月翼",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/O0TomQN.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11433,7 +11433,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "红林珠璃,冰上堇",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/DYxhHJI.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11444,7 +11444,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "白鸟姬,虹野梦,樱庭劳拉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/zNBt55a.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11455,7 +11455,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "虹野梦,樱庭劳拉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/yvnCcRV.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11466,7 +11466,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "新条雏姬,大空明,冰上堇",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/jgohXFd.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11477,7 +11477,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "虹野梦,樱庭劳拉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/q4FhJ75.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11488,7 +11488,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "虹野梦,樱庭劳拉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/1qnLr9n.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11499,7 +11499,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "大空明,新条雏姬,冰上堇",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/VsRxW95.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11510,7 +11510,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "大空明,新条雏姬,冰上堇",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/mlTMDDm.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11521,7 +11521,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "大空明,大地乃野,白桦丽莎",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/gSiHBQ7.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11532,7 +11532,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "大空明,天羽圆香",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/vBoxuvE.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11543,7 +11543,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "黑泽凛,新条雏姬",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/dRSFqFk.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11554,7 +11554,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "栗栖心音,藤原雅,天羽圆香,黑泽凛,红林珠璃,大空明,冰上堇,新条雏姬",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/h7NmITy.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11565,7 +11565,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "神崎美月,紫吹兰,藤堂尤里卡",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/Niitj1S.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11576,7 +11576,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "雾矢葵,紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/ySoovJn.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11587,7 +11587,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,雾矢葵,紫吹兰,有栖川乙女,藤堂尤里卡,北大路樱,一之濑枫,神崎美月",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/Ww9kMqG.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11598,7 +11598,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/F6kWwFe.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11609,7 +11609,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,雾矢葵,紫吹兰,神崎美月,有栖川乙女",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/zK5wwik.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11620,7 +11620,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,雾矢葵,紫吹兰,神崎美月,有栖川乙女,北大路樱,藤堂尤里卡,一之濑枫",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/qG7TRMr.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11631,7 +11631,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/jedQ62q.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11642,7 +11642,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,雾矢葵,紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/5Jik3rq.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11653,7 +11653,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,音城塞拉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/S7DwIKS.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11664,7 +11664,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,紫吹兰,雾矢葵,音城塞拉,冴草纪伊,神崎美月,大空明",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/mfGCPoX.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11675,7 +11675,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,紫吹兰,雾矢葵,神崎美月",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/zxpTSB0.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11686,7 +11686,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,紫吹兰,雾矢葵",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/eSBek4B.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11697,7 +11697,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/SiRom4t.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11708,7 +11708,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,神崎美月",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/Hy4uBof.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11719,7 +11719,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,紫吹兰,雾矢葵",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/qXTOY7N.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11730,7 +11730,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,音城塞拉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/Rxpepsz.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11741,7 +11741,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,雾矢葵,神谷紫苑,有栖川乙女",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/vzSLcea.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11752,7 +11752,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "藤堂尤里卡,一之濑枫,北大路樱,有栖川乙女",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/AlYwSwM.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11763,7 +11763,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "紫吹兰,风沢空",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/ubQiyhX.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11774,7 +11774,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,雾矢葵,紫吹兰,神崎美月,有栖川乙女,北大路樱,藤堂尤里卡,一之濑枫",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/yDeCPTR.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11785,7 +11785,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "香澄真昼,白银莉莉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/sK9rOsA.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11796,7 +11796,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "夏树未来,姬里玛丽亚,风沢空",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "初版200円 再贩204円(含税)", 
     image: "https://i.imgur.com/a7k6HEP.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11807,7 +11807,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓,大空明",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/brHZE6U.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11818,7 +11818,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "吉良彼方,五十岚望，香澄朝阳，结城昂",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/ui94XlK.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11829,7 +11829,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "骑咲礼,花园绮罗,虹野梦，艾尔莎·福特，双叶亚里亚",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/PAd4THb.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11840,7 +11840,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/fOzZ3zM.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11851,7 +11851,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "星宫莓，紫吹兰，雾矢葵，大空明，新条雏姬，冰上堇",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/KpwJ1rG.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11862,7 +11862,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "凉川直人，Hiro，Shurato，King",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/aYzwzy2.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11873,7 +11873,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "白鸟姬，星宫莓，虹野梦，神崎美月，樱庭劳拉，大空明",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/EuDsHsf.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11884,7 +11884,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "香澄真昼，白银莉莉，樱庭劳拉，早乙女亚子",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/Qfz1kqk.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11895,7 +11895,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/g8S2yW5.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11906,7 +11906,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "如月翼，白鸟姬，虹野梦，香澄夜空，二阶堂柚子",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/iU5sto8.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11917,7 +11917,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "香澄真昼，七仓小春，樱庭劳拉，早乙女亚子",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/YTvu9FE.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11928,7 +11928,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ ミュージックフェスタ ジャケバッジ セット ジャケバッジ",
     character: "香澄真昼，七仓小春，樱庭劳拉，早乙女亚子",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "204円(含税)", 
     image: "https://i.imgur.com/48flpxA.png",
     remark: "可能有初版和再贩区别，包括但不限于颜色/尺寸区别",
@@ -11939,7 +11939,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "友希爱音，凑美绪",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/cT4DgEN.png",
 },
@@ -11949,7 +11949,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "月城爱弓，栗六杏",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/PDwsvtN.png",
 },
@@ -11959,7 +11959,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "音羽舞樱，阳明咲",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/IzNmgmq.png",
 },
@@ -11969,7 +11969,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "珠树琉璃，梅小路响子",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/k9CfccZ.png",
 },
@@ -11979,7 +11979,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "音羽舞樱，阳明咲",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/whd9vA0.png",
 },
@@ -11989,7 +11989,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "音羽舞樱",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/C7J64ux.png",
 },
@@ -11999,7 +11999,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "姬石来希，友希爱音，凑美绪",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/0K7YnEh.png",
 },
@@ -12009,7 +12009,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "姬石来希，音城诺艾尔",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/BXTaBy0.png",
 },
@@ -12019,7 +12019,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "星宫莓，大空明，虹野梦",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/gNzEdUx.png",
 },
@@ -12029,7 +12029,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "珠树琉璃，音羽舞樱，梅小路响子，本谷栞",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/gmy6xBI.png",
 },
@@ -12039,7 +12039,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！シリーズ 10th Thanks Party ジャケバッジ",
     character: "糸井纱良，本谷栞",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/QIXkh6X.png",
 },
@@ -12058,7 +12058,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "友希爱音，凑美绪",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/7ZwrNVE.png",
 },
@@ -12068,7 +12068,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "神城卡莲，明日香未来",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/qbVTJNs.png",
 },
@@ -12078,7 +12078,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "姬石来希，春风若叶",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/yOiXUwq.png",
 },
@@ -12088,7 +12088,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "冰上堇，新条雏姬，大空明",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/7rfXN3V.png",
 },
@@ -12098,7 +12098,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "音羽舞樱，珠树琉璃，梅小路响子，本谷栞",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/YrjGQXc.png",
 },
@@ -12108,7 +12108,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "红林珠璃，黑泽凛，天羽圆香",
     type: "徽章",
-    size: "直径约 40mm",  
+    size: "直径约40mm",  
     price: "300円(含税)", 
     image: "https://i.imgur.com/eNLIWDy.png",
 },
@@ -12118,7 +12118,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "星宫莓，雾矢葵，紫吹兰",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/q2T0isW.png",
 },
@@ -12128,7 +12128,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "有栖川乙女，北大路樱，神谷紫苑",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/lAboWW4.png",
 },
@@ -12138,7 +12138,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "虹野梦，樱庭劳拉",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/9d32RaS.png",
 },
@@ -12148,7 +12148,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "二阶堂柚子，白鸟姬，如月翼，香澄夜空",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/hXkrpF3.png",
 },
@@ -12158,7 +12158,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ!シリーズ 10th ANNIVERSARY アイカツ!ミュージックフェスタ FINAL ジャケバッジ",
     character: "骑咲礼，花园绮罗，艾尔莎·福特，双叶亚里亚",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "300円(含税)", 
     image: "https://i.imgur.com/4tOs7Sm.png",
 },
@@ -12168,7 +12168,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！「BEST FRIENDS！スペシャルLIVE～Thanks⇄OK～」ジャケバッジ",
     character: "友希爱音，凑美绪，蝶乃舞花，日向绘麻",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/0HEM9io.png",
 },
@@ -12178,7 +12178,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！「BEST FRIENDS！スペシャルLIVE～Thanks⇄OK～」ジャケバッジ",
     character: "天翔响，艾莉西亚·夏洛特",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/wDcLhhG.png",
 },
@@ -12188,7 +12188,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！「BEST FRIENDS！スペシャルLIVE～Thanks⇄OK～」ジャケバッジ",
     character: "天翔响，艾莉西亚·夏洛特，友希爱音，凑美绪",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/FayJcU2.png",
 },
@@ -12198,7 +12198,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！「BEST FRIENDS！スペシャルLIVE～Thanks⇄OK～」ジャケバッジ",
     character: "友希爱音，凑美绪，蝶乃舞花，日向绘麻",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/s68VH6j.png",
 },
@@ -12208,7 +12208,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！「BEST FRIENDS！スペシャルLIVE～Thanks⇄OK～」ジャケバッジ",
     character: "友希爱音，凑美绪，神城卡莲，明日香未来",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/mlc478t.png",
 },
@@ -12218,7 +12218,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！「BEST FRIENDS！スペシャルLIVE～Thanks⇄OK～」ジャケバッジ",
     character: "友希爱音，凑美绪",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/iDz45zE.png",
 },
@@ -12228,7 +12228,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！「BEST FRIENDS！スペシャルLIVE～Thanks⇄OK～」ジャケバッジ",
     character: "蝶乃舞花，日向绘麻",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/XLwYlxv.png",
 },
@@ -12238,7 +12238,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！「BEST FRIENDS！スペシャルLIVE～Thanks⇄OK～」ジャケバッジ",
     character: "神城卡莲，明日香未来",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/x0Wp88E.png",
 },
@@ -12248,7 +12248,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツフレンズ！トレーディング缶バッジ",
     character: "白百合辉夜，白百合咲夜",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     price: "200円(含税)", 
     image: "https://i.imgur.com/1YpFbbm.png",
 },
@@ -12258,7 +12258,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！×ヴィレッジヴァンガード第7弾 トレーディング缶バッジ　",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单品]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/3QsEOQL.png",
 },
@@ -12268,7 +12268,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！×ヴィレッジヴァンガード第7弾 トレーディング缶バッジ　",
     character: "服部优",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单品]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/LHOQZsh.png",
 },
@@ -12278,7 +12278,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！×ヴィレッジヴァンガード第7弾 トレーディング缶バッジ　",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单品]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/W1Z6JYY.png",
 },
@@ -12288,7 +12288,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！×ヴィレッジヴァンガード第7弾 トレーディング缶バッジ　",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单品]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/Ch221mS.png",
 },
@@ -12298,7 +12298,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！×ヴィレッジヴァンガード第7弾 トレーディング缶バッジ　",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单品]550円 [BOX]3,300円(含税)", 
     image: "https://i.imgur.com/r799ej1.png",
 },
@@ -12308,7 +12308,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！×ヴィレッジヴァンガード第7弾 トレーディング缶バッジ　",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单品]550円 [BOX]3,500円(含税)", 
     image: "https://i.imgur.com/eb3GxaC.png",
 },
@@ -12418,7 +12418,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード 缶バッジ2種セット",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]800円+税", 
     image: "https://i.imgur.com/uGzR8IS.png",
 },
@@ -12428,7 +12428,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード 缶バッジ2種セット",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]800円+税", 
     image: "https://i.imgur.com/ij0TXmS.png",
 },
@@ -12628,7 +12628,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第2弾 缶バッジ2種セット",
     character: "音羽舞樱",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]880円(含税)",
     image: "https://i.imgur.com/Vi6lbym.png",
 },
@@ -12638,7 +12638,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第2弾 缶バッジ2種セット",
     character: "本谷栞",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]880円(含税)",
     image: "https://i.imgur.com/3h9pH05.png",
 },
@@ -12852,7 +12852,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第3弾 缶バッジ2種セット",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]880円(含税)", 
     image: "https://i.imgur.com/DnfcJEA.png",
 },
@@ -12862,7 +12862,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第3弾 缶バッジ2種セット",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]880円(含税)", 
     image: "https://i.imgur.com/oriKnsP.png",
 },
@@ -13088,7 +13088,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第4弾 缶バッジ3種セット",
     character: "凑美绪",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]1,400円(含税)", 
     image: "https://i.imgur.com/gM6MhtR.png",
 },
@@ -13098,7 +13098,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第4弾 缶バッジ3種セット",
     character: "友希爱音",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]1,400円(含税)", 
     image: "https://i.imgur.com/U1lSlVl.png",
 },{
@@ -13107,7 +13107,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第4弾 缶バッジ3種セット",
     character: "姬石来希",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]1,400円(含税)", 
     image: "https://i.imgur.com/hJLSNx7.png",
 },
@@ -13469,7 +13469,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第5弾 缶バッジ2種セットッジ　",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]900円(含税)",
     image: "https://i.imgur.com/793sAh0.png",
 },
@@ -13479,7 +13479,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第5弾 缶バッジ2種セット　",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]900円(含税)",
     image: "https://i.imgur.com/lfSqLuC.png",
 },
@@ -13695,7 +13695,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツスターズ！ 07/スクールドレスver. グラフアートイラスト 缶バッジ",
     character: "骑咲礼",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[单个]550円 [BOX]3,850円(含税)",   
     image: "https://i.imgur.com/E4RtrV5.png"
   },
@@ -13705,7 +13705,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第6弾 缶バッジ2種セット",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]1,000円(含税)",
     image: "https://i.imgur.com/1amJLNf.png",
 },
@@ -13715,7 +13715,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第6弾 缶バッジ2種セット",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]1,000円(含税)",
     image: "https://i.imgur.com/7uw0sKq.png",
 },
@@ -13725,7 +13725,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第6弾 缶バッジ2種セット　",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]1,000円(含税)",
     image: "https://i.imgur.com/Szpt6tK.png",
 },
@@ -13735,7 +13735,7 @@ export const BASE_ITEMS = [{
     subtitle: "オールアイカツ！× ヴィレッジヴァンガード第6弾 缶バッジ2種セット　",
     character: "大空明",
     type: "徽章",
-    size: "直径约 57mm",
+    size: "直径约57mm",
     price: "[set]1,000円(含税)",
     image: "https://i.imgur.com/qG6Frga.png",
 },
@@ -15256,7 +15256,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ 缶バッジ",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "495円(含税)", 
     image: "https://i.imgur.com/CEpKbVA.png",
 },{
@@ -15265,7 +15265,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ 缶バッジ",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "495円(含税)", 
     image: "https://i.imgur.com/VfZs1ls.png",
 },{
@@ -15274,7 +15274,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ 缶バッジ",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "495円(含税)", 
     image: "https://i.imgur.com/EsZzmx1.png",
 },
@@ -15285,7 +15285,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ 缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "495円(含税)", 
     image: "https://i.imgur.com/GqvuJhN.png",
 },
@@ -15295,7 +15295,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ 缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "495円(含税)", 
     image: "https://i.imgur.com/A9ZjR3P.png",
 },
@@ -15305,7 +15305,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ 缶バッジ",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "495円(含税)", 
     image: "https://i.imgur.com/S9u1fxX.png",
 },{
@@ -15314,7 +15314,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ 缶バッジ",
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "495円(含税)", 
     image: "https://i.imgur.com/MPcE3Jn.png",
 },{
@@ -15323,7 +15323,7 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！メモリアルステージ ～輝きのユニットカップ～ 缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "495円(含税)", 
     image: "https://i.imgur.com/1IGYs4L.png",
 },{
@@ -15847,7 +15847,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定特典】BD アイカツ！メモリアルステージ ～輝きのユニットカップ～ (Blu-ray Disc) 缶バッジ2個セット",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "amiami购入特典 [BD]8,580円(含税)", 
     image: "https://i.imgur.com/B2ID5VC.png",
 },{
@@ -15856,7 +15856,7 @@ export const BASE_ITEMS = [{
     subtitle: "【アニメイト限定特典】BD アイカツ！メモリアルステージ ～輝きのユニットカップ～ (Blu-ray Disc) 缶バッジ2個セット",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "animate购入特典 [BD]8,580円(含税)", 
     image: "https://i.imgur.com/JeijQhI.png",
 },{
@@ -16596,7 +16596,7 @@ id: 1672,
     subtitle: "アイカツ！ ジャケバッジ 缶バッジ",
     character: "星宫莓,神崎美月，大空明",
     type: "徽章",
-    size: "直径约 40mm",
+    size: "直径约40mm",
     image: "https://i.imgur.com/zG6k2YG.png"
 }, {
 id: 1673,
@@ -16612,7 +16612,7 @@ id: 1674,
     subtitle: "アイカツ！ デザインマート Happy Rainbow 缶バッジ",
     character: "其他，有栖川乙女",
     type: "徽章",
-    size: "直径约 50mm",
+    size: "直径约50mm",
     image: "https://i.imgur.com/AbqSL9B.png"
   }, {
 id: 1675,
@@ -16628,7 +16628,7 @@ id: 1676,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/iKIisHV.png"
   },{
@@ -16637,7 +16637,7 @@ id: 1677,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "骑咲礼",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/3raA9Be.png"
   },{
@@ -16646,7 +16646,7 @@ id: 1678,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "香澄夜空",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/QFg4072.png"
   },{
@@ -16655,7 +16655,7 @@ id: 1679,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "天翔响",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/PhEMEID.png"
   },{
@@ -16664,7 +16664,7 @@ id: 1680,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "明日香未来",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/Nb8yXkr.png"
   },{
@@ -16673,7 +16673,7 @@ id: 1681,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "红林珠璃",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/8cCEy0L.png"
   },{
@@ -16682,7 +16682,7 @@ id: 1682,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "友希爱音",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/bmAO78w.png"
   },{
@@ -16691,7 +16691,7 @@ id: 1683,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "服部优",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/E22Gxd6.png"
   },{
@@ -16700,7 +16700,7 @@ id: 1684,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "如月翼",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/HDCPS9U.png"
   },{
@@ -16709,7 +16709,7 @@ id: 1685,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "风沢空",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/3Hl6pAa.png"
   },{
@@ -16718,7 +16718,7 @@ id: 1686,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "神城卡莲",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/AstMXUr.png"
   },{
@@ -16727,7 +16727,7 @@ id: 1687,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/QeMIdEu.png"
   },{
@@ -16736,7 +16736,7 @@ id: 1688,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "香澄真昼",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/EYufcrk.png"
   },{
@@ -16745,7 +16745,7 @@ id: 1689,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "二阶堂柚子",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/yiyEMvL.png"
   },{
@@ -16754,7 +16754,7 @@ id: 1690,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "白百合辉夜",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/vt4QQa1.png"
   },{
@@ -16763,7 +16763,7 @@ id: 1691,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/SwmqiiB.png"
   },{
@@ -16772,7 +16772,7 @@ id: 1692,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "白百合咲夜",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/ttiGcNk.png"
   },{
@@ -16781,7 +16781,7 @@ id: 1693,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "冴草纪伊",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/4FFtvDd.png"
   },{
@@ -16790,7 +16790,7 @@ id: 1694,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "白桦丽莎",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/xvVWSR9.png"
   },{
@@ -16799,7 +16799,7 @@ id: 1695,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "双叶亚里亚",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/jsUCijW.png"
   },{
@@ -16808,7 +16808,7 @@ id: 1696,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/xCcaA0c.png"
   },{
@@ -16817,7 +16817,7 @@ id: 1697,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "姬石来希",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/2LtSxha.png"
   },{
@@ -16826,7 +16826,7 @@ id: 1698,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "白鸟姬",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/OqSW2fs.png"
   },{
@@ -16835,7 +16835,7 @@ id: 1699,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "艾莉西亚·夏洛特",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/pPKwyMl.png"
   },{
@@ -16844,7 +16844,7 @@ id: 1700,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "堂岛妮娜",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/Ie2KtH3.png"
   },{
@@ -16853,7 +16853,7 @@ id: 1701,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "天羽圆香",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/4PpouHy.png"
   },{
@@ -16862,7 +16862,7 @@ id: 1702,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/E7oJKKQ.png"
   },{
@@ -16871,7 +16871,7 @@ id: 1703,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "艾尔莎·福特",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/ThOjCjE.png"
   },{
@@ -16880,7 +16880,7 @@ id: 1704,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "栗栖心音",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/OiBhOfI.png"
   },{
@@ -16889,7 +16889,7 @@ id: 1705,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "蝶乃舞花",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/veMTD1q.png"
   },{
@@ -16898,7 +16898,7 @@ id: 1706,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "波间照南",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/DWuuipg.png"
   },{
@@ -16907,7 +16907,7 @@ id: 1707,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "花园绮罗",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/jpJT8S0.png"
   },{
@@ -16916,7 +16916,7 @@ id: 1708,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "虹野梦",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/BH1fh64.png"
   },{
@@ -16925,7 +16925,7 @@ id: 1709,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "日向绘麻",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/iHponz2.png"
   },{
@@ -16934,7 +16934,7 @@ id: 1710,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/RrWboIZ.png"
   },{
@@ -16943,7 +16943,7 @@ id: 1711,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "三轮光",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/kYDGp7N.png"
   },{
@@ -16952,7 +16952,7 @@ id: 1712,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "黑泽凛",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/vmNujyS.png"
   },{
@@ -16961,7 +16961,7 @@ id: 1713,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/EmMq7tt.png"
   },{
@@ -16970,7 +16970,7 @@ id: 1714,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "神谷紫苑",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/xMjGYCB.png"
   },{
@@ -16979,7 +16979,7 @@ id: 1715,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "白银莉莉",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/LqzqZb0.png"
   },{
@@ -16988,7 +16988,7 @@ id: 1716,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "凑美绪",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/y81tePZ.png"
   },{
@@ -16997,7 +16997,7 @@ id: 1717,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "大地乃野",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/KUgJhmn.png"
   },{
@@ -17006,7 +17006,7 @@ id: 1718,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "音城诺艾尔",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/oq23gaG.png"
   },{
@@ -17015,7 +17015,7 @@ id: 1719,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "姬里玛丽亚",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/4SUmMDN.png"
   },{
@@ -17024,7 +17024,7 @@ id: 1720,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "大空明",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/8QPMmy3.png"
   },{
@@ -17033,7 +17033,7 @@ id: 1721,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "七仓小春",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/zzCuXcP.png"
   },{
@@ -17042,7 +17042,7 @@ id: 1722,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "北大路樱",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/RiJFAmj.png"
   },{
@@ -17051,7 +17051,7 @@ id: 1723,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "早乙女亚子",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/gvLsUJA.png"
   },{
@@ -17060,7 +17060,7 @@ id: 1724,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "藤原雅",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/AH1UeUC.png"
   },{
@@ -17069,7 +17069,7 @@ id: 1725,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "春风若叶",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/rN7AukJ.png"
   },{
@@ -17078,7 +17078,7 @@ id: 1726,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "神崎美月",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/6STMOOI.png"
   },{
@@ -17087,7 +17087,7 @@ id: 1727,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "音城塞拉",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/Iew9M4k.png"
   },{
@@ -17096,7 +17096,7 @@ id: 1728,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/o3xdSLZ.png"
   },{
@@ -17105,7 +17105,7 @@ id: 1729,
     subtitle: "アイカツ！スタイル バースデー缶バッジ",
     character: "樱庭劳拉",
     type: "徽章",
-    size: "直径约 44mm",
+    size: "直径约44mm",
     price: "消费满4,000円赠送1个 再消费2,000円再赠送一个",
     image: "https://i.imgur.com/Z0nTGlX.png"
   },
@@ -17115,7 +17115,7 @@ id: 1730,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "糸井纱良",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/mLXL9bp.png"
  },{
@@ -17124,7 +17124,7 @@ id: 1731,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "新条雏姬",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/Dwxkjij.png"
  },{
@@ -17133,7 +17133,7 @@ id: 1732,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "白百合咲夜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/9DpAFh0.png"
  },{
@@ -17142,7 +17142,7 @@ id: 1733,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "白百合辉夜",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/xvqp7Mn.png"
  },{
@@ -17151,7 +17151,7 @@ id: 1734,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "香澄夜空",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/WEMdoDM.png"
  },{
@@ -17160,7 +17160,7 @@ id: 1735,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/DJ7PhV7.png"
  },{
@@ -17169,7 +17169,7 @@ id: 1736,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "骑咲礼",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/YTSJO9Q.png"
  },{
@@ -17178,7 +17178,7 @@ id: 1737,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "明日香未来",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/FNpdpAY.png"
  },{
@@ -17187,7 +17187,7 @@ id: 1738,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "二阶堂柚子",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/taXk4ar.png"
  },{
@@ -17196,7 +17196,7 @@ id: 1739,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "天翔响",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/xemV290.png"
  },{
@@ -17205,7 +17205,7 @@ id: 1740,
     subtitle: "アイカツ！ シリーズ バースデー 缶バッジ Season3 <5月~6月>",
     character: "珠树琉璃",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "473円(含税)",
     image: "https://i.imgur.com/2Ndo3xh.png"
  },{
@@ -17214,7 +17214,7 @@ id: 1741,
     subtitle: "【アニメイト限定】アイカツ！ トレーディング缶バッジ -Classical-",
     character: "冰上堇",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "385円(含税)",
     image: "https://i.imgur.com/4g2b6ku.png"
  },{
@@ -17223,7 +17223,7 @@ id: 1742,
     subtitle: "【アニメイト限定】アイカツ！ トレーディング缶バッジ -Classical-",
     character: "星宫莓",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "385円(含税)",
     image: "https://i.imgur.com/MKlWQUR.png"
  },{
@@ -17232,7 +17232,7 @@ id: 1743,
     subtitle: "【アニメイト限定】アイカツ！ トレーディング缶バッジ -Classical-",
     character: "大空明",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "385円(含税)",
     image: "https://i.imgur.com/bvZLxep.png"
  },{
@@ -17241,7 +17241,7 @@ id: 1744,
     subtitle: "【アニメイト限定】アイカツ！ トレーディング缶バッジ -Classical-",
     character: "雾矢葵",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "385円(含税)",
     image: "https://i.imgur.com/I0eWBaH.png"
  },{
@@ -17250,7 +17250,7 @@ id: 1745,
     subtitle: "【アニメイト限定】アイカツ！ トレーディング缶バッジ -Classical-",
     character: "一之濑枫",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "385円(含税)",
     image: "https://i.imgur.com/Jhd3yLz.png"
  },{
@@ -17259,7 +17259,7 @@ id: 1746,
     subtitle: "【アニメイト限定】アイカツ！ トレーディング缶バッジ -Classical-",
     character: "藤堂尤里卡",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "385円(含税)",
     image: "https://i.imgur.com/NHsLw4R.png"
  },{
@@ -17268,7 +17268,7 @@ id: 1747,
     subtitle: "【アニメイト限定】アイカツ！ トレーディング缶バッジ -Classical-",
     character: "有栖川乙女",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "385円(含税)",
     image: "https://i.imgur.com/PngYCYA.png"
  },{
@@ -17277,7 +17277,7 @@ id: 1748,
     subtitle: "【アニメイト限定】アイカツ！ トレーディング缶バッジ -Classical-",
     character: "紫吹兰",
     type: "徽章",
-    size: "直径约 56mm",
+    size: "直径约56mm",
     price: "385円(含税)",
     image: "https://i.imgur.com/pgS39dQ.png"
  },{
@@ -17286,7 +17286,7 @@ id: 1749,
     subtitle: "【アニメイト限定】アイカツ！ アクリルスタンド -Classical-",
     character: "雾矢葵",
     type: "立牌",
-    size: "[本体]约20cm以内[底座]约W6xH5.5cm以内",
+    size: "[本体]约20cm以内 [底座]约W6xH5.5cm以内",
     price: "2,200円(含税)",
     image: "https://i.imgur.com/lZCZnTP.png"
  },{
@@ -17295,7 +17295,7 @@ id: 1750,
     subtitle: "【アニメイト限定】アイカツ！ アクリルスタンド -Classical-",
     character: "藤堂尤里卡",
     type: "立牌",
-    size: "[本体]约20cm以内[底座]约W6xH5.5cm以内",
+    size: "[本体]约20cm以内 [底座]约W6xH5.5cm以内",
     price: "2,200円(含税)",
     image: "https://i.imgur.com/NZJfCw5.png"
  },
@@ -17305,7 +17305,7 @@ id: 1751,
     subtitle: "【アニメイト限定】アイカツ！ アクリルスタンド -Classical-",
     character: "大空明",
     type: "立牌",
-    size: "[本体]约20cm以内[底座]约W6xH5.5cm以内",
+    size: "[本体]约20cm以内 [底座]约W6xH5.5cm以内",
     price: "2,200円(含税)",
     image: "https://i.imgur.com/Yd3ynyX.png"
  },
@@ -17315,7 +17315,7 @@ id: 1752,
     subtitle: "【アニメイト限定】アイカツ！ アクリルスタンド -Classical-",
     character: "冰上堇",
     type: "立牌",
-    size: "[本体]约20cm以内[底座]约W6xH5.5cm以内",
+    size: "[本体]约20cm以内 [底座]约W6xH5.5cm以内",
     price: "2,200円(含税)",
     image: "https://i.imgur.com/YJ6Htvl.png"
  },
@@ -17325,7 +17325,7 @@ id: 1753,
     subtitle: "【アニメイト限定】アイカツ！ アクリルスタンド -Classical-",
     character: "一之濑枫",
     type: "立牌",
-    size: "[本体]约20cm以内[底座]约W6xH5.5cm以内",
+    size: "[本体]约20cm以内 [底座]约W6xH5.5cm以内",
     price: "2,200円(含税)",
     image: "https://i.imgur.com/p9wy7sZ.png"
  },
@@ -17335,7 +17335,7 @@ id: 1754,
     subtitle: "【アニメイト限定】アイカツ！ アクリルスタンド -Classical-",
     character: "星宫莓",
     type: "立牌",
-    size: "[本体]约20cm以内[底座]约W6xH5.5cm以内",
+    size: "[本体]约20cm以内 [底座]约W6xH5.5cm以内",
     price: "2,200円(含税)",
     image: "https://i.imgur.com/HGLchwG.png"
  },
@@ -17345,7 +17345,7 @@ id: 1755,
     subtitle: "【アニメイト限定】アイカツ！ アクリルスタンド -Classical-",
     character: "有栖川乙女",
     type: "立牌",
-    size: "[本体]约20cm以内[底座]约W6xH5.5cm以内",
+    size: "[本体]约20cm以内 [底座]约W6xH5.5cm以内",
     price: "2,200円(含税)",
     image: "https://i.imgur.com/zaSsxGG.png"
  },
@@ -17355,7 +17355,7 @@ id: 1756,
     subtitle: "【アニメイト限定】アイカツ！ アクリルスタンド -Classical-",
     character: "紫吹兰",
     type: "立牌",
-    size: "[本体]约20cm以内[底座]约W6xH5.5cm以内",
+    size: "[本体]约20cm以内 [底座]约W6xH5.5cm以内",
     price: "2,200円(含税)",
     image: "https://i.imgur.com/Fr9XiCI.png"
  },{
@@ -17579,7 +17579,7 @@ id: 1780,
     type: "文具",
     size: "A4",
     price: "[set]880円(含税)",
-    image: "https://i.imgur.com/vZLOrpy.png"
+    image: "https://i.imgur.com/6CDbYGN.png"
  },{
 id: 1781,
     name: "照活文件夹",
@@ -17588,7 +17588,7 @@ id: 1781,
     type: "文具",
     size: "A4",
     price: "[set]880円(含税)",
-    image: "https://i.imgur.com/vZLOrpy.png"
+    image: "https://i.imgur.com/DgbLune.png"
  },{
 id: 1782,
     name: "照活文件夹",
@@ -17652,8 +17652,280 @@ id: 1788,
     size: "A4",
     price: "[set]880円(含税)",
     image: "https://i.imgur.com/g0GKJEl.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "早乙女亚子",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/dgY5LoB.png"
  },
-
+{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "香澄真昼",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/56GU7Qm.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "白鸟姬",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/iGMw8Em.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "艾尔莎·福特",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/bXyvkF4.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "七仓小春",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/F0la1vK.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "樱庭劳拉",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/csHbV5Z.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "白银莉莉",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/utJw5il.png"
+ },
+{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "虹野梦",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/7yzfhP9.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "冰上堇",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/UC9JOsU.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "紫吹兰",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/ZP0XmuS.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "雾矢葵",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/410ok8Z.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "大地乃野",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/Tic0pSD.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "冴草纪伊",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/8GdmPZJ.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "一之濑枫",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/UUkEuhV.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "藤堂尤里卡",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/MGv4zoD.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "有栖川乙女",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/b7E1SNQ.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "新条雏姬",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/22EWKxu.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "大空明",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/31597vu.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "星宫莓",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/MMjPlgv.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "音城塞拉",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/rKkf5JZ.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "白桦丽莎",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/uTa5v5u.png"
+ },{
+id: 1788,
+    name: "照活色纸",
+    subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
+    character: "红林珠璃",
+    type: "纸制品",
+    size: "约W120mm*H135mm",
+    price: "550円(含税)",
+    image: "https://i.imgur.com/afUubBx.png"
+ },
+{
+id: 1788,
+    name: "复古尤里卡挂件",
+    subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
+    character: "一之濑枫",
+    type: "挂件",
+    size: "约约W70xH70mm以内",
+    price: "660円(含税)",
+    image: "https://i.imgur.com/E5yWCGt.png"
+ },{
+id: 1788,
+    name: "复古尤里卡挂件",
+    subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
+    character: "藤堂尤里卡",
+    type: "挂件",
+    size: "约约W70xH70mm以内",
+    price: "660円(含税)",
+    image: "https://i.imgur.com/AQbrOhM.png"
+ },{
+id: 1788,
+    name: "复古尤里卡挂件",
+    subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
+    character: "有栖川乙女",
+    type: "挂件",
+    size: "约约W70xH70mm以内",
+    price: "660円(含税)",
+    image: "https://i.imgur.com/hwJpi6Q.png"
+ },{
+id: 1788,
+    name: "复古尤里卡挂件",
+    subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
+    character: "冰上堇",
+    type: "挂件",
+    size: "约约W70xH70mm以内",
+    price: "660円(含税)",
+    image: "https://i.imgur.com/c4B0gxc.png"
+ },{
+id: 1788,
+    name: "复古尤里卡挂件",
+    subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
+    character: "大空明",
+    type: "挂件",
+    size: "约约W70xH70mm以内",
+    price: "660円(含税)",
+    image: "https://i.imgur.com/aq3CtGV.png"
+ },{
+id: 1788,
+    name: "复古尤里卡挂件",
+    subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
+    character: "紫吹兰",
+    type: "挂件",
+    size: "约约W70xH70mm以内",
+    price: "660円(含税)",
+    image: "https://i.imgur.com/TgNHRxT.png"
+ },{
+id: 1788,
+    name: "复古尤里卡挂件",
+    subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
+    character: "雾矢葵",
+    type: "挂件",
+    size: "约约W70xH70mm以内",
+    price: "660円(含税)",
+    image: "https://i.imgur.com/VHb4m1b.png"
+ },{
+id: 1788,
+    name: "复古尤里卡挂件",
+    subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
+    character: "星宫莓",
+    type: "挂件",
+    size: "约约W70xH70mm以内",
+    price: "660円(含税)",
+    image: "https://i.imgur.com/8hjmhDu.png"
+ },
 
 
 
