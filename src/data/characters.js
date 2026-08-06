@@ -42,6 +42,7 @@ const CHARACTER_DATABASE = [
   { name: '藤原雅', series: '明代', gender: '女', romaji: 'Fujiwara Miyabi', pinyin: 'tengyuanya' },
   { name: '濑名翼', series: '明代', gender: '男', romaji: 'Sena Tsubasa', pinyin: 'laimingyi' },
   { name: '四叶春', series: '明代', gender: '男', romaji: 'Yotsuba Haru', pinyin: 'siyechun' },
+  { name: '波间照南', series: '明代', gender: '女', romaji: 'Minami Hateruma', pinyin: 'bojianzhaonan' },
 
   // 星代（Star）
   { name: '虹野梦', series: '星代', gender: '女', romaji: 'Nijino Yume', pinyin: 'hongyemeng' },
