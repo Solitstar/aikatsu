@@ -17653,7 +17653,7 @@ id: 1788,
     price: "[set]880円(含税)",
     image: "https://i.imgur.com/g0GKJEl.png"
  },{
-id: 1788,
+id: 1789,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "早乙女亚子",
@@ -17663,7 +17663,7 @@ id: 1788,
     image: "https://i.imgur.com/dgY5LoB.png"
  },
 {
-id: 1788,
+id: 1790,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "香澄真昼",
@@ -17672,7 +17672,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/56GU7Qm.png"
  },{
-id: 1788,
+id: 1791,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "白鸟姬",
@@ -17681,7 +17681,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/iGMw8Em.png"
  },{
-id: 1788,
+id: 1792,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "艾尔莎·福特",
@@ -17690,7 +17690,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/bXyvkF4.png"
  },{
-id: 1788,
+id: 1793,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "七仓小春",
@@ -17699,7 +17699,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/F0la1vK.png"
  },{
-id: 1788,
+id: 1794,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "樱庭劳拉",
@@ -17708,7 +17708,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/csHbV5Z.png"
  },{
-id: 1788,
+id: 1795,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "白银莉莉",
@@ -17718,7 +17718,7 @@ id: 1788,
     image: "https://i.imgur.com/utJw5il.png"
  },
 {
-id: 1788,
+id: 1796,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツスターズ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "虹野梦",
@@ -17727,7 +17727,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/7yzfhP9.png"
  },{
-id: 1788,
+id: 1797,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "冰上堇",
@@ -17736,7 +17736,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/UC9JOsU.png"
  },{
-id: 1788,
+id: 1798,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "紫吹兰",
@@ -17745,7 +17745,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/ZP0XmuS.png"
  },{
-id: 1788,
+id: 1799,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "雾矢葵",
@@ -17754,7 +17754,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/410ok8Z.png"
  },{
-id: 1788,
+id: 1800,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "大地乃野",
@@ -17763,7 +17763,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/Tic0pSD.png"
  },{
-id: 1788,
+id: 1801,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "冴草纪伊",
@@ -17772,7 +17772,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/8GdmPZJ.png"
  },{
-id: 1788,
+id: 1802,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "一之濑枫",
@@ -17781,7 +17781,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/UUkEuhV.png"
  },{
-id: 1788,
+id: 1803,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "藤堂尤里卡",
@@ -17790,7 +17790,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/MGv4zoD.png"
  },{
-id: 1788,
+id: 1804,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "有栖川乙女",
@@ -17799,7 +17799,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/b7E1SNQ.png"
  },{
-id: 1788,
+id: 1805,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "新条雏姬",
@@ -17808,7 +17808,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/22EWKxu.png"
  },{
-id: 1788,
+id: 1806,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "大空明",
@@ -17817,7 +17817,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/31597vu.png"
  },{
-id: 1788,
+id: 1807,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "星宫莓",
@@ -17826,7 +17826,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/MMjPlgv.png"
  },{
-id: 1788,
+id: 1808,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "音城塞拉",
@@ -17835,7 +17835,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/rKkf5JZ.png"
  },{
-id: 1788,
+id: 1809,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "白桦丽莎",
@@ -17844,7 +17844,7 @@ id: 1788,
     price: "550円(含税)",
     image: "https://i.imgur.com/uTa5v5u.png"
  },{
-id: 1788,
+id: 1810,
     name: "照活色纸",
     subtitle: "【アニメイト限定】アイカツ！ トレーディングミニ色紙-フォトカツ！コレクション-",
     character: "红林珠璃",
@@ -17854,8 +17854,8 @@ id: 1788,
     image: "https://i.imgur.com/afUubBx.png"
  },
 {
-id: 1788,
-    name: "复古尤里卡挂件",
+id: 1811,
+    name: "复古亚克力挂件",
     subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
     character: "一之濑枫",
     type: "挂件",
@@ -17863,8 +17863,8 @@ id: 1788,
     price: "660円(含税)",
     image: "https://i.imgur.com/E5yWCGt.png"
  },{
-id: 1788,
-    name: "复古尤里卡挂件",
+id: 1812,
+    name: "复古亚克力挂件",
     subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
     character: "藤堂尤里卡",
     type: "挂件",
@@ -17872,8 +17872,8 @@ id: 1788,
     price: "660円(含税)",
     image: "https://i.imgur.com/AQbrOhM.png"
  },{
-id: 1788,
-    name: "复古尤里卡挂件",
+id: 1813,
+    name: "复古亚克力挂件",
     subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
     character: "有栖川乙女",
     type: "挂件",
@@ -17881,8 +17881,8 @@ id: 1788,
     price: "660円(含税)",
     image: "https://i.imgur.com/hwJpi6Q.png"
  },{
-id: 1788,
-    name: "复古尤里卡挂件",
+id: 1814,
+    name: "复古亚克力挂件",
     subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
     character: "冰上堇",
     type: "挂件",
@@ -17890,8 +17890,8 @@ id: 1788,
     price: "660円(含税)",
     image: "https://i.imgur.com/c4B0gxc.png"
  },{
-id: 1788,
-    name: "复古尤里卡挂件",
+id: 1815,
+    name: "复古亚克力挂件",
     subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
     character: "大空明",
     type: "挂件",
@@ -17899,8 +17899,8 @@ id: 1788,
     price: "660円(含税)",
     image: "https://i.imgur.com/aq3CtGV.png"
  },{
-id: 1788,
-    name: "复古尤里卡挂件",
+id: 1816,
+    name: "复古亚克力挂件",
     subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
     character: "紫吹兰",
     type: "挂件",
@@ -17908,8 +17908,8 @@ id: 1788,
     price: "660円(含税)",
     image: "https://i.imgur.com/TgNHRxT.png"
  },{
-id: 1788,
-    name: "复古尤里卡挂件",
+id: 1817,
+    name: "复古亚克力挂件",
     subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
     character: "雾矢葵",
     type: "挂件",
@@ -17917,8 +17917,8 @@ id: 1788,
     price: "660円(含税)",
     image: "https://i.imgur.com/VHb4m1b.png"
  },{
-id: 1788,
-    name: "复古尤里卡挂件",
+id: 1818,
+    name: "复古亚克力挂件",
     subtitle: "【アニメイト限定】アイカツ！ アクリルストラップ -Classical-",
     character: "星宫莓",
     type: "挂件",
