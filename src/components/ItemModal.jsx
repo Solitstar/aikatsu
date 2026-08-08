@@ -177,16 +177,22 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   <span className="w-16 text-text-secondary flex-shrink-0">种类</span>
                   <span className="text-text-primary">{item.type}</span>
                 </div>
-                {item.price && (
-                  <div className="flex">
-                    <span className="w-16 text-text-secondary flex-shrink-0">价格</span>
-                    <span className="text-text-primary font-medium text-rose-600">{item.price}</span>
-                  </div>
-                )}
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>
-                  <span className="flex-1 min-w-0 break-words text-text-primary">{item.size || '-'}</span>
+                  <span className="text-text-primary">{item.size || '-'}</span>
                 </div>
+                {item.material && (
+                  <div className="flex">
+                    <span className="w-16 text-text-secondary flex-shrink-0">材质</span>
+                    <span className="flex-1 min-w-0 break-words text-text-primary leading-relaxed">{item.material}</span>
+                  </div>
+                )}
+                {item.craft && (
+                  <div className="flex">
+                    <span className="w-16 text-text-secondary flex-shrink-0">工艺</span>
+                    <span className="flex-1 min-w-0 break-words text-text-primary leading-relaxed">{item.craft}</span>
+                  </div>
+                )}
                 {item.remark && (
                   <div className="flex">
                     <span className="w-16 text-text-secondary flex-shrink-0">备注</span>

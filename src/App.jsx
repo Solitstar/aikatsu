@@ -101,6 +101,8 @@ function App() {
           itemChars.includes(rest) ||
           normalize(item.type).includes(rest) ||
           normalize(item.subtitle).includes(rest) ||
+          normalize(item.craft).includes(rest) ||
+          normalize(item.material).includes(rest) ||
           normalize(item.characterRomaji).includes(rest) ||
           normalize(item.characterAlias).includes(rest) ||
           normalize(item.characterPinyin).includes(rest)
