@@ -27173,6 +27173,12 @@ id: 2745,
 export const TYPES = ["全部", "徽章", "透卡","色纸","贴纸","卡片","杯垫","立牌", "文具", "玩偶", "手办", "挂件", "服饰", "挂画", "画板", "饮食","生活","家居", "数码", "海报"];
 export const STATUS_OPTIONS = ["全部", "已拥有", "想要"];
 
+// 种类字段支持多值（用 /、、、,、，分隔），返回去重后的种类列表
+export const splitTypes = (type) => {
+  if (!type) return [];
+  return [...new Set(String(type).split(/[\/、,，]/).map(t => t.trim()).filter(Boolean))];
+};
+
 export const getItemsWithMeta = () => {
   return BASE_ITEMS
     .map(item => {
