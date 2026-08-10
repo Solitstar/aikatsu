@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { splitTypes } from '../data/items';
 
-const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder }) => {
+const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder, onSeriesClick }) => {
   const [showFolderPicker, setShowFolderPicker] = useState(false);
   const [newFolderName, setNewFolderName] = useState('');
   const [imgSrc, setImgSrc] = useState('');
@@ -170,7 +170,22 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
               <div className="space-y-3 text-sm mb-6">
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">系列</span>
-                  <span className="text-text-primary">{item.series}</span>
+                  {item.productSeries && item.productSeries.length > 0 ? (
+                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                      {item.productSeries.map(s => (
+                        <button
+                          key={s}
+                          onClick={() => onSeriesClick(s)}
+                          className="text-accent hover:underline font-medium"
+                          title={`查看「${s}」系列的所有商品`}
+                        >
+                          {s} →
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <span className="text-text-primary">{item.series}</span>
+                  )}
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">角色</span>
