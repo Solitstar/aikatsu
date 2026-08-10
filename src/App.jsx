@@ -4,7 +4,7 @@ import { useCollection } from './hooks/useCollection';
 import { useVersionCheck } from './hooks/useVersionCheck';
 import { useFolders } from './hooks/useFolders';
 import { getCharactersBySeriesAndGender, ALL_CHARACTERS } from './data/characters';
-import { splitTypes } from './data/items';
+import { splitTypes, TYPES } from './data/items';
 import Header from './components/Header';
 import StatsBar from './components/StatsBar';
 import FilterBar from './components/FilterBar';
@@ -20,8 +20,12 @@ const normalize = (s) => String(s || '').replace(/[\(\)（）\（\）\[\]【】�
 // 角色名表（按长度降序，优先匹配长名字避免子串误判）
 const NORMALIZED_CHARS = ALL_CHARACTERS.map(normalize).filter(Boolean).sort((a, b) => b.length - a.length);
 
-// 从搜索词中提取角色名（支持无空格连续输入，如"星宫莓亚克力"），返回 { chars: 提取到的角色名列表, rest: 剩余关键词 }
-const extractCharParts = (kw) => {
+// 种类名表（排除"全部"，按长度降序）
+const NORMALIZED_TYPES = TYPES.filter(t => t !== '全部').map(normalize).filter(Boolean).sort((a, b) => b.length - a.length);
+
+// 从搜索词中提取角色名和种类名（支持无空格连续输入，如"格言贴纸"、"星宫莓亚克力挂件"），
+// 返回 { chars: 角色名列表, types: 种类名列表, rest: 剩余关键词 }
+const extractSearchParts = (kw) => {
   let rest = normalize(kw);
   const chars = [];
   for (const cn of NORMALIZED_CHARS) {
@@ -30,7 +34,14 @@ const extractCharParts = (kw) => {
       rest = rest.replace(cn, '');
     }
   }
-  return { chars, rest };
+  const types = [];
+  for (const tn of NORMALIZED_TYPES) {
+    if (rest.includes(tn)) {
+      types.push(tn);
+      rest = rest.replace(tn, '');
+    }
+  }
+  return { chars, types, rest };
 };
 
 function App() {
@@ -52,6 +63,8 @@ function App() {
   const [filterType, setFilterType] = useState(() => getInitialFilter('type', '全部'));
   const [filterStatus, setFilterStatus] = useState(() => getInitialFilter('status', '全部'));
   const [filterCharCount, setFilterCharCount] = useState(() => getInitialFilter('charcount', '全部'));
+  // 商品系列（从商品名自动识别，详情页点击系列跳转筛选）
+  const [filterProductSeries, setFilterProductSeries] = useState(() => getInitialFilter('productseries', ''));
   const [searchInput, setSearchInput] = useState(() => getInitialFilter('search', ''));
   // 延迟过滤：输入即时响应，过滤/重渲染在低优先级执行，缓解移动端搜索卡顿
   const searchKeyword = useDeferredValue(searchInput);
@@ -80,6 +93,7 @@ function App() {
     for (const it of items) {
       map.set(it.id, {
         char: normalize(it.character),
+        type: normalize(it.type),
         text: normalize([
           it.name, it.type, it.subtitle, it.craft, it.material,
           it.characterRomaji, it.characterAlias, it.characterPinyin,
@@ -90,13 +104,14 @@ function App() {
   }, [items]);
 
   const filteredItems = useMemo(() => {
-    // 解析搜索词（仅当关键词变化时执行一次，从关键词中提取角色名）
-    const parsedKw = searchKeyword ? extractCharParts(searchKeyword) : null;
+    // 解析搜索词（仅当关键词变化时执行一次，提取角色名与种类名）
+    const parsedKw = searchKeyword ? extractSearchParts(searchKeyword) : null;
 
     return items.filter(item => {
       const matchSeries = filterSeries === '全部' || item.series.includes(filterSeries);
       const matchChar = filterChar === '全部' || item.character.includes(filterChar);
       const matchType = filterType === '全部' || splitTypes(item.type).includes(filterType);
+      const matchProductSeries = !filterProductSeries || item.productSeries.includes(filterProductSeries);
       const matchStatus = filterStatus === '全部' || item.status === filterStatus;
 
       // 角色数量筛选：单人/多人/其他
@@ -106,11 +121,12 @@ function App() {
         (filterCharCount === '多人' && charList.length > 1 && !charList.includes('其他')) ||
         (filterCharCount === '其他(不含角色)' && charList.includes('其他'));
 
-      // 关键词匹配：提取出的角色名必须都在商品角色中，剩余关键词匹配预计算的搜索文本
+      // 关键词匹配：提取出的角色名必须都在商品角色中、种类名必须在商品种类中，剩余关键词匹配预计算的搜索文本
       const matchSearch = !searchKeyword || !parsedKw || (() => {
-        const { chars, rest } = parsedKw;
+        const { chars, types, rest } = parsedKw;
         const idx = searchIndex.get(item.id);
         if (!chars.every(cn => idx.char.includes(cn))) return false;
+        if (!types.every(tn => idx.type.includes(tn))) return false;
         if (!rest) return true;
         return idx.text.includes(rest);
       })();
@@ -127,9 +143,9 @@ function App() {
         }
       }
 
-      return matchSeries && matchChar && matchType && matchStatus && matchCharCount && matchSearch && matchFolder;
+      return matchSeries && matchChar && matchType && matchProductSeries && matchStatus && matchCharCount && matchSearch && matchFolder;
     });
-  }, [items, searchIndex, filterSeries, filterChar, filterType, filterStatus, filterCharCount, searchKeyword, activeTab, activeFolder, getItemFolderId]);
+  }, [items, searchIndex, filterSeries, filterChar, filterType, filterProductSeries, filterStatus, filterCharCount, searchKeyword, activeTab, activeFolder, getItemFolderId]);
 
   // 增量渲染：先渲染前 100 张卡片，滚动到底部自动加载更多，避免一次性渲染数千个 DOM
   const PAGE_SIZE = 100;
@@ -149,17 +165,19 @@ function App() {
     if (filterChar !== '全部') params.set('character', filterChar);
     if (filterType !== '全部') params.set('type', filterType);
     if (filterCharCount !== '全部') params.set('charcount', filterCharCount);
+    if (filterProductSeries) params.set('productseries', filterProductSeries);
     if (searchKeyword) params.set('search', searchKeyword);
     const query = params.toString();
     const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
     window.history.replaceState({}, '', newUrl);
-  }, [filterSeries, filterChar, filterType, filterCharCount, searchKeyword]);
+  }, [filterSeries, filterChar, filterType, filterCharCount, filterProductSeries, searchKeyword]);
 
   const handleReset = () => {
     setFilterSeries('全部');
     setFilterChar('全部');
     setFilterType('全部');
     setFilterCharCount('全部');
+    setFilterProductSeries('');
     setSearchInput('');
   };
 
@@ -173,6 +191,7 @@ function App() {
       setFilterChar('全部');
       setFilterType('全部');
       setFilterCharCount('全部');
+      setFilterProductSeries('');
       setSearchInput('');
       setFilterStatus('owned');
     } else if (tab === 'wishlist') {
@@ -180,10 +199,18 @@ function App() {
       setFilterChar('全部');
       setFilterType('全部');
       setFilterCharCount('全部');
+      setFilterProductSeries('');
       setSearchInput('');
       setFilterStatus('wish');
     }
   };
+
+  // 点击详情页的系列 → 跳转到图鉴并按该系列筛选
+  const handleSeriesClick = useCallback((series) => {
+    setFilterProductSeries(series);
+    setSelectedItem(null);
+    setActiveTab('collection');
+  }, []);
 
   const handleCardClick = useCallback((item) => {
     setSelectedItem(item);
@@ -412,6 +439,14 @@ function App() {
               onCharCountChange={setFilterCharCount}
               onReset={handleReset}
             />
+
+            {filterProductSeries && (
+              <div className="mt-3 flex items-center gap-2 text-sm">
+                <span className="text-text-secondary">当前系列：</span>
+                <span className="px-2.5 py-1 rounded-full bg-accent/10 text-accent font-medium">{filterProductSeries}</span>
+                <button onClick={() => setFilterProductSeries('')} className="px-2 py-1 text-text-secondary hover:text-accent transition-colors">✕ 清除</button>
+              </div>
+            )}
           </>
         )}
 
@@ -518,6 +553,7 @@ function App() {
         itemFolderId={modalItem && currentFolderType ? getItemFolderId(currentFolderType, modalItem.id) : null}
         onMoveToFolder={(folderId) => modalItem && handleMoveToFolder(modalItem.id, folderId)}
         onCreateFolder={handleCreateFolderForModal}
+        onSeriesClick={handleSeriesClick}
       />
 
       {showBackTop && (
