@@ -25140,7 +25140,7 @@ id: 2571,
     subtitle: "アイカツ！シリーズ ～AIKATSU！Cheers～ スクラッチ D賞 ミニ色紙",
     character: "姬石来希",
     type: "色纸/纸制品",
-    size: "[本体]约W136×H121mm",
+    size: "约W136×H121mm",
     price: "770円/次(含税)",
     image: "https://i.imgur.com/4j7nh9z.png"
   },{
@@ -25149,7 +25149,7 @@ id: 2572,
     subtitle: "アイカツ！シリーズ ～AIKATSU！Cheers～ スクラッチ D賞 ミニ色紙",
     character: "音羽舞樱",
     type: "色纸/纸制品",
-    size: "[本体]约W136×H121mm",
+    size: "约W136×H121mm",
     price: "770円/次(含税)",
     image: "https://i.imgur.com/8gwpP1Q.png"
   },{
@@ -25158,7 +25158,7 @@ id: 2573,
     subtitle: "アイカツ！シリーズ ～AIKATSU！Cheers～ スクラッチ D賞 ミニ色紙",
     character: "友希爱音",
     type: "色纸/纸制品",
-    size: "[本体]约W136×H121mm",
+    size: "约W136×H121mm",
     price: "770円/次(含税)",
     image: "https://i.imgur.com/uyaqevw.png"
   },{
@@ -25167,7 +25167,7 @@ id: 2574,
     subtitle: "アイカツ！シリーズ ～AIKATSU！Cheers～ スクラッチ D賞 ミニ色紙",
     character: "凑美绪",
     type: "色纸/纸制品",
-    size: "[本体]约W136×H121mm",
+    size: "约W136×H121mm",
     price: "770円/次(含税)",
     image: "https://i.imgur.com/C2ZF6U7.png"
   },{
@@ -25176,7 +25176,7 @@ id: 2575,
     subtitle: "アイカツ！シリーズ ～AIKATSU！Cheers～ スクラッチ D賞 ミニ色紙",
     character: "大空明",
     type: "色纸/纸制品",
-    size: "[本体]约W136×H121mm",
+    size: "约W136×H121mm",
     price: "770円/次(含税)",
     image: "https://i.imgur.com/GUSInyR.png"
   },{
@@ -25185,7 +25185,7 @@ id: 2576,
     subtitle: "アイカツ！シリーズ ～AIKATSU！Cheers～ スクラッチ D賞 ミニ色紙",
     character: "虹野梦",
     type: "色纸/纸制品",
-    size: "[本体]约W136×H121mm",
+    size: "约W136×H121mm",
     price: "770円/次(含税)",
     image: "https://i.imgur.com/aZITSX1.png"
   },{
@@ -25194,7 +25194,7 @@ id: 2577,
     subtitle: "アイカツ！シリーズ ～AIKATSU！Cheers～ スクラッチ D賞 ミニ色紙",
     character: "星宫莓",
     type: "色纸/纸制品",
-    size: "[本体]约W136×H121mm",
+    size: "约W136×H121mm",
     price: "770円/次(含税)",
     image: "https://i.imgur.com/olNNsKH.png"
   },
