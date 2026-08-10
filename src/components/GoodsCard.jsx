@@ -1,4 +1,5 @@
 import { useState, memo } from 'react';
+import { splitTypes } from '../data/items';
 
 const GoodsCard = ({ item, onClick, priority = false }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
