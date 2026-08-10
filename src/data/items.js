@@ -9648,8 +9648,9 @@ export const BASE_ITEMS = [{
     subtitle: "アイカツ！ チェスクッキー",
     character: "新条雏姬,大空明,冰上堇",
     type: "徽章",
+    size: "直径约57mm",
     price: "770円(含税)", 
-    size: "https://i.imgur.com/0kVM56h.png"
+    image: "https://i.imgur.com/0kVM56h.png"
     },
     {
     id: 957,
@@ -15719,6 +15720,7 @@ export const BASE_ITEMS = [{
     name: "剧场版重映《偶像活动Stars!》 方形徽章",
     subtitle: "「劇場版アイカツスターズ！」ライブ缶バッジ",
     character: "白鸟姬",
+    type: "徽章",
     size: "约W80×H53mm",
     price: "500円(含税)", 
     image: "https://i.imgur.com/ViUje0E.png",
