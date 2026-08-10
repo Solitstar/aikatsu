@@ -125,7 +125,7 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
             {formatCardCharacter(item.character)}
           </span>
           <span className="hidden sm:inline-block text-xs px-2.5 py-1 rounded-full bg-bg-primary text-text-secondary font-medium">
-            {item.type}
+            {splitTypes(item.type).join('/')}
           </span>
         </div>
       </div>
