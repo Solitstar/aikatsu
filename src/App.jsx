@@ -4,6 +4,7 @@ import { useCollection } from './hooks/useCollection';
 import { useVersionCheck } from './hooks/useVersionCheck';
 import { useFolders } from './hooks/useFolders';
 import { getCharactersBySeriesAndGender, ALL_CHARACTERS } from './data/characters';
+import { splitTypes } from './data/items';
 import Header from './components/Header';
 import StatsBar from './components/StatsBar';
 import FilterBar from './components/FilterBar';
@@ -73,6 +74,21 @@ function App() {
     }
   }, [filterSeries, filterChar]);
 
+  // 预计算搜索索引：每件商品的标准化搜索文本只算一次，避免每次按键对全部商品跑正则
+  const searchIndex = useMemo(() => {
+    const map = new Map();
+    for (const it of items) {
+      map.set(it.id, {
+        char: normalize(it.character),
+        text: normalize([
+          it.name, it.type, it.subtitle, it.craft, it.material,
+          it.characterRomaji, it.characterAlias, it.characterPinyin,
+        ].join(' ')),
+      });
+    }
+    return map;
+  }, [items]);
+
   const filteredItems = useMemo(() => {
     // 解析搜索词（仅当关键词变化时执行一次，从关键词中提取角色名）
     const parsedKw = searchKeyword ? extractCharParts(searchKeyword) : null;
@@ -80,7 +96,7 @@ function App() {
     return items.filter(item => {
       const matchSeries = filterSeries === '全部' || item.series.includes(filterSeries);
       const matchChar = filterChar === '全部' || item.character.includes(filterChar);
-      const matchType = filterType === '全部' || item.type === filterType;
+      const matchType = filterType === '全部' || splitTypes(item.type).includes(filterType);
       const matchStatus = filterStatus === '全部' || item.status === filterStatus;
 
       // 角色数量筛选：单人/多人/其他
@@ -90,23 +106,13 @@ function App() {
         (filterCharCount === '多人' && charList.length > 1 && !charList.includes('其他')) ||
         (filterCharCount === '其他(不含角色)' && charList.includes('其他'));
 
-      // 关键词匹配：提取出的角色名必须都在商品角色中，剩余关键词匹配任意字段
+      // 关键词匹配：提取出的角色名必须都在商品角色中，剩余关键词匹配预计算的搜索文本
       const matchSearch = !searchKeyword || !parsedKw || (() => {
         const { chars, rest } = parsedKw;
-        const itemChars = normalize(item.character);
-        if (!chars.every(cn => itemChars.includes(cn))) return false;
+        const idx = searchIndex.get(item.id);
+        if (!chars.every(cn => idx.char.includes(cn))) return false;
         if (!rest) return true;
-        return (
-          normalize(item.name).includes(rest) ||
-          itemChars.includes(rest) ||
-          normalize(item.type).includes(rest) ||
-          normalize(item.subtitle).includes(rest) ||
-          normalize(item.craft).includes(rest) ||
-          normalize(item.material).includes(rest) ||
-          normalize(item.characterRomaji).includes(rest) ||
-          normalize(item.characterAlias).includes(rest) ||
-          normalize(item.characterPinyin).includes(rest)
-        );
+        return idx.text.includes(rest);
       })();
 
       // 文件夹过滤
@@ -123,7 +129,19 @@ function App() {
 
       return matchSeries && matchChar && matchType && matchStatus && matchCharCount && matchSearch && matchFolder;
     });
-  }, [items, filterSeries, filterChar, filterType, filterStatus, filterCharCount, searchKeyword, activeTab, activeFolder, getItemFolderId]);
+  }, [items, searchIndex, filterSeries, filterChar, filterType, filterStatus, filterCharCount, searchKeyword, activeTab, activeFolder, getItemFolderId]);
+
+  // 增量渲染：先渲染前 100 张卡片，滚动到底部自动加载更多，避免一次性渲染数千个 DOM
+  const PAGE_SIZE = 100;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [filterSeries, filterChar, filterType, filterStatus, filterCharCount, searchKeyword, activeTab, activeFolder]);
+  const visibleItems = useMemo(() => filteredItems.slice(0, visibleCount), [filteredItems, visibleCount]);
+  const hasMore = visibleCount < filteredItems.length;
+  const handleLoadMore = useCallback(() => {
+    setVisibleCount(c => Math.min(c + PAGE_SIZE, filteredItems.length));
+  }, [filteredItems.length]);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -227,7 +245,7 @@ function App() {
       item.name,
       item.character,
       item.series,
-      item.type,
+      item.type && splitTypes(item.type).join('/'),
       (item.wishPriceMin || 0).toFixed(2),
       (item.wishPriceMax || 0).toFixed(2),
       item.wishQuantity || 1,
@@ -281,7 +299,7 @@ function App() {
       item.name,
       item.character,
       item.series,
-      item.type,
+      item.type && splitTypes(item.type).join('/'),
       item.quantity > 0 ? ((item.totalPrice || 0) / item.quantity).toFixed(2) : '0.00',
       item.quantity || 0,
       (item.totalPrice || 0).toFixed(2),
@@ -473,7 +491,7 @@ function App() {
           </>
         )}
 
-        <CardGrid items={filteredItems} onCardClick={handleCardClick} />
+        <CardGrid items={visibleItems} onCardClick={handleCardClick} onLoadMore={handleLoadMore} hasMore={hasMore} />
 
         <footer className="mt-16 pb-8 text-center">
           <p className="text-text-secondary text-xs sm:text-sm">

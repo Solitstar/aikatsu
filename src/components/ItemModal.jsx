@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { splitTypes } from '../data/items';
 
 const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder }) => {
   const [showFolderPicker, setShowFolderPicker] = useState(false);
@@ -21,9 +22,10 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   // 本地缓存文件名：多版本商品用 item_{id}_v{idx}，单图商品用 item_{id}
   const localBase = (idx) => `item_${item.id}${imageList.length > 1 ? `_v${idx}` : ''}`;
 
-  // 图片加载优先级：本地缓存 → 远程URL → SVG占位
-  useEffect(() => {
-    if (!item) return;
+  // 切换商品时在渲染阶段同步重置图片状态，避免上一件商品的旧图残留（重影）
+  const prevItemIdRef = useRef(null);
+  if (item && prevItemIdRef.current !== item.id) {
+    prevItemIdRef.current = item.id;
     // 恢复已保存的版本（如 初版/再贩）
     const savedIdx = item.version
       ? imageList.findIndex(img => img.label === item.version)
@@ -35,7 +37,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     setFallbackStep(0);
     const base = import.meta.env.BASE_URL;
     setImgSrc(`${base}images/${localBase(idx)}.webp`);
-  }, [item?.id]);
+  }
 
   const handleImgError = () => {
     const base = import.meta.env.BASE_URL;
@@ -120,6 +122,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   <div className="w-full h-full animate-pulse bg-gradient-to-b from-gray-200 via-gray-100 to-gray-200" />
                 )}
                 <img
+                  key={`${item.id}-${selectedIdx}`}
                   src={imgSrc || item.image}
                   alt={item.name}
                   className="w-full h-full object-cover"
@@ -175,7 +178,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">种类</span>
-                  <span className="text-text-primary">{item.type}</span>
+                  <span className="text-text-primary">{splitTypes(item.type).join('/')}</span>
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>

@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import { splitTypes } from '../data/items';
 
 const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) => {
   return (
@@ -50,7 +51,7 @@ const OwnedShareImage = forwardRef(({ items, totalQuantity, totalPrice }, ref) =
                 <p className="text-[8px] text-black/40 leading-tight">{item.subtitle}</p>
               )}
               <p className="font-bold text-black text-xs leading-tight">{item.name}</p>
-              <p className="text-[9px] text-black/50 leading-tight">{item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean).join(' | ')} · {item.type}</p>
+              <p className="text-[9px] text-black/50 leading-tight">{item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean).join(' | ')} · {splitTypes(item.type).join('/')}</p>
             </div>
             <div className="text-right flex-shrink-0 flex flex-col justify-center">
               <p className="text-black font-bold text-sm whitespace-nowrap">

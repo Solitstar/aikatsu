@@ -1,6 +1,6 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { getCharactersBySeriesAndGender } from '../data/characters';
-import { TYPES } from '../data/items';
+import { TYPES, splitTypes } from '../data/items';
 
 const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) => {
   const [selectedChar, setSelectedChar] = useState('全部');
@@ -65,14 +65,14 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
     const charTotal = items.filter(item => {
       const matchChar = selectedChar === '全部' ||
         item.character.split(/[,，]/).map(c => c.trim()).includes(selectedChar);
-      const matchType = selectedType === '全部' || item.type === selectedType;
+      const matchType = selectedType === '全部' || splitTypes(item.type).includes(selectedType);
       return matchChar && matchType && charCountMatch(item);
     });
 
     const charOwned = ownedItems.filter(item => {
       const matchChar = selectedChar === '全部' ||
         item.character.split(/[,，]/).map(c => c.trim()).includes(selectedChar);
-      const matchType = selectedType === '全部' || item.type === selectedType;
+      const matchType = selectedType === '全部' || splitTypes(item.type).includes(selectedType);
       return matchChar && matchType && charCountMatch(item);
     });
 
@@ -148,10 +148,10 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
               <div className="absolute top-full left-0 right-0 mt-1 bg-card-bg rounded-xl shadow-soft border border-accent/10 max-h-52 overflow-y-auto z-30">
                 {filteredChars.map((char) => {
                   const count = char === '全部' ? (
-                    selectedType === '全部' ? totalCount : items.filter(item => item.type === selectedType).length
+                    selectedType === '全部' ? totalCount : items.filter(item => splitTypes(item.type).includes(selectedType)).length
                   ) : items.filter(item => {
                     const mChar = item.character.split(/[,，]/).map(c => c.trim()).includes(char);
-                    const mType = selectedType === '全部' || item.type === selectedType;
+                    const mType = selectedType === '全部' || splitTypes(item.type).includes(selectedType);
                     return mChar && mType;
                   }).length;
                   const isActive = selectedChar === char;
@@ -188,7 +188,7 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
                          focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
             >
               {TYPES.filter(t => t !== '全部').map(t => {
-                const count = items.filter(item => item.type === t).length;
+                const count = items.filter(item => splitTypes(item.type).includes(t)).length;
                 return (
                   <option key={t} value={t}>{t} ({count})</option>
                 );
