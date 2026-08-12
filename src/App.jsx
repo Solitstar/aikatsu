@@ -205,9 +205,10 @@ function App() {
     }
   };
 
-  // 点击详情页的系列 → 跳转到图鉴并按该系列筛选
+  // 点击详情页的系列 → 跳转到图鉴并按该系列筛选（清空搜索词）
   const handleSeriesClick = useCallback((series) => {
     setFilterProductSeries(series);
+    setSearchInput('');
     setSelectedItem(null);
     setActiveTab('collection');
   }, []);
