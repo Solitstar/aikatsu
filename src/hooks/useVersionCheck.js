@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 /**
  * 定期检查 version.json，检测网站更新
- * 每 60 秒轮询一次，发现新版本时 hasUpdate = true
+ * 每 15 秒轮询一次，发现新版本时 hasUpdate = true
  */
 export function useVersionCheck() {
   const [hasUpdate, setHasUpdate] = useState(false);
@@ -20,7 +20,7 @@ export function useVersionCheck() {
         currentVersion.current = Date.now();
       });
 
-    // 每 60 秒检查一次
+    // 每 15 秒检查一次
     const interval = setInterval(() => {
       fetch('/aikatsu/version.json?t=' + Date.now())
         .then((res) => res.json())
@@ -34,7 +34,7 @@ export function useVersionCheck() {
           }
         })
         .catch(() => {});
-    }, 60000);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, []);
