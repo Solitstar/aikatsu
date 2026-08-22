@@ -210,8 +210,14 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>
-                  <span className="text-text-primary">{item.size || '-'}</span>
+                  <span className="text-text-primary whitespace-pre-line">{item.size || '-'}</span>
                 </div>
+                {item.price && (
+                  <div className="flex">
+                    <span className="w-16 text-text-secondary flex-shrink-0">价格</span>
+                    <span className="text-text-primary whitespace-pre-line">{item.price}</span>
+                  </div>
+                )}
                 {item.material && (
                   <div className="flex">
                     <span className="w-16 text-text-secondary flex-shrink-0">材质</span>
