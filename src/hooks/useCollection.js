@@ -24,6 +24,8 @@ const loadFromStorage = () => {
         normalized[id] = {
           status: val.status,
           version: val.version || null,
+          // 旧数据只有单个 version+status，迁移为 versionStatuses
+          versionStatuses: val.versionStatuses || (val.version && val.status ? { [val.version]: val.status } : {}),
           priceRecords: val.priceRecords && val.priceRecords.length > 0
             ? val.priceRecords
             : (val.price > 0
@@ -55,6 +57,15 @@ const getNextStatus = (current) => {
   return null;
 };
 
+// 版本级收藏状态：versionStatuses = { [版本label]: 'owned' | 'wish' }
+// 整件商品状态由各版本聚合：任一版本已拥有 → owned；否则任一心愿 → wish；否则 null
+const deriveStatus = (versionStatuses) => {
+  const vals = Object.values(versionStatuses || {});
+  if (vals.includes('owned')) return 'owned';
+  if (vals.includes('wish')) return 'wish';
+  return null;
+};
+
 let _recordIdCounter = Date.now();
 
 const generateRecordId = () => ++_recordIdCounter;
@@ -72,10 +83,13 @@ export const useCollection = () => {
       const saved = dataMap[item.id];
       const records = saved?.priceRecords || [];
       const { quantity, totalPrice } = computeFromRecords(records);
+      const versionStatuses = saved?.versionStatuses || {};
       return {
         ...item,
-        status: saved?.status || null,
+        // 版本级商品状态由 versionStatuses 聚合，普通商品回退到保存的 status
+        status: deriveStatus(versionStatuses) || saved?.status || null,
         version: saved?.version || null,
+        versionStatuses,
         priceRecords: records,
         quantity,
         totalPrice,
@@ -93,6 +107,7 @@ export const useCollection = () => {
         statusMap[item.id] = {
           status: item.status,
           version: item.version || null,
+          versionStatuses: item.versionStatuses || {},
           priceRecords: item.priceRecords || [],
           wishQuantity: item.wishQuantity || 1,
           wishPriceMin: item.wishPriceMin || 0,
@@ -123,6 +138,27 @@ export const useCollection = () => {
     setItems(prevItems =>
       prevItems.map(item => {
         if (item.id !== id) return item;
+        // 版本级商品：状态作用于指定版本，整件状态由各版本聚合
+        if (version !== undefined && version !== null) {
+          const nextVersionStatuses = { ...(item.versionStatuses || {}) };
+          if (status) nextVersionStatuses[version] = status;
+          else delete nextVersionStatuses[version];
+          const hasOwned = Object.values(nextVersionStatuses).includes('owned');
+          // 任一版本仍为已拥有时保留购入记录，否则清空
+          const records = hasOwned
+            ? (item.priceRecords.length > 0 ? item.priceRecords : [{ id: generateRecordId(), price: 0, quantity: 1 }])
+            : [];
+          const { quantity, totalPrice } = computeFromRecords(records);
+          return {
+            ...item,
+            status: deriveStatus(nextVersionStatuses),
+            version,
+            versionStatuses: nextVersionStatuses,
+            priceRecords: records,
+            quantity,
+            totalPrice,
+          };
+        }
         const records = status === 'owned'
           ? (item.priceRecords.length > 0 ? item.priceRecords : [{ id: generateRecordId(), price: 0, quantity: 1 }])
           : [];
@@ -156,7 +192,10 @@ export const useCollection = () => {
         if (item.id !== id) return item;
         const records = item.priceRecords.filter(r => r.id !== recordId);
         const { quantity, totalPrice } = computeFromRecords(records);
-        const newStatus = quantity > 0 ? 'owned' : (item.status === 'wish' ? 'wish' : null);
+        // 版本级商品：收藏状态由各版本聚合决定，删除记录不改变版本标记
+        const newStatus = item.versionStatuses && Object.keys(item.versionStatuses).length > 0
+          ? deriveStatus(item.versionStatuses)
+          : (quantity > 0 ? 'owned' : (item.status === 'wish' ? 'wish' : null));
         return { ...item, priceRecords: records, quantity, totalPrice, status: newStatus };
       })
     );

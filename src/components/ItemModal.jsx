@@ -11,13 +11,17 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   const [displayName, setDisplayName] = useState('');
 
   // 多图列表：images 存在时使用多图，否则单图（支持字符串或 {label, url, name} 对象）
+  // 带 label 的条目为版本图（如 初版/再贩）；不带 label 的条目为普通图集（仅展示，无版本语义）
   const imageList = (() => {
     const raw = item?.images?.length ? item.images : item ? [item.image] : [];
     return raw.map((img, i) => {
-      if (typeof img === 'string') return { label: `图${i + 1}`, url: img, name: null };
-      return { label: img.label || `图${i + 1}`, url: img.url, name: img.name || null };
+      if (typeof img === 'string') return { label: `图${i + 1}`, url: img, name: null, versioned: false };
+      return { label: img.label || `图${i + 1}`, url: img.url, name: img.name || null, versioned: !!img.label };
     });
   })();
+
+  // 版本模式：多图且所有条目都带 label（如 邮票吧唧的 初版/再贩），收藏时保存所选版本
+  const isVersioned = imageList.length > 1 && imageList.every(img => img.versioned);
 
   // 本地缓存文件名：多版本商品用 item_{id}_v{idx}，单图商品用 item_{id}
   const localBase = (idx) => `item_${item.id}${imageList.length > 1 ? `_v${idx}` : ''}`;
@@ -71,8 +75,12 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   };
 
   const itemType = item?.status;
-  // 多图商品才有版本概念，收藏时保存当前选中版本的 label
-  const selectedVersion = imageList.length > 1 ? imageList[selectedIdx]?.label : undefined;
+  // 仅版本模式商品在收藏时保存当前选中版本的 label（如 初版/再贩），普通图集不保存
+  const selectedVersion = isVersioned ? imageList[selectedIdx]?.label : undefined;
+  // 当前选中版本的收藏状态：版本级商品看 versionStatuses（各版本独立标记），普通/图集商品看整件状态
+  const selectedVersionStatus = isVersioned
+    ? (item?.versionStatuses?.[selectedVersion] || null)
+    : item?.status;
   useEffect(() => {
     if (!item) return;
     const handleEsc = (e) => {
@@ -144,29 +152,63 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   onError={handleImgError}
                 />
               </div>
-              {/* 淘宝式图片选择按钮 */}
-              {imageList.length > 1 && (
+              {/* 版本模式：文字按钮（初版/再贩）；图集模式：缩略图切换 */}
+              {imageList.length > 1 && (isVersioned ? (
+                <div className="mt-3">
+                  <div className="flex flex-wrap gap-2">
+                    {imageList.map((img, idx) => {
+                      const vs = item?.versionStatuses?.[img.label];
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleSelectImage(idx)}
+                          className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+                            selectedIdx === idx
+                              ? 'bg-accent text-white border-accent shadow-md'
+                              : 'bg-white text-text-secondary border-accent/20 hover:border-accent/50 hover:text-text-primary'
+                          }`}
+                        >
+                          {img.label}
+                          {/* 版本收藏状态点：黄=已拥有，粉=心愿单 */}
+                          {vs && (
+                            <span
+                              className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
+                                vs === 'owned' ? 'bg-yellow-400' : 'bg-rose-400'
+                              }`}
+                            />
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <p className="text-[10px] text-text-secondary/60 mt-1.5">
+                    当前：{imageList[selectedIdx].label}
+                  </p>
+                </div>
+              ) : (
                 <div className="mt-3">
                   <div className="flex flex-wrap gap-2">
                     {imageList.map((img, idx) => (
                       <button
                         key={idx}
                         onClick={() => handleSelectImage(idx)}
-                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+                        className={`w-14 h-14 rounded-lg overflow-hidden border-2 transition-all ${
                           selectedIdx === idx
-                            ? 'bg-accent text-white border-accent shadow-md'
-                            : 'bg-white text-text-secondary border-accent/20 hover:border-accent/50 hover:text-text-primary'
+                            ? 'border-accent shadow-md'
+                            : 'border-transparent opacity-70 hover:opacity-100'
                         }`}
                       >
-                        {img.label}
+                        <img
+                          src={img.url}
+                          alt={img.label}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
                       </button>
                     ))}
                   </div>
-                  <p className="text-[10px] text-text-secondary/60 mt-1.5">
-                    当前：{imageList[selectedIdx].label}
-                  </p>
                 </div>
-              )}
+              ))}
             </div>
 
             <div className="flex-1 flex flex-col justify-center">
@@ -242,7 +284,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 <button
                   onClick={() => onToggleStatus(item.id, 'owned', selectedVersion)}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white transition-all ${
-                    item.status === 'owned'
+                    selectedVersionStatus === 'owned'
                       ? 'bg-yellow-500 shadow-md ring-2 ring-yellow-300'
                       : 'bg-yellow-400 hover:bg-yellow-500'
                   }`}
@@ -255,7 +297,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 <button
                   onClick={() => onToggleStatus(item.id, 'wish', selectedVersion)}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium text-white transition-all ${
-                    item.status === 'wish'
+                    selectedVersionStatus === 'wish'
                       ? 'bg-rose-600 shadow-md ring-2 ring-rose-300'
                       : 'bg-rose-400 hover:bg-rose-500'
                   }`}
@@ -340,7 +382,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 </div>
               )}
 
-              {item.status === 'owned' && (
+              {selectedVersionStatus === 'owned' && (
                 <div className="bg-yellow-50/50 rounded-2xl p-4 mb-6 border border-yellow-100">
                   <div className="flex items-center justify-between mb-3">
                     <p className="text-sm font-semibold text-yellow-700">购入记录</p>
@@ -414,7 +456,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 </div>
               )}
 
-              {item.status === 'wish' && (
+              {selectedVersionStatus === 'wish' && (
                 <div className="bg-rose-50/50 rounded-2xl p-4 mb-6 border border-rose-100">
                   <p className="text-sm font-semibold text-rose-600 mb-1">心理价格范围</p>
                   <p className="text-xs text-rose-400/70 mb-3 leading-relaxed">

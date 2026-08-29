@@ -256,7 +256,11 @@ function App() {
   const handleModalToggle = (id, targetStatus, version) => {
     const currentItem = items.find(i => i.id === id);
     if (!currentItem) return;
-    if (currentItem.status === targetStatus) {
+    // 版本级商品（如 初版/再贩）：只切换当前选中版本的收藏状态
+    if (version) {
+      const currentVersionStatus = currentItem.versionStatuses?.[version] || null;
+      setStatus(id, currentVersionStatus === targetStatus ? null : targetStatus, version);
+    } else if (currentItem.status === targetStatus) {
       setStatus(id, null);
     } else {
       setStatus(id, targetStatus, version);
