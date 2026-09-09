@@ -3,7 +3,7 @@ import { renderShareImageToCanvas } from './utils/exportImage';
 import { useCollection } from './hooks/useCollection';
 import { useVersionCheck } from './hooks/useVersionCheck';
 import { useFolders } from './hooks/useFolders';
-import { getCharactersBySeriesAndGender, ALL_CHARACTERS } from './data/characters';
+import { getCharactersBySeries, ALL_CHARACTERS, SERIES_LIST, isCharacterless, countRealCharacters, OTHER_SERIES_CHARACTERS, getCharacterGroupByName, matchCharacterGroup } from './data/characters';
 import { splitTypes, TYPES } from './data/items';
 import Header from './components/Header';
 import StatsBar from './components/StatsBar';
@@ -81,11 +81,30 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const availableChars = getCharactersBySeriesAndGender(filterSeries, '全部');
-    if (filterChar !== '全部' && !availableChars.includes(filterChar)) {
+    // 系列筛选可能是"组合"（如 WM）→ 角色下拉候选为该组合成员；否则为该系列角色
+    const activeGroup = getCharacterGroupByName(filterSeries);
+    const availableChars = activeGroup
+      ? activeGroup.characters
+      : getCharactersBySeries(filterSeries);
+    // 角色=其他是虚拟选项，始终合法；其余必须是所选系列/组合下真实存在的角色
+    if (filterChar !== '全部' && filterChar !== '其他' && !availableChars.includes(filterChar)) {
       setFilterChar('全部');
     }
-  }, [filterSeries, filterChar]);
+    // 旧 URL 带入非法系列值时自动回退为"全部"（组合名如 WM 属于合法值）
+    if (!SERIES_LIST.includes(filterSeries) && !activeGroup) {
+      setFilterSeries('全部');
+    }
+    // 单向联动：角色下拉选「其他」时，角色数自动同步为「其他(不含角色)」
+    // —— 注意：这是单向同步；反向（手动先选角色数=其他(不含角色)）不会强改角色筛选，
+    //    因为用户需要保留角色=具体角色名 AND 角色数=其他(不含角色) 的叠加能力。
+    if (filterChar === '其他' && filterCharCount !== '其他(不含角色)') {
+      setFilterCharCount('其他(不含角色)');
+    }
+    // 吉祥物（其他系列角色如 天使熊/Meruli）不参与角色数分类 → 角色数默认回落到"全部"
+    if (OTHER_SERIES_CHARACTERS.has(filterChar) && filterCharCount !== '全部') {
+      setFilterCharCount('全部');
+    }
+  }, [filterSeries, filterChar, filterCharCount]);
 
   // 预计算搜索索引：每件商品的标准化搜索文本只算一次，避免每次按键对全部商品跑正则
   const searchIndex = useMemo(() => {
@@ -108,18 +127,33 @@ function App() {
     const parsedKw = searchKeyword ? extractSearchParts(searchKeyword) : null;
 
     return items.filter(item => {
-      const matchSeries = filterSeries === '全部' || item.series.includes(filterSeries);
-      const matchChar = filterChar === '全部' || item.character.includes(filterChar);
+      // 系列/组合筛选：选"全部"不过滤；选组合（如 WM）按角色成员匹配；
+      // 否则按商品归属的系列匹配
+      const activeGroup = getCharacterGroupByName(filterSeries);
+      const matchSeries = filterSeries === '全部'
+        || (activeGroup
+          ? matchCharacterGroup(item.character, activeGroup.characters)
+          : item.series.includes(filterSeries));
+      // 角色筛选：选「其他」= 商品不含任何真实角色（全是系列名/其他/空）
+      const matchChar = filterChar === '全部'
+        ? true
+        : filterChar === '其他'
+          ? isCharacterless(item.character)
+          : item.character.includes(filterChar);
       const matchType = filterType === '全部' || splitTypes(item.type).includes(filterType);
       const matchProductSeries = !filterProductSeries || item.productSeries.includes(filterProductSeries);
       const matchStatus = filterStatus === '全部' || item.status === filterStatus;
 
-      // 角色数量筛选：单人/多人/其他
-      const charList = (item.character || '').split(/[,，]/).map(c => c.trim()).filter(Boolean);
+      // 角色数量筛选
+      // - 单人 / 多人：按"偶像角色数"归类（吉祥物如 天使熊/Meruli 不计入人数），
+      //   但 character 里显式写了 "其他" 的商品仍优先归到「其他(不含角色)」
+      // - 其他(不含角色)：character 含"其他"字样，或没有任何偶像角色（纯吉祥物/系列名/空）
+      const hasOtherLiteral = String(item.character || '').includes('其他');
+      const realCount = countRealCharacters(item.character);
       const matchCharCount = filterCharCount === '全部' ||
-        (filterCharCount === '单人' && charList.length === 1 && !charList.includes('其他')) ||
-        (filterCharCount === '多人' && charList.length > 1 && !charList.includes('其他')) ||
-        (filterCharCount === '其他(不含角色)' && charList.includes('其他'));
+        (filterCharCount === '单人' && !hasOtherLiteral && realCount === 1) ||
+        (filterCharCount === '多人' && !hasOtherLiteral && realCount >= 2) ||
+        (filterCharCount === '其他(不含角色)' && (hasOtherLiteral || realCount === 0));
 
       // 关键词匹配：提取出的角色名必须都在商品角色中、种类名必须在商品种类中，剩余关键词匹配预计算的搜索文本
       const matchSearch = !searchKeyword || !parsedKw || (() => {

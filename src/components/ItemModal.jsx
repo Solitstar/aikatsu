@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { splitTypes } from '../data/items';
+import { formatCharacterDisplay } from '../data/characters';
 
 const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder, onSeriesClick }) => {
   const [showFolderPicker, setShowFolderPicker] = useState(false);
@@ -244,7 +245,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">角色</span>
-                  <span className="text-text-primary">{item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean).join(' | ')}</span>
+                  <span className="text-text-primary">{formatCharacterDisplay(item.character, item.series)}</span>
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">种类</span>

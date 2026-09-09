@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
-import { getCharactersBySeriesAndGender } from '../data/characters';
+import { getCharactersBySeries, isCharacterless, countRealCharacters } from '../data/characters';
 import { TYPES, splitTypes } from '../data/items';
 
 const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) => {
@@ -17,19 +17,23 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
   const ownedCount = ownedItems.length;
 
   // 角色数量匹配函数 — 同时受全局筛选和本地筛选影响
+  // - 单人 / 多人：按"偶像角色数"归类（吉祥物如 天使熊/Meruli 不计入人数），
+  //   但 character 里显式写了 "其他" 的商品仍优先归到「其他(不含角色)」
+  // - 其他(不含角色)：character 含"其他"字样，或没有任何偶像角色（纯吉祥物/系列名/空）
   const charCountMatch = (item) => {
     const effective = selectedCharCount !== '全部' ? selectedCharCount : filterCharCount;
     if (effective === '全部') return true;
-    const chars = (item.character || '').split(/[,，]/).map(c => c.trim()).filter(Boolean);
-    if (effective === '单人') return chars.length === 1 && !chars.includes('其他');
-    if (effective === '多人') return chars.length > 1 && !chars.includes('其他');
-    if (effective === '其他(不含角色)') return chars.includes('其他');
+    const hasOtherLiteral = String(item.character || '').includes('其他');
+    const realCount = countRealCharacters(item.character);
+    if (effective === '单人') return !hasOtherLiteral && realCount === 1;
+    if (effective === '多人') return !hasOtherLiteral && realCount >= 2;
+    if (effective === '其他(不含角色)') return hasOtherLiteral || realCount === 0;
     return true;
   };
 
   const overallPercent = totalCount > 0 ? Math.round((ownedCount / totalCount) * 100) : 0;
 
-  const allCharacters = ['全部', ...getCharactersBySeriesAndGender('全部', '全部')];
+  const allCharacters = ['全部', ...getCharactersBySeries('全部'), '其他'];
 
   // 搜索过滤角色列表
   const filteredChars = useMemo(() => {
@@ -63,15 +67,21 @@ const CollectionProgress = ({ items, ownedItems, filterCharCount = '全部' }) =
     if (!hasFilter) return null;
 
     const charTotal = items.filter(item => {
-      const matchChar = selectedChar === '全部' ||
-        item.character.split(/[,，]/).map(c => c.trim()).includes(selectedChar);
+      const matchChar = selectedChar === '全部'
+        ? true
+        : selectedChar === '其他'
+          ? isCharacterless(item.character)
+          : item.character.split(/[,，]/).map(c => c.trim()).includes(selectedChar);
       const matchType = selectedType === '全部' || splitTypes(item.type).includes(selectedType);
       return matchChar && matchType && charCountMatch(item);
     });
 
     const charOwned = ownedItems.filter(item => {
-      const matchChar = selectedChar === '全部' ||
-        item.character.split(/[,，]/).map(c => c.trim()).includes(selectedChar);
+      const matchChar = selectedChar === '全部'
+        ? true
+        : selectedChar === '其他'
+          ? isCharacterless(item.character)
+          : item.character.split(/[,，]/).map(c => c.trim()).includes(selectedChar);
       const matchType = selectedType === '全部' || splitTypes(item.type).includes(selectedType);
       return matchChar && matchType && charCountMatch(item);
     });

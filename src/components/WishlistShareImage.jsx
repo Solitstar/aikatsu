@@ -1,5 +1,6 @@
 import { forwardRef } from 'react';
 import { splitTypes } from '../data/items';
+import { formatCharacterDisplay } from '../data/characters';
 
 const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPriceMin, totalPriceMax }, ref) => {
   const hasTotalRange = totalPriceMax > 0;
@@ -55,7 +56,7 @@ const WishlistShareImage = forwardRef(({ items, totalQuantity, totalPriceMin, to
                 <p className="text-[8px] text-black/40 leading-tight">{item.subtitle}</p>
               )}
               <p className="font-bold text-black text-xs leading-tight">{item.name}</p>
-              <p className="text-[9px] text-black/50 leading-tight">{item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean).join(' | ')} · {splitTypes(item.type).join('/')}</p>
+              <p className="text-[9px] text-black/50 leading-tight">{formatCharacterDisplay(item.character, item.series)} · {splitTypes(item.type).join('/')}</p>
             </div>
             <div className="text-right flex-shrink-0 flex flex-col justify-center">
               <p className="text-black font-bold text-sm whitespace-nowrap">
