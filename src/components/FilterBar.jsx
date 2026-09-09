@@ -1,7 +1,9 @@
 import { TYPES } from '../data/items';
 import {
   SERIES_LIST,
-  getCharactersBySeriesAndGender,
+  getCharactersBySeries,
+  CHARACTER_GROUPS,
+  getCharacterGroupByName,
 } from '../data/characters';
 
 const FilterBar = ({
@@ -16,10 +18,34 @@ const FilterBar = ({
   onReset,
 }) => {
   const CHAR_COUNT_OPTIONS = ['全部', '单人', '多人', '其他(不含角色)'];
-  const availableCharacters = ['全部', ...getCharactersBySeriesAndGender(filterSeries, '全部')];
+  // 系列筛选若选中了"组合"（如 WM），角色下拉候选即该组合成员；否则为该系列角色
+  const activeGroup = getCharacterGroupByName(filterSeries);
+  const availableCharacters = ['全部', ...(activeGroup ? activeGroup.characters : getCharactersBySeries(filterSeries))];
   if (!availableCharacters.includes('其他')) {
     availableCharacters.push('其他');
   }
+
+  // 系列下拉：普通系列 + 「组合」分组（组合选项 value=组合名，文案带"组合"后缀）
+  const renderSeriesSelect = (label, value, onChange) => (
+    <div className={wrapperClass}>
+      <label className="block text-xs text-text-secondary mb-1.5 ml-1">{label}</label>
+      <select
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className={selectClass + " w-full"}
+      >
+        {SERIES_LIST.map(opt => (
+          <option key={opt} value={opt}>{opt}</option>
+        ))}
+        <optgroup label="组合">
+          {CHARACTER_GROUPS.map(g => (
+            <option key={g.name} value={g.name}>{g.name}组合</option>
+          ))}
+        </optgroup>
+      </select>
+      <span className={chevronClass}>▾</span>
+    </div>
+  );
 
   const selectClass = `
     appearance-none px-4 py-2.5 pr-10 rounded-xl
@@ -54,7 +80,7 @@ const FilterBar = ({
     <div className="bg-card-bg rounded-2xl shadow-card p-4 sm:p-6 mb-6">
       <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 items-stretch lg:items-center">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 flex-1">
-          {renderSelect('系列', filterSeries, onSeriesChange, SERIES_LIST)}
+          {renderSeriesSelect('系列', filterSeries, onSeriesChange)}
           {renderSelect('角色', filterChar, onCharChange, availableCharacters)}
           {renderSelect('种类', filterType, onTypeChange, TYPES)}
           {renderSelect('角色数', filterCharCount, onCharCountChange, CHAR_COUNT_OPTIONS)}

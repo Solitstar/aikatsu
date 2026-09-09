@@ -1,17 +1,11 @@
 import { useState, memo } from 'react';
 import { splitTypes } from '../data/items';
+import { formatCharacterDisplay } from '../data/characters';
 
 const GoodsCard = ({ item, onClick, priority = false }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
   const [fallbackStep, setFallbackStep] = useState(0);
-
-  const formatCardCharacter = (character) => {
-    if (!character) return '';
-    const chars = character.split(/[,，]/).map(c => c.trim()).filter(Boolean);
-    if (chars.length <= 1) return character;
-    return chars[0] + ' 等' + chars.length + '人';
-  };
 
   const getStatusBadge = () => {
     if (item.status === 'owned') {
@@ -123,7 +117,7 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
         </h3>
         <div className="flex flex-wrap gap-1 sm:gap-1.5">
           <span className="inline-block text-[10px] sm:text-xs px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-accent/15 text-accent font-medium truncate max-w-full">
-            {formatCardCharacter(item.character)}
+            {formatCharacterDisplay(item.character, item.series, { forCardCompact: true })}
           </span>
           <span className="hidden sm:inline-block text-xs px-2.5 py-1 rounded-full bg-bg-primary text-text-secondary font-medium">
             {splitTypes(item.type).join('/')}

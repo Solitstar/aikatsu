@@ -79,7 +79,9 @@ const computeFromRecords = (records) => {
 export const useCollection = () => {
   const [items, setItems] = useState(() => {
     const dataMap = loadFromStorage();
-    return getItemsWithMeta().map(item => {
+    return getItemsWithMeta()
+      .filter(Boolean) // 防御：BASE_ITEMS 若有稀疏元素空洞直接跳过，避免 map 后 undefined
+      .map(item => {
       const saved = dataMap[item.id];
       const records = saved?.priceRecords || [];
       const { quantity, totalPrice } = computeFromRecords(records);
@@ -99,7 +101,6 @@ export const useCollection = () => {
       };
     });
   });
-
   useEffect(() => {
     const statusMap = {};
     items.forEach(item => {
