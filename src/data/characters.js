@@ -107,9 +107,10 @@ const CHARACTER_DATABASE = [
   { name: 'Potepo', series: '其他', romaji: 'Potepo', pinyin: 'potepo' },
   { name: 'Alan', series: '其他', romaji: 'Alan', pinyin: 'alun' },
   { name: '大空海獭', series: '其他', pinyin: 'dakonghaita' },
-   { name: 'Dream puppy', series: '其他', pinyin: 'Dream puppy' },
+  { name: 'Dream Puppy', series: '其他', romaji: 'Dream Puppy', pinyin: 'dreampuppy' },
+  { name: 'Penne', series: '其他', romaji: 'Penne', pinyin: 'penne' },
   { name: 'Meruli', series: '其他', romaji: 'Meruli', alias: 'メルリ', pinyin: 'meiluli' },
-
+  { name: 'Sweetie Berry', series: '其他', romaji: 'Sweetie Berry', pinyin: 'sweetieberry' },
 ];
 
 // 「其他」系列角色（吉祥物等非偶像角色）：不计入"单人/多人"的角色人数统计

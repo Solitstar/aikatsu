@@ -25,7 +25,7 @@ const FilterBar = ({
     availableCharacters.push('其他');
   }
 
-  // 系列下拉：普通系列 + 「组合」分组（组合选项 value=组合名，文案带"组合"后缀）
+  // 系列下拉：普通系列 + 「组合」分组
   const renderSeriesSelect = (label, value, onChange) => (
     <div className={wrapperClass}>
       <label className="block text-xs text-text-secondary mb-1.5 ml-1">{label}</label>
