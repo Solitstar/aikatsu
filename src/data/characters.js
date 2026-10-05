@@ -1,6 +1,10 @@
 export const SERIES_LIST = ['全部', '初代', '明代', '星代', '友代', '大游行', '行星', 'Academy', '其他'];
 // 合法系列名集合（不含"全部"），用于判断 character 里写的是系列名而非真实角色
 export const VALID_SERIES = new Set(SERIES_LIST.filter(s => s !== '全部'));
+// 系列下拉/展示用的友好文案（内部值保持不变，避免与商品数据里的 series 值不一致）
+export const SERIES_LABELS = {
+  '其他': '其他（吉祥物等角色）',
+};
 
 const CHARACTER_DATABASE = [
   // 初代
@@ -14,7 +18,7 @@ const CHARACTER_DATABASE = [
   { name: '神崎美月', series: '初代', romaji: 'Kanzaki Mizuki', pinyin: 'shenqimeiyue' },
   { name: '夏树未来', series: '初代', romaji: 'Natsuki Mikuru', pinyin: 'xiashuweilai' },
   { name: '神谷紫苑', series: '初代', romaji: 'Kamiya Shion', pinyin: 'shenguziyuan' },
-  { name: '三轮光', series: '初代', romaji: 'Miwa Hikari', pinyin: 'sanlunguang' },
+  { name: '三轮光', series: '初代', romaji: ' Minowa Hikari', pinyin: 'sanlunguang' },
   { name: '音城塞拉', series: '初代', romaji: 'Otoshiro Seira', pinyin: 'yinchengsaila' },
   { name: '音城诺艾尔', series: '初代', romaji: 'Otoshiro Noeru', pinyin: 'yinchengnuoai\'er' },
   { name: '冴草纪伊', series: '初代', romaji: 'Saegusa Kii', pinyin: 'hucaojiyi' },
@@ -94,7 +98,14 @@ const CHARACTER_DATABASE = [
   { name: '栗六杏', series: '行星', romaji: 'Kurimu An', alias: 'Ann', pinyin: 'liliuxing' },
   { name: '阳明咲', series: '行星', romaji: 'Yomei Saki', alias: 'Rose', pinyin: 'yangmingxiao' },
   { name: '糸井纱良', series: '行星', romaji: 'Itoi Sara', alias: 'Sala', pinyin: 'mijingshaliang' },
-
+  { name: 'Hana', series: '行星', romaji: 'Hana', pinyin: 'Hana' },
+  { name: 'Ruli', series: '行星', romaji: 'Ruli', pinyin: 'Ruli' },
+  { name: 'Beat', series: '行星', romaji: 'Beat', pinyin: 'Beat' },
+  { name: 'Shiori', series: '行星', romaji: 'Shiori', pinyin: 'Shiori' },
+  { name: 'Q-Pit', series: '行星', romaji: 'Q-Pit', pinyin: 'Q-Pit' },
+  { name: 'Ann', series: '行星', romaji: 'Ann', pinyin: 'Ann' },
+  { name: 'Rose', series: '行星', romaji: 'Rose', pinyin: 'Rose' },
+  { name: 'Sala', series: '行星', romaji: 'Sala', pinyin: 'sala' },
   // Academy
   { name: '姫乃Mieru', series: 'Academy', romaji: 'Himeno Mieru', pinyin: 'jinaimieru' },
   { name: '真未梦Meh', series: 'Academy', romaji: 'Mamime Meh', pinyin: 'zhenweimengmeh' },
@@ -103,14 +114,24 @@ const CHARACTER_DATABASE = [
 
   // 其他（吉祥物等非偶像角色）
   { name: '天使熊', series: '其他', pinyin: 'tianshixiong' },
-  { name: '艾比胖', series: '其他', pinyin: 'aibipang' },
+  { name: '虾子碰', series: '其他', pinyin: 'xiazipeng' },
   { name: 'Potepo', series: '其他', romaji: 'Potepo', pinyin: 'potepo' },
   { name: 'Alan', series: '其他', romaji: 'Alan', pinyin: 'alun' },
   { name: '大空海獭', series: '其他', pinyin: 'dakonghaita' },
   { name: 'Dream Puppy', series: '其他', romaji: 'Dream Puppy', pinyin: 'dreampuppy' },
+  { name: 'Gothic Bunny', series: '其他', romaji: 'Gothic Bunny', pinyin: 'gothicbunny' },
   { name: 'Penne', series: '其他', romaji: 'Penne', pinyin: 'penne' },
-  { name: 'Meruli', series: '其他', romaji: 'Meruli', alias: 'メルリ', pinyin: 'meiluli' },
+  { name: '梅莉', series: '其他', romaji: 'Meruli', alias: 'メルリ', pinyin: 'meili' },
   { name: 'Sweetie Berry', series: '其他', romaji: 'Sweetie Berry', pinyin: 'sweetieberry' },
+  { name: 'Miss Romance', series: '其他', pinyin: 'missromance' },
+  { name: 'Fuwafuwa Merry', series: '其他', pinyin: 'fuwafuwammerry' },
+  { name: '高级定制镜', series: '其他' },
+ { name: '奢华玫瑰', series: '其他' },
+ { name: '极光天马', series: '其他' },
+ { name: '光辉蓝宝石', series: '其他' },
+ { name: '爱之射手座', series: '其他' },
+ { name: '血腥摇滚', series: '其他' },
+
 ];
 
 // 「其他」系列角色（吉祥物等非偶像角色）：不计入"单人/多人"的角色人数统计
@@ -144,6 +165,7 @@ export const CHARACTER_GROUPS = [
   { name: 'Vanilla Chili Pepper', characters: ['天羽圆香', '黑泽凛', '红林珠璃'] },
   { name: '第25代S4', characters: ['白鸟姬', '如月翼', '二阶堂柚子', '香澄夜空'] },
   { name: '第26代S4', characters: ['虹野梦', '早乙女亚子', '二阶堂柚子', '香澄真昼'] },
+  { name: 'M4', characters: ['五十岚望', '吉良彼方', '结城昂', '香澄朝阳'] },
   { name: 'Yume&Rola', characters: ['虹野梦', '樱庭劳拉'] },
   { name: 'FuwaFuwa Dreamer', characters: ['早乙女亚子', '花园绮罗'] },
   { name: 'ゆずっとリリィ☆', characters: ['白银莉莉', '二阶堂柚子'] },

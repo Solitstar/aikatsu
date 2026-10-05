@@ -1,6 +1,7 @@
 import { TYPES } from '../data/items';
 import {
   SERIES_LIST,
+  SERIES_LABELS,
   getCharactersBySeries,
   CHARACTER_GROUPS,
   getCharacterGroupByName,
@@ -35,7 +36,7 @@ const FilterBar = ({
         className={selectClass + " w-full"}
       >
         {SERIES_LIST.map(opt => (
-          <option key={opt} value={opt}>{opt}</option>
+          <option key={opt} value={opt}>{SERIES_LABELS[opt] || opt}</option>
         ))}
         <optgroup label="组合">
           {CHARACTER_GROUPS.map(g => (
