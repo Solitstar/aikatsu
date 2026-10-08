@@ -1,6 +1,8 @@
 import { useState, memo } from 'react';
 import { splitTypes } from '../data/items';
 import { formatCharacterDisplay } from '../data/characters';
+import { LOCAL_IMAGES } from '../data/localImages';
+import { withImgurSize, getCardImgSize } from '../utils/imageUrl';
 
 const GoodsCard = ({ item, onClick, priority = false }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
@@ -36,17 +38,20 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
     return '';
   };
 
-  // 图片加载优先级：本地缓存(WebP → PNG → JPG) → 远程URL → SVG占位
+  // 图片加载优先级：本地缓存（仅当该商品确实有本地图）→ 远程图床 → SVG占位
   const base = import.meta.env.BASE_URL; // '/' dev, '/aikatsu/' build
   // 多版本商品按收藏版本显示对应图（无收藏版本时默认第 0 版）
   const versionIdx = item?.images?.length > 1
     ? Math.max(0, item.images.findIndex(img => (img.label || img.name) === item.version))
     : 0;
   const vSuffix = item?.images?.length > 1 ? `_v${versionIdx}` : '';
-  const localWebp = `${base}images/item_${item.id}${vSuffix}.webp`;
-  const localPng = `${base}images/item_${item.id}${vSuffix}.png`;
-  const localJpg = `${base}images/item_${item.id}${vSuffix}.jpg`;
-  const initialSrc = localWebp; // 优先WebP格式（体积最小）
+  // 本地缓存图只覆盖少量商品，没命中就直接用远程图，
+  // 避免为绝大多数商品先发起 3 次必然 404 的请求（串行失败后才加载远程图）
+  const localExt = LOCAL_IMAGES[`item_${item.id}${vSuffix}`];
+  const localSrc = localExt ? `${base}images/item_${item.id}${vSuffix}.${localExt}` : null;
+  // 远程图床（优先当前版本图，imgur 缩略图：手机 320px、桌面 640px）
+  const remoteSrc = withImgurSize(item.images?.[versionIdx]?.url || item.image, getCardImgSize());
+  const initialSrc = localSrc || remoteSrc;
 
   // 多版本商品已收藏时，标题直接显示所选版本的完整名字
   const displayName = item.images?.length > 1 && item.version && item.images[versionIdx]?.name
@@ -54,9 +59,7 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
     : item.name;
 
   const fallbacks = [
-    localPng,           // 2. 本地PNG缓存
-    localJpg,           // 3. 本地JPG缓存
-    item.images?.[versionIdx]?.url || item.image, // 4. 远程图床（优先当前版本图）
+    ...(localSrc ? [remoteSrc] : []), // 有本地图时，本地失败再回退远程
     `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23f3f4f6' width='200' height='200'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='14'%3E${encodeURIComponent(item.name.substring(0, 8))}%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' fill='%23d1d5db' font-size='11'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
   ];
 

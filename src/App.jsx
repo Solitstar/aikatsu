@@ -340,8 +340,6 @@ function App() {
         items: wishItems,
         type: 'wish',
         totalQuantity: wishTotalQuantity,
-        totalPriceMin: wishTotalPriceMin,
-        totalPriceMax: wishTotalPriceMax,
       });
       const link = document.createElement('a');
       link.download = `心愿单_${new Date().toISOString().slice(0, 10)}.png`;

@@ -33,9 +33,6 @@ jobs:
       - name: Auto fix item ids
         run: npm run auto-id
 
-      - name: Download images
-        run: npm run download-images
-
       - name: Write version
         run: npm run write-version
 

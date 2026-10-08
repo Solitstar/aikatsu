@@ -9,13 +9,13 @@
     "convert-webp": "node scripts/convert-to-webp.cjs",
     "write-version": "node scripts/write-version.cjs",
     "auto-id": "node scripts/auto-id.cjs",
-    "build": "npm run auto-id && npm run download-images -- --force && npm run convert-webp -- --force && npm run write-version && vite build",
+    "manifest": "node scripts/generate-image-manifest.cjs",
+    "build": "npm run manifest && npm run auto-id && npm run write-version && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bash deploy.sh"
   },
   "dependencies": {
-    "html2canvas": "^1.4.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },

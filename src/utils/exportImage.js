@@ -6,11 +6,11 @@
 const WIDTH = 960;
 const PADDING = 28;
 const CARD_GAP = 14;
-const CARDS_PER_ROW = 3;
-const CARD_W = (WIDTH - PADDING * 2 - CARD_GAP * (CARDS_PER_ROW - 1)) / CARDS_PER_ROW; // ~292px
+const CARDS_PER_ROW = 5;
+const CARD_W = (WIDTH - PADDING * 2 - CARD_GAP * (CARDS_PER_ROW - 1)) / CARDS_PER_ROW; // ~170px
 const CARD_IMG_H = CARD_W; // 正方形图片区域
-const CARD_INFO_H = 72;
-const CARD_H = CARD_IMG_H + CARD_INFO_H;
+const CARD_INFO_H = 72;      // 收藏：信息区高度
+const CARD_INFO_H_WISH = 92; // 心愿单：价格药丸独占卡片底部一行，信息区需要更高
 const CARD_R = 14;
 
 // 主题色
@@ -224,18 +224,20 @@ function drawCardImage(ctx, imgObj, x, y, w, h, name) {
 
 // ---- 主渲染 ----
 
-export async function renderShareImageToCanvas({ items, type, totalQuantity, totalPrice, totalPriceMin, totalPriceMax }) {
+export async function renderShareImageToCanvas({ items, type, totalQuantity, totalPrice }) {
   console.group('🎨 Canvas 直绘分享图');
 
   const theme = COLORS[type];
+  // 心愿单的价格药丸挪到了卡片底部独占一行，卡片相应变高
+  const cardH = CARD_IMG_H + (type === 'owned' ? CARD_INFO_H : CARD_INFO_H_WISH);
 
   // 1. 预加载所有图片
   const imageMap = await preloadItemImages(items);
 
-  // 2. 计算画布尺寸 (3列卡片网格)
+  // 2. 计算画布尺寸 (5列卡片网格)
   const rows = Math.ceil(items.length / CARDS_PER_ROW);
   const ROW_GAP = 14;
-  const height = PADDING + 100 + 90 + (rows * (CARD_H + ROW_GAP) + 16) + 50 + PADDING;
+  const height = PADDING + 100 + 90 + (rows * (cardH + ROW_GAP) + 16) + 50 + PADDING;
 
   const canvas = document.createElement('canvas');
   canvas.width = WIDTH * 2;
@@ -281,14 +283,15 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
   ctx.lineWidth = 1;
   ctx.stroke();
 
-  const colW = statsW / 3;
+  // 心愿单不展示「心理总价」，只保留 种类 / 总件数；收藏额外展示「购入总价」
   const stats = [
     { label: '种类', value: String(items.length) },
     { label: '总件数', value: String(totalQuantity) },
-    type === 'owned'
-      ? { label: '购入总价', value: `¥${totalPrice.toFixed(2)}` }
-      : { label: '心理总价', value: `¥${totalPriceMin.toFixed(2)}${totalPriceMax > 0 ? '~¥' + totalPriceMax.toFixed(2) : ''}` },
   ];
+  if (type === 'owned') {
+    stats.push({ label: '购入总价', value: `¥${totalPrice.toFixed(2)}` });
+  }
+  const colW = statsW / stats.length;
   stats.forEach(({ label, value }, i) => {
     const cx = PADDING + colW * i + colW / 2;
     ctx.textAlign = 'center';
@@ -305,7 +308,7 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
   });
   cy = statsY + 88;
 
-  // 6. 商品卡片网格 (3列)
+  // 6. 商品卡片网格 (5列)
   for (let r = 0; r < rows; r++) {
     const rowY = cy;
     const itemsInRow = items.slice(r * CARDS_PER_ROW, r * CARDS_PER_ROW + CARDS_PER_ROW);
@@ -314,12 +317,12 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
       const cx = PADDING + colIdx * (CARD_W + CARD_GAP);
 
       // ---- 卡片阴影 ----
-      roundRect(ctx, cx + 2, rowY + 3, CARD_W, CARD_H, CARD_R);
+      roundRect(ctx, cx + 2, rowY + 3, CARD_W, cardH, CARD_R);
       ctx.fillStyle = 'rgba(0,0,0,0.07)';
       ctx.fill();
 
       // ---- 卡片主体 ----
-      roundRect(ctx, cx, rowY, CARD_W, CARD_H, CARD_R);
+      roundRect(ctx, cx, rowY, CARD_W, cardH, CARD_R);
       ctx.fillStyle = '#ffffff';
       ctx.fill();
 
@@ -355,7 +358,7 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
       ctx.fillStyle = 'rgba(0,0,0,0.4)';
       ctx.fillText(charStr, innerX, infoY + 32);
 
-      // 价格标签右对齐，垂直居中于角色文字行
+      // 收藏的价格标签右对齐，垂直居中于角色文字行
       const badgeH = 22;
       const badgeCenterY = infoY + 27; // 角色文字 9px 的视觉中心
 
@@ -391,7 +394,8 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
         const pw = ctx.measureText(priceText).width;
         const badgeW = Math.ceil(pw) + 18;
         const badgeX = cx + CARD_W - pad - badgeW;
-        const badgeY = badgeCenterY - badgeH / 2;
+        // 心愿单价格药丸独占卡片底部一行，避免和角色文字挤在同一行
+        const badgeY = infoY + 60;
 
         // 玫红药丸（与「想要」同款）
         roundRect(ctx, badgeX, badgeY, badgeW, badgeH, 11);
@@ -403,7 +407,7 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
         ctx.fillStyle = theme.badgeText;
         ctx.fillText(priceText, badgeX + badgeW / 2, badgeY + 16);
 
-        // 单价×数量 在卡片底部
+        // 单价×数量 在卡片中部
         ctx.textAlign = 'left';
         ctx.font = '9px "Quicksand", "Noto Sans SC", sans-serif';
         ctx.fillStyle = 'rgba(0,0,0,0.4)';
@@ -414,7 +418,7 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
       }
     });
 
-    cy += CARD_H + ROW_GAP;
+    cy += cardH + ROW_GAP;
   }
 
   // 7. 页脚

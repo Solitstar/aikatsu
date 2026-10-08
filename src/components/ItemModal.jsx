@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { splitTypes } from '../data/items';
 import { formatCharacterDisplay } from '../data/characters';
+import { LOCAL_IMAGES } from '../data/localImages';
+import { withImgurSize, DETAIL_IMG_SIZE, THUMB_IMG_SIZE } from '../utils/imageUrl';
 
 const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePriceRecord, onUpdatePriceRecord, onIncreaseWishQty, onDecreaseWishQty, onSetWishPriceMin, onSetWishPriceMax, folders, itemFolderId, onMoveToFolder, onCreateFolder, onSeriesClick }) => {
   const [showFolderPicker, setShowFolderPicker] = useState(false);
@@ -27,6 +29,19 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   // 本地缓存文件名：多版本商品用 item_{id}_v{idx}，单图商品用 item_{id}
   const localBase = (idx) => `item_${item.id}${imageList.length > 1 ? `_v${idx}` : ''}`;
 
+  // 图片加载链：仅当该商品确实有本地缓存图时才先走同源，否则直接用远程图，
+  // 避免为绝大多数商品先发起必然 404 的请求
+  const IMG_FAIL_SVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23f3f4f6' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='16'%3E图片加载失败%3C/text%3E%3C/svg%3E`;
+  const imageChainOf = (idx) => {
+    const remote = withImgurSize(
+      (imageList[idx] && imageList[idx].url) || item.image,
+      DETAIL_IMG_SIZE,
+    );
+    const ext = LOCAL_IMAGES[localBase(idx)];
+    if (!ext) return [remote, IMG_FAIL_SVG];
+    return [`${import.meta.env.BASE_URL}images/${localBase(idx)}.${ext}`, remote, IMG_FAIL_SVG];
+  };
+
   // 切换商品时在渲染阶段同步重置图片状态，避免上一件商品的旧图残留（重影）
   const prevItemIdRef = useRef(null);
   if (item && prevItemIdRef.current !== item.id) {
@@ -39,25 +54,16 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     setSelectedIdx(idx);
     setDisplayName(imageList[idx].name ? imageList[idx].name : item.name);
     setImgLoaded(false);
-    setFallbackStep(0);
-    const base = import.meta.env.BASE_URL;
-    setImgSrc(`${base}images/${localBase(idx)}.webp`);
+    const chain = imageChainOf(idx);
+    setImgSrc(chain[0]);
+    setFallbackStep(1);
   }
 
   const handleImgError = () => {
-    const base = import.meta.env.BASE_URL;
-    // 当前版本图片失败：留在当前版本按兜底链尝试，不强制回退第一张
-    // 注意：webp 已作为初始 src 加载，失败后从 png 开始，避免重复设置相同 src 导致不重新加载
-    const currentUrl = (imageList[selectedIdx] && imageList[selectedIdx].url) || item.image;
-    const lb = localBase(selectedIdx);
-    const next = [
-      `${base}images/${lb}.png`,
-      `${base}images/${lb}.jpg`,
-      currentUrl,
-      `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23f3f4f6' width='300' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='16'%3E图片加载失败%3C/text%3E%3C/svg%3E`,
-    ];
-    if (fallbackStep < next.length) {
-      setImgSrc(next[fallbackStep]);
+    // 当前版本图片失败：留在当前版本按加载链继续尝试，不强制回退第一张
+    const chain = imageChainOf(selectedIdx);
+    if (fallbackStep < chain.length) {
+      setImgSrc(chain[fallbackStep]);
       setFallbackStep(fallbackStep + 1);
     }
   };
@@ -65,8 +71,9 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   const handleSelectImage = (idx) => {
     setSelectedIdx(idx);
     setImgLoaded(false);
-    setFallbackStep(0);
-    setImgSrc(`${import.meta.env.BASE_URL}images/${localBase(idx)}.webp`);
+    const chain = imageChainOf(idx);
+    setImgSrc(chain[0]);
+    setFallbackStep(1);
     // 版本自带标题时更新商品标题
     if (imageList[idx].name) {
       setDisplayName(imageList[idx].name);
@@ -145,7 +152,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 )}
                 <img
                   key={`${item.id}-${selectedIdx}`}
-                  src={imgSrc || item.image}
+                  src={imgSrc || withImgurSize(item.image, DETAIL_IMG_SIZE)}
                   alt={item.name}
                   className="w-full h-full object-cover"
                   style={{ display: imgLoaded ? 'block' : 'none' }}
@@ -200,7 +207,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                         }`}
                       >
                         <img
-                          src={img.url}
+                          src={withImgurSize(img.url, THUMB_IMG_SIZE)}
                           alt={img.label}
                           loading="lazy"
                           className="w-full h-full object-cover"
