@@ -1,0 +1,66 @@
+name: Fetch local images
+
+# 按需工具（不自动运行）：在 GitHub runner（海外，访问 imgur 快）上把商品图拉下来、
+# 压成 WebP 放进 public/images/，让站点改用同源图片（国内访问比 imgur 快一个数量级）。
+#
+# 触发方式：仓库 Actions 页 → Fetch local images → Run workflow
+#   target: 输出宽度，320 体积小（约 10KB/张） / 640 更清晰（约 24KB/张）
+#   limit:  本次最多处理张数，0 = 全部；先小批量验证，确认后再全量
+#   offset: 跳过前 N 张，用于分批跑
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: '输出宽度(px)：320 体积小 / 640 更清晰'
+        type: string
+        default: '320'
+      limit:
+        description: '本次最多处理张数（0 = 全部）'
+        type: string
+        default: '200'
+      offset:
+        description: '跳过前 N 张（分批用）'
+        type: string
+        default: '0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-local-images
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch and convert images
+        run: node scripts/fetch-local-images.cjs --target ${{ inputs.target }} --limit ${{ inputs.limit }} --offset ${{ inputs.offset }}
+
+      - name: Regenerate local image manifest
+        run: npm run manifest
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/images src/data/localImages.js
+          if git diff --cached --quiet; then
+            echo "没有新增图片，跳过提交"
+          else
+            COUNT=$(git diff --cached --name-only | wc -l)
+            git commit -m "图片本地化：新增 ${COUNT} 个文件（target=${{ inputs.target }}, offset=${{ inputs.offset }}）"
+            git push
+          fi

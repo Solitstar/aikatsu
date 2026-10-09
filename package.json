@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "download-images": "node scripts/download-images.cjs",
+    "fetch-images": "node scripts/fetch-local-images.cjs",
     "convert-webp": "node scripts/convert-to-webp.cjs",
     "write-version": "node scripts/write-version.cjs",
     "auto-id": "node scripts/auto-id.cjs",
