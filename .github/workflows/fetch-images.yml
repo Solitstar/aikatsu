@@ -4,16 +4,16 @@ name: Fetch local images
 # 压成 WebP 放进 public/images/，让站点改用同源图片（国内访问比 imgur 快一个数量级）。
 #
 # 触发方式：仓库 Actions 页 → Fetch local images → Run workflow
-#   target: 输出宽度，320 体积小（约 10KB/张） / 640 更清晰（约 24KB/张）
+#   target: 输出宽度，480 为当前线上标准（约 10.6KB/张）；640 更清晰但约 18KB/张
 #   limit:  本次最多处理张数，0 = 全部；先小批量验证，确认后再全量
 #   offset: 跳过前 N 张，用于分批跑
 on:
   workflow_dispatch:
     inputs:
       target:
-        description: '输出宽度(px)：320 体积小 / 640 更清晰'
+        description: '输出宽度(px)：480 标准 / 640 更清晰'
         type: string
-        default: '320'
+        default: '480'
       limit:
         description: '本次最多处理张数（0 = 全部）'
         type: string

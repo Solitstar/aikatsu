@@ -6,9 +6,12 @@
  *   .github/workflows/fetch-images.yml
  *
  * 用法:
- *   node scripts/fetch-local-images.cjs --target 320 --limit 200 --offset 0
- *   node scripts/fetch-local-images.cjs --target 320                 # 全量（跳过已有）
- *   node scripts/fetch-local-images.cjs --target 320 --force         # 覆盖已有
+ *   node scripts/fetch-local-images.cjs                              # 增量：只补缺失的（新增商品后跑这个）
+ *   node scripts/fetch-local-images.cjs --target 480 --limit 200 --offset 0
+ *   node scripts/fetch-local-images.cjs --target 480 --force         # 覆盖已有（重新生成全部）
+ *
+ * 默认输出宽 480px、WebP q75（当前线上标准）。素材体积的大头来自 PNG/JPEG → WebP 转码，
+ * 即使原图本身就是 480px，也必须过这一步。
  */
 const fs = require('fs');
 const os = require('os');
@@ -29,7 +32,7 @@ const arg = (name, def) => {
 };
 const hasFlag = (name) => process.argv.includes(`--${name}`);
 
-const TARGET = parseInt(arg('target', '320'), 10);
+const TARGET = parseInt(arg('target', '480'), 10);
 const LIMIT = parseInt(arg('limit', '0'), 10) || 0;
 const OFFSET = parseInt(arg('offset', '0'), 10) || 0;
 const QUALITY = parseInt(arg('quality', '75'), 10);
