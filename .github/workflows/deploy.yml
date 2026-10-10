@@ -33,6 +33,17 @@ jobs:
       - name: Auto fix item ids
         run: npm run auto-id
 
+      # 新增商品时把缺的图从 imgur 拉下来（runner 在海外，访问 imgur 快），
+      # 让线上新图也能走同源加载。图只进本次部署产物、不写进仓库，避免 git 历史持续膨胀。
+      # 失败不阻断部署：拉不到的图前端会自动回退到 imgur 地址（慢但不影响可用性）。
+      - name: Fetch new local images
+        continue-on-error: true
+        run: npm run fetch-images
+
+      # vite build 不会自动重建图片清单，必须显式跑一次，否则新图不会被前端使用
+      - name: Refresh local image manifest
+        run: npm run manifest
+
       - name: Write version
         run: npm run write-version
 
