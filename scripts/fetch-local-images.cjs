@@ -11,9 +11,14 @@
  *   node scripts/fetch-local-images.cjs --target 320 --force         # 覆盖已有
  */
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const https = require('https');
+const { execFile } = require('child_process');
+const { promisify } = require('util');
 const sharp = require('sharp');
+
+const execFileAsync = promisify(execFile);
 
 const OUT_DIR = path.join(__dirname, '..', 'public', 'images');
 const ITEMS_FILE = path.join(__dirname, '..', 'src', 'data', 'items.js');
@@ -57,6 +62,26 @@ const sourceUrlFor = (url) => {
   const m = IMGUR_RE.exec(url);
   return m ? `${m[1]}l${m[2]}` : url;
 };
+
+// Windows 上 node / curl 直连 imgur 会被重置连接（ECONNRESET），只有 PowerShell 能连通，
+// 因此本地跑时改走 PowerShell 下载；GitHub runner（Linux）继续走下面的 https 实现。
+const USE_PS = process.platform === 'win32' && !hasFlag('no-ps');
+const SAFE_URL_RE = /^https?:\/\/[A-Za-z0-9._\-]+\/[A-Za-z0-9._\-/=%&:?+]*$/;
+
+async function downloadViaPowerShell(url) {
+  if (!SAFE_URL_RE.test(url)) throw new Error('URL 含不安全字符，已跳过');
+  const tmp = path.join(os.tmpdir(), `fetch_${process.pid}_${Math.random().toString(36).slice(2)}.bin`);
+  try {
+    await execFileAsync('powershell', ['-NoProfile', '-NonInteractive', '-Command',
+      `$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri '${url}' -OutFile '${tmp}' -TimeoutSec 40 -UseBasicParsing`,
+    ], { timeout: 60000 });
+    const buf = fs.readFileSync(tmp);
+    if (buf.length < 200) throw new Error('响应过小');
+    return buf;
+  } finally {
+    try { fs.unlinkSync(tmp); } catch { /* ignore */ }
+  }
+}
 
 function download(url, redirects = 3) {
   return new Promise((resolve, reject) => {
@@ -108,7 +133,7 @@ async function main() {
       const t = queue.shift();
       const remote = sourceUrlFor(t.url);
       try {
-        const buf = await download(remote);
+        const buf = USE_PS ? await downloadViaPowerShell(remote) : await download(remote);
         if (buf.length < 200) throw new Error('响应过小');
         await sharp(buf)
           .resize({ width: TARGET, withoutEnlargement: true })
