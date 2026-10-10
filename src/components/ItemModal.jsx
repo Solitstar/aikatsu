@@ -42,6 +42,13 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
     return [`${import.meta.env.BASE_URL}images/${localBase(idx)}.${ext}`, remote, IMG_FAIL_SVG];
   };
 
+  // 缩略图条：同样优先本地同源图，没有才回退远程 imgur（否则 imgur 不可达时会显示破图）
+  const thumbSrcOf = (idx) => {
+    const ext = LOCAL_IMAGES[localBase(idx)];
+    if (ext) return `${import.meta.env.BASE_URL}images/${localBase(idx)}.${ext}`;
+    return withImgurSize((imageList[idx] && imageList[idx].url) || item.image, THUMB_IMG_SIZE);
+  };
+
   // 切换商品时在渲染阶段同步重置图片状态，避免上一件商品的旧图残留（重影）
   const prevItemIdRef = useRef(null);
   if (item && prevItemIdRef.current !== item.id) {
@@ -207,7 +214,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                         }`}
                       >
                         <img
-                          src={withImgurSize(img.url, THUMB_IMG_SIZE)}
+                          src={thumbSrcOf(idx)}
                           alt={img.label}
                           loading="lazy"
                           className="w-full h-full object-cover"
