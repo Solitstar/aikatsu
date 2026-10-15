@@ -162,7 +162,7 @@ export const CHARACTER_GROUPS = [
   { name: '2wingS', characters: ['音城塞拉', '星宫莓'] },
   { name: 'Cosmos', characters: ['大空明', '星宫莓'] },
   { name: 'Skips♪', characters: ['大空明', '天羽圆香'] },
-  { name: 'あまふわ☆なでしこ', characters: ['栗栖心音', '藤原雅'] },
+  { name: '甜软☆抚子', characters: ['栗栖心音', '藤原雅'] },
   { name: 'Dancing Diva', characters: ['冰上堇', '黑泽凛'] },
   { name: '情热Jalapeño', characters: ['红林珠璃', '新条雏姬'] },
   { name: 'Vanilla Chili Pepper', characters: ['天羽圆香', '黑泽凛', '红林珠璃'] },
@@ -171,7 +171,7 @@ export const CHARACTER_GROUPS = [
   { name: 'M4', characters: ['五十岚望', '吉良彼方', '结城昂', '香澄朝阳'] },
   { name: 'Yume&Rola', characters: ['虹野梦', '樱庭劳拉'] },
   { name: 'FuwaFuwa Dreamer', characters: ['早乙女亚子', '花园绮罗'] },
-  { name: 'ゆずっとリリィ☆', characters: ['白银莉莉', '二阶堂柚子'] },
+  { name: '柚子莉莉☆', characters: ['白银莉莉', '二阶堂柚子'] },
    { name: 'Cheer Star', characters: ['春风若叶', '姬石来希'] },
    { name: '假面舞会', characters: ['星宫苹果', '光石织姬'] },
 ];
