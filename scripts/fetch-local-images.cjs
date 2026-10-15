@@ -52,7 +52,10 @@ function extractEntries() {
     const block = src.slice(ids[i].start, i + 1 < ids.length ? ids[i + 1].start : undefined);
     const img = block.match(/image:\s*"([^"]+)"/);
     if (img) entries.push({ id: ids[i].id, url: img[1], suffix: '' });
-    [...block.matchAll(/url:\s*'([^']+)'/g)].forEach((um, vi) => {
+    // 注意：空 url 也要计入索引，否则它后面的版本号会整体错位（如某一版暂时没图时），
+    // 导致文件名与前端使用的 item_{id}_v{idx} 对不上。
+    [...block.matchAll(/url:\s*'([^']*)'/g)].forEach((um, vi) => {
+      if (!um[1]) return;
       entries.push({ id: ids[i].id, url: um[1], suffix: `_v${vi}` });
     });
   }
