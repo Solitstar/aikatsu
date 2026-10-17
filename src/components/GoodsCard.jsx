@@ -72,6 +72,16 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
     }
   };
 
+  // 心愿单商品：已填写心理价时在卡片上直接显示价格区间（整数不带小数，避免过长）
+  const wishPriceMin = Number(item.wishPriceMin) || 0;
+  const wishPriceMax = Number(item.wishPriceMax) || 0;
+  const fmtPrice = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
+  const wishPriceLabel = item.status === 'wish' && wishPriceMin > 0
+    ? (wishPriceMax > 0
+      ? `¥${fmtPrice(wishPriceMin)}~${fmtPrice(wishPriceMax)}`
+      : `¥${fmtPrice(wishPriceMin)}`)
+    : null;
+
   return (
     <div
       onClick={() => onClick(item)}
@@ -107,6 +117,15 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
           }}
           className="w-full h-full object-contain p-1.5 sm:p-2 transition-transform duration-500 group-hover:scale-105"
         />
+
+        {/* 心愿单心理价角标：已填写时直接显示在卡片上 */}
+        {wishPriceLabel && (
+          <div className="absolute bottom-1.5 right-1.5 sm:bottom-3 sm:right-3 z-10">
+            <span className="bg-rose-500/95 text-white text-[10px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full shadow-md whitespace-nowrap font-quick">
+              {wishPriceLabel}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="p-2.5 sm:p-4">
