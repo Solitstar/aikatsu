@@ -1,8 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
+import UsageGuide, { useUsageGuide } from './UsageGuide';
 
 const Header = ({ activeTab, onTabChange }) => {
   const [showAbout, setShowAbout] = useState(false);
   const [copied, setCopied] = useState(false);
+  const { open: guideOpen, setOpen: setGuideOpen, dismiss: dismissGuide } = useUsageGuide();
 
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(
@@ -50,6 +52,12 @@ const Header = ({ activeTab, onTabChange }) => {
                   {tab.label}
                 </button>
               ))}
+              <button
+                onClick={() => setGuideOpen(true)}
+                className="px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-text-secondary hover:bg-accent/10 hover:text-text-primary transition-all duration-300 whitespace-nowrap"
+              >
+                指导
+              </button>
               <button
                 onClick={() => setShowAbout(true)}
                 className="px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-text-secondary hover:bg-accent/10 hover:text-text-primary transition-all duration-300 whitespace-nowrap"
@@ -130,6 +138,8 @@ const Header = ({ activeTab, onTabChange }) => {
           </div>
         </div>
       )}
+
+      <UsageGuide open={guideOpen} onClose={dismissGuide} />
     </>
   );
 };
