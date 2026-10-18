@@ -71,6 +71,7 @@ const CHARACTER_DATABASE = [
   { name: '诸星辉', series: '星代', romaji: 'Moroboshi Hikaru', pinyin: 'zhuxinghui' },
   { name: '白鸟姬', series: '星代', romaji: 'Shiratori Hime', pinyin: 'bainiaoji' },
  { name: '芦田有莉', series: '星代', romaji: 'Ashida Yuuri', pinyin: 'lutianyouli' },
+ { name: '玛欧莉', series: '星代', romaji: '', pinyin: 'maouli' },
   // 友代(Friends)
   { name: '友希爱音', series: '友代', romaji: 'Yuki Aine', pinyin: 'youxiaiyin' },
   { name: '凑美绪', series: '友代', romaji: 'Minato Mio', pinyin: 'coumeixu' },

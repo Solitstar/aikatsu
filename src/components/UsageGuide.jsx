@@ -6,7 +6,7 @@ const GUIDE_SEEN_KEY = 'aikatsu_guide_seen_v1';
 const SECTIONS = [
   {
     title: '搜索',
-    desc: '顶部搜索框支持商品名、角色名（中文 / 罗马音 / 拼音）、日文副标题，以及种类、材质等关键词。',
+    desc: '顶部搜索框支持商品名、角色名（中文 / 罗马音 / 拼音）、日文关键词，以及种类、材质等关键词。',
   },
   {
     title: '筛选',
