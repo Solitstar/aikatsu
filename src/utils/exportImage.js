@@ -3,6 +3,8 @@
  * 彻底绕过跨域限制：优先尝试本地同源图片，远程代理竞速兜底
  */
 
+import { LOCAL_IMAGES } from '../data/localImages';
+
 const WIDTH = 960;
 const PADDING = 28;
 const CARD_GAP = 14;
@@ -86,23 +88,28 @@ function loadViaProxy(remoteUrl) {
   });
 }
 
-/** 根据 item id 和远程 URL 推导本地路径候选列表 */
+/** 当前展示图片对应的版本下标（多版本商品按收藏的版本，否则第 0 版）；单图商品返回 -1 */
+function versionIndex(item) {
+  const list = item.images && item.images.length > 1 ? item.images : null;
+  if (!list) return -1;
+  const found = list.findIndex(img => (img.label || img.name) === item.version);
+  return found >= 0 ? found : 0;
+}
+
+/** 远程原图地址（多版本商品取当前版本，避免 item.image 为空时拿到空串） */
+function remoteUrlOf(item) {
+  const idx = versionIndex(item);
+  if (idx >= 0 && item.images[idx] && item.images[idx].url) return item.images[idx].url;
+  return item.image || '';
+}
+
+/** 推导本地图片路径：清单里记录了真实后缀（多为 webp），多版本商品带 _v{idx} */
 function getLocalUrls(item) {
-  const urls = [];
-  // 从远程 URL 提取格式信息
-  if (item.image.endsWith('.png')) {
-    urls.push(`/aikatsu/images/item_${item.id}.png`);
-  } else if (item.image.includes('?thumb=1')) {
-    // Chevereto 缩略图通常是 JPEG/WebP
-    urls.push(`/aikatsu/images/item_${item.id}.jpg`);
-    urls.push(`/aikatsu/images/item_${item.id}.webp`);
-  }
-  // 兜底：都试一下
-  urls.push(`/aikatsu/images/item_${item.id}.png`);
-  if (!urls.includes(`/aikatsu/images/item_${item.id}.jpg`)) {
-    urls.push(`/aikatsu/images/item_${item.id}.jpg`);
-  }
-  return urls;
+  const base = import.meta.env.BASE_URL; // '/'（dev）或 '/aikatsu/'（构建）
+  const idx = versionIndex(item);
+  const key = idx >= 0 ? `item_${item.id}_v${idx}` : `item_${item.id}`;
+  const ext = LOCAL_IMAGES[key];
+  return ext ? [`${base}images/${key}.${ext}`] : [];
 }
 
 /**
@@ -121,8 +128,13 @@ async function loadItemImage(item) {
   }
 
   // 策略2: 远程代理竞速
+  const remote = remoteUrlOf(item);
+  if (!remote) {
+    console.log(`    ✗ 无可用图片地址`);
+    return null;
+  }
   console.log(`    ⚡ 本地无缓存，尝试代理加载...`);
-  const dataUrl = await loadViaProxy(item.image);
+  const dataUrl = await loadViaProxy(remote);
   if (dataUrl) {
     const img = await urlToImage(dataUrl);
     if (img) {
@@ -133,7 +145,7 @@ async function loadItemImage(item) {
 
   // 策略3: 直接加载远程 URL（部分 CDN 如 Imgur 支持 CORS）
   console.log(`    🌐 尝试直接加载远程 URL...`);
-  const directImg = await urlToImage(item.image);
+  const directImg = await urlToImage(remote);
   if (directImg) {
     console.log(`    ✓ direct (CORS)`);
     return directImg;
