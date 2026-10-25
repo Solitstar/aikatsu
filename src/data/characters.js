@@ -135,7 +135,8 @@ const CHARACTER_DATABASE = [
  { name: '光辉蓝宝石', series: '其他' },
  { name: '爱之射手座', series: '其他' },
  { name: '血腥摇滚', series: '其他' },
-
+ { name: '甜美蛋糕', series: '其他' },
+ { name: '仙境传说', series: '其他' },
 ];
 
 // 「其他」系列角色（吉祥物等非偶像角色）：不计入"单人/多人"的角色人数统计
@@ -175,6 +176,7 @@ export const CHARACTER_GROUPS = [
   { name: '柚子莉莉☆', characters: ['白银莉莉', '二阶堂柚子'] },
    { name: 'Cheer Star', characters: ['春风若叶', '姬石来希'] },
    { name: '假面舞会', characters: ['星宫苹果', '光石织姬'] },
+      { name: 'Hélianthé', characters: ['姫乃Mieru', '凛堂Taimu', '和央Parin', '真未梦Meh'] },
 ];
 
 export const getCharacterGroupByName = (name) =>
