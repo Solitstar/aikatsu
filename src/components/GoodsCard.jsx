@@ -14,8 +14,8 @@ const GoodsCard = ({ item, onClick, priority = false }) => {
       const qty = item.quantity || 1;
       return (
         <div className="absolute top-1.5 left-1.5 sm:top-3 sm:left-3 z-10">
-          <span className="bg-yellow-400 text-white text-[10px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full shadow-md flex items-center gap-0.5 sm:gap-1">
-            ⭐️ {qty > 1 ? `×${qty}` : '已拥有'}
+          <span className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-yellow-400 text-white text-[11px] sm:text-sm font-bold shadow-md flex items-center justify-center tabular-nums">
+            ×{qty}
           </span>
         </div>
       );

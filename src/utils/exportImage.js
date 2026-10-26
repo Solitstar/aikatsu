@@ -11,7 +11,7 @@ const CARD_GAP = 14;
 const CARDS_PER_ROW = 5;
 const CARD_W = (WIDTH - PADDING * 2 - CARD_GAP * (CARDS_PER_ROW - 1)) / CARDS_PER_ROW; // ~170px
 const CARD_IMG_H = CARD_W; // 正方形图片区域
-const CARD_INFO_H = 72;      // 收藏：信息区高度
+const CARD_INFO_H = 56;      // 收藏：信息区高度（数量改为图片上的圆圈，不再占底部一行）
 const CARD_INFO_H_WISH = 92; // 心愿单：价格药丸独占卡片底部一行，信息区需要更高
 const CARD_R = 14;
 
@@ -341,6 +341,24 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
       // ---- 图片区域 ----
       drawCardImage(ctx, imageMap[item.id], cx, rowY, CARD_W, CARD_IMG_H, item.name);
 
+      // ---- 数量圆圈（图片左上角实心圆：收藏黄色、心愿单红色）----
+      const qtyText = `×${(type === 'owned' ? item.quantity : item.wishQuantity) || 1}`;
+      ctx.font = 'bold 11px "Quicksand", "Noto Sans SC", sans-serif';
+      const tw = ctx.measureText(qtyText).width;
+      const r = Math.max(12, tw / 2 + 6);
+      const ccx = cx + r + 8;
+      const ccy = rowY + r + 8;
+      ctx.beginPath();
+      ctx.arc(ccx, ccy, r, 0, Math.PI * 2);
+      ctx.fillStyle = theme.badge;
+      ctx.fill();
+      ctx.fillStyle = theme.badgeText;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(qtyText, ccx, ccy + 0.5);
+      ctx.textBaseline = 'alphabetic';
+      ctx.textAlign = 'left';
+
       // ---- 图片/信息分隔线 ----
       ctx.strokeStyle = 'rgba(0,0,0,0.05)';
       ctx.lineWidth = 1;
@@ -393,40 +411,31 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
         ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
         ctx.fillStyle = theme.accent;
         ctx.fillText(priceText, badgeX + badgeW / 2, badgeY + 16);
-
-        // 数量小字在卡片底部
-        ctx.textAlign = 'left';
-        ctx.font = '9px "Quicksand", "Noto Sans SC", sans-serif';
-        ctx.fillStyle = 'rgba(0,0,0,0.4)';
-        ctx.fillText(`×${item.quantity || 1} 件`, innerX, infoY + 52);
       } else {
-        const totalPrice = ((item.wishPriceMin || 0) * (item.wishQuantity || 1)).toFixed(2);
-        const priceText = `¥${totalPrice}`;
-        ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
-        const pw = ctx.measureText(priceText).width;
-        const badgeW = Math.ceil(pw) + 18;
-        const badgeX = cx + CARD_W - pad - badgeW;
-        // 心愿单价格药丸独占卡片底部一行，避免和角色文字挤在同一行
-        const badgeY = infoY + 60;
+        // 红色圆角矩形里显示完整的心理价格范围（min~max），不再只显示小计
+        const min = item.wishPriceMin || 0;
+        const max = item.wishPriceMax || 0;
+        const fmt = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
+        const priceText = max > 0 ? `¥${fmt(min)}~${fmt(max)}` : `¥${fmt(min)}`;
+        // 未填写心理价时不画价格药丸（与卡片保持一致）
+        if (min > 0 || max > 0) {
+          ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
+          const pw = ctx.measureText(priceText).width;
+          const badgeW = Math.ceil(pw) + 18;
+          const badgeX = cx + CARD_W - pad - badgeW;
+          // 心愿单价格药丸独占卡片底部一行，避免和角色文字挤在同一行
+          const badgeY = infoY + 60;
 
-        // 玫红药丸（与「想要」同款）
-        roundRect(ctx, badgeX, badgeY, badgeW, badgeH, 11);
-        ctx.fillStyle = theme.badge;
-        ctx.fill();
+          // 玫红药丸（与「想要」同款）
+          roundRect(ctx, badgeX, badgeY, badgeW, badgeH, 11);
+          ctx.fillStyle = theme.badge;
+          ctx.fill();
 
-        ctx.textAlign = 'center';
-        ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
-        ctx.fillStyle = theme.badgeText;
-        ctx.fillText(priceText, badgeX + badgeW / 2, badgeY + 16);
-
-        // 单价×数量 在卡片中部
-        ctx.textAlign = 'left';
-        ctx.font = '9px "Quicksand", "Noto Sans SC", sans-serif';
-        ctx.fillStyle = 'rgba(0,0,0,0.4)';
-        const detail = (item.wishPriceMax || 0) > 0
-          ? `¥${(item.wishPriceMin || 0).toFixed(2)}~${(item.wishPriceMax || 0).toFixed(2)} ×${item.wishQuantity || 1}`
-          : `¥${(item.wishPriceMin || 0).toFixed(2)} ×${item.wishQuantity || 1}`;
-        ctx.fillText(detail, innerX, infoY + 52);
+          ctx.textAlign = 'center';
+          ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
+          ctx.fillStyle = theme.badgeText;
+          ctx.fillText(priceText, badgeX + badgeW / 2, badgeY + 16);
+        }
       }
     });
 

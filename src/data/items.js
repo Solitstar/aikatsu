@@ -144861,7 +144861,7 @@ id: 13623,
     type: "徽章",
     size: "约W53×H80mm",
     price: "[盲抽]400円(含税)",
-    image: "https://i.imgur.com/lrgQhLf.png"
+    image: "https://i.imgur.com/IwTralq.png"
   },
 {
 id: 13624,
