@@ -15,16 +15,26 @@ const FolderBar = ({
   const [menuId, setMenuId] = useState(null);
   const [menuPos, setMenuPos] = useState({ top: 0, left: 0 });
   const inputRef = useRef(null);
+  const editRowRef = useRef(null);
+  const createRowRef = useRef(null);
   const menuRef = useRef(null);
   const containerRef = useRef(null);
   const menuBtnRefs = useRef({});
 
   useEffect(() => {
     if (showCreate && inputRef.current) inputRef.current.focus();
+    // 新建框在横向滚动条最右侧，滚到可见处，避免确认按钮被裁掉
+    if (showCreate && createRowRef.current) {
+      createRowRef.current.scrollIntoView({ inline: 'center', block: 'nearest' });
+    }
   }, [showCreate]);
 
   useEffect(() => {
     if (editingId && inputRef.current) inputRef.current.focus();
+    // 编辑框在横向滚动条里，滚到中间，避免右侧的保存按钮被裁掉点不到
+    if (editingId && editRowRef.current) {
+      editRowRef.current.scrollIntoView({ inline: 'center', block: 'nearest' });
+    }
   }, [editingId]);
 
   useEffect(() => {
@@ -42,9 +52,12 @@ const FolderBar = ({
     if (menuId !== null && containerRef.current && menuBtnRefs.current[menuId]) {
       const containerRect = containerRef.current.getBoundingClientRect();
       const btnRect = menuBtnRefs.current[menuId].getBoundingClientRect();
+      const MENU_W = 110;
+      // 贴右边缘时向左收，避免菜单超出屏幕
+      const left = Math.max(0, Math.min(btnRect.left - containerRect.left, containerRect.width - MENU_W));
       setMenuPos({
         top: btnRect.bottom - containerRect.top + 4,
-        left: btnRect.left - containerRect.left,
+        left,
       });
     }
   }, [menuId]);
@@ -90,7 +103,7 @@ const FolderBar = ({
           <div key={String(tab.id)} className="relative flex-shrink-0 group">
             {/* 重命名编辑模式 */}
             {isEditing ? (
-              <div className="flex items-center gap-1">
+              <div ref={editRowRef} className="flex items-center gap-1 flex-shrink-0">
                 <input
                   ref={inputRef}
                   value={editName}
@@ -99,13 +112,19 @@ const FolderBar = ({
                     if (e.key === 'Enter') handleRename(tab.id);
                     if (e.key === 'Escape') { setEditingId(null); setEditName(''); }
                   }}
-                  className="w-32 px-2.5 py-1.5 rounded-full bg-card-bg border border-accent/40 text-xs
+                  onBlur={() => {
+                    // 点到别处也视为保存，避免保存按钮没点到就没反应
+                    if (editName.trim()) handleRename(tab.id);
+                    else { setEditingId(null); setEditName(''); }
+                  }}
+                  className="w-28 px-2.5 py-1.5 rounded-full bg-card-bg border border-accent/40 text-xs
                              text-text-primary focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
                   autoFocus
                 />
                 <button
                   onMouseDown={(e) => { e.preventDefault(); handleRename(tab.id); }}
-                  className="w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent/80 transition-colors"
+                  className="w-7 h-7 flex-shrink-0 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent/80 transition-colors"
+                  title="保存"
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -139,7 +158,7 @@ const FolderBar = ({
                 ref={(el) => { menuBtnRefs.current[tab.id] = el; }}
                 onClick={() => setMenuId(menuId === tab.id ? null : tab.id)}
                 className={`absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full flex items-center justify-center
-                  ${isActive ? 'bg-white/30 text-white hover:bg-white/50' : 'bg-bg-primary text-text-secondary hover:bg-accent/10 opacity-0 group-hover:opacity-100'}
+                  ${isActive ? 'bg-white/30 text-white hover:bg-white/50' : 'bg-bg-primary text-text-secondary hover:bg-accent/10 opacity-100 sm:opacity-0 sm:group-hover:opacity-100'}
                   transition-opacity`}
                 title="更多操作"
               >
@@ -156,7 +175,7 @@ const FolderBar = ({
 
       {/* 新建文件夹 */}
       {showCreate ? (
-        <div className="flex items-center gap-1 flex-shrink-0">
+        <div ref={createRowRef} className="flex items-center gap-1 flex-shrink-0">
           <input
             ref={inputRef}
             value={newName}
@@ -165,22 +184,29 @@ const FolderBar = ({
               if (e.key === 'Enter') handleCreate();
               if (e.key === 'Escape') { setShowCreate(false); setNewName(''); }
             }}
+            onBlur={() => {
+              // 点到别处也视为确认，避免确认按钮被裁掉时完全没反应
+              if (newName.trim()) handleCreate();
+            }}
             placeholder="文件夹名..."
-            className="w-32 px-2.5 py-1.5 rounded-full bg-card-bg border border-accent/30 text-xs
+            className="w-28 px-2.5 py-1.5 rounded-full bg-card-bg border border-accent/30 text-xs
                        text-text-primary placeholder:text-text-secondary/40
                        focus:outline-none focus:border-accent"
           />
           <button
             onClick={handleCreate}
-            className="w-7 h-7 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent/80 transition-colors"
+            className="w-7 h-7 flex-shrink-0 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent/80 transition-colors"
+            title="创建"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </button>
           <button
+            onMouseDown={(e) => e.preventDefault()}
             onClick={() => { setShowCreate(false); setNewName(''); }}
-            className="w-7 h-7 rounded-full bg-bg-primary text-text-secondary flex items-center justify-center hover:bg-accent/10 transition-colors"
+            className="w-7 h-7 flex-shrink-0 rounded-full bg-bg-primary text-text-secondary flex items-center justify-center hover:bg-accent/10 transition-colors"
+            title="取消"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
