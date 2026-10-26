@@ -14,6 +14,15 @@ const CARD_IMG_H = CARD_W; // 正方形图片区域
 const CARD_INFO_H = 78; // 信息区高度：收藏 / 心愿单统一，两种导出图卡片等高
 const CARD_R = 14;
 
+// 浏览器画布上限（超过后 toBlob/toDataURL 会失败）
+// iOS Safari 明显更严格：超出会导出 0KB 打不开的空文件
+const IS_IOS = typeof navigator !== 'undefined' && (
+  /iPad|iPhone|iPod/.test(navigator.userAgent)
+  || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+);
+const MAX_CANVAS_SIDE = IS_IOS ? 4096 : 16384;
+const MAX_CANVAS_AREA = IS_IOS ? 16700000 : 268000000;
+
 // 主题色
 const COLORS = {
   owned: { badge: '#eab308', badgeText: '#fff' },
@@ -235,6 +244,30 @@ function drawCardImage(ctx, imgObj, x, y, w, h, name) {
 
 // ---- 主渲染 ----
 
+/**
+ * 把画布保存为 PNG 下载
+ * 用 toBlob + objectURL，避免超大 data URL 被浏览器拦截导致下载失败
+ */
+export function downloadCanvasAsPng(canvas, filename) {
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => {
+      if (!blob) {
+        reject(new Error('图片生成失败（画布尺寸过大或内存不足）'));
+        return;
+      }
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = url;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(url), 10000);
+      resolve();
+    }, 'image/png');
+  });
+}
+
 export async function renderShareImageToCanvas({ items, type, totalQuantity, totalPrice }) {
   console.group('🎨 Canvas 直绘分享图');
 
@@ -250,11 +283,19 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
   const ROW_GAP = 14;
   const height = PADDING + 100 + 90 + (rows * (cardH + ROW_GAP) + 16) + 50 + PADDING;
 
+  // 商品很多时画布会超出浏览器上限（iOS 超出会导出 0KB 空文件），
+  // 按比例降分辨率，保证画布始终在限制内
+  const scale = Math.min(
+    2,
+    MAX_CANVAS_SIDE / height,
+    Math.sqrt(MAX_CANVAS_AREA / (WIDTH * height)),
+  );
+
   const canvas = document.createElement('canvas');
-  canvas.width = WIDTH * 2;
-  canvas.height = height * 2;
+  canvas.width = Math.round(WIDTH * scale);
+  canvas.height = Math.round(height * scale);
   const ctx = canvas.getContext('2d');
-  ctx.scale(2, 2);
+  ctx.scale(scale, scale);
 
   // 3. 背景渐变
   const gradient = ctx.createLinearGradient(0, 0, 0, height);

@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useCallback, useDeferredValue } from 'react';
-import { renderShareImageToCanvas } from './utils/exportImage';
+import { renderShareImageToCanvas, downloadCanvasAsPng } from './utils/exportImage';
 import { useCollection } from './hooks/useCollection';
 import { useVersionCheck } from './hooks/useVersionCheck';
 import { useFolders } from './hooks/useFolders';
@@ -341,10 +341,7 @@ function App() {
         type: 'wish',
         totalQuantity: wishTotalQuantity,
       });
-      const link = document.createElement('a');
-      link.download = `心愿单_${new Date().toISOString().slice(0, 10)}.png`;
-      link.href = canvas.toDataURL('image/png');
-      document.body.appendChild(link); link.click(); document.body.removeChild(link);
+      await downloadCanvasAsPng(canvas, `心愿单_${new Date().toISOString().slice(0, 10)}.png`);
     } catch (err) {
       console.error('导出图片失败:', err);
       alert('导出图片失败，请稍后再试~');
@@ -394,10 +391,7 @@ function App() {
         totalQuantity: ownedTotalQuantity,
         totalPrice: ownedTotalPrice,
       });
-      const link = document.createElement('a');
-      link.download = `我的收藏_${new Date().toISOString().slice(0, 10)}.png`;
-      link.href = canvas.toDataURL('image/png');
-      document.body.appendChild(link); link.click(); document.body.removeChild(link);
+      await downloadCanvasAsPng(canvas, `我的收藏_${new Date().toISOString().slice(0, 10)}.png`);
     } catch (err) {
       console.error('导出图片失败:', err);
       alert('导出图片失败，请稍后再试~');
