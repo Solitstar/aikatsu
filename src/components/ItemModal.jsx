@@ -136,7 +136,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
 
       <div className="absolute inset-0 overflow-y-auto flex items-start justify-center p-4 sm:items-center">
         <div
-          className="relative w-full max-w-3xl bg-card-bg rounded-3xl shadow-soft overflow-hidden my-8"
+          className="relative w-full min-w-0 max-w-3xl bg-card-bg rounded-3xl shadow-soft overflow-hidden my-8"
           onClick={(e) => e.stopPropagation()}
         >
         <div className="bg-accent/10 px-4 py-3 border-b border-accent/20">
@@ -237,13 +237,13 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
               ))}
             </div>
 
-            <div className="flex-1 flex flex-col justify-center">
+            <div className="flex-1 min-w-0 flex flex-col justify-center">
               {item.subtitle && (
-                <p className="text-sm text-text-secondary font-quick mb-1">
+                <p className="text-sm text-text-secondary font-quick mb-1 break-words">
                   {item.subtitle}
                 </p>
               )}
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-4 break-words">
                 {displayName || item.name}
               </h3>
 
@@ -252,12 +252,12 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">系列</span>
                   {item.productSeries && item.productSeries.length > 0 ? (
-                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                    <div className="flex flex-wrap gap-x-3 gap-y-1 min-w-0">
                       {item.productSeries.map(s => (
                         <button
                           key={s}
                           onClick={() => onSeriesClick(s)}
-                          className="text-accent hover:underline font-medium"
+                          className="text-accent hover:underline font-medium break-words text-left"
                           title={`查看「${s}」系列的所有商品`}
                         >
                           {s} →
@@ -265,25 +265,25 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                       ))}
                     </div>
                   ) : (
-                    <span className="text-text-primary">{item.series}</span>
+                    <span className="text-text-primary flex-1 min-w-0 break-words">{item.series}</span>
                   )}
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">角色</span>
-                  <span className="text-text-primary">{formatCharacterDisplay(item.character, item.series)}</span>
+                  <span className="text-text-primary flex-1 min-w-0 break-words">{formatCharacterDisplay(item.character, item.series)}</span>
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">种类</span>
-                  <span className="text-text-primary">{splitTypes(item.type).join('/')}</span>
+                  <span className="text-text-primary flex-1 min-w-0 break-words">{splitTypes(item.type).join('/')}</span>
                 </div>
                 <div className="flex">
                   <span className="w-16 text-text-secondary flex-shrink-0">尺寸</span>
-                  <span className="text-text-primary whitespace-pre-line">{item.size || '-'}</span>
+                  <span className="text-text-primary flex-1 min-w-0 whitespace-pre-line break-words">{item.size || '-'}</span>
                 </div>
                 {item.price && (
                   <div className="flex">
                     <span className="w-16 text-text-secondary flex-shrink-0">价格</span>
-                    <span className="text-text-primary whitespace-pre-line">{item.price}</span>
+                    <span className="text-text-primary flex-1 min-w-0 whitespace-pre-line break-words">{item.price}</span>
                   </div>
                 )}
                 {item.material && (
@@ -359,7 +359,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                       <button
                         key={f.id}
                         onClick={() => onMoveToFolder(f.id)}
-                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all max-w-full truncate ${
                           itemFolderId === f.id
                             ? 'bg-accent text-white shadow-sm'
                             : 'bg-white text-text-secondary border border-accent/20 hover:bg-accent/5'
@@ -377,7 +377,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                   </div>
 
                   {showFolderPicker && (
-                    <div className="flex items-center gap-2 mt-2">
+                    <div className="flex flex-wrap items-center gap-2 mt-2">
                       <input
                         value={newFolderName}
                         onChange={(e) => setNewFolderName(e.target.value)}
@@ -386,7 +386,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                           if (e.key === 'Escape') { setShowFolderPicker(false); setNewFolderName(''); }
                         }}
                         placeholder="文件夹名..."
-                        className="flex-1 px-3 py-1.5 rounded-lg border border-accent/30 bg-white text-text-primary text-sm
+                        className="flex-1 min-w-0 px-3 py-1.5 rounded-lg border border-accent/30 bg-white text-text-primary text-sm
                                    focus:outline-none focus:border-accent"
                         autoFocus
                       />
