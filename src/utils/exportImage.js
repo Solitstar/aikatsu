@@ -11,14 +11,13 @@ const CARD_GAP = 14;
 const CARDS_PER_ROW = 5;
 const CARD_W = (WIDTH - PADDING * 2 - CARD_GAP * (CARDS_PER_ROW - 1)) / CARDS_PER_ROW; // ~170px
 const CARD_IMG_H = CARD_W; // 正方形图片区域
-const CARD_INFO_H = 56;      // 收藏：信息区高度（数量改为图片上的圆圈，不再占底部一行）
-const CARD_INFO_H_WISH = 92; // 心愿单：价格药丸独占卡片底部一行，信息区需要更高
+const CARD_INFO_H = 78; // 信息区高度：收藏 / 心愿单统一，两种导出图卡片等高
 const CARD_R = 14;
 
 // 主题色
 const COLORS = {
-  owned: { accent: '#b45309', accentBg: '#fef3c7', badge: '#eab308', badgeText: '#fff' },
-  wish:  { accent: '#be123c', accentBg: '#ffe4e6', badge: '#f43f5e', badgeText: '#fff' },
+  owned: { badge: '#eab308', badgeText: '#fff' },
+  wish:  { badge: '#f43f5e', badgeText: '#fff' },
 };
 
 // ---- 图片加载 ----
@@ -240,8 +239,8 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
   console.group('🎨 Canvas 直绘分享图');
 
   const theme = COLORS[type];
-  // 心愿单的价格药丸挪到了卡片底部独占一行，卡片相应变高
-  const cardH = CARD_IMG_H + (type === 'owned' ? CARD_INFO_H : CARD_INFO_H_WISH);
+  // 收藏 / 心愿单卡片高度一致
+  const cardH = CARD_IMG_H + CARD_INFO_H;
 
   // 1. 预加载所有图片
   const imageMap = await preloadItemImages(items);
@@ -388,9 +387,9 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
       ctx.fillStyle = 'rgba(0,0,0,0.4)';
       ctx.fillText(charStr, innerX, infoY + 32);
 
-      // 收藏的价格标签右对齐，垂直居中于角色文字行
+      // 价格标签：收藏 / 心愿单同款布局，独占卡片底部一行、右对齐
       const badgeH = 22;
-      const badgeCenterY = infoY + 27; // 角色文字 9px 的视觉中心
+      const badgeY = infoY + 46;
 
       if (type === 'owned') {
         const priceText = `¥${(item.totalPrice || 0).toFixed(2)}`;
@@ -398,19 +397,19 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
         const pw = ctx.measureText(priceText).width;
         const badgeW = Math.ceil(pw) + 18;
         const badgeX = cx + CARD_W - pad - badgeW;
-        const badgeY = badgeCenterY - badgeH / 2;
 
+        // 黄色渐变实心药丸 + 白色价格
+        const g = ctx.createLinearGradient(badgeX, badgeY, badgeX, badgeY + badgeH);
+        g.addColorStop(0, '#fbbf24');
+        g.addColorStop(1, '#f59e0b');
         roundRect(ctx, badgeX, badgeY, badgeW, badgeH, 11);
-        ctx.fillStyle = theme.accentBg;
+        ctx.fillStyle = g;
         ctx.fill();
-        ctx.strokeStyle = theme.accent;
-        ctx.lineWidth = 1;
-        ctx.stroke();
 
         ctx.textAlign = 'center';
-        ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
-        ctx.fillStyle = theme.accent;
+        ctx.fillStyle = '#ffffff';
         ctx.fillText(priceText, badgeX + badgeW / 2, badgeY + 16);
+        ctx.textAlign = 'left';
       } else {
         // 红色圆角矩形里显示完整的心理价格范围（min~max），不再只显示小计
         const min = item.wishPriceMin || 0;
@@ -423,8 +422,6 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
           const pw = ctx.measureText(priceText).width;
           const badgeW = Math.ceil(pw) + 18;
           const badgeX = cx + CARD_W - pad - badgeW;
-          // 心愿单价格药丸独占卡片底部一行，避免和角色文字挤在同一行
-          const badgeY = infoY + 60;
 
           // 玫红药丸（与「想要」同款）
           roundRect(ctx, badgeX, badgeY, badgeW, badgeH, 11);
