@@ -90,6 +90,17 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
   };
 
   const itemType = item?.status;
+
+  // 新建文件夹：点「创建」按钮或按回车都会走这里
+  const submitNewFolder = () => {
+    const name = newFolderName.trim();
+    if (!name) return;
+    const fid = onCreateFolder(name);
+    if (!fid) return;
+    onMoveToFolder(fid);
+    setNewFolderName('');
+    setShowFolderPicker(false);
+  };
   // 仅版本模式商品在收藏时保存当前选中版本的 label（如 初版/再贩），普通图集不保存
   const selectedVersion = isVersioned ? imageList[selectedIdx]?.label : undefined;
   // 当前选中版本的收藏状态：版本级商品看 versionStatuses（各版本独立标记），普通/图集商品看整件状态
@@ -371,14 +382,7 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                         value={newFolderName}
                         onChange={(e) => setNewFolderName(e.target.value)}
                         onKeyDown={(e) => {
-                          if (e.key === 'Enter' && newFolderName.trim()) {
-                            const fid = onCreateFolder(newFolderName.trim());
-                            if (fid) {
-                              onMoveToFolder(fid);
-                              setNewFolderName('');
-                              setShowFolderPicker(false);
-                            }
-                          }
+                          if (e.key === 'Enter') submitNewFolder();
                           if (e.key === 'Escape') { setShowFolderPicker(false); setNewFolderName(''); }
                         }}
                         placeholder="文件夹名..."
@@ -386,6 +390,14 @@ const ItemModal = ({ item, onClose, onToggleStatus, onAddPriceRecord, onRemovePr
                                    focus:outline-none focus:border-accent"
                         autoFocus
                       />
+                      <button
+                        onClick={submitNewFolder}
+                        disabled={!newFolderName.trim()}
+                        className="px-3 py-1.5 rounded-lg bg-accent text-white text-xs font-medium
+                                   hover:bg-accent/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                      >
+                        创建
+                      </button>
                       <button
                         onClick={() => { setShowFolderPicker(false); setNewFolderName(''); }}
                         className="text-xs text-text-secondary hover:text-text-primary"

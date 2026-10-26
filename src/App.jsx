@@ -270,20 +270,20 @@ function App() {
     if (currentFolderType) deleteFolder(currentFolderType, folderId);
   };
 
-  const handleMoveToFolder = (itemId, folderId) => {
-    if (!currentFolderType) return;
+  const handleMoveToFolder = (itemId, folderId, type) => {
+    if (!type) return;
     if (folderId === null) {
       // 从未分类中移除所有文件夹归属
-      const currentFid = getItemFolderId(currentFolderType, itemId);
-      if (currentFid) removeItemFromFolder(currentFolderType, currentFid, itemId);
+      const currentFid = getItemFolderId(type, itemId);
+      if (currentFid) removeItemFromFolder(type, currentFid, itemId);
     } else {
-      addItemToFolder(currentFolderType, folderId, itemId);
+      addItemToFolder(type, folderId, itemId);
     }
   };
 
-  const handleCreateFolderForModal = (name) => {
-    if (!currentFolderType) return null;
-    const folder = createFolder(currentFolderType, name);
+  const handleCreateFolderForModal = (type, name) => {
+    if (!type) return null;
+    const folder = createFolder(type, name);
     return folder ? folder.id : null;
   };
 
@@ -402,6 +402,11 @@ function App() {
 
   const modalItem = selectedItem
     ? items.find(i => i.id === selectedItem.id) || selectedItem
+    : null;
+
+  // 详情弹窗里的文件夹归属按商品当前状态决定，这样在图鉴页打开商品也能建/选文件夹
+  const modalFolderType = modalItem
+    ? (modalItem.status === 'owned' ? 'owned' : modalItem.status === 'wish' ? 'wish' : null)
     : null;
 
   return (
@@ -580,10 +585,10 @@ function App() {
         onDecreaseWishQty={decreaseWishQuantity}
         onSetWishPriceMin={setWishPriceMin}
         onSetWishPriceMax={setWishPriceMax}
-        folders={currentFolderType ? folders[currentFolderType] : []}
-        itemFolderId={modalItem && currentFolderType ? getItemFolderId(currentFolderType, modalItem.id) : null}
-        onMoveToFolder={(folderId) => modalItem && handleMoveToFolder(modalItem.id, folderId)}
-        onCreateFolder={handleCreateFolderForModal}
+        folders={modalFolderType ? folders[modalFolderType] : []}
+        itemFolderId={modalItem && modalFolderType ? getItemFolderId(modalFolderType, modalItem.id) : null}
+        onMoveToFolder={(folderId) => modalItem && handleMoveToFolder(modalItem.id, folderId, modalFolderType)}
+        onCreateFolder={(name) => handleCreateFolderForModal(modalFolderType, name)}
         onSeriesClick={handleSeriesClick}
       />
 
