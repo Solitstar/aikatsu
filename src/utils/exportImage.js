@@ -11,8 +11,17 @@ const CARD_GAP = 14;
 const CARDS_PER_ROW = 5;
 const CARD_W = (WIDTH - PADDING * 2 - CARD_GAP * (CARDS_PER_ROW - 1)) / CARDS_PER_ROW; // ~170px
 const CARD_IMG_H = CARD_W; // 正方形图片区域
-const CARD_INFO_H = 78; // 信息区高度：收藏 / 心愿单统一，两种导出图卡片等高
 const CARD_R = 14;
+
+// 信息区排版常量：标题按实际行数计算高度，保证完整展示不截断
+const TITLE_FONT = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
+const TITLE_LINE_H = 14;
+const TITLE_FIRST_BASELINE = 16;
+const INFO_PAD = 8;
+const CHAR_LINE_GAP = 16; // 标题末行基线 → 角色行基线
+const BADGE_GAP = 14; // 角色行基线 → 价格标签顶部
+const BADGE_H = 22;
+const INFO_BOTTOM_PAD = 8;
 
 // 浏览器画布上限（超过后 toBlob/toDataURL 会失败）
 // iOS Safari 明显更严格：超出会导出 0KB 打不开的空文件
@@ -102,6 +111,82 @@ function versionIndex(item) {
   if (!list) return -1;
   const found = list.findIndex(img => (img.label || img.name) === item.version);
   return found >= 0 ? found : 0;
+}
+
+/**
+ * 导出图标题：多版本商品且已选择版本时，显示所选版本的完整标题
+ * （如「海景布徽章(初版)」），与详情弹窗/卡片一致；否则使用商品基础名
+ */
+export function getItemExportTitle(item) {
+  const list = item.images && item.images.length > 1 ? item.images : null;
+  if (!list || !item.version) return item.name;
+  const found = list.findIndex(img => (img.label || img.name) === item.version);
+  if (found < 0) return item.name;
+  return list[found].name || item.name;
+}
+
+// 文本测量用的离屏画布（标题折行需要与主画布完全一致的字体度量）
+let _measureCtx = null;
+function getMeasureContext() {
+  if (!_measureCtx) {
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
+    _measureCtx = canvas.getContext('2d');
+  }
+  return _measureCtx;
+}
+
+/** 按字符折行，完整保留标题内容（不截断、不省略任何字符） */
+function wrapText(ctx, text, maxWidth) {
+  const chars = Array.from(String(text || ''));
+  const lines = [];
+  let line = '';
+  chars.forEach((ch) => {
+    if (line && ctx.measureText(line + ch).width > maxWidth) {
+      lines.push(line);
+      line = ch;
+    } else {
+      line += ch;
+    }
+  });
+  if (line || lines.length === 0) lines.push(line);
+  return lines;
+}
+
+/**
+ * 预排版：为每行卡片计算标题折行与信息区高度
+ * 同一行内卡片等高（取最高的一张），不同行可不同高
+ */
+function buildLayout(items) {
+  const ctx = getMeasureContext();
+  ctx.font = TITLE_FONT;
+  const maxTitleW = CARD_W - INFO_PAD * 2;
+  const rows = [];
+  for (let r = 0; r < Math.ceil(items.length / CARDS_PER_ROW); r++) {
+    const cards = items
+      .slice(r * CARDS_PER_ROW, (r + 1) * CARDS_PER_ROW)
+      .map((item) => {
+        const title = getItemExportTitle(item);
+        const lines = wrapText(ctx, title, maxTitleW);
+        const titleBottom = TITLE_FIRST_BASELINE + (lines.length - 1) * TITLE_LINE_H;
+        const charBaseline = titleBottom + CHAR_LINE_GAP;
+        const badgeY = charBaseline + BADGE_GAP;
+        return {
+          item,
+          title,
+          lines,
+          charBaseline,
+          badgeY,
+          infoH: badgeY + BADGE_H + INFO_BOTTOM_PAD,
+        };
+      });
+    rows.push({
+      cards,
+      infoH: Math.max(...cards.map(c => c.infoH)),
+    });
+  }
+  return rows;
 }
 
 /** 远程原图地址（多版本商品取当前版本，避免 item.image 为空时拿到空串） */
@@ -209,8 +294,11 @@ function drawPlaceholder(ctx, x, y, w, h, name) {
   ctx.fillStyle = '#94a3b8';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  const short = name.length > 8 ? name.substring(0, 8) + '…' : name;
-  ctx.fillText(short, x + w / 2, y + h / 2);
+  // 占位文字也完整显示商品名，按图片宽度折行
+  const lines = wrapText(ctx, name, w - 16);
+  const lineH = 16;
+  const startY = y + h / 2 - ((lines.length - 1) * lineH) / 2;
+  lines.forEach((line, i) => ctx.fillText(line, x + w / 2, startY + i * lineH));
   ctx.textBaseline = 'alphabetic';
 }
 
@@ -272,16 +360,16 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
   console.group('🎨 Canvas 直绘分享图');
 
   const theme = COLORS[type];
-  // 收藏 / 心愿单卡片高度一致
-  const cardH = CARD_IMG_H + CARD_INFO_H;
+  // 先按标题折行预排版：每行卡片高度由该行最高的一张决定
+  const layout = buildLayout(items);
 
   // 1. 预加载所有图片
   const imageMap = await preloadItemImages(items);
 
   // 2. 计算画布尺寸 (5列卡片网格)
-  const rows = Math.ceil(items.length / CARDS_PER_ROW);
   const ROW_GAP = 14;
-  const height = PADDING + 100 + 90 + (rows * (cardH + ROW_GAP) + 16) + 50 + PADDING;
+  const cardsHeight = layout.reduce((sum, row) => sum + CARD_IMG_H + row.infoH + ROW_GAP, 0);
+  const height = PADDING + 100 + 90 + (cardsHeight + 16) + 50 + PADDING;
 
   // 商品很多时画布会超出浏览器上限（iOS 超出会导出 0KB 空文件），
   // 按比例降分辨率，保证画布始终在限制内
@@ -361,11 +449,12 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
   cy = statsY + 88;
 
   // 6. 商品卡片网格 (5列)
-  for (let r = 0; r < rows; r++) {
+  layout.forEach(({ cards, infoH }) => {
     const rowY = cy;
-    const itemsInRow = items.slice(r * CARDS_PER_ROW, r * CARDS_PER_ROW + CARDS_PER_ROW);
+    const cardH = CARD_IMG_H + infoH;
 
-    itemsInRow.forEach((item, colIdx) => {
+    cards.forEach((card, colIdx) => {
+      const { item, lines, charBaseline, badgeY: relBadgeY } = card;
       const cx = PADDING + colIdx * (CARD_W + CARD_GAP);
 
       // ---- 卡片阴影 ----
@@ -379,7 +468,7 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
       ctx.fill();
 
       // ---- 图片区域 ----
-      drawCardImage(ctx, imageMap[item.id], cx, rowY, CARD_W, CARD_IMG_H, item.name);
+      drawCardImage(ctx, imageMap[item.id], cx, rowY, CARD_W, CARD_IMG_H, card.title);
 
       // ---- 数量圆圈（图片左上角实心圆：收藏黄色、心愿单红色）----
       const qtyText = `×${(type === 'owned' ? item.quantity : item.wishQuantity) || 1}`;
@@ -409,15 +498,16 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
 
       // ---- 信息区域 ----
       const infoY = rowY + CARD_IMG_H;
-      const pad = 8;
+      const pad = INFO_PAD;
       const innerX = cx + pad;
 
-      // 商品名
+      // 商品名：完整展示（含版本信息的全名），按卡片宽度折行，不截断不省略
       ctx.textAlign = 'left';
-      ctx.font = 'bold 12px "Quicksand", "Noto Sans SC", sans-serif';
+      ctx.font = TITLE_FONT;
       ctx.fillStyle = '#1e293b';
-      const name = item.name.length > 11 ? item.name.substring(0, 11) + '…' : item.name;
-      ctx.fillText(name, innerX, infoY + 16);
+      lines.forEach((line, li) => {
+        ctx.fillText(line, innerX, infoY + TITLE_FIRST_BASELINE + li * TITLE_LINE_H);
+      });
 
       // ---- 角色（左） + 价格标签（右，同排对齐）----
       const chars = item.character.split(/[,，]/).map(c => c.trim()).filter(Boolean);
@@ -426,11 +516,11 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
         : chars.join('·');
       ctx.font = '9px "Quicksand", "Noto Sans SC", sans-serif';
       ctx.fillStyle = 'rgba(0,0,0,0.4)';
-      ctx.fillText(charStr, innerX, infoY + 32);
+      ctx.fillText(charStr, innerX, infoY + charBaseline);
 
       // 价格标签：收藏 / 心愿单同款布局，独占卡片底部一行、右对齐
-      const badgeH = 22;
-      const badgeY = infoY + 46;
+      const badgeH = BADGE_H;
+      const badgeY = infoY + relBadgeY;
 
       if (type === 'owned') {
         const priceText = `¥${(item.totalPrice || 0).toFixed(2)}`;
@@ -478,7 +568,7 @@ export async function renderShareImageToCanvas({ items, type, totalQuantity, tot
     });
 
     cy += cardH + ROW_GAP;
-  }
+  });
 
   // 7. 页脚
   ctx.textAlign = 'center';
