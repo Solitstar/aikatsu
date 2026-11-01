@@ -56,11 +56,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/images src/data/localImages.js
+          git add public/images src/data/localImages.js scripts/image-sources.json
           if git diff --cached --quiet; then
-            echo "没有新增图片，跳过提交"
+            echo "没有新增或更新的图片，跳过提交"
           else
             COUNT=$(git diff --cached --name-only | wc -l)
-            git commit -m "图片本地化：新增 ${COUNT} 个文件（target=${{ inputs.target }}, offset=${{ inputs.offset }}）"
+            git commit -m "图片本地化：新增/更新 ${COUNT} 个文件（target=${{ inputs.target }}, offset=${{ inputs.offset }}）"
             git push
           fi

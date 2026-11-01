@@ -6,7 +6,7 @@
  *   .github/workflows/fetch-images.yml
  *
  * 用法:
- *   node scripts/fetch-local-images.cjs                              # 增量：只补缺失的（新增商品后跑这个）
+ *   node scripts/fetch-local-images.cjs                              # 增量：补缺失的 + 源链接已变更的
  *   node scripts/fetch-local-images.cjs --target 480 --limit 200 --offset 0
  *   node scripts/fetch-local-images.cjs --target 480 --force         # 覆盖已有（重新生成全部）
  *
@@ -17,14 +17,17 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const https = require('https');
+const crypto = require('crypto');
 const { execFile } = require('child_process');
 const { promisify } = require('util');
 const sharp = require('sharp');
+const { extractImageEntries } = require('./item-image-entries.cjs');
 
 const execFileAsync = promisify(execFile);
 
 const OUT_DIR = path.join(__dirname, '..', 'public', 'images');
-const ITEMS_FILE = path.join(__dirname, '..', 'src', 'data', 'items.js');
+// 记录每张本地图下载时对应的图片链接指纹，用于在链接变更后重新下载
+const SOURCES_FILE = path.join(__dirname, 'image-sources.json');
 
 const arg = (name, def) => {
   const i = process.argv.indexOf(`--${name}`);
@@ -39,28 +42,22 @@ const QUALITY = parseInt(arg('quality', '75'), 10);
 const CONCURRENCY = parseInt(arg('concurrency', '8'), 10);
 const FORCE = hasFlag('force');
 
-// ---- 从 items.js 提取图片条目（主图 + 多版本图）----
-function extractEntries() {
-  const src = fs.readFileSync(ITEMS_FILE, 'utf-8');
-  const ids = [];
-  const idRe = /id:\s*(\d+)\s*,/g;
-  let m;
-  while ((m = idRe.exec(src)) !== null) ids.push({ id: parseInt(m[1], 10), start: m.index });
+// ---- 源链接指纹：链接变了就必须重新下载，否则会一直用旧图 ----
+const hashUrl = (url) => crypto.createHash('sha1').update(url).digest('hex').slice(0, 12);
 
-  const entries = [];
-  for (let i = 0; i < ids.length; i++) {
-    const block = src.slice(ids[i].start, i + 1 < ids.length ? ids[i + 1].start : undefined);
-    const img = block.match(/image:\s*"([^"]+)"/);
-    if (img) entries.push({ id: ids[i].id, url: img[1], suffix: '' });
-    // 注意：空 url 也要计入索引，否则它后面的版本号会整体错位（如某一版暂时没图时），
-    // 导致文件名与前端使用的 item_{id}_v{idx} 对不上。
-    [...block.matchAll(/url:\s*'([^']*)'/g)].forEach((um, vi) => {
-      if (!um[1]) return;
-      entries.push({ id: ids[i].id, url: um[1], suffix: `_v${vi}` });
-    });
+const readSources = () => {
+  try {
+    return JSON.parse(fs.readFileSync(SOURCES_FILE, 'utf-8'));
+  } catch {
+    return {};
   }
-  return entries;
-}
+};
+
+const writeSources = (sources) => {
+  const sorted = {};
+  Object.keys(sources).sort().forEach((k) => { sorted[k] = sources[k]; });
+  fs.writeFileSync(SOURCES_FILE, JSON.stringify(sorted, null, 0) + '\n', 'utf8');
+};
 
 // ---- 源图统一取 imgur 的 640px 档，再自行缩放，避免二次压缩导致画质损失 ----
 const IMGUR_RE = /^(https?:\/\/i\.imgur\.com\/[A-Za-z0-9]+)(\.[A-Za-z0-9]+)$/;
@@ -114,21 +111,26 @@ function download(url, redirects = 3) {
 async function main() {
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
-  let entries = extractEntries();
+  let entries = extractImageEntries();
   console.log(`items.js 中共 ${entries.length} 处图片引用`);
 
   if (OFFSET) entries = entries.slice(OFFSET);
   if (LIMIT) entries = entries.slice(0, LIMIT);
 
+  const sources = readSources();
+  let sourcesDirty = false;
+
   const targets = [];
   for (const e of entries) {
     // 同一资源已有任意格式的本地图时跳过，避免重复占用
-    const base = `item_${e.id}${e.suffix}`;
-    const exists = ['webp', 'png', 'jpg'].some((ext) => fs.existsSync(path.join(OUT_DIR, `${base}.${ext}`)));
-    if (!FORCE && exists) continue;
-    targets.push({ ...e, out: path.join(OUT_DIR, `${base}.webp`) });
+    const exists = ['webp', 'png', 'jpg'].some((ext) => fs.existsSync(path.join(OUT_DIR, `${e.key}.${ext}`)));
+    // 链接变更过 → 本地图是旧图，必须重新下载
+    const stale = exists && sources[e.key] && sources[e.key] !== hashUrl(e.url);
+    if (!FORCE && exists && !stale) continue;
+    targets.push({ ...e, stale, out: path.join(OUT_DIR, `${e.key}.webp`) });
   }
-  console.log(`待处理 ${targets.length} 张（输出宽 ${TARGET}px，质量 ${QUALITY}，并发 ${CONCURRENCY}）`);
+  const staleCount = targets.filter((t) => t.stale).length;
+  console.log(`待处理 ${targets.length} 张（其中链接已变更需更新 ${staleCount} 张；输出宽 ${TARGET}px，质量 ${QUALITY}，并发 ${CONCURRENCY}）`);
 
   let done = 0; let failed = 0;
   const failures = [];
@@ -145,7 +147,11 @@ async function main() {
           .resize({ width: TARGET, withoutEnlargement: true })
           .webp({ quality: QUALITY })
           .toFile(t.out);
+        // 记录本次下载对应的链接指纹，供清单生成时判断本地图是否过期
+        sources[t.key] = hashUrl(t.url);
+        sourcesDirty = true;
         done++;
+        if (t.stale) console.log(`  ↻ 已更新: ${t.key}`);
         if (done % 25 === 0) console.log(`  进度 ${done}/${targets.length}`);
       } catch (err) {
         failed++;
@@ -155,6 +161,8 @@ async function main() {
   };
 
   await Promise.all(Array.from({ length: Math.min(CONCURRENCY, targets.length) }, worker));
+
+  if (sourcesDirty) writeSources(sources);
 
   console.log(`\n✅ 成功 ${done} 张，失败 ${failed} 张`);
   if (failures.length) {
