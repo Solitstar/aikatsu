@@ -116,6 +116,7 @@ function App() {
         text: normalize([
           it.name, it.type, it.subtitle, it.craft, it.material,
           it.characterRomaji, it.characterAlias, it.characterPinyin,
+          it.series, ...(it.productSeries || []),
         ].join(' ')),
       });
     }
@@ -436,7 +437,7 @@ function App() {
             {activeTab === 'wishlist' ? 'WISHLIST' : activeTab === 'owned' ? 'MY COLLECTION' : 'GOODS COLLECTION'}
           </h2>
           <p className="text-text-secondary text-sm sm:text-base">
-            {activeTab === 'wishlist' ? '你想要的周边都在这里' : activeTab === 'owned' ? '你已拥有的周边收藏' : '记录你的偶像活动周边收藏'}
+            {activeTab === 'wishlist' ? '你想要的周边都在这里' : activeTab === 'owned' ? '你已拥有的周边收藏' : '正在持续完善中，建议定期刷新页面，以免遗漏更新内容'}
           </p>
         </div>
 
